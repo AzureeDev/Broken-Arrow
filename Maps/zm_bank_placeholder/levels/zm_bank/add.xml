@@ -1,0 +1,7 @@
+<table directory="assets">
+	<add path="units/test/jocke/plane_black_temp" type="unit">
+		<unit force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
+		<object force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
+		<material_config force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
+	</add>
+</table>
