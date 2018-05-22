@@ -1,2 +1,3 @@
 {
+    "zm_buy_weapon" : "Buying a weapon"
 }
