@@ -56,55 +56,71 @@ Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
     local player = self:player_unit()
 
     if self:has_special_equipment("perk_juggernog") then
-        if not self._has_perk_juggernog then
-            player:character_damage():replenish()
-            local new_health = tonumber(player:character_damage():_max_health()) * 2
-            player:character_damage():change_health(new_health)
-            self._has_perk_juggernog = true
+		if not self._has_perk_juggernog then
+			if player then
+				player:character_damage():replenish()
+				local new_health = tonumber(player:character_damage():_max_health()) * 2
+				player:character_damage():change_health(new_health)
+				self._has_perk_juggernog = true
+			end
         end
     end
 
-    if not self._wunderwaffe_unlocked then
-        local current_state = self:get_current_state()
-        if current_state then
-            local current_weapon = current_state:get_equipped_weapon()
-            if current_weapon.name_id == "wunderwaffe_primary" or current_weapon.name_id == "wunderwaffe_secondary" then
-                local lip = SoundDevice:create_source("lip")
-                lip:post_event("zm_announcer_wunder")
-                LuaNetworking:SendToPeers( "ZMWunderwaffeUnlocked", "1" )
-                self._wunderwaffe_unlocked = true
-            end
-        end
+	local GCS = PlayerManager.get_current_state
+	
+	if not self._wunderwaffe_unlocked then
+		if GCS and type(GCS) == "function" then
+			local current_state = self:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				if current_weapon then
+					if current_weapon.name_id == "wunderwaffe_primary" or current_weapon.name_id == "wunderwaffe_secondary" then
+						local lip = SoundDevice:create_source("lip")
+						lip:post_event("zm_announcer_wunder")
+						LuaNetworking:SendToPeers( "ZMWunderwaffeUnlocked", "1" )
+						self._wunderwaffe_unlocked = true
+					end
+				end
+			end
+		end
     end
 
-    if not self._roach_unlocked then
-        local current_state = self:get_current_state()
-        if current_state then
-            local current_weapon = current_state:get_equipped_weapon()
-            if current_weapon.name_id == "roach_primary" or current_weapon.name_id == "roach_secondary" then
-                local lip = SoundDevice:create_source("lip")
-                lip:post_event("zm_announcer_roach")
-                LuaNetworking:SendToPeers( "ZMRoachUnlocked", "1" )
-                self._roach_unlocked = true
-            end
-        end
-    end
+	if not self._roach_unlocked then
+		if GCS and type(GCS) == "function" then
+			local current_state = self:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				if current_weapon then
+					if current_weapon.name_id == "roach_primary" or current_weapon.name_id == "roach_secondary" then
+						local lip = SoundDevice:create_source("lip")
+						lip:post_event("zm_announcer_roach")
+						LuaNetworking:SendToPeers( "ZMRoachUnlocked", "1" )
+						self._roach_unlocked = true
+					end
+				end
+			end
+		end
+	end
+	
+	if GCS and type(GCS) == "function" then
+		local current_state = self:get_current_state()
+		if current_state then
+			local current_weapon = current_state:get_equipped_weapon()
 
-    local current_state = self:get_current_state()
-    if current_state then
-        local current_weapon = current_state:get_equipped_weapon()
+			if current_weapon then
+				local weapon = current_weapon.name_id
+				local weapon_name_id = managers.localization:text(tweak_data.weapon[weapon].name_id)
 
-        local weapon = current_weapon.name_id
-        local weapon_name_id = managers.localization:text(tweak_data.weapon[weapon].name_id)
+				if weapon == "nothing2_primary" then
+					weapon_name_id = ""
+				end
 
-        if weapon == "nothing2_primary" then
-            weapon_name_id = ""
-        end
-
-		managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
-		
-		current_weapon:_update_rof_on_perk()
-    end
+				managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
+				
+				current_weapon:_update_rof_on_perk()
+			end
+		end
+	end
 
 	self:_count_nb_perks()
 end)
@@ -254,6 +270,119 @@ function PlayerManager:check_skills()
     
     self:register_message(Message.OnWeaponFired, "wunderwaffe_shot", callback(SniperGrazeDamage, SniperGrazeDamage, "on_wunderwaffe_fired"))
 end
+
+function PlayerManager:_internal_load()
+	local player = self:player_unit()
+
+	if not player then
+		return
+	end
+
+	local default_weapon_selection = 1
+	local secondary = managers.blackmarket:equipped_secondary()
+	local secondary_slot = managers.blackmarket:equipped_weapon_slot("secondaries")
+	local texture_switches = managers.blackmarket:get_weapon_texture_switches("secondaries", secondary_slot, secondary)
+
+	player:inventory():add_unit_by_factory_name(secondary.factory_id, default_weapon_selection == 1, false, secondary.blueprint, secondary.cosmetics, texture_switches)
+
+	local primary = managers.blackmarket:equipped_primary()
+
+	if primary then
+		local primary_slot = managers.blackmarket:equipped_weapon_slot("primaries")
+		local texture_switches = managers.blackmarket:get_weapon_texture_switches("primaries", primary_slot, primary)
+
+		player:inventory():add_unit_by_factory_name(primary.factory_id, default_weapon_selection == 2, false, primary.blueprint, primary.cosmetics, texture_switches)
+	end
+
+	player:inventory():set_melee_weapon("zdann")
+
+	local peer_id = managers.network:session():local_peer():id()
+	local grenade, amount = managers.blackmarket:equipped_grenade()
+
+	if self:has_grenade(peer_id) then
+		amount = self:get_grenade_amount(peer_id) or amount
+	end
+
+	amount = managers.crime_spree:modify_value("PlayerManager:GetThrowablesMaxAmount", amount)
+
+	self:_set_grenade({
+		grenade = grenade,
+		amount = math.min(amount, self:get_max_grenades())
+	})
+	self:_set_body_bags_amount(self._local_player_body_bags or self:total_body_bags())
+
+	if self._respawn then
+		-- Nothing
+	else
+		self:_add_level_equipment(player)
+
+		for i, name in ipairs(self._global.default_kit.special_equipment_slots) do
+			local ok_name = self._global.equipment[name] and name
+
+			if ok_name then
+				local upgrade = tweak_data.upgrades.definitions[ok_name]
+
+				if upgrade and (upgrade.slot and upgrade.slot < 2 or not upgrade.slot) then
+					self:add_equipment({
+						silent = true,
+						equipment = upgrade.equipment_id
+					})
+				end
+			end
+		end
+
+		local slot = 2
+
+		if self:has_category_upgrade("player", "second_deployable") then
+			slot = 3
+		else
+			self:set_equipment_in_slot(nil, 2)
+		end
+
+		local equipment_list = self:equipment_slots()
+
+		for i, name in ipairs(equipment_list) do
+			local ok_name = self._global.equipment[name] and name or self:equipment_in_slot(i)
+
+			if ok_name then
+				local upgrade = tweak_data.upgrades.definitions[ok_name]
+
+				if upgrade and (upgrade.slot and upgrade.slot < slot or not upgrade.slot) then
+					self:add_equipment({
+						silent = true,
+						equipment = upgrade.equipment_id,
+						slot = i
+					})
+				end
+			end
+		end
+
+		self:update_deployable_selection_to_peers()
+	end
+
+	if self:has_category_upgrade("player", "cocaine_stacking") then
+		self:update_synced_cocaine_stacks_to_peers(0, self:upgrade_value("player", "sync_cocaine_upgrade_level", 1), self:upgrade_level("player", "cocaine_stack_absorption_multiplier", 0))
+		managers.hud:set_info_meter(nil, {
+			icon = "guis/dlcs/coco/textures/pd2/hud_absorb_stack_icon_01",
+			max = 1,
+			current = self:get_local_cocaine_damage_absorption_ratio(),
+			total = self:get_local_cocaine_damage_absorption_max_ratio()
+		})
+	end
+
+	self:update_cocaine_hud()
+
+	local equipment = self:selected_equipment()
+
+	if equipment then
+		add_hud_item(get_as_digested(equipment.amount), equipment.icon)
+	end
+
+	if self:has_equipment("armor_kit") then
+		managers.mission:call_global_event("player_regenerate_armor", true)
+	end
+end
+
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_Wunderwaffe_unlock", function(sender, id, data)
     if id == "ZMWunderwaffeUnlocked" then

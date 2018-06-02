@@ -21,7 +21,7 @@ function ElementAnnouncerGift:on_executed(instigator)
         if player_unit then
             for id,weapon in pairs( player_unit:inventory():available_selections() ) do
                 if alive(weapon.unit) then
-                    weapon.unit:base():replenish()
+                    weapon.unit:base():soft_replenish()
                     managers.hud:set_ammo_amount( id, weapon.unit:base():ammo_info() )
                 end
                 
@@ -65,10 +65,16 @@ function ElementAnnouncerGift:on_executed(instigator)
         self._source:set_orientation(self._values.rotation)
         self._source:post_event("zm_announcer_double_points")
 
-        self._source_loop = SoundDevice:create_source(self._editor_name .. "_loop_dp")
-		self._source_loop:set_position(self._values.position)
-        self._source_loop:set_orientation(self._values.rotation)
-        self._source_loop:post_event("zm_double_points_loop")
+        managers.wdu:_element_play_sound({
+            name = self._id,
+            file_name = "double_points_loop.ogg",
+            sound_type = "sfx",
+            custom_dir = "sound",
+            is_relative = false,
+            is_loop = false,
+            is_3d = false,
+            use_velocity = false
+        })
     end
 
     if self._values.gift_id == "double_points_disable" then
@@ -84,10 +90,16 @@ function ElementAnnouncerGift:on_executed(instigator)
         self._source:set_orientation(self._values.rotation)
         self._source:post_event("zm_announcer_instakill")
 
-        self._source_loop = SoundDevice:create_source(self._editor_name .. "_loop_ik")
-		self._source_loop:set_position(self._values.position)
-        self._source_loop:set_orientation(self._values.rotation)
-        self._source_loop:post_event("zm_instakill_loop")
+        managers.wdu:_element_play_sound({
+            name = self._id,
+            file_name = "instakill_loop.ogg",
+            sound_type = "sfx",
+            custom_dir = "sound",
+            is_relative = false,
+            is_loop = false,
+            is_3d = false,
+            use_velocity = false
+        })
     end
 
     if self._values.gift_id == "instakill_disable" then
@@ -102,7 +114,7 @@ function ElementAnnouncerGift:on_executed(instigator)
 			play_paused = true,
 			fade_in = 0,
 			fade_out = 3,
-			color = Color(1, 1, 1, 1),
+			color = Color(0.8, 1, 1, 1),
 			timer = TimerManager:main()
         }
         

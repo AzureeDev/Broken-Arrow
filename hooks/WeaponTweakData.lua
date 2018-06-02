@@ -227,7 +227,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.peacemaker_primary = deep_clone(self.peacemaker)
     self.peacemaker_primary.animations.reload_name_id = "peacemaker"
     self.peacemaker_primary.weapon_hold = "peacemaker"
-    self.peacemaker_primary.NR_CLIPS_MAX = self.peacemaker_primary.NR_CLIPS_MAX * 2
+    self.peacemaker_primary.NR_CLIPS_MAX = self.peacemaker_primary.NR_CLIPS_MAX
     self.peacemaker_primary.AMMO_MAX = self.peacemaker_primary.CLIP_AMMO_MAX * self.peacemaker_primary.NR_CLIPS_MAX
     self.peacemaker_primary.use_data = {selection_index = PRIMARY}    
     self.peacemaker_primary.stats_modifiers = {damage = 2} -- it was 1 before; wtf?
@@ -238,7 +238,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.new_raging_bull_primary.animations.reload_name_id = "raging_bull"
     self.new_raging_bull_primary.weapon_hold = "raging_bull"
     self.new_raging_bull_primary.stats_modifiers = {damage = 2}
-    self.new_raging_bull_primary.NR_CLIPS_MAX = self.new_raging_bull_primary.NR_CLIPS_MAX * 2
+    self.new_raging_bull_primary.NR_CLIPS_MAX = self.new_raging_bull_primary.NR_CLIPS_MAX
     self.new_raging_bull_primary.AMMO_MAX = self.new_raging_bull_primary.CLIP_AMMO_MAX * self.new_raging_bull_primary.NR_CLIPS_MAX
     self.new_raging_bull_primary.use_data = {selection_index = PRIMARY}    
     self.new_raging_bull_secondary = deep_clone(self.new_raging_bull_primary)
@@ -363,6 +363,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.lemming_primary.stats_modifiers = {damage = 2}
     self.lemming_primary.NR_CLIPS_MAX = self.lemming_primary.NR_CLIPS_MAX * 2
     self.lemming_primary.AMMO_MAX = self.lemming_primary.CLIP_AMMO_MAX * self.lemming_primary.NR_CLIPS_MAX
+    self.lemming_primary.armor_piercing_chance = 0
     self.lemming_primary.can_shoot_through_enemy = false 
     self.lemming_primary.can_shoot_through_wall = false 
     self.lemming_primary.can_shoot_through_shield = false 
@@ -441,6 +442,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.new_m14_upg_primary.NR_CLIPS_MAX = 7
     self.new_m14_upg_primary.AMMO_MAX = self.new_m14_upg_primary.CLIP_AMMO_MAX * self.new_m14_upg_primary.NR_CLIPS_MAX
     self.new_m14_upg_primary.stats_modifiers = {damage = 8}
+    self.new_m14_upg_primary.armor_piercing_chance = 1
     self.new_m14_upg_primary.can_shoot_through_enemy = true
     self.new_m14_upg_secondary = deep_clone(self.new_m14_upg_primary)
     self.new_m14_upg_secondary.use_data = {selection_index = SECONDARY}
@@ -657,6 +659,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.peacemaker_upg_primary.stats_modifiers = {damage = 14}
     self.peacemaker_upg_primary.CLIP_AMMO_MAX = 6
     self.peacemaker_upg_primary.NR_CLIPS_MAX = 14
+    self.peacemaker_upg_primary.armor_piercing_chance = 1
     self.peacemaker_upg_primary.can_shoot_through_enemy = true
     self.peacemaker_upg_primary.can_shoot_through_shield = true
     self.peacemaker_upg_primary.AMMO_MAX = self.peacemaker_upg_primary.CLIP_AMMO_MAX * self.peacemaker_upg_primary.NR_CLIPS_MAX
@@ -671,6 +674,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.new_raging_bull_upg_primary.stats_modifiers = {damage = 16}
     self.new_raging_bull_upg_primary.CLIP_AMMO_MAX = 6
     self.new_raging_bull_upg_primary.NR_CLIPS_MAX = 10
+    self.new_raging_bull_upg_primary.armor_piercing_chance = 1
     self.new_raging_bull_upg_primary.can_shoot_through_enemy = true
     self.new_raging_bull_upg_primary.can_shoot_through_shield = true
     self.new_raging_bull_upg_primary.AMMO_MAX = self.new_raging_bull_upg_primary.CLIP_AMMO_MAX * self.new_raging_bull_upg_primary.NR_CLIPS_MAX
@@ -748,6 +752,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.lemming_upg_primary.stats_modifiers = {damage = 13}
     self.lemming_upg_primary.CLIP_AMMO_MAX = 20
     self.lemming_upg_primary.NR_CLIPS_MAX = 7
+    self.lemming_upg_primary.armor_piercing_chance = 1
     self.lemming_upg_primary.can_shoot_through_enemy = true 
     self.lemming_upg_primary.can_shoot_through_wall = true 
     self.lemming_upg_primary.can_shoot_through_shield = true 
@@ -768,7 +773,8 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m37_upg_secondary = deep_clone(self.m37_upg_primary)
     self.m37_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
 	
-	self.r870_upg_primary = deep_clone(self.r870_primary)
+    self.r870_upg_primary = deep_clone(self.r870_primary)
+    self.r870_upg_primary.name_id = "wpn_r870_upg_name"
     self.r870_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.r870_upg_primary.sounds.fire = "zm_pew_shts"
     self.r870_upg_primary.sounds.fire_single = "zm_pew_shts"
@@ -823,7 +829,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.msr_upg_primary.AMMO_MAX = self.msr_upg_primary.CLIP_AMMO_MAX * self.msr_upg_primary.NR_CLIPS_MAX
     self.msr_upg_primary.sounds.fire = "zm_pew_snp_b"
     self.msr_upg_primary.sounds.fire_single = "zm_pew_snp_e"
-    self.msr_upg_primary.stats_modifiers = {damage = 150}
+    self.msr_upg_primary.stats_modifiers = {damage = 85}
     self.msr_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.msr_upg_secondary = deep_clone(self.msr_upg_primary)
     self.msr_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
@@ -835,6 +841,8 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.roach_upg_primary.CLIP_AMMO_MAX = 6
     self.roach_upg_primary.NR_CLIPS_MAX = 5
     self.roach_upg_primary.AMMO_MAX = self.roach_upg_primary.CLIP_AMMO_MAX * self.roach_upg_primary.NR_CLIPS_MAX
+    self.roach_upg_primary.sounds.fire = "zm_pew_roach"
+    self.roach_upg_primary.sounds.fire_single = "zm_pew_roach"
     self.roach_upg_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.roach_upg_secondary = deep_clone(self.roach_upg_primary)
     self.roach_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
