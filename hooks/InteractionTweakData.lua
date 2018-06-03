@@ -13,7 +13,29 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_bank_buy_gsps = {
 		zm_interaction = true,
 		weapon = "GSPS",
+		points_cost = 750,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+	
+		self.zm_bank_buy_joceline = {
+		zm_interaction = true,
+		weapon = "Joceline",
 		points_cost = 500,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+	
+		self.zm_bank_buy_box = {
+		zm_interaction = true,
+		weapon = "a random weapon",
+		points_cost = 950,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
