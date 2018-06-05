@@ -62,6 +62,8 @@
 			<value_node value=""/>
 		</outro_event>
 		<packages>
+			<value_node value="packages/narr_hvh"/>
+			<value_node value="levels/narratives/bain/hvh/world_sounds"/>
 			<value_node value="levels/narratives/elephant/chew/collision/collision"/>
 			<value_node value="levels/instances/unique/dark/train_int_murky_emp/world/world"/>
 			<value_node value="levels/narratives/continental/spa/world/world"/>
