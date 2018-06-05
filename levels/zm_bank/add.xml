@@ -723,9 +723,9 @@
 		<unit force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
 	</add>
 	<add path="units/dev_tools/editable_text_long/editable_text_long" type="unit">
-		<unit force="true" path="units/dev_tools/editable_text_long/editable_text_long" unload="true"/>
-		<object force="true" path="units/dev_tools/editable_text_long/editable_text_long" unload="true"/>
 		<material_config force="true" path="units/dev_tools/editable_text_long/editable_text_long" unload="true"/>
+		<object force="true" path="units/dev_tools/editable_text_long/editable_text_long" unload="true"/>
+		<unit force="true" path="units/dev_tools/editable_text_long/editable_text_long" unload="true"/>
 	</add>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
