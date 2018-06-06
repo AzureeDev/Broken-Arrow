@@ -40,19 +40,19 @@
 			<hook file="WeaponTweakData.lua" source_file="lib/tweak_data/weapontweakdata"/>
 		</hooks>
 		<include directory="levels/zm_bank">
-			<file file="world.world" type="binary"/>
-			<file file="continents.continents" type="binary"/>
-			<file file="mission.mission" type="binary"/>
-			<file file="nav_manager_data.nav_data" type="binary"/>
-			<file file="world_sounds.world_sounds" type="binary"/>
-			<file file="world_cameras.world_cameras" type="binary"/>
-			<file file="world/world.continent" type="binary"/>
-			<file file="world/world.mission" type="binary"/>
-			<file file="dev/dev.continent" type="binary"/>
-			<file file="dev/dev.mission" type="binary"/>
-			<file file="editor_only/editor_only.continent" type="binary"/>
-			<file file="editor_only/editor_only.mission" type="binary"/>
-			<file file="cover_data.cover_data" type="binary"/>
+			<file file="world.world" type="generic_xml"/>
+			<file file="continents.continents" type="custom_xml"/>
+			<file file="mission.mission" type="custom_xml"/>
+			<file file="nav_manager_data.nav_data" type="generic_xml"/>
+			<file file="world_sounds.world_sounds" type="generic_xml"/>
+			<file file="world_cameras.world_cameras" type="custom_xml"/>
+			<file file="world/world.continent" type="custom_xml"/>
+			<file file="world/world.mission" type="generic_xml"/>
+			<file file="dev/dev.continent" type="custom_xml"/>
+			<file file="dev/dev.mission" type="generic_xml"/>
+			<file file="editor_only/editor_only.continent" type="custom_xml"/>
+			<file file="editor_only/editor_only.mission" type="generic_xml"/>
+			<file file="cover_data.cover_data" type="custom_xml"/>
 			<file file="environments/default.environment" type="custom_xml"/>
 		</include>
 		<intro_event>
@@ -140,14 +140,27 @@
 			<sound path="headshot_2.ogg"/>
 			<sound path="headshot_3.ogg"/>
 			<sound path="Air_raid.ogg"/>
-			<sound path="Pack_loop.ogg"/>
-			<sound path="Pack_sting.ogg"/>
+			<sound path="pack_loop.ogg"/>
+			<sound path="pack_sting.ogg"/>
 			<sound path="doubletap_sting.ogg"/>
-			<sound path="Deadshot_sting.ogg"/>
-			<sound path="Stamin_sting.ogg"/>
+			<sound path="deadshot_sting.ogg"/>
+			<sound path="stamin_sting.ogg"/>
 			<sound path="speed_sting.ogg"/>
 			<sound path="revive_sting.ogg"/>
-			<sound path="Juggernog_sting.ogg"/>
+			<sound path="juggernog_sting.ogg"/>
+			<sound path="belch.ogg.ogg"/>
+			<sound path="box_interact.ogg"/>
+			<sound path="box_interact_stop.ogg"/>
+			<sound path="box_move.ogg"/>
+			<sound path="box_moved.ogg"/>
+			<sound path="dispense.ogg"/>
+			<sound path="Door_buy1.ogg"/>
+			<sound path="Door_buy2.ogg"/>
+			<sound path="Door_buy3.ogg"/>
+			<sound path="hum.ogg"/>
+			<sound path="Secret_nearby.ogg"/>
+			<sound path="swallow.ogg"/>
+			<sound path="special_spawn.ogg"/>
 		</sounds>
 	</level>
 	<narrative contact="custom" id="zm_bank_placeholder">
