@@ -77,6 +77,78 @@
 				<options merge_mode="add" mode="add"/>
 			</mod>
 		</script_data_mods>
+		<sounds directory="assets/sound">
+			<sounds directory="deamon">
+				<sound path="demon_sam_laugh.ogg"/>
+				<sound path="demon_sam_max_ammo.ogg"/>
+				<sound path="demon_sam_firesale.ogg"/>
+				<sound path="demon_sam_firesale_first.ogg"/>
+				<sound path="demon_sam_double_points.ogg"/>
+				<sound path="demon_sam_instakill.ogg"/>
+				<sound path="demon_dempsey_kaboom.ogg"/>
+				<sound path="LIGHTNING_IS_POWER.ogg"/>
+				<sound path="demon_sam_present.ogg"/>
+			</sounds>
+			<sounds directory="pew">
+				<sound path="lmg_m240_base.ogg"/>
+				<sound path="pis_cobra_base.ogg"/>
+				<sound path="pis_m1911_base.ogg"/>
+				<sound path="rif_m14_base.ogg"/>
+				<sound path="shot_auto_base.ogg"/>
+				<sound path="shot_single_base.ogg"/>
+				<sound path="snp_barret_base.ogg"/>
+				<sound path="snp_ebr_base.ogg"/>
+				<sound path="smg_mp7_base.ogg"/>
+				<sound path="railgun_papboom.ogg"/>
+			</sounds>
+			<sounds directory="teleporter">
+				<sound path="activated.ogg"/>
+				<sound path="arrived.ogg"/>
+				<sound path="combined.ogg"/>
+				<sound path="teleportation.ogg"/>
+				<sound path="mono_turned_on.ogg"/>
+				<sound path="mono_activate_teleporter.ogg"/>
+				<sound path="mono_comeback_activate.ogg"/>
+				<sound path="mono_teleport_in_progress.ogg"/>
+				<sound path="mono_teleporter_charging.ogg"/>
+				<sound path="mono_spawn.ogg"/>
+			</sounds>
+			<sound path="wunder_fire.ogg"/>
+			<sound path="wunder_clip_out.ogg"/>
+			<sound path="wunder_clip_contact.ogg"/>
+			<sound path="wunder_clip_in.ogg"/>
+			<sound path="gottem.ogg"/>
+			<sound path="spree.ogg"/>
+			<sound path="spree2.ogg"/>
+			<sound path="railgun_boom.ogg"/>
+			<sound path="end_2.ogg"/>
+			<sound path="new_v2_1.ogg"/>
+			<sound path="new_v2_2.ogg"/>
+			<sound path="new_v2_3.ogg"/>
+			<sound path="FETCH_ME_THEIR_SOULS.ogg"/>
+			<sound path="firesale.ogg"/>
+			<sound path="ded.ogg"/>
+			<sound path="pregame.ogg"/>
+			<sound path="instakill_loop.ogg"/>
+			<sound path="double_points_loop.ogg"/>
+			<sound path="specialwave_end.ogg"/>
+			<sound path="power_on.ogg"/>
+			<sound path="boom.ogg"/>
+			<sound path="cashin.ogg"/>
+			<sound path="denied.ogg"/>
+			<sound path="headshot_1.ogg"/>
+			<sound path="headshot_2.ogg"/>
+			<sound path="headshot_3.ogg"/>
+			<sound path="Air_raid.ogg"/>
+			<sound path="Pack_loop.ogg"/>
+			<sound path="Pack_sting.ogg"/>
+			<sound path="doubletap_sting.ogg"/>
+			<sound path="Deadshot_sting.ogg"/>
+			<sound path="Stamin_sting.ogg"/>
+			<sound path="speed_sting.ogg"/>
+			<sound path="revive_sting.ogg"/>
+			<sound path="Juggernog_sting.ogg"/>
+		</sounds>
 	</level>
 	<narrative contact="custom" id="zm_bank_placeholder">
 		<chain>
