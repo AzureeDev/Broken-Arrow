@@ -1,4 +1,4 @@
-<table name="zm_bank_placeholder">
+<table name="zm_bank_placeholder" global_key="ZM_BANK">
 	<Localization default="english.txt" directory="loc"/>
 	<level ai_group_type="zombie" briefing_dialog="" id="zm_bank" max_bags="0" music="no_music" team_ai_off="true">
 		<add file="levels/zm_bank/add.xml"/>
