@@ -325,7 +325,7 @@ function WDUManager:_play_music(event)
 end
 
 function WDUManager:_get_mod_path()
-    return WDU.ModPath
+    return ZM_BANK.ModPath
 end
 
 function WDUManager:_setup_video_panel()
