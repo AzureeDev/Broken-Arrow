@@ -25,7 +25,8 @@ function ElementAnnouncerGift:on_executed(instigator)
                     managers.hud:set_ammo_amount( id, weapon.unit:base():ammo_info() )
                 end
                 
-                managers.player:add_grenade_amount(10)
+                managers.player:add_grenade_amount(10, true)
+                managers.player:add_cable_ties(2)
             end
         end
 
@@ -114,7 +115,7 @@ function ElementAnnouncerGift:on_executed(instigator)
 			play_paused = true,
 			fade_in = 0,
 			fade_out = 3,
-			color = Color(0.8, 1, 1, 1),
+			color = Color(0.65, 1, 1, 1),
 			timer = TimerManager:main()
         }
         

@@ -18,7 +18,10 @@ function ElementWeaponSwitch:on_executed(instigator)
     -- Grenade spot ? Call it directly and refill nades. Terminate it afterwards.
 
     if self._values.is_grenade_spot then
-        managers.player:add_grenade_amount(10)
+        if instigator == managers.player:player_unit() then
+            managers.player:add_grenade_amount(10, true)
+        end
+        
         ElementWeaponSwitch.super.on_executed(self, instigator)
         return
     end
@@ -131,7 +134,7 @@ function ElementWeaponSwitch:_get_random_weapon()
 		table.remove(table_available_weapons_mystery_box, 2)
 	elseif managers.player._roach_unlocked and managers.player._wunderwaffe_unlocked then
 		table.remove(table_available_weapons_mystery_box, 1)
-	end
+    end
 
 	local random_entry = table_available_weapons_mystery_box[math.random(#table_available_weapons_mystery_box)]
 

@@ -18,4 +18,12 @@ Hooks:PostHook(StatisticsManager, "killed", "zm_init_add_zmpoints", function(sel
 
         managers.wdu:_add_money_to(peer_id, points_to_add)
     end
+
+    if alive(managers.player:player_unit()) then
+        local random = math.random(0, 100)
+
+        if random <= 2 then
+            managers.player:player_unit():sound():say("v46", true, true)
+        end
+    end
 end)

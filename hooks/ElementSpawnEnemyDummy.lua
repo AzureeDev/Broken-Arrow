@@ -3,14 +3,50 @@ function ElementSpawnEnemyDummy:produce(params)
 		return
     end
 
-    if managers.wdu.level.zombies.currently_spawned >= math.floor(managers.wdu.level.zombies.max_spawns) then
-        return
-    end
+	if not managers.wdu:_is_special_wave() then
+		if managers.wdu.level.zombies.currently_spawned >= math.floor(managers.wdu.level.zombies.max_spawns) then
+			return
+		end
+	else
+		local total_spe_spawns = managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players()
+		if managers.wdu.level.zombies.currently_spawned >= math.floor(total_spe_spawns) then
+			return
+		end
+	end
+	
+	local units_special_wave = {}
 
-    managers.wdu.level.zombies.currently_spawned = managers.wdu.level.zombies.currently_spawned + 1
+	if managers.wdu:_is_special_wave() then
+		if managers.player.totalCopAlive >= managers.wdu:_get_max_special_wave_spawns() then
+			return
+		end
+	end
+
+	managers.wdu.level.zombies.currently_spawned = managers.wdu.level.zombies.currently_spawned + 1
 
 	if params and params.name then
-		local unit = safe_spawn_unit(params.name, self:get_orientation())
+		local unit
+
+		if managers.wdu:PostWave15Apocalypse() or managers.wdu:_is_special_wave() then
+			units_special_wave = {
+				Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_1/ene_bulldozer_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_2/ene_bulldozer_hvh_2"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_3/ene_bulldozer_hvh_3"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1")
+			}
+
+			unit = safe_spawn_unit(units_special_wave[ math.random( #units_special_wave ) ], self:get_orientation())
+		else
+			unit = safe_spawn_unit(params.name, self:get_orientation())
+		end
 
 		unit:base():add_destroy_listener(self._unit_destroy_clbk_key, callback(self, self, "clbk_unit_destroyed"))
 
@@ -27,7 +63,14 @@ function ElementSpawnEnemyDummy:produce(params)
 			unit:character_damage():set_pickup(pickup_name)
 		end
 	else
-		local enemy_name = self:value("enemy") or self._enemy_name
+		local enemy_name
+
+		if managers.wdu:PostWave15Apocalypse() or managers.wdu:_is_special_wave() then
+			enemy_name = units_special_wave[ math.random( #units_special_wave ) ]
+		else
+			enemy_name = self:value("enemy") or self._enemy_name
+		end
+
 		local unit = safe_spawn_unit(enemy_name, self:get_orientation())
 
 		unit:base():add_destroy_listener(self._unit_destroy_clbk_key, callback(self, self, "clbk_unit_destroyed"))

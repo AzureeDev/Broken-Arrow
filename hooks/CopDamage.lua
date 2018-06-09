@@ -36,33 +36,14 @@ function CopDamage:_check_special_death_conditions(variant, body, attacker_unit,
     end
 end
 
-function CopDamage:get_damage_type(damage_percent, category)
-	local hurt_table = self._char_tweak.damage.hurt_severity[category or "bullet"]
-	local dmg = damage_percent / self._HEALTH_GRANULARITY
-
-	if hurt_table.health_reference == "full" then
-		-- Nothing
-	else
-		dmg = hurt_table.health_reference == "current" and math.min(1, (self._HEALTH_INIT * dmg) / self._health) or math.min(1, (self._HEALTH_INIT * dmg) / hurt_table.health_reference)
-	end
-
-	local zone = nil
-
-	for i_zone, test_zone in ipairs(hurt_table.zones) do
-		if i_zone == #hurt_table.zones or dmg < test_zone.health_limit then
-			zone = test_zone
-
-			break
-		end
-	end
-
-	return "dmg_rcv"
-end
-
 Hooks:PreHook(CopDamage, "damage_explosion", "zm_instakill_explosion", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	--if CopDamage.is_civilian then
+		--return
+	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -79,7 +60,11 @@ end)
 Hooks:PreHook(CopDamage, "damage_fire", "zm_instakill_fire", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	--if CopDamage.is_civilian then
+	----	return
+	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -96,7 +81,11 @@ end)
 Hooks:PreHook(CopDamage, "damage_tase", "zm_instakill_tase", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	--if CopDamage.is_civilian then
+	--	return
+	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -113,7 +102,16 @@ end)
 Hooks:PreHook(CopDamage, "damage_simple", "zm_instakill_simple", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+
+	--if CopDamage.is_civilian then
+	--	return
+	--end
+	
+	if (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") then
+		return
+	end
+
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -130,13 +128,21 @@ end)
 Hooks:PreHook(CopDamage, "damage_melee", "zm_instakill_melee", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
 
-    if managers.wdu:_is_event_active("instakill") then
+	--if CopDamage.is_civilian then
+	--	return
+	--end
+
+	if managers.wdu:_is_event_active("instakill") then
         self._health = 1
     end
+	
+	if attack_data.shield_knock and self._char_tweak.damage.shield_knocked and "shield_knock" or attack_data.variant == "counter_tased" and "counter_tased" or attack_data.variant == "taser_tased" and "taser_tased" or attack_data.variant == "counter_spooc" and "expl_hurt" or "fire_hurt" then
+		return
+	end
 
-    if attack_data.attacker_unit == managers.player:player_unit() then
+    if attack_data.attacker_unit == managers.player:player_unit() and not attack_data.knock_down then
         local peer_id = managers.wdu:_peer_id()
         local hit_points = managers.wdu.level.active_events.double_points and 20 or 10
 
@@ -163,13 +169,21 @@ end
 function CopDamage:damage_bullet(attack_data)
 	if self._dead or self._invulnerable then
 		return
-    end
+	end
+
+	--if CopDamage.is_civilian then
+	--	return
+	--end
+	
+	if (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") then
+		return
+	end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
     end
 
-    if attack_data.attacker_unit == managers.player:player_unit() then
+    if attack_data.attacker_unit == managers.player:player_unit() and not attack_data.knock_down or attack_data.stagger then
         local peer_id = managers.wdu:_peer_id()
         local hit_points = managers.wdu.level.active_events.double_points and 20 or 10
 
@@ -329,7 +343,7 @@ function CopDamage:damage_bullet(attack_data)
 		end
 	else
 		attack_data.damage = damage
-		local result_type = not self._char_tweak.immune_to_knock_down and (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") or self:get_damage_type(damage_percent, "bullet")
+		local result_type = not self._char_tweak.immune_to_knock_down and (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_stagdown and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") or self:get_damage_type(damage_percent, "bullet")
 		result = {
 			type = result_type,
 			variant = attack_data.variant

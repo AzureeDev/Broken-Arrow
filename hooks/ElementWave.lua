@@ -14,19 +14,28 @@ function ElementWave:on_executed(instigator)
 		self._mission_script:debug_output("Element '" .. self._editor_name .. "' not enabled. Skip.", Color(1, 1, 0, 0))
 		return
     end
-    
+
     local current_wave = managers.wdu:_get_current_wave()
+
+    if self._values.special_wave then
+        managers.wdu:_set_special_wave(true)
+    end
 
     if self._values.ending_check then
         managers.wdu.level.zombies.killed = managers.wdu.level.zombies.killed + 1
 
-        if managers.wdu.level.zombies.killed == math.floor(managers.wdu.level.zombies.max_spawns) then
-            managers.wdu.level.zombies.killed = 0
-            managers.wdu.level.zombies.currently_spawned = 0
-            managers.wdu:_multiply_zombies_by_wave(current_wave)
-            
-            ElementWave.super.on_executed(self, instigator)
-            return
+        if managers.wdu:_is_special_wave() then
+            if managers.wdu.level.zombies.killed == (managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players()) then
+                managers.wdu:_start_new_wave(13, true)
+                ElementWave.super.on_executed(self, instigator)
+                return
+            end
+        else
+            if managers.wdu.level.zombies.killed == math.floor(managers.wdu.level.zombies.max_spawns) then
+                managers.wdu:_start_new_wave(13)
+                ElementWave.super.on_executed(self, instigator)
+                return
+            end
         end
 
         return
@@ -35,7 +44,12 @@ function ElementWave:on_executed(instigator)
     if current_wave > 0 then
         managers.hud._hud_zm_waves:_new_animation_wave_start()
         managers.player:add_grenade_amount(2, true)
-        tweak_data.character:_multiply_by_wave_nb(current_wave)
+        managers.wdu:_increase_scale_value()
+
+        if managers.wdu:_scale_required() then
+            tweak_data.character:_multiply_by_wave_nb(current_wave)
+            managers.wdu:_reset_scale()
+        end
     else
         managers.hud._hud_zm_waves:_animate_text_blinking()
     end
