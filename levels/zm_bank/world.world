@@ -45,7 +45,7 @@
 			<entry index="1" type="table">
 				<entry key="name" type="string" value="effects/payday2/particles/explosions/sentry_damage_smoke_med"/>
 				<entry key="name_id" type="string" value="none"/>
-				<entry key="position" type="vector3" value="-4121.38 -956.104 50.1009"/>
+				<entry key="position" type="vector3" value="-4151.38 -776.104 80.1009"/>
 				<entry key="rotation" type="quaternion" value="0 0 0 -1"/>
 			</entry>
 			<entry index="2" type="table">
