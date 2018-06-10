@@ -1,9 +1,7 @@
 Hooks:PostHook(HUDMissionBriefing, "init", "zm_postinit_music", function(self, hud, workspace)
     DelayedCalls:Add("zm_remove_current_song", 0.05, function()
         managers.music:post_event("stop_all_music")
-    end)
-
-    managers.wdu:_play_music("pregame")
+    end
 end)
 
 Hooks:PostHook(HUDMissionBriefing, "set_player_slot", "zm_postinit_set_player", function(self, nr, params)

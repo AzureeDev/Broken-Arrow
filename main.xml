@@ -1,4 +1,4 @@
-<table name="zm_bank_placeholder" global_key="ZM_BANK">
+<table global_key="ZM_BANK" name="zm_bank_placeholder">
 	<Localization default="english.txt" directory="loc"/>
 	<level ai_group_type="zombie" briefing_dialog="" id="zm_bank" max_bags="0" music="no_music" team_ai_off="true">
 		<add file="levels/zm_bank/add.xml"/>
@@ -71,6 +71,7 @@
 			<value_node value="levels/narratives/locke/brb/art/art"/>
 			<value_node value="levels/narratives/vlad/nightclub/world/world"/>
 			<value_node value="levels/narratives/classics/red2/world/world"/>
+			<value_node value="levels/narratives/e_election_day/stage_3/pc_only/pc_only"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">

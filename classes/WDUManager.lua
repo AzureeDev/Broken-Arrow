@@ -1,6 +1,10 @@
 WDUManager = WDUManager or class()
 
 function WDUManager:init()
+    if not self:_on_wdu_map() then
+        return
+    end
+
     self:_init_variables()
     self:_setup_xaudio()
     self:_setup_video_panel()
@@ -20,40 +24,41 @@ function WDUManager:_init_variables()
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0,
-            synched = false
+            max_waves_survived = 0
         },
         [2] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0,
-            synched = false
+            max_waves_survived = 0
         },
         [3] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0,
-            synched = false
+            max_waves_survived = 0
         },
         [4] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0,
-            synched = false
+            max_waves_survived = 0
         }
     }
     self.level = {
         zombies = {
             currently_spawned = 0,
+            total_alive = 0,
             max_spawns = 8,
+            max_special_wave_total_spawns = 10,
             killed = 0,
-            add_on_end_wave = 4
+            add_on_end_wave = 2,
+            max_special_wave_spawns = 2
         },
         wave = {
-            current = 0
+            current = 0,
+            delay_timeout = 15,
+            is_special_wave = false
         },
         active_events = {
             double_points = false,
@@ -62,7 +67,9 @@ function WDUManager:_init_variables()
         },
         teleporter = {
             active = true
-        }
+        },
+        scale = 0,
+        scale_value_max = 0
     }
 
     self.points = {
@@ -97,8 +104,25 @@ function WDUManager:_init_new_player(data)
     self:_set_start_money(data.id, 500)
 end
 
-function WDUManager:_is_solo()
+function WDUManager:_number_of_players()
+    return managers.network:session() and managers.network:session():amount_of_players() or 1
+end
 
+function WDUManager:_get_max_special_wave_spawns()
+    local nb_players = self:_number_of_players()
+
+    return self.level.zombies.max_special_wave_spawns * nb_players
+end
+
+function WDUManager:_get_total_cops_alive()
+    return self.level.zombies.total_alive
+end
+
+function WDUManager:change_cops_alive(nb)
+    self.level.zombies.total_alive = self.level.zombies.total_alive + nb
+end
+
+function WDUManager:_is_solo()
     if Global.game_settings.single_player then
         return true
     end
@@ -110,6 +134,26 @@ function WDUManager:_is_solo()
     end
 
     return false
+end
+
+function WDUManager:_increase_scale_value()
+    self.level.scale = self.level.scale + 1
+end
+
+function WDUManager:_get_scale()
+    return self.level.scale
+end
+
+function WDUManager:_scale_required()
+    if self.level.scale >= self.level.scale_value_max then
+        return true
+    end
+
+    return false
+end
+
+function WDUManager:_reset_scale()
+    self.level.scale = 0
 end
 
 function WDUManager:_init_wave_highscore()
@@ -166,6 +210,11 @@ function WDUManager:_peer_id()
 end
 
 function WDUManager:_multiply_zombies_by_wave(current_wave)
+    if self:_is_solo() then
+        self.level.zombies.max_spawns = self.level.zombies.max_spawns + current_wave
+        return
+    end
+
     self.level.zombies.max_spawns = self.level.zombies.max_spawns + (self.level.zombies.add_on_end_wave + current_wave)
 end
 
@@ -180,31 +229,34 @@ function WDUManager:_add_money_to(peer_id, amount)
         self.players[peer_id].money = self.players[peer_id].money + additional_amount
         self.players[peer_id].total_score = self.players[peer_id].total_score + additional_amount
 
-        LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
-        self:_update_hud_element()
-    end
-end
+        if not self:_is_solo() then
+            LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
+            LuaNetworking:SendToPeers( "ZMUpdatePointsGained", tostring(amount) )
+        end
 
-function WDUManager:_deduct_money_to(peer_id, amount)
-    if amount and type(amount) == "number" then
-        local minus_amount = math.floor(amount)
-        self.players[peer_id].money = self.players[peer_id].money - minus_amount
+        local positive = true
 
-        LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
+        if amount < 0 then
+            positive = false
+        end
+
+        managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, positive)
         self:_update_hud_element()
     end
 end
 
 function WDUManager:_update_hud_element()
     if not Global.game_settings.single_player then
-        for _, peer in pairs(managers.network:session():all_peers()) do
-                Steam:friend_avatar(2, peer:user_id(), function (texture)
-                    local avatar = texture or "guis/textures/pd2/none_icon"
-                    managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_image(avatar)
-                    managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
-                end)
-                managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
-                managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
+        if managers and managers.network and managers.network:session() then
+            for _, peer in pairs(managers.network:session():all_peers()) do
+                    Steam:friend_avatar(2, peer:user_id(), function (texture)
+                        local avatar = texture or "guis/textures/pd2/none_icon"
+                        managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_image(avatar)
+                        managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
+                    end)
+                    managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
+                    managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
+            end
         end
     else
         Steam:friend_avatar(2, Steam:userid(), function (texture)
@@ -226,15 +278,33 @@ function WDUManager:_update_total_score(peer_id, add)
 end
 
 function WDUManager:_get_points_amount(category, unit)
+    local double_point_effect = self.level.active_events.double_points and 2 or 1
+    
     if not unit then
         return self.points[category]
     end
 
     if not self.points[category][unit] then
-        return self.points["default"]
+        return self.points["default"] * double_point_effect
     end
 
     return self.points[category][unit]
+end
+
+function WDUManager:_on_wdu_map()
+    if Global.editor_mode then
+        return true
+    end
+
+    if not managers.job then
+        return false
+    end
+    
+    if managers.job:current_level_id() == "zm_the_forest" then
+        return true
+    end
+
+    return false
 end
 
 function WDUManager:_setup_event_state(event, state)
@@ -265,7 +335,7 @@ function WDUManager:_element_play_sound(data)
     end
 
     if self._sound_sources[data.name] then
-        self._sound_buffers[data.name]:close(true)
+        self._sound_buffers[data.name]:close()
         self._sound_sources[data.name]:close()
         self._sound_sources[data.name] = nil
     end
@@ -274,6 +344,10 @@ function WDUManager:_element_play_sound(data)
 
     if data.custom_dir and data.custom_dir ~= "" then
         directory = data.custom_dir .. "/"
+    end
+
+    if not XAudio then
+        error("SuperBLT is NOT installed properly. Refer to the step 1 in the installation guide for more details.")
     end
 
     self._sound_buffers[data.name] = XAudio.Buffer:new(self:_get_mod_path() .. "assets/" .. directory .. data.file_name)
@@ -306,6 +380,10 @@ end
 
 function WDUManager:_play_music(event)
     if not self.xaudio_initialized then
+        return
+    end
+
+    if not XAudio then
         return
     end
 
@@ -364,6 +442,44 @@ end
 
 function WDUManager:_is_teleporter_available()
     return self.level.teleporter.active
+end
+
+function WDUManager:_is_special_wave()
+    return self.level.wave.is_special_wave
+end
+
+function WDUManager:_set_special_wave(state)
+    self.level.wave.is_special_wave = state
+end
+
+function WDUManager:_start_new_wave(t, was_special_wave)
+    if not t then
+        t = self.level.wave.delay_timeout
+    end
+
+    local special_wave = was_special_wave
+
+    DelayedCalls:Add("zm_delay_between_waves", t, function()
+        if special_wave then
+            managers.wdu:_set_special_wave(false)
+        end
+
+        self.level.zombies.killed = 0
+        self.level.zombies.currently_spawned = 0
+        self:_multiply_zombies_by_wave(self:_get_current_wave())
+    end)
+end
+
+function WDUManager:PostWave15Apocalypse()
+    if not self:_is_special_wave() then
+        if self:_get_current_wave() > 15 then
+            if math.random(0, 100) > 94 then
+                return true
+            end
+        end
+    end
+
+    return false
 end
 
 function WDUManager:_get_weapons_in_mystery_box()
@@ -462,7 +578,8 @@ function WDUManager:_convert_factory_to_upgrade()
         wpn_fps_special_roach_primary = "wpn_fps_special_roach_upg_primary",
         wpn_fps_special_roach_secondary = "wpn_fps_special_roach_upg_secondary",
         wpn_fps_snp_msr_primary = "wpn_fps_snp_msr_upg_primary",
-        wpn_fps_snp_msr_secondary = "wpn_fps_snp_msr_upg_secondary"
+        wpn_fps_snp_msr_secondary = "wpn_fps_snp_msr_upg_secondary",
+        wpn_fps_ass_nothing2_primary = "wpn_fps_spe_vulcan_upg_primary"
 	}
 end
 
@@ -479,9 +596,102 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         managers.wdu:_update_total_score(sender, points)
     end
 
+    if id == "ZMUpdatePointsGained" then
+        local points = tonumber(data)
+        local positive = true
+
+        if points < 0 then
+            positive = false
+        end
+
+        if managers.hud then
+            managers.hud._hud_zm_points:_animate_points_gained_v2(sender, points, positive)
+        end
+    end
+
     if id == "ZMWavesHighScore" then
         local max_waves = tonumber(data)
         managers.wdu.players[sender].max_waves_survived = max_waves
+    end
+
+    local function string_to_vector(str)
+        local data = string.split( str, "[|]" )
+        if #data < 3 then
+            return nil
+        end
+        local split_str = "[:]"
+
+        local x = tonumber(string.split(data[1], split_str)[2])
+        local y = tonumber(string.split(data[2], split_str)[2])
+        local z = tonumber(string.split(data[3], split_str)[2])
+
+        return Vector3(x, y, z)
+    end
+
+    if id == "SpecialWave_SpawnPosition" then
+        if managers.wdu:_is_special_wave() then
+            local pos = string_to_vector(data)
+
+            if pos then
+                World:effect_manager():spawn({
+                    effect = Idstring("effects/zm/zm_special_spawn"),
+                    position = pos
+                })
+            end
+
+            managers.wdu:_element_play_sound({
+                name = "play_sound_spawn",
+                custom_dir = "sound",
+                file_name = "special_spawn.ogg",
+                is_loop = false,
+                is_relative = false
+            })
+
+            DelayedCalls:Add("zm_shake_little_delay", 1.6, function()
+                if alive(managers.player:player_unit()) then
+                    local feedback = managers.feedback:create("mission_triggered")
+                    feedback:set_unit(managers.player:player_unit())
+                    feedback:set_enabled("camera_shake", true)
+                    feedback:set_enabled("rumble", true)
+                    feedback:set_enabled("above_camera_effect", false)
+
+                    local params = {
+                        "camera_shake",
+                        "multiplier",
+                        1,
+                        "camera_shake",
+                        "amplitude",
+                        0.5,
+                        "camera_shake",
+                        "attack",
+                        0.05,
+                        "camera_shake",
+                        "sustain",
+                        0.15,
+                        "camera_shake",
+                        "decay",
+                        0.5,
+                        "rumble",
+                        "multiplier_data",
+                        1,
+                        "rumble",
+                        "peak",
+                        0.5,
+                        "rumble",
+                        "attack",
+                        0.05,
+                        "rumble",
+                        "sustain",
+                        0.15,
+                        "rumble",
+                        "release",
+                        0.5
+                    }
+
+                    feedback:play(unpack(params))
+                end
+            end)
+        end
     end
 end)
 
