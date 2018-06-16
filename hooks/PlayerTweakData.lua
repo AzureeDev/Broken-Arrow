@@ -1,6 +1,6 @@
 Hooks:PostHook(PlayerTweakData, "init", "zm_no_penalty_timer", function(self)
 	self.damage.respawn_time_penalty = 0
-	self.damage.base_respawn_time_penalty = 0
+	self.damage.base_respawn_time_penalty = 1
 end)
 
 Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", function(self)
@@ -202,4 +202,6 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.msr_upg_primary.steelsight.shoulders.translation = Vector3(-8.7, -38, -1.3)
 	self.stances.msr_upg_secondary = deep_clone(self.stances.msr)
 	self.stances.msr_upg_secondary.steelsight.shoulders.translation = Vector3(-8.7, -38, -1.3)
+
+	self.stances.vulcan_upg = deep_clone(self.stances.shuno)
 end)

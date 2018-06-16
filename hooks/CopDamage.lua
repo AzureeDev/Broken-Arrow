@@ -2,8 +2,36 @@ Hooks:PostHook(CopDamage, "init", "zm_disable_ammo_drop", function(self, unit)
     self._pickup = nil
 end)
 
+local mvec_1 = Vector3()
+
 function CopDamage:drop_pickup(extra)
-	return
+	if self._pickup then
+		local tracker = self._unit:movement():nav_tracker()
+		local position = tracker:lost() and tracker:field_position() or tracker:position()
+		local rotation = self._unit:rotation()
+
+		mvector3.set(mvec_1, position)
+
+		managers.game_play_central:spawn_pickup({
+			name = self._pickup,
+			position = mvec_1,
+			rotation = rotation
+		})
+
+		managers.wdu:_element_play_sound({
+			name = "power_up_spawn",
+			file_name = "power_up_spawn.ogg",
+			sound_type = "sfx",
+			custom_dir = "sound",
+			is_relative = false,
+			is_loop = false,
+			is_3d = true,
+			position = position,
+			use_velocity = false
+		})
+	else
+		log("no pickup . . .")
+	end
 end
 
 function CopDamage:_dismember_condition(attack_data)
@@ -40,10 +68,6 @@ Hooks:PreHook(CopDamage, "damage_explosion", "zm_instakill_explosion", function(
     if self._dead or self._invulnerable then
 		return
 	end
-	
-	--if CopDamage.is_civilian then
-		--return
-	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -61,10 +85,6 @@ Hooks:PreHook(CopDamage, "damage_fire", "zm_instakill_fire", function(self, atta
     if self._dead or self._invulnerable then
 		return
 	end
-	
-	--if CopDamage.is_civilian then
-	----	return
-	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -82,10 +102,6 @@ Hooks:PreHook(CopDamage, "damage_tase", "zm_instakill_tase", function(self, atta
     if self._dead or self._invulnerable then
 		return
 	end
-	
-	--if CopDamage.is_civilian then
-	--	return
-	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -103,12 +119,8 @@ Hooks:PreHook(CopDamage, "damage_simple", "zm_instakill_simple", function(self, 
     if self._dead or self._invulnerable then
 		return
 	end
-
-	--if CopDamage.is_civilian then
-	--	return
-	--end
 	
-	if (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") then
+	if (attack_data.knock_down and "knock_down") then
 		return
 	end
 
@@ -129,10 +141,6 @@ Hooks:PreHook(CopDamage, "damage_melee", "zm_instakill_melee", function(self, at
     if self._dead or self._invulnerable then
 		return
 	end
-
-	--if CopDamage.is_civilian then
-	--	return
-	--end
 
 	if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -170,12 +178,8 @@ function CopDamage:damage_bullet(attack_data)
 	if self._dead or self._invulnerable then
 		return
 	end
-
-	--if CopDamage.is_civilian then
-	--	return
-	--end
 	
-	if (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") then
+	if (attack_data.knock_down and "knock_down") then
 		return
 	end
 

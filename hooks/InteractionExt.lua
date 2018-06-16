@@ -10,24 +10,141 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 	self:_add_string_macros(string_macros)
 
 	local text = ""
+	local current_money = managers.wdu:_get_own_money()
+	local cost = self._tweak_data.points_cost or 0
 
 	if self._tweak_data.zm_interaction then
 		text = "Hold " .. managers.localization:btn_macro("interact") .. " to buy"
 
 		if self._tweak_data.weapon then
-			local current_money = managers.wdu:_get_own_money()
-			local cost = self._tweak_data.points_cost or 0
+			if self._tweak_data.grenade_spot then
+				text = "Hold " .. managers.localization:btn_macro("interact") .. " to refill your throwables"
+			end
+
 			local item = self._tweak_data.weapon
+			local own_weapon = false
+
+			if not self._tweak_data.grenade_spot then
+				local current_state = managers.player:get_current_state()
+				if current_state then
+					local current_weapon = current_state:get_equipped_weapon()
+					local is_secondary = managers.player:player_unit():inventory():equipped_selection() == 1
+					local is_primary = managers.player:player_unit():inventory():equipped_selection() == 2
+					local suffix = "_primary"
+
+					if is_secondary then
+						suffix = "_secondary"
+					end
+
+					local converted_id_to_new_system = self._tweak_data.weapon_id .. suffix
+
+					if current_weapon.name_id == converted_id_to_new_system then
+						text = "Hold " .. managers.localization:btn_macro("interact") .. " to refill the ammo of"
+						cost = cost / 2
+						own_weapon = true
+					end
+				end
+			end
 
 			if current_money >= cost then
-				text = text .. " the " .. item
+				if not self._tweak_data.grenade_spot then text = text .. " the " .. item end
 				text = text .. " [Cost : " .. cost .. "]"
 			else
 				local points_needed = cost - current_money
-				text = "You need " .. points_needed .. " more points to buy the " .. item
+				
+				if not self._tweak_data.grenade_spot then 
+					text = "You need " .. points_needed .. " more points to buy the " .. item 
+				else
+					text = "You need " .. points_needed .. " more points to refill your throwables" 
+				end
+
+				if own_weapon then
+					if not self._tweak_data.grenade_spot then text = "You need " .. points_needed .. " more points to refill the ammo of the " .. item end
+				end
 			end
 		end
 
+		if self._tweak_data.perk then
+			local item = self._tweak_data.perk
+
+			if self._tweak_data.special_equipment and not managers.player:has_special_equipment(self._tweak_data.special_equipment) then
+				local has_special_equipment = false
+		
+				if self._tweak_data.possible_special_equipment then
+					for i, special_equipment in ipairs(self._tweak_data.possible_special_equipment) do
+						if managers.player:has_special_equipment(special_equipment) then
+							has_special_equipment = true
+		
+							break
+						end
+					end
+				end
+		
+				if not has_special_equipment then
+					text = managers.localization:text(self._tweak_data.equipment_text_id, string_macros)
+					icon = self.no_equipment_icon or self._tweak_data.no_equipment_icon or icon
+				end
+
+				managers.hud:show_interact({
+					text = text,
+					icon = icon
+				})
+
+				return true
+			end
+
+			if current_money >= cost then
+				text = text .. " " .. item
+				text = text .. " [Cost : " .. cost .. "]"
+			else
+				local points_needed = cost - current_money
+				text = "You need " .. points_needed .. " more points to buy " .. item
+			end
+		end
+
+		if self._tweak_data.path then
+			text = "Hold " .. managers.localization:btn_macro("interact") .. " to open "
+			local path_type = "the path"
+			
+			if self._tweak_data.custom_path then
+				path_type = self._tweak_data.custom_path
+			end
+
+			if current_money >= cost then
+				text = text .. path_type
+				text = text .. " [Cost : " .. cost .. "]"
+			else
+				local points_needed = cost - current_money
+				text = "You need " .. points_needed .. " more points to open " .. path_type
+			end
+		end
+
+		if self._tweak_data.pack_a_punch then
+			text = "Hold " .. managers.localization:btn_macro("interact") .. " to upgrade your weapon"
+
+			if current_money >= cost then
+				text = text .. " [Cost : " .. cost .. "]"
+			else
+				local points_needed = cost - current_money
+				text = "You need " .. points_needed .. " more points to upgrade your weapon"
+			end
+		end
+
+		if self._tweak_data.mystery_box then
+			text = text .. " a random weapon"
+
+			if managers.wdu:_is_event_active("firesale") then
+				cost = 10
+				self:quick_swap()
+			end
+
+			if current_money >= cost then
+				text = text .. " [Cost : " .. cost .. "]"
+			else
+				local points_needed = cost - current_money
+				text = "You need " .. points_needed .. " more points to buy a random weapon"
+			end
+		end
 	else
 		local text_id = self._tweak_data.text_id or alive(self._unit) and self._unit:base().interaction_text_id and self._unit:base():interaction_text_id()
 		text = managers.localization:text(text_id, string_macros)
@@ -69,6 +186,18 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 	return true
 end
 
+function BaseInteractionExt:quick_swap()
+	if not managers.wdu.level.active_events.firesale_box_swap then
+		self:set_active(false)
+
+		managers.wdu:wait(0.1, "quick_swap_interaction", function()
+			self:set_active(true)
+		end)
+
+		managers.wdu.level.active_events.firesale_box_swap = true
+	end
+end
+
 function BaseInteractionExt:can_interact(player)
 	if self._host_only and not Network:is_server() then
 		return false
@@ -92,6 +221,30 @@ function BaseInteractionExt:can_interact(player)
 	if self._tweak_data.zm_interaction then
 		local current_money = managers.wdu:_get_own_money()
 		local cost = self._tweak_data.points_cost or 0
+
+		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
+			cost = 10
+		end
+
+		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then
+			local current_state = managers.player:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				local is_secondary = managers.player:player_unit():inventory():equipped_selection() == 1
+				local is_primary = managers.player:player_unit():inventory():equipped_selection() == 2
+				local suffix = "_primary"
+
+				if is_secondary then
+					suffix = "_secondary"
+				end
+
+				local converted_id_to_new_system = self._tweak_data.weapon_id .. suffix
+
+				if current_weapon.name_id == converted_id_to_new_system then
+					cost = cost / 2
+				end
+			end
+		end
 
 		if current_money < cost then
 			return false
@@ -152,7 +305,7 @@ function BaseInteractionExt:_get_timer()
 
 	if self.tweak_data == "revive" then
 		if managers.player:has_special_equipment("perk_quickrevive") then
-			multiplier = multiplier * 2
+			multiplier = multiplier / 2
 		end
 	end
 
@@ -163,8 +316,42 @@ function BaseInteractionExt:interact(player)
 	self._tweak_data_at_interact_start = nil
 
 	if self._tweak_data.zm_interaction then
-		local amount_to_deduct = self._tweak_data.points_cost
-		managers.wdu:_deduct_money_to(managers.wdu:_peer_id(), amount_to_deduct)
+		local amount_to_deduct = 0 - self._tweak_data.points_cost
+
+		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
+			amount_to_deduct = 0 - 10
+		end
+
+		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then
+			local current_state = managers.player:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				local is_secondary = managers.player:player_unit():inventory():equipped_selection() == 1
+				local is_primary = managers.player:player_unit():inventory():equipped_selection() == 2
+				local suffix = "_primary"
+
+				if is_secondary then
+					suffix = "_secondary"
+				end
+
+				local converted_id_to_new_system = self._tweak_data.weapon_id .. suffix
+
+				if current_weapon.name_id == converted_id_to_new_system then
+					amount_to_deduct = amount_to_deduct / 2
+				end
+			end
+		end
+
+		local peer_id = 1
+
+		if managers and managers.network then
+			local peer = managers.network:session():peer_by_unit(player)
+			peer_id = peer:id()
+		end
+
+		if peer_id == managers.wdu:_peer_id() then
+			managers.wdu:_add_money_to(peer_id, amount_to_deduct)
+		end
 	end
 
 	self:_post_event(player, "sound_done")
@@ -247,44 +434,34 @@ function UseInteractionExt:sync_interacted(peer, player, status, skip_alive_chec
 		return
 	end
 
-	if self._tweak_data.zm_interaction then
-		local amount_to_deduct = self._tweak_data.points_cost
-		managers.wdu:_deduct_money_to(peer, amount_to_deduct)
+	local player = peer:unit()
 
-		if not self._tweak_data.stay_active then
-			self:remove_interact()
-			self:set_active(false)
-		end
-	else
-		local player = peer:unit()
-
-		if not skip_alive_check and not alive(player) then
-			return
-		end
-
-		if player ~= managers.player:player_unit() then
-			if self._achievement_stat then
-				managers.achievment:award_progress(self._achievement_stat)
-			elseif self._achievement_id then
-				managers.achievment:award(self._achievement_id)
-			elseif self._challenge_stat then
-				managers.challenge:award_progress(self._challenge_stat)
-			elseif self._trophy_stat then
-				managers.custom_safehouse:award(self._trophy_stat)
-			elseif self._challenge_award then
-				managers.challenge:award(self._challenge_award)
-			elseif self._sidejob_award then
-				managers.generic_side_jobs:award(self._sidejob_award)
-			elseif self.award_blackmarket then
-				local args = string.split(self.award_blackmarket, " ")
-
-				managers.blackmarket:add_to_inventory(unpack(args))
-			end
-		end
-
-		self:remove_interact()
-		self:set_active(false)
+	if not skip_alive_check and not alive(player) then
+		return
 	end
+
+	if player ~= managers.player:player_unit() then
+		if self._achievement_stat then
+			managers.achievment:award_progress(self._achievement_stat)
+		elseif self._achievement_id then
+			managers.achievment:award(self._achievement_id)
+		elseif self._challenge_stat then
+			managers.challenge:award_progress(self._challenge_stat)
+		elseif self._trophy_stat then
+			managers.custom_safehouse:award(self._trophy_stat)
+		elseif self._challenge_award then
+			managers.challenge:award(self._challenge_award)
+		elseif self._sidejob_award then
+			managers.generic_side_jobs:award(self._sidejob_award)
+		elseif self.award_blackmarket then
+			local args = string.split(self.award_blackmarket, " ")
+
+			managers.blackmarket:add_to_inventory(unpack(args))
+		end
+	end
+
+	self:remove_interact()
+	self:set_active(false)
 
 	if self._unit:damage() then
 		self._unit:damage():run_sequence_simple("interact", {unit = player})

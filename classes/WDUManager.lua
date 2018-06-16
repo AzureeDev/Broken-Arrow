@@ -8,6 +8,8 @@ function WDUManager:init()
     self:_init_variables()
     self:_setup_xaudio()
     self:_setup_video_panel()
+
+    self._power_ups = WDUPowerUps
     
     if LocalizationManager then
         LocalizationManager:load_localization_file( self:_get_mod_path() .. "loc/unique_lines.txt" )
@@ -15,9 +17,9 @@ function WDUManager:init()
 end
 
 function WDUManager:_init_variables()
-    self.project_name = "Bank"
+	self.project_name = "Bank"
     self.extension = "shovel"
-    self.wave_highscore_file = SavePath .. self.project_name .. "_Highscore." .. self.extension
+    self.wave_highscore_file = SavePath .. "WaldDerUntoten_Highscore.data"
     self.xaudio_initialized = false
     self.players = {
         [1] = {
@@ -63,7 +65,16 @@ function WDUManager:_init_variables()
         active_events = {
             double_points = false,
             instakill = false,
-            firesale = false
+            firesale = false,
+            firesale_box_swap = false
+        },
+        power_up_chance = 50,
+        power_up_table = {
+            "max_ammo",
+            "double_points",
+            "firesale",
+            "instakill",
+            "nuke"
         },
         teleporter = {
             active = true
@@ -583,6 +594,14 @@ function WDUManager:_convert_factory_to_upgrade()
 	}
 end
 
+function WDUManager:power_ups()
+    return self._power_ups
+end
+
+function WDUManager:wait(t, uniqid, ect)
+    DelayedCalls:Add(uniqid, t, ect)
+end
+
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "ZMUpdatePoints" then
         local points = tonumber(data)
@@ -626,6 +645,36 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         local z = tonumber(string.split(data[3], split_str)[2])
 
         return Vector3(x, y, z)
+    end
+
+    local function string_to_vector_wilko_sucks(str)
+        local data = string.split( str, "[;]" )
+        if #data < 3 then
+            return nil
+        end
+        local split_str = "[:]"
+
+        local x = tonumber(string.split(data[1], split_str)[2])
+        local y = tonumber(string.split(data[2], split_str)[2])
+        local z = tonumber(string.split(data[3], split_str)[2])
+
+        return Vector3(x, y, z)
+    end
+
+    if id == "PWUP_EXECUTE" then
+        local power_up = tonumber(data)
+
+        if power_up == 1 then
+            managers.wdu:power_ups():execute_max_ammo()
+        elseif power_up == 2 then
+            managers.wdu:power_ups():execute_double_points()
+        elseif power_up == 3 then
+            managers.wdu:power_ups():execute_instakill()
+        elseif power_up == 4 then
+            managers.wdu:power_ups():execute_firesale()
+        elseif power_up == 5 then
+            managers.wdu:power_ups():execute_kaboom()
+        end
     end
 
     if id == "SpecialWave_SpawnPosition" then
