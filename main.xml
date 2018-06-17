@@ -45,10 +45,10 @@
 			<hook file="GamePlayCentralManager.lua" source_file="lib/managers/gameplaycentralmanager"/>
 		</hooks>
 		<include directory="levels/zm_bank">
-			<file file="nav_manager_data.nav_data" type="binary"/>
 			<file file="world.world" type="binary"/>
 			<file file="continents.continents" type="binary"/>
 			<file file="mission.mission" type="binary"/>
+			<file file="nav_manager_data.nav_data" type="binary"/>
 			<file file="world_sounds.world_sounds" type="binary"/>
 			<file file="world_cameras.world_cameras" type="binary"/>
 			<file file="world/world.continent" type="binary"/>
@@ -78,6 +78,7 @@
 			<value_node value="levels/narratives/classics/red2/world/world"/>
 			<value_node value="levels/narratives/e_election_day/stage_3/pc_only/pc_only"/>
 			<value_node value="levels/instances/unique/dark/train_numbers/world/world"/>
+			<value_node value="levels/narratives/dentist/mia/stage1/editor_only/editor_only"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">

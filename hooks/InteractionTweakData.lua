@@ -145,7 +145,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_open_path_1500 = {
 		zm_interaction = true,
 		path = true,
-		points_cost = 1000,
+		points_cost = 1500,
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,

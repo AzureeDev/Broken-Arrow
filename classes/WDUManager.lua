@@ -68,7 +68,7 @@ function WDUManager:_init_variables()
             firesale = false,
             firesale_box_swap = false
         },
-        power_up_chance = 50,
+        power_up_chance = 5,
         power_up_table = {
             "max_ammo",
             "double_points",
