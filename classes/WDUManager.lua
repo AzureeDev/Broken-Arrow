@@ -19,7 +19,7 @@ end
 function WDUManager:_init_variables()
 	self.project_name = "Bank"
     self.extension = "shovel"
-    self.wave_highscore_file = SavePath .. "WaldDerUntoten_Highscore.data"
+    self.wave_highscore_file = SavePath .. self.project_name .. "_Highscore." .. self.extension
     self.xaudio_initialized = false
     self.players = {
         [1] = {

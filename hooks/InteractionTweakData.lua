@@ -1,5 +1,5 @@
 Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", function(self, tweak_data)
-    self.zm_wall_buy_m14_2000 = {
+    self.zm_wall_buy_m14 = {
 		zm_interaction = true,
 		weapon = "M308 Rifle",
 		weapon_id = "new_m14",
@@ -11,7 +11,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_joceline_1600 = {
+	self.zm_wall_buy_joceline = {
 		zm_interaction = true,
 		weapon = "Joceline Shotgun",
 		weapon_id = "b682",
@@ -23,7 +23,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_r870_1300 = {
+	self.zm_wall_buy_r870 = {
 		zm_interaction = true,
 		weapon = "Reinfeld 880 Shotgun",
 		weapon_id = "r870",
@@ -35,7 +35,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_57_1000 = {
+	self.zm_wall_buy_57 = {
 		zm_interaction = true,
 		weapon = "5/7 Pistol",
 		weapon_id = "lemming",
@@ -47,7 +47,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_ump45_1450 = {
+	self.zm_wall_buy_ump45 = {
 		zm_interaction = true,
 		weapon = "Jackal SMG",
 		weapon_id = "schakal",
@@ -59,7 +59,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_m37_1300 = {
+	self.zm_wall_buy_m37 = {
 		zm_interaction = true,
 		weapon = "GSPS Shotgun",
 		weapon_id = "m37",
@@ -71,7 +71,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_mp9_2500 = {
+	self.zm_wall_buy_mp9 = {
 		zm_interaction = true,
 		weapon = "MP9 Submachine Gun",
 		weapon_id = "mp9",
@@ -83,7 +83,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_ak47_2000 = {
+	self.zm_wall_buy_ak47 = {
 		zm_interaction = true,
 		weapon = "AK Rifle",
 		weapon_id = "ak74",
@@ -95,7 +95,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_mp40_1100 = {
+	self.zm_wall_buy_mp40 = {
 		zm_interaction = true,
 		weapon = "MP40 SMG",
 		weapon_id = "erma",
@@ -107,7 +107,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_garand_1500 = {
+	self.zm_wall_buy_garand = {
 		zm_interaction = true,
 		weapon = "Galant Rifle",
 		weapon_id = "ching",
@@ -119,7 +119,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
-	self.zm_wall_buy_nades_1000 = {
+	self.zm_wall_buy_nades = {
 		zm_interaction = true,
 		weapon = "Grenades",
 		grenade_spot = true,
@@ -142,6 +142,36 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 4
 	}
 	
+	self.zm_open_path_1500 = {
+		zm_interaction = true,
+		path = true,
+		points_cost = 1000,
+		action_text_id = "zm_opening_path",
+		start_active = false,
+		timer = 1.5,
+		axis = "y"
+	}
+	
+	self.zm_open_path_1250 = {
+		zm_interaction = true,
+		path = true,
+		points_cost = 1250,
+		action_text_id = "zm_opening_path",
+		start_active = false,
+		timer = 1.5,
+		axis = "y"
+	}
+	
+	self.zm_open_path_750 = {
+		zm_interaction = true,
+		path = true,
+		points_cost = 750,
+		action_text_id = "zm_opening_path",
+		start_active = false,
+		timer = 1.5,
+		axis = "y"
+	}
+
 	self.zm_open_path_1000 = {
 		zm_interaction = true,
 		path = true,
@@ -149,47 +179,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
-        interact_distance = 1300
-	}
-
-	self.zm_open_path_1000_nrm = {
-		zm_interaction = true,
-		path = true,
-		points_cost = 1000,
-		action_text_id = "zm_opening_path",
-		start_active = false,
-		timer = 1.5,
-        interact_distance = 500
-	}
-
-	self.zm_open_path_2000 = {
-		zm_interaction = true,
-		path = true,
-		points_cost = 2000,
-		action_text_id = "zm_opening_path",
-		start_active = false,
-		timer = 1.5,
-        interact_distance = 700
-	}
-
-	self.zm_open_path_2000_exp = {
-		zm_interaction = true,
-		path = true,
-		points_cost = 2000,
-		action_text_id = "zm_opening_path",
-		start_active = false,
-		timer = 1.5,
-        interact_distance = 1300
-	}
-
-	self.zm_open_door_2000 = {
-		zm_interaction = true,
-		path = true,
-		custom_path = "the door",
-		points_cost = 2000,
-		action_text_id = "zm_opening_path",
-		start_active = false,
-		timer = 1.5
+		axis = "y"
 	}
 
 	self.zm_mystery_box = {

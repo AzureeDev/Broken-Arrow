@@ -5,8 +5,10 @@
 	<texture force="true" path="effects/textures/bullet_hit/e_dist_heat"/>
 	<texture force="true" path="effects/textures/bullet_hit/e_muzzle_flash03_mgsj2"/>
 	<texture force="true" path="effects/textures/bullet_hit/glow_ball"/>
+	<texture force="true" path="effects/textures/smoke/e_smoke_04_6x6_seq"/>
 	<texture force="true" path="skies/sky_eclipse_v2" unload="true"/>
 	<texture force="true" path="map_assets/perks" unload="true"/>
+	<texture force="true" path="map_assets/perks_2" unload="true"/>
 	<texture path="units/skins/pap_1/base_gradient/base_pack-a-punch"/>
 	<texture path="units/skins/pap_1/base_gradient/base_pack-a-punch_2"/>
 	<texture path="units/skins/pap_1/base_gradient/base_pack-a-punch_3"/>
@@ -179,6 +181,7 @@
 	<unit path="new_weapon_units/wpn_fps_snp_msr_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_snp_msr_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_snp_msr_upg_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_spe_vulcan_upg_primary"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
@@ -331,6 +334,8 @@
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_swat_hvh_1/ene_swat_hvh_1"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_swat_hvh_2/ene_swat_hvh_2"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_tazer_hvh_1/ene_tazer_hvh_1"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_shield_hvh_1/ene_shield_hvh_1"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_shield_hvh_2/ene_shield_hvh_2"/>
 	<cooked_physics force="true" path="units/props/black_crate" unload="true"/>
 	<unit force="true" path="units/props/black_crate" unload="true"/>
 	<object force="true" path="units/props/black_crate" unload="true"/>
@@ -353,6 +358,7 @@
 	<unit path="units/mods/weapons/wpn_third_mel_zdann/wpn_third_mel_zdann"/>
 	<material_config path="units/mods/weapons/wpn_third_mel_zdann/wpn_third_mel_zdann"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_df"/>
+	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_pap_df"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_nm"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_lens_df"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_lens_op"/>
@@ -374,12 +380,23 @@
 	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_thq"/>
+	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"/>
+	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"/>
+	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"/>
+	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_thq"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
@@ -444,6 +461,46 @@
 	<unit force="true" path="units/babuforce/tree/giant_tree"/>
 	<object force="true" path="units/babuforce/tree/giant_tree"/>
 	<material_config force="true" path="units/babuforce/tree/giant_tree"/>
+
+	<cooked_physics path="power_ups/max_ammo/max_ammo"/>
+	<model path="power_ups/max_ammo/max_ammo"/>
+	<object path="power_ups/max_ammo/max_ammo"/>
+	<unit load="true" path="power_ups/max_ammo/max_ammo"/>
+	<material_config path="power_ups/max_ammo/max_ammo"/>
+	<texture path="power_ups/max_ammo/max_ammo_df"/>
+	<texture path="power_ups/max_ammo/max_ammo_nm"/>
+
+	<cooked_physics path="power_ups/firesale/firesale"/>
+	<model path="power_ups/firesale/firesale"/>
+	<object path="power_ups/firesale/firesale"/>
+	<unit load="true" path="power_ups/firesale/firesale"/>
+	<material_config path="power_ups/firesale/firesale"/>
+	<texture path="power_ups/firesale/firesale_df"/>
+	
+	<cooked_physics path="power_ups/instakill/instakill"/>
+	<model path="power_ups/instakill/instakill"/>
+	<object path="power_ups/instakill/instakill"/>
+	<unit load="true" path="power_ups/instakill/instakill"/>
+	<material_config path="power_ups/instakill/instakill"/>
+	<texture path="power_ups/instakill/instakill_df"/>
+	<texture path="power_ups/instakill/instakill_nm"/>
+
+	<cooked_physics path="power_ups/double_points/double_points"/>
+	<model path="power_ups/double_points/double_points"/>
+	<object path="power_ups/double_points/double_points"/>
+	<unit load="true" path="power_ups/double_points/double_points"/>
+	<material_config path="power_ups/double_points/double_points"/>
+	<texture path="power_ups/double_points/double_points_df"/>
+	<texture path="power_ups/double_points/double_points_nm"/>
+
+	<cooked_physics path="power_ups/nuke/nuke"/>
+	<model path="power_ups/nuke/nuke"/>
+	<object path="power_ups/nuke/nuke"/>
+	<unit load="true" path="power_ups/nuke/nuke"/>
+	<material_config path="power_ups/nuke/nuke"/>
+	<texture path="power_ups/nuke/nuke_df"/>
+	<texture path="power_ups/nuke/nuke_nm"/>
+
 	<unit_load name="units/test/jocke/plane_black_temp">
 		<cooked_physics force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
 		<material_config force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
@@ -498,6 +555,7 @@
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/double_tap" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/quick_revive" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dead_shot" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/quick_revive_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/juggernog_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola_on" unload="true"/>
@@ -506,10 +564,12 @@
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_doubletap" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_quickrevive" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_deadshot" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_quickrevive_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_juggernog_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_doubletap_il" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_deadshot_il" unload="true"/>
 		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
@@ -722,10 +782,10 @@
 		<object force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
 		<unit force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
 	</add>
-	<add path="units/dev_tools/editable_text_long/editable_text_long" type="unit">
-		<material_config force="true" path="units/dev_tools/editable_text_long/editable_text_long" unload="true"/>
-		<object force="true" path="units/dev_tools/editable_text_long/editable_text_long" unload="true"/>
-		<unit force="true" path="units/dev_tools/editable_text_long/editable_text_long" unload="true"/>
+	<add path="units/payday2/architecture/str/str_ext_grass_16x16m_a" type="unit">
+		<unit force="true" path="units/payday2/architecture/str/str_ext_grass_16x16m_a" unload="true"/>
+		<object force="true" path="units/payday2/architecture/str/str_ext_grass_16x16m_a" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/str/str_01_grass" unload="true"/>
 	</add>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>

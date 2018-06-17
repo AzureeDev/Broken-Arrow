@@ -45,19 +45,19 @@
 			<hook file="GamePlayCentralManager.lua" source_file="lib/managers/gameplaycentralmanager"/>
 		</hooks>
 		<include directory="levels/zm_bank">
-			<file file="world.world" type="generic_xml"/>
-			<file file="continents.continents" type="custom_xml"/>
-			<file file="mission.mission" type="custom_xml"/>
-			<file file="nav_manager_data.nav_data" type="generic_xml"/>
-			<file file="world_sounds.world_sounds" type="generic_xml"/>
-			<file file="world_cameras.world_cameras" type="custom_xml"/>
-			<file file="world/world.continent" type="custom_xml"/>
-			<file file="world/world.mission" type="generic_xml"/>
-			<file file="dev/dev.continent" type="custom_xml"/>
-			<file file="dev/dev.mission" type="generic_xml"/>
-			<file file="editor_only/editor_only.continent" type="custom_xml"/>
-			<file file="editor_only/editor_only.mission" type="generic_xml"/>
-			<file file="cover_data.cover_data" type="custom_xml"/>
+			<file file="nav_manager_data.nav_data" type="binary"/>
+			<file file="world.world" type="binary"/>
+			<file file="continents.continents" type="binary"/>
+			<file file="mission.mission" type="binary"/>
+			<file file="world_sounds.world_sounds" type="binary"/>
+			<file file="world_cameras.world_cameras" type="binary"/>
+			<file file="world/world.continent" type="binary"/>
+			<file file="world/world.mission" type="binary"/>
+			<file file="dev/dev.continent" type="binary"/>
+			<file file="dev/dev.mission" type="binary"/>
+			<file file="editor_only/editor_only.continent" type="binary"/>
+			<file file="editor_only/editor_only.mission" type="binary"/>
+			<file file="cover_data.cover_data" type="binary"/>
 			<file file="environments/default.environment" type="custom_xml"/>
 		</include>
 		<intro_event>
@@ -77,6 +77,7 @@
 			<value_node value="levels/narratives/vlad/nightclub/world/world"/>
 			<value_node value="levels/narratives/classics/red2/world/world"/>
 			<value_node value="levels/narratives/e_election_day/stage_3/pc_only/pc_only"/>
+			<value_node value="levels/instances/unique/dark/train_numbers/world/world"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
