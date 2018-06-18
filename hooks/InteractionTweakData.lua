@@ -149,7 +149,6 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
-		axis = "y"
 	}
 	
 	self.zm_open_path_1250 = {
@@ -159,7 +158,6 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
-		axis = "y"
 	}
 	
 	self.zm_open_path_750 = {
@@ -168,8 +166,6 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		points_cost = 750,
 		action_text_id = "zm_opening_path",
 		start_active = false,
-		timer = 1.5,
-		axis = "y"
 	}
 
 	self.zm_open_path_1000 = {
@@ -179,7 +175,6 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
-		axis = "y"
 	}
 
 	self.zm_mystery_box = {
@@ -189,6 +184,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
+		stay_active = true,
 		timer = 4
 	}
 
