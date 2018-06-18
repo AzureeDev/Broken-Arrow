@@ -17,7 +17,7 @@ function WDUManager:init()
 end
 
 function WDUManager:_init_variables()
-	self.project_name = "Bank"
+    self.project_name = "Bank"
     self.extension = "shovel"
     self.wave_highscore_file = SavePath .. self.project_name .. "_Highscore." .. self.extension
     self.xaudio_initialized = false
@@ -68,7 +68,7 @@ function WDUManager:_init_variables()
             firesale = false,
             firesale_box_swap = false
         },
-        power_up_chance = 5,
+        power_up_chance = 3,
         power_up_table = {
             "max_ammo",
             "double_points",
@@ -222,11 +222,11 @@ end
 
 function WDUManager:_multiply_zombies_by_wave(current_wave)
     if self:_is_solo() then
-        self.level.zombies.max_spawns = self.level.zombies.max_spawns + current_wave
+        self.level.zombies.max_spawns = self.level.zombies.max_spawns + 2
         return
     end
 
-    self.level.zombies.max_spawns = self.level.zombies.max_spawns + (self.level.zombies.add_on_end_wave + current_wave)
+    self.level.zombies.max_spawns = self.level.zombies.max_spawns + (self.level.zombies.add_on_end_wave + 2)
 end
 
 function WDUManager:_get_own_money()
@@ -518,7 +518,8 @@ function WDUManager:_get_weapons_in_mystery_box()
 		"wpn_fps_ass_flint",
 		"wpn_fps_pis_breech",
 		"wpn_fps_spe_rpg7",
-		"wpn_fps_smg_tec9"
+        "wpn_fps_smg_tec9",
+        "wpn_fps_sho_deamon"
     }
 end
 
@@ -590,7 +591,9 @@ function WDUManager:_convert_factory_to_upgrade()
         wpn_fps_special_roach_secondary = "wpn_fps_special_roach_upg_secondary",
         wpn_fps_snp_msr_primary = "wpn_fps_snp_msr_upg_primary",
         wpn_fps_snp_msr_secondary = "wpn_fps_snp_msr_upg_secondary",
-        wpn_fps_ass_nothing2_primary = "wpn_fps_spe_vulcan_upg_primary"
+        wpn_fps_ass_nothing2_primary = "wpn_fps_spe_vulcan_upg_primary",
+        wpn_fps_sho_deamon_primary = "wpn_fps_sho_deamon_upg_primary",
+        wpn_fps_sho_deamon_secondary = "wpn_fps_sho_deamon_upg_secondary"
 	}
 end
 
