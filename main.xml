@@ -80,6 +80,8 @@
 			<value_node value="levels/instances/unique/dark/train_numbers/world/world"/>
 			<value_node value="levels/narratives/dentist/mia/stage1/editor_only/editor_only"/>
 			<value_node value="levels/narratives/vlad/nightclub/nightclub_interior/nightclub_interior"/>
+			<value_node value="levels/narratives/bain/revenge/world"/>
+			<value_node value="levels/narratives/armadillo/arm_und/backdrop/backdrop"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
