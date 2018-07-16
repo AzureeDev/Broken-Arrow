@@ -1,15 +1,15 @@
 core:import("CoreMissionScriptElement")
 
-ElementSpawnEnemyDummy = ElementSpawnEnemyDummy or class(CoreMissionScriptElement.MissionScriptElement)
-ElementSpawnEnemyDummy._unit_destroy_clbk_key = "ElementSpawnEnemyDummy"
-ElementSpawnEnemyDummy.ACCESSIBILITIES = {
+ElementSpawnSafeEnemyDummy = ElementSpawnSafeEnemyDummy or class(CoreMissionScriptElement.MissionScriptElement)
+ElementSpawnSafeEnemyDummy._unit_destroy_clbk_key = "ElementSpawnSafeEnemyDummy"
+ElementSpawnSafeEnemyDummy.ACCESSIBILITIES = {
 	"any",
 	"walk",
 	"acrobatic"
 }
 
-function ElementSpawnEnemyDummy:init(...)
-	ElementSpawnEnemyDummy.super.init(self, ...)
+function ElementSpawnSafeEnemyDummy:init(...)
+	ElementSpawnSafeEnemyDummy.super.init(self, ...)
 
 	self._enemy_name = self._values.enemy and Idstring(self._values.enemy) or Idstring("units/payday2/characters/ene_swat_1/ene_swat_1")
 	self._values.enemy = nil
@@ -19,7 +19,7 @@ function ElementSpawnEnemyDummy:init(...)
 	self:_finalize_values()
 end
 
-function ElementSpawnEnemyDummy:_finalize_values()
+function ElementSpawnSafeEnemyDummy:_finalize_values()
 	local values = self._values
 	values.spawn_action = self:value("spawn_action")
 
@@ -53,15 +53,15 @@ function ElementSpawnEnemyDummy:_finalize_values()
 	self._values = clone(values)
 end
 
-function ElementSpawnEnemyDummy:enemy_name()
+function ElementSpawnSafeEnemyDummy:enemy_name()
 	return self._enemy_name
 end
 
-function ElementSpawnEnemyDummy:units()
+function ElementSpawnSafeEnemyDummy:units()
 	return self._units
 end
 
-function ElementSpawnEnemyDummy:produce(params)
+function ElementSpawnSafeEnemyDummy:produce(params)
 	if not managers.groupai:state():is_AI_enabled() then
 		return
 	end
@@ -134,7 +134,7 @@ function ElementSpawnEnemyDummy:produce(params)
 	return self._units[#self._units]
 end
 
-function ElementSpawnEnemyDummy:clbk_unit_destroyed(unit)
+function ElementSpawnSafeEnemyDummy:clbk_unit_destroyed(unit)
 	local u_key = unit:key()
 
 	for i, owned_unit in ipairs(self._units) do
@@ -144,7 +144,7 @@ function ElementSpawnEnemyDummy:clbk_unit_destroyed(unit)
 	end
 end
 
-function ElementSpawnEnemyDummy:event(name, unit)
+function ElementSpawnSafeEnemyDummy:event(name, unit)
 	if self._events[name] then
 		for _, callback in ipairs(self._events[name]) do
 			callback(unit)
@@ -152,13 +152,13 @@ function ElementSpawnEnemyDummy:event(name, unit)
 	end
 end
 
-function ElementSpawnEnemyDummy:add_event_callback(name, callback)
+function ElementSpawnSafeEnemyDummy:add_event_callback(name, callback)
 	self._events[name] = self._events[name] or {}
 
 	table.insert(self._events[name], callback)
 end
 
-function ElementSpawnEnemyDummy:on_executed(instigator)
+function ElementSpawnSafeEnemyDummy:on_executed(instigator)
 	if not self._values.enabled then
 		return
 	end
@@ -169,10 +169,10 @@ function ElementSpawnEnemyDummy:on_executed(instigator)
 
 	local unit = self:produce()
 
-	ElementSpawnEnemyDummy.super.on_executed(self, unit)
+	ElementSpawnSafeEnemyDummy.super.on_executed(self, unit)
 end
 
-function ElementSpawnEnemyDummy:_create_spawn_AI_parametric(stance, objective, spawn_properties)
+function ElementSpawnSafeEnemyDummy:_create_spawn_AI_parametric(stance, objective, spawn_properties)
 	local entry_action = self._create_action_data(CopActionAct._act_redirects.enemy_spawn[self._values.spawn_action])
 
 	if entry_action.type == "act" then
@@ -192,7 +192,7 @@ function ElementSpawnEnemyDummy:_create_spawn_AI_parametric(stance, objective, s
 	}
 end
 
-function ElementSpawnEnemyDummy._create_action_data(anim_name)
+function ElementSpawnSafeEnemyDummy._create_action_data(anim_name)
 	if not anim_name or anim_name == "none" then
 		return {
 			sync = true,
@@ -215,7 +215,7 @@ function ElementSpawnEnemyDummy._create_action_data(anim_name)
 	end
 end
 
-function ElementSpawnEnemyDummy:unspawn_all_units()
+function ElementSpawnSafeEnemyDummy:unspawn_all_units()
 	for _, unit in ipairs(self._units) do
 		if alive(unit) then
 			unit:brain():set_active(false)
@@ -224,7 +224,7 @@ function ElementSpawnEnemyDummy:unspawn_all_units()
 	end
 end
 
-function ElementSpawnEnemyDummy:kill_all_units()
+function ElementSpawnSafeEnemyDummy:kill_all_units()
 	for _, unit in ipairs(self._units) do
 		if alive(unit) then
 			unit:character_damage():damage_mission({
@@ -235,7 +235,7 @@ function ElementSpawnEnemyDummy:kill_all_units()
 	end
 end
 
-function ElementSpawnEnemyDummy:execute_on_all_units(func)
+function ElementSpawnSafeEnemyDummy:execute_on_all_units(func)
 	for _, unit in ipairs(self._units) do
 		if alive(unit) then
 			func(unit)
@@ -243,7 +243,7 @@ function ElementSpawnEnemyDummy:execute_on_all_units(func)
 	end
 end
 
-function ElementSpawnEnemyDummy:accessibility()
+function ElementSpawnSafeEnemyDummy:accessibility()
 	return self.ACCESSIBILITIES[self._values.accessibility]
 end
 
