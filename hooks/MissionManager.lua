@@ -1,4 +1,4 @@
-local Path = WDU.ModPath
+local Path = ZM_BANK.ModPath
 
 dofile(Path .. "hooks/ElementWeaponSwitch.lua")
 dofile(Path .. "hooks/ElementPointChecker.lua")
