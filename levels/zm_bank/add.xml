@@ -25,6 +25,7 @@
 	<texture path="perks/gift_instakill"/>
 	<texture path="perks/power"/>
 	<sequence_manager path="units/payday2/equipment/gen_interactable_door_reinforced/gen_interactable_door_reinforced" force="true" unload="true"/>
+	<sequence_manager path="units/payday2/equipment/gen_interactable_door_wooden_a/gen_interactable_door_wooden_a" force="true" unload="true"/>
 	<cooked_physics path="units/weapon_walls/crate_mysterybox"/>
 	<material_config path="units/weapon_walls/crate_mysterybox"/>
 	<model path="units/weapon_walls/crate_mysterybox"/>
