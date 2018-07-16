@@ -580,9 +580,6 @@
 			<sound path="Secret_nearby.ogg"/>
 			<sound path="swallow.ogg"/>
 			<sound path="special_spawn.ogg"/>
-			<sound path="music/Bank/bankpowerup_assault.ogg"/>
-			<sound path="music/Bank/bankpowerup_intro.ogg"/>
-			<sound path="music/Bank/bankpowerup_end.ogg"/>
 		</sounds>
 	</level>
 	<narrative contact="custom" id="zm_bank_placeholder" quest_zm_001="true">

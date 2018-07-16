@@ -795,4 +795,11 @@
 	</add>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
+	<movie path="sound/music/bank/bankpowerup_assault"/>
+	<movie path="sound/music/bank/bankpowerup_intro"/>
+	<movie path="sound/music/bank/bankpowerup_end"/>
+	<movie path="sound/music/Nightclub/nightclubpowerup_intro"/>
+	<movie path="sound/music/Nightclub/nightclubpowerup_introintro"/>
+	<movie path="sound/music/Nightclub/nightclubpowerup_assault"/>
+	<movie path="sound/music/Nightclub/nightclubpowerup_end"/>
 </table>

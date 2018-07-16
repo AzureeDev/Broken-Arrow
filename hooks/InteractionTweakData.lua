@@ -184,7 +184,6 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		stay_active = true,
 		timer = 4
 	}
 
