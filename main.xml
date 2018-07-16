@@ -85,6 +85,7 @@
 			<value_node value="levels/narratives/vlad/nightclub/world"/>
 			<value_node value="levels/narratives/butcher/thebomb/stage_3/editor_only/editor_only"/>
 			<value_node value="levels/narratives/h_firestarter/stage_2/world/world"/>
+			<value_node value="levels/narratives/vlad/nightclub/kitchen/kitchen"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
