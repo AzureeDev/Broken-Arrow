@@ -1,11 +1,11 @@
 <table global_key="ZM_BANK" name="zm_bank_placeholder">
-	<Localization default="english.txt" directory="loc"/>
 	<Hooks directory="hooks">
 		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
 		<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
 		<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
 		<hook file="ContractBrokerHeistItem.lua" source_file="lib/managers/menu/items/contractbrokerheistitem"/>
 	</Hooks>
+	<Localization default="english.txt" directory="loc"/>
 	<level ai_group_type="zombie" briefing_dialog="" id="zm_bank" max_bags="0" music="no_music" team_ai_off="true">
 		<add file="levels/zm_bank/add.xml"/>
 		<hooks directory="hooks">
