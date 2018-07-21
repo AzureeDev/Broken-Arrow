@@ -77,11 +77,6 @@
 			<value_node value="levels/narratives/bain/hvh/world_sounds"/>
 			<value_node value="levels/narratives/elephant/chew/collision/collision"/>
 			<value_node value="levels/instances/unique/dark/train_int_murky_emp/world/world"/>
-			<value_node value="levels/narratives/continental/spa/world/world"/>
-			<value_node value="levels/narratives/h_firestarter/stage_3/world/world"/>
-			<value_node value="levels/narratives/locke/brb/art/art"/>
-			<value_node value="levels/narratives/vlad/nightclub/world/world"/>
-			<value_node value="levels/narratives/classics/red2/world/world"/>
 			<value_node value="levels/narratives/e_election_day/stage_3/pc_only/pc_only"/>
 			<value_node value="levels/instances/unique/dark/train_numbers/world/world"/>
 			<value_node value="levels/narratives/dentist/mia/stage1/editor_only/editor_only"/>
@@ -90,8 +85,13 @@
 			<value_node value="levels/narratives/armadillo/arm_und/backdrop/backdrop"/>
 			<value_node value="levels/narratives/vlad/nightclub/world"/>
 			<value_node value="levels/narratives/butcher/thebomb/stage_3/editor_only/editor_only"/>
-			<value_node value="levels/narratives/h_firestarter/stage_2/world/world"/>
 			<value_node value="levels/narratives/vlad/nightclub/kitchen/kitchen"/>
+			<value_node value="levels/narratives/classics/red2/world/world"/>
+			<value_node value="levels/narratives/locke/brb/art/art"/>
+			<value_node value="levels/narratives/h_firestarter/stage_2/world/world"/>
+			<value_node value="levels/narratives/h_firestarter/stage_3/world/world"/>
+			<value_node value="levels/narratives/vlad/nightclub/world/world"/>
+			<value_node value="levels/instances/unique/brb/police_intro/world/world"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
