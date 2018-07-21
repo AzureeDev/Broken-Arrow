@@ -92,6 +92,7 @@
 			<value_node value="levels/narratives/h_firestarter/stage_3/world/world"/>
 			<value_node value="levels/narratives/vlad/nightclub/world/world"/>
 			<value_node value="levels/instances/unique/brb/police_intro/world/world"/>
+			<value_node value="levels/instances/unique/pbr/pbr_hardware_store/world/world"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
