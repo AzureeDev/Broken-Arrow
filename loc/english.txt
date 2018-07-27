@@ -1,5 +1,10 @@
 {
-    "zm_buy_weapon" : "Buying a weapon"
+	"quest_a_better_tomorrow" : "A Better Tomorrow",
+	"heist_zm_broken_arrow_name" : "Broken Arrow",
+	"heist_zm_broken_arrow_brief" : "Broken Arrow brief placeholder",
+	"heist_zm_bank_name" : "Broken Arrow",
+	"heist_zm_bank_brief" : "Broken Arrow desc placeholder",
+    "zm_buy_weapon" : "Buying a weapon",
 	"wpn_m1911_name" : "M1911",
     "wpn_lemming_name" : "5/7 Pistol",
     "wpn_melee_zdann" : "Zdann's Shovel",

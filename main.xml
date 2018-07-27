@@ -1,4 +1,4 @@
-<table global_key="ZM_BANK" name="zm_bank_placeholder">
+<table global_key="ZM_BANK" name="zm_broken_arrow">
 	<Hooks directory="hooks">
 		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
 		<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
@@ -6,6 +6,7 @@
 		<hook file="ContractBrokerHeistItem.lua" source_file="lib/managers/menu/items/contractbrokerheistitem"/>
 	</Hooks>
 	<Localization default="english.txt" directory="loc"/>
+	<contact assets_gui="guis/mission_briefing/preload_contact_bain" desc_id="quest_a_better_tomorrow_d" id="a_better_tomorrow" name_id="quest_a_better_tomorrow" package="packages/contact_bain"/>
 	<level ai_group_type="zombie" briefing_dialog="" id="zm_bank" max_bags="0" music="no_music" team_ai_off="true">
 		<add file="levels/zm_bank/add.xml"/>
 		<hooks directory="hooks">
@@ -586,7 +587,7 @@
 			<sound path="special_spawn.ogg"/>
 		</sounds>
 	</level>
-	<narrative contact="custom" id="zm_bank_placeholder" quest_zm_001="true">
+	<narrative contact="a_better_tomorrow" id="zm_broken_arrow" quest_zm_001="true">
 		<chain>
 			<table level_id="zm_bank" type="d" type_id="heist_type_assault"/>
 		</chain>
