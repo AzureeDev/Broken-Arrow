@@ -55,6 +55,12 @@
 	<model path="units/weapon_walls/wpn_mp9"/>
 	<object path="units/weapon_walls/wpn_mp9"/>
 	<unit path="units/weapon_walls/wpn_mp9"/>
+	<texture path="units/weapon_walls/wpn_msr"/>
+	<cooked_physics path="units/weapon_walls/wpn_msr"/>
+	<material_config path="units/weapon_walls/wpn_msr"/>
+	<model path="units/weapon_walls/wpn_msr"/>
+	<object path="units/weapon_walls/wpn_msr"/>
+	<unit path="units/weapon_walls/wpn_msr"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_secondary"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3"/>
@@ -802,4 +808,7 @@
 	<movie path="sound/music/Nightclub/nightclubpowerup_introintro"/>
 	<movie path="sound/music/Nightclub/nightclubpowerup_assault"/>
 	<movie path="sound/music/Nightclub/nightclubpowerup_end"/>
+	<movie path="sound/music/Bus/buspowerup_intro"/>
+	<movie path="sound/music/Bus/buspowerup_assault"/>
+	<movie path="sound/music/Bus/buspowerup_end"/>
 </table>

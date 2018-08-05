@@ -130,6 +130,18 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		axis = "y",
 		timer = 0.5
 	}
+	
+	self.zm_wall_buy_msr = {
+		zm_interaction = true,
+		weapon = "Rattlesnake",
+		weapon_id = "msr",
+		points_cost = 1400,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
 
 	self.zm_wall_buy_mp40 = {
 		zm_interaction = true,
