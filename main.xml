@@ -95,6 +95,7 @@
 			<value_node value="levels/instances/unique/pbr/pbr_hardware_store/world/world"/>
 			<value_node value="levels/instances/unique/pbr/pbr_gas_station/world/world"/>
 			<value_node value="levels/instances/unique/brb/police_intro/world/world"/>
+			<value_node value="levels/narratives/locke/des/world/world"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">

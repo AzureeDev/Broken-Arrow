@@ -10,6 +10,18 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		axis = "y",
 		timer = 0.5
 	}
+	
+	self.zm_wall_buy_random = {
+		zm_interaction = true,
+		weapon = "Randomizer",
+		weapon_id = "g22c",
+		points_cost = 1000,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
 
 	self.zm_wall_buy_joceline = {
 		zm_interaction = true,
@@ -71,6 +83,18 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 0.5
 	}
 
+		self.zm_wall_buy_tec9 = {
+		zm_interaction = true,
+		weapon = "Blaster 9mm",
+		weapon_id = "tec9",
+		points_cost = 1250,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+	
 	self.zm_wall_buy_mp9 = {
 		zm_interaction = true,
 		weapon = "MP9 Submachine Gun",
@@ -88,6 +112,18 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		weapon = "AK Rifle",
 		weapon_id = "ak74",
 		points_cost = 1800,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+	
+	self.zm_wall_buy_fal = {
+		zm_interaction = true,
+		weapon = "Falcon",
+		weapon_id = "fal",
+		points_cost = 1600,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
@@ -167,6 +203,22 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_opening_path",
 		start_active = false,
 	}
+	
+		self.zm_open_path_750_car = {
+		zm_interaction = true,
+		path = true,
+		points_cost = 750,
+		action_text_id = "zm_opening_path",
+		start_active = false,
+		interact_distance = 500
+	}
+	
+		self.zm_open_secret_bunker = {
+		text_id = "zm_activate_song_invisible",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		timer = 5
+	}
 
 	self.zm_open_path_1000 = {
 		zm_interaction = true,
@@ -193,15 +245,21 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		start_active = false,
 		interact_distance = 250
 	}
-
+	
+	self.zm_power_req = { 
+		text_id = "zm_teleporter",
+		action_text_id = "zm_use_teleporter",
+		start_active = false,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_no_power",
+	}
+	
 	self.zm_teleporter = {
 		is_teleporter = true,
 		text_id = "zm_teleporter",
 		action_text_id = "zm_use_teleporter",
 		start_active = false,
 		timer = 1,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",
 		interact_distance = 500
 	}
 
@@ -221,9 +279,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
+		timer = 3,		
 		special_equipment_block = "perk_juggernog"
 	}
 
@@ -235,9 +291,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
+		timer = 3,	
 		special_equipment_block = "perk_speedcola"
 	}
 
@@ -249,9 +303,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
+		timer = 3,	
 		special_equipment_block = "perk_doubletap"
 	}
 
@@ -263,9 +315,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
+		timer = 3,		
 		special_equipment_block = "perk_quickrevive"
 	}
 
@@ -289,9 +339,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
+		timer = 3,	
 		special_equipment_block = "perk_deadshot"
 	}
 end)
