@@ -536,6 +536,7 @@
 				<sound id="zm_wave_new_2" path="wave_start2.ogg"/>
 				<sound id="zm_wave_new_3" path="wave_start3.ogg"/>
 				<sound id="zm_pregame" path="pregame.ogg"/>
+				<sound id="pregame" path="pregame.ogg"/>
 			</sounds>
 			<sound id="wunderwaffe_fire" path="wunder_fire.ogg" prefix="regular"/>
 			<sound id="lakner_mag_out" path="wunder_clip_out.ogg" prefix="first"/>
