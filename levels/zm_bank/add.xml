@@ -811,4 +811,5 @@
 	<movie path="sound/music/Bus/buspowerup_intro"/>
 	<movie path="sound/music/Bus/buspowerup_assault"/>
 	<movie path="sound/music/Bus/buspowerup_end"/>
+	<movie path="sound/buzzer_fail"/>
 </table>

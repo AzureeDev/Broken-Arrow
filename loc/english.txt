@@ -4,7 +4,9 @@
 	"heist_zm_broken_arrow_brief" : "Broken Arrow brief placeholder",
 	"heist_zm_bank_name" : "Broken Arrow",
 	"heist_zm_bank_brief" : "Broken Arrow desc placeholder",
-    "zm_buy_weapon" : "Buying a weapon",
+    "zm_buy_weapon" : "Buying...",
+	"zm_hack" : "Hacking...",
+	"zm_power" : "Restarting...",
 	"wpn_m1911_name" : "M1911",
     "wpn_lemming_name" : "5/7 Pistol",
     "wpn_melee_zdann" : "Zdann's Shovel",
@@ -34,4 +36,7 @@
     "wpn_m16_upg_name" : "The Last Judgement",
     "wpn_scar_upg_name" : "Vulture Rifle",
     "wpn_deamon_upg_name" : "AHZH"
+	"zm_secret_bunker_hack" : "Hold $BTN_INTERACT to start the hack",
+	"zm_require_everyone_nearby" : "Requires everyone nearby to activate",
+	"zm_restart_power_start" : "Hold $BTN_INTERACT to restart power up sequence",
 }

@@ -152,7 +152,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 0.5
+		timer = 0.5,
 	}
 
 	self.zm_wall_buy_garand = {
@@ -164,7 +164,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 0.5
+		timer = 0.5,
 	}
 
 	self.zm_wall_buy_nades = {
@@ -176,7 +176,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 0.5
+		timer = 0.5,
 	}
 
 	self.zm_pack_a_punch = {
@@ -187,7 +187,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_upgrade_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 4
+		timer = 4,
 	}
 	
 	self.zm_open_path_1500 = {
@@ -214,22 +214,39 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		points_cost = 750,
 		action_text_id = "zm_opening_path",
 		start_active = false,
+		timer = 1.5,
 	}
 	
-		self.zm_open_path_750_car = {
+	self.zm_open_path_750_car = {
 		zm_interaction = true,
 		path = true,
 		points_cost = 750,
 		action_text_id = "zm_opening_path",
 		start_active = false,
-		interact_distance = 500
+		interact_distance = 500,
+		timer = 1.5,
 	}
 	
-		self.zm_open_secret_bunker = {
-		text_id = "zm_activate_song_invisible",
+	self.zm_require_everyone = {
+		text_id = "zm_req",
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
-		timer = 5
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_require_everyone_nearby",
+	}
+	
+	self.zm_secret_bunker = {
+		text_id = "zm_secret_bunker_hack",
+		action_text_id = "zm_hack",
+		start_active = false,
+		timer = 5,
+	}
+	
+	self.zm_power_start = {
+		text_id = "zm_restart_power_start",
+		action_text_id = "zm_power",
+		start_active = false,
+		timer = 5,
 	}
 
 	self.zm_open_path_1000 = {
