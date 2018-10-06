@@ -37,6 +37,6 @@
     "wpn_scar_upg_name" : "Vulture Rifle",
     "wpn_deamon_upg_name" : "AHZH"
 	"zm_secret_bunker_hack" : "Hold $BTN_INTERACT to start the hack",
-	"zm_require_everyone_nearby" : "Requires everyone nearby to activate",
+	"zm_require_everyone_nearby" : "Requires everyone nearby to start the hack",
 	"zm_restart_power_start" : "Hold $BTN_INTERACT to restart power up sequence",
 }
