@@ -99,6 +99,8 @@
 			<value_node value="levels/instances/unique/hox_fbi_security_office/world/world"/>
 			<value_node value="levels/narratives/e_framing_frame/stage_3/world/world"/>
 			<value_node value="levels/narratives/short1/stage2/world/world"/>
+			<value_node value="levels/instances/unique/kenaz/weak_floor/world/world"/>
+			<value_node value="levels/narratives/escapes/escape_garage/artpass/artpass"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
