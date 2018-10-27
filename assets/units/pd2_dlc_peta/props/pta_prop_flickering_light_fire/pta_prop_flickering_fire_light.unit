@@ -1,0 +1,11 @@
+<unit type="pta" slot="1">
+	<network sync="spawn"/>
+	<object file="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" />
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" >
+			<var name="only_visible_in_editor" value="true" />
+		</extension>
+		<extension name="damage" class="UnitDamage" />
+		<extension name="sync_unit_data" class="SyncUnitData" />
+	</extensions>
+</unit>

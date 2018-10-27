@@ -1,0 +1,21 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" orientation_object="rp_flickering_fire_light" />
+	<sequence_manager file="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" />
+	<animations>
+		<animation_group name="light_flicker" enabled="false" loop="true">
+				<object name="ls_fire" />
+		</animation_group>
+	</animations>
+	<bodies>
+		<body name="body_static" enabled="true" template="editor" >
+			<object name="rp_flickering_fire_light" />
+			<object name="c_box" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<graphics>
+		<object name="g_box" enabled="true" />
+	</graphics>
+	<lights>
+		<light name="ls_fire" enabled="true" editable="true" type="point|specular" multiplier="0.1" far_range="250" falloff="2" />
+	</lights>
+</dynamic_object>

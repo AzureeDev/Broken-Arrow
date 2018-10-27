@@ -1,0 +1,17 @@
+<materials version="3">
+    <material name="mat_debris" render_template="generic:BLEND_DIFFUSE:BLEND_GSMA:BLEND_MASK_CONTROL:BLEND_MASK_CROSSBLEND:BLEND_NORMAL:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_df"/>
+        <bump_normal_texture file="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_nm"/>
+        <material_texture file="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_gsma"/>
+        <diffuse_layer0_texture file="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_burnt_df"/>
+        <diffuse_layer2_texture file="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_burnt_gsma"/>
+        <normal_layer0_texture file="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_nm"/>
+        <variable value="0.34999999403954 0.20000000298023 0" type="vector3" name="blend_control"/>
+    </material>
+    <material name="mat_contour" render_template="generic:ALPHA_MASKED:CONTOUR:DIFFUSE_TEXTURE:OPACITY_TEXTURE" unique="true" version="2">
+        <diffuse_texture file="units/white_df"/>
+        <variable value="0 1 0" type="vector3" name="contour_color"/>
+        <variable value="1" type="scalar" name="contour_opacity"/>
+        <opacity_texture file="units/transparent_op"/>
+    </material>
+</materials>

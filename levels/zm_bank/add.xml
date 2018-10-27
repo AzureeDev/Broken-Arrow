@@ -814,4 +814,16 @@
 		<object force="true" path="units/pd2_dlc_sah/nature/sah_clouds/sah_clouds" unload="true"/>
 		<unit force="true" path="units/pd2_dlc_sah/nature/sah_clouds/sah_clouds" unload="true"/>
 	</add>
+	<add path="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" type="unit">
+		<material_config force="true" path="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" unload="true"/>
+		<object force="true" path="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" type="unit">
+		<unit force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
+		<object force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
+	</add>
 </table>

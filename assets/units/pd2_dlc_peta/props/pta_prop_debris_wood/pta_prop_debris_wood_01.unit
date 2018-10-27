@@ -1,0 +1,16 @@
+<unit type="pta" slot="1">
+	<object file="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" />
+	<network sync="spawn"/>
+
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+
+		<extension name="interaction" class="UseInteractionExt">
+			<var name="tweak_data" value="hold_remove_debris" />
+			<var name="_interact_object" value="interaction" />
+			<var name="_remove_on_interact" value="true" />
+		</extension>
+	</extensions>
+	
+</unit>
