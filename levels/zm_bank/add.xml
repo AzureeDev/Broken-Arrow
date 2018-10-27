@@ -2,6 +2,7 @@
 	<texture force="true" path="effects/textures/misc/lightning2"/>
 	<texture force="true" path="effects/textures/add_atlas_df"/>
 	<texture force="true" path="effects/textures/effects_atlas"/>
+	<texture force="true" path="effects/textures/opacity_atlas_df"/>
 	<texture force="true" path="effects/textures/bullet_hit/e_dist_heat"/>
 	<texture force="true" path="effects/textures/bullet_hit/e_muzzle_flash03_mgsj2"/>
 	<texture force="true" path="effects/textures/bullet_hit/glow_ball"/>
@@ -24,8 +25,9 @@
 	<texture path="perks/gift_double_points"/>
 	<texture path="perks/gift_instakill"/>
 	<texture path="perks/power"/>
-	<sequence_manager path="units/payday2/equipment/gen_interactable_door_reinforced/gen_interactable_door_reinforced" force="true" unload="true"/>
-	<sequence_manager path="units/payday2/equipment/gen_interactable_door_wooden_a/gen_interactable_door_wooden_a" force="true" unload="true"/>
+	<sequence_manager force="true" path="units/payday2/equipment/gen_interactable_door_reinforced/gen_interactable_door_reinforced" unload="true"/>
+	<sequence_manager force="true" path="units/payday2/equipment/gen_interactable_door_wooden_a/gen_interactable_door_wooden_a" unload="true"/>
+	<sequence_manager force="true" path="units/payday2/props/gen_prop_bank_atm_standing/gen_prop_bank_atm_standing" unload="true"/>
 	<cooked_physics path="units/weapon_walls/crate_mysterybox"/>
 	<material_config path="units/weapon_walls/crate_mysterybox"/>
 	<model path="units/weapon_walls/crate_mysterybox"/>
@@ -335,7 +337,7 @@
 	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<object path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
-	<unit load="false" path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
+	<unit path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<texture path="units/zdann/ene_acc_zombie_eyes/zombie_eyes_il"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_fbi_heavy_hvh_1/ene_fbi_heavy_hvh_1"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_fbi_swat_hvh_1/ene_fbi_swat_hvh_1"/>
@@ -473,7 +475,6 @@
 	<unit force="true" path="units/babuforce/tree/giant_tree"/>
 	<object force="true" path="units/babuforce/tree/giant_tree"/>
 	<material_config force="true" path="units/babuforce/tree/giant_tree"/>
-
 	<cooked_physics path="power_ups/max_ammo/max_ammo"/>
 	<model path="power_ups/max_ammo/max_ammo"/>
 	<object path="power_ups/max_ammo/max_ammo"/>
@@ -481,14 +482,12 @@
 	<material_config path="power_ups/max_ammo/max_ammo"/>
 	<texture path="power_ups/max_ammo/max_ammo_df"/>
 	<texture path="power_ups/max_ammo/max_ammo_nm"/>
-
 	<cooked_physics path="power_ups/firesale/firesale"/>
 	<model path="power_ups/firesale/firesale"/>
 	<object path="power_ups/firesale/firesale"/>
 	<unit load="true" path="power_ups/firesale/firesale"/>
 	<material_config path="power_ups/firesale/firesale"/>
 	<texture path="power_ups/firesale/firesale_df"/>
-	
 	<cooked_physics path="power_ups/instakill/instakill"/>
 	<model path="power_ups/instakill/instakill"/>
 	<object path="power_ups/instakill/instakill"/>
@@ -496,7 +495,6 @@
 	<material_config path="power_ups/instakill/instakill"/>
 	<texture path="power_ups/instakill/instakill_df"/>
 	<texture path="power_ups/instakill/instakill_nm"/>
-
 	<cooked_physics path="power_ups/double_points/double_points"/>
 	<model path="power_ups/double_points/double_points"/>
 	<object path="power_ups/double_points/double_points"/>
@@ -504,7 +502,6 @@
 	<material_config path="power_ups/double_points/double_points"/>
 	<texture path="power_ups/double_points/double_points_df"/>
 	<texture path="power_ups/double_points/double_points_nm"/>
-
 	<cooked_physics path="power_ups/nuke/nuke"/>
 	<model path="power_ups/nuke/nuke"/>
 	<object path="power_ups/nuke/nuke"/>
@@ -512,7 +509,6 @@
 	<material_config path="power_ups/nuke/nuke"/>
 	<texture path="power_ups/nuke/nuke_df"/>
 	<texture path="power_ups/nuke/nuke_nm"/>
-
 	<unit_load name="units/test/jocke/plane_black_temp">
 		<cooked_physics force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
 		<material_config force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
@@ -795,9 +791,9 @@
 		<unit force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
 	</add>
 	<add path="units/payday2/architecture/str/str_ext_grass_16x16m_a" type="unit">
-		<unit force="true" path="units/payday2/architecture/str/str_ext_grass_16x16m_a" unload="true"/>
-		<object force="true" path="units/payday2/architecture/str/str_ext_grass_16x16m_a" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/str/str_01_grass" unload="true"/>
+		<object force="true" path="units/payday2/architecture/str/str_ext_grass_16x16m_a" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/str/str_ext_grass_16x16m_a" unload="true"/>
 	</add>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
@@ -812,4 +808,10 @@
 	<movie path="sound/music/Bus/buspowerup_assault"/>
 	<movie path="sound/music/Bus/buspowerup_end"/>
 	<movie path="sound/buzzer_fail"/>
+	<add path="units/pd2_dlc_sah/nature/sah_clouds/sah_clouds" type="unit">
+		<cooked_physics force="true" path="units/pd2_dlc_sah/nature/sah_clouds/sah_clouds" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_sah/nature/sah_clouds/sah_clouds" unload="true"/>
+		<object force="true" path="units/pd2_dlc_sah/nature/sah_clouds/sah_clouds" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_sah/nature/sah_clouds/sah_clouds" unload="true"/>
+	</add>
 </table>

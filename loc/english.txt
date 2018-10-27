@@ -4,6 +4,7 @@
 	"heist_zm_broken_arrow_brief" : "Broken Arrow brief placeholder",
 	"heist_zm_bank_name" : "Broken Arrow",
 	"heist_zm_bank_brief" : "Broken Arrow desc placeholder",
+    "hud_assault_zombie" : "Zombie Assault in progress",
     "zm_buy_weapon" : "Buying...",
 	"zm_hack" : "Hacking...",
 	"zm_power" : "Restarting...",
@@ -35,8 +36,8 @@
     "wpn_fal_upg_name" : "Fallen Hero",
     "wpn_m16_upg_name" : "The Last Judgement",
     "wpn_scar_upg_name" : "Vulture Rifle",
-    "wpn_deamon_upg_name" : "AHZH"
+    "wpn_deamon_upg_name" : "AHZH",
 	"zm_secret_bunker_hack" : "Hold $BTN_INTERACT to start the hack",
 	"zm_require_everyone_nearby" : "Requires everyone nearby to start the hack",
-	"zm_restart_power_start" : "Hold $BTN_INTERACT to restart power up sequence",
+	"zm_restart_power_start" : "Hold $BTN_INTERACT to restart power up sequence"
 }
