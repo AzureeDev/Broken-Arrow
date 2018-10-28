@@ -283,6 +283,13 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		equipment_text_id = "zm_no_power",
 	}
 	
+	self.zm_grab_crystal = { 
+		text_id = "zm_grab_crystal",
+		action_text_id = "zm_grabing_part",
+		start_active = false,
+	}
+	
+	
 	self.zm_teleporter = {
 		is_teleporter = true,
 		text_id = "zm_teleporter",
