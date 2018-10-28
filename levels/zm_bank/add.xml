@@ -826,4 +826,10 @@
 		<material_config force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
 	</add>
+	<cooked_physics path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
+	<model path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
+	<object path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
+	<unit path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
+	<material_config path="units/sora/shoot_at_trigger/shoot_at_shared"/>
+	<sequence_manager path="units/sora/shoot_at_trigger/shoot_at_shared"/>
 </table>
