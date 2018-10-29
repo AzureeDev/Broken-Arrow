@@ -275,6 +275,28 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		interact_distance = 250
 	}
 	
+	self.zm_authorization = {
+		text_id = "zm_activate_song_invisible",
+		action_text_id = "zm_grabbing_hand",
+		start_active = false,
+		interact_distance = 250,
+		timer = 3
+	}
+	
+	self.zm_computer_authorize = {
+		text_id = "zm_authorize",
+		action_text_id = "zm_authorizing",
+		start_active = false,
+		interact_distance = 250,
+		timer = 3
+	}
+	
+	self.zm_place_crystal = {
+		text_id = "zm_place_crystal",
+		action_text_id = "zm_placing_crystal",
+		start_active = false,
+	}
+	
 	self.zm_power_req = { 
 		text_id = "zm_teleporter",
 		action_text_id = "zm_use_teleporter",

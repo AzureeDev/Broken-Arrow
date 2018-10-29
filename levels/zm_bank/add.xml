@@ -821,10 +821,10 @@
 		<unit force="true" path="units/pd2_dlc_peta/props/pta_prop_flickering_light_fire/pta_prop_flickering_fire_light" unload="true"/>
 	</add>
 	<add path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" type="unit">
-		<unit force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
-		<object force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
+		<object force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_peta/props/pta_prop_debris_wood/pta_prop_debris_wood_01" unload="true"/>
 	</add>
 	<cooked_physics path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
 	<model path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
@@ -832,4 +832,10 @@
 	<unit path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
 	<material_config path="units/sora/shoot_at_trigger/shoot_at_shared"/>
 	<sequence_manager path="units/sora/shoot_at_trigger/shoot_at_shared"/>
+	<add path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" type="unit">
+		<unit force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
+		<object force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
+		<material_config force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
+	</add>
 </table>

@@ -43,4 +43,8 @@
 	"zm_activate_song_invisible" : "",
 	"zm_grabing_part" : "Grabbing part...",
 	"zm_grab_crystal" : "Press $BTN_INTERACT to grab a Power Crystal",
+	"zm_authorize" : "Hold $BTN_INTERACT to use hand",
+	"zm_grabbing_hand" : "Grabbing hand...",
+	"zm_authorizing" : "Authorizing...",
+	"zm_place_crystal" : "Press $BTN_INTERACT to connect the Crystal",
 }
