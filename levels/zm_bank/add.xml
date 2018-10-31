@@ -833,9 +833,9 @@
 	<material_config path="units/sora/shoot_at_trigger/shoot_at_shared"/>
 	<sequence_manager path="units/sora/shoot_at_trigger/shoot_at_shared"/>
 	<add path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" type="unit">
-		<unit force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
-		<object force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
 		<material_config force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
+		<object force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
 		<sequence_manager force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
+		<unit force="true" path="units/payday2/props/bnk_prop_office_briefcase_steel/bnk_prop_office_briefcase_steel" unload="true"/>
 	</add>
 </table>
