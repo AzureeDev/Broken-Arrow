@@ -320,6 +320,15 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 1,
 		interact_distance = 500
 	}
+	
+	self.zm_teleport_back = {
+		is_teleporter = true,
+		text_id = "zm_teleporter_back",
+		action_text_id = "zm_teleport_back",
+		start_active = false,
+		timer = 5,
+		axis = "y"
+	}
 
 	self.zm_teleporter_dummy_reload = {
 		text_id = "zm_teleporter_cooling_down",

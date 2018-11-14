@@ -859,4 +859,17 @@
 		<material_config force="true" path="units/payday2/props/gen_prop_loot_confidential_folder/gen_prop_loot_confidential_folder" unload="true"/>
 		<sequence_manager force="true" path="units/payday2/props/gen_prop_loot_confidential_folder/gen_prop_loot_confidential_folder" unload="true"/>
 	</add>
+	<unit_load name="units/sora/erf_emblem_decal/erf_emblem_decal">
+		<material_config path="units/sora/erf_emblem_decal/erf_emblem_decal_white"/>
+		<material_config path="units/sora/erf_emblem_decal/erf_emblem_decal_black_so"/>
+		<material_config path="units/sora/erf_emblem_decal/erf_emblem_decal_black_fo"/>
+		<texture path="units/sora/erf_emblem_decal/erf_emblem_decal_white"/>
+		<texture path="units/sora/erf_emblem_decal/erf_emblem_decal_black_so"/>
+		<texture path="units/sora/erf_emblem_decal/erf_emblem_decal_black_fo"/>
+		<cooked_physics path="units/sora/erf_emblem_decal/erf_emblem_decal"/>
+		<model path="units/sora/erf_emblem_decal/erf_emblem_decal"/>
+		<object path="units/sora/erf_emblem_decal/erf_emblem_decal"/>
+		<sequence_manager path="units/sora/erf_emblem_decal/erf_emblem_decal"/>
+		<unit path="units/sora/erf_emblem_decal/erf_emblem_decal"/>
+	</unit_load>
 </table>

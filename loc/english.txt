@@ -47,4 +47,9 @@
 	"zm_grabbing_hand" : "Grabbing hand...",
 	"zm_authorizing" : "Authorizing...",
 	"zm_place_crystal" : "Press $BTN_INTERACT to connect the Crystal",
+	"zm_use_teleporter" : "Using teleporter...",
+	"zm_teleporter" : "Hold $BTN_INTERACT to use the Teleporter",
+	"zm_teleporter_cooling_down" : "Teleporter is cooling down",
+	"zm_teleporter_back" : "Hold $BTN_INTERACT to Teleport back",
+	"zm_teleport_back" : "Teleporting back...",
 }
