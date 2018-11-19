@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/train/tra_prop_waterbottle/tra_prop_waterbottle" orientation_object="rp_tra_prop_waterbottle" />
+  <sequence_manager file="units/world/props/small_prop" />
+  
+	<bodies>
+		<body name="dynamic_body" enabled="false" template="small_prop" pushed_by_mover="false">
+			<object name="rp_tra_prop_waterbottle" />
+			<object name="c_capsule" collision_type="capsule" material="balsa"/>
+		</body>
+		<body name="static_body" remove_ray_type="walk" enabled="true" template="static">
+			<object name="rp_tra_prop_waterbottle" />
+			<object name="c_capsule" collision_type="capsule" padding="-2"/>
+		</body>
+	</bodies>  
+  
+	<decal_surfaces default_material="no_decal">
+		<decal_mesh name="dm_dm" enabled="true" material="no_decal"/>
+	</decal_surfaces>  
+
+	<graphics>
+		<object name="g_g" enabled="true" instance_struct="world_tm" />
+	</graphics>  
+  
+</dynamic_object> 

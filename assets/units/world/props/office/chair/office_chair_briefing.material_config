@@ -1,0 +1,6 @@
+<materials version="3">
+    <material render_template="generic:DIFFUSE_TEXTURE:INSTANCED:NORMALMAP" decal_material="cloth" version="2" name="office_chair_briefing">
+        <bump_normal_texture file="units/world/props/office/chair/office_chair_briefing_nm"/>
+        <diffuse_texture file="units/world/props/office/chair/office_chair_briefing_df"/>
+    </material>
+</materials>

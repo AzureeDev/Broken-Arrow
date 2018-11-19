@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<unit type="tra" slot="1">
+  <object file="units/world/props/train/tra_prop_waterbottle/tra_prop_waterbottle" />
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+    <extension name="damage" class="UnitDamage" />
+  </extensions>
+</unit>

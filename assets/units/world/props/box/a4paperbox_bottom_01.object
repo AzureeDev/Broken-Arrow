@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/box/a4paperbox_etc_material" orientation_object="rp_a4paperbox_bottom_01" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_a4paperbox_bottom_01" />
+      <object name="c_a4paperbox_bottom_01" collision_type="box" padding="-2"/>
+    </body>
+  </bodies>
+  <graphics>
+    <object name="g_a4paperbox_bottom_01" enabled="true" shadow_caster="false"  instance_struct="world_tm"/>
+  </graphics>
+  <decal_surfaces default_material="thin_layer" static="true">
+    <decal_mesh name="dm_a4paperbox_bottom_01" material="thin_layer" enabled="true"/>
+  </decal_surfaces>
+</dynamic_object>

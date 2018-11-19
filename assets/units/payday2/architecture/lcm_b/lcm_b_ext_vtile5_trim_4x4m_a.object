@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel orientation_object="rp_lcm_b_ext_vtile5_trim_4x4m_a" materials="units/payday2/architecture/lcm_b/lcm_b" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object collision_type="box" name="c_mesh_01" />
+        </body>
+    </bodies>
+	<decal_surfaces default_material="plaster" static="true">
+		<decal_mesh name="g_lcm_b_ext_vtile5_trim_4x4m_a" material="plaster" enabled="true"/>
+	</decal_surfaces> 
+    <graphics>
+        <object enabled="true" shadow_caster="true" name="s_s" />
+        <object enabled="true" name="g_lcm_b_ext_vtile5_trim_4x4m_a" />
+    </graphics>
+</dynamic_object>

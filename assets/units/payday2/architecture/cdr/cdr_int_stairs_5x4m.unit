@@ -1,0 +1,6 @@
+<unit type="str" slot="1" >
+    <object file="units/payday2/architecture/cdr/cdr_int_stairs_5x4m" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

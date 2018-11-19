@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/payday2/props/com_prop_restroom_toiletbooth/com_prop_restroom_toiletbooth" orientation_object="rp_restroom_toiletbooth_closed" />
+	<bodies>
+		<body name="static_body" enabled="true" template="static">
+			<object name="rp_restroom_toiletbooth_closed" />
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+			<object name="c_box_02" collision_type="box" padding="-2.5"/>
+			<object name="c_box_03" collision_type="box" padding="-2.5"/>
+			<object name="c_box_04" collision_type="box" padding="-2.5"/>
+			<object name="c_box_05" collision_type="box" padding="-2.5"/>
+		</body>
+	</bodies>
+	<decal_surfaces default_material="metal">
+		<decal_mesh name="dm_sheet_metal" enabled="true" material="sheet_metal"/>
+		<decal_mesh name="dm_wood" enabled="true" material="wood"/>
+	</decal_surfaces>
+	<graphics>
+		<object name="g_restroom_toiletbooth" enabled="true"/>
+	</graphics>
+</dynamic_object> 

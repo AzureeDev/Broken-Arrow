@@ -1,0 +1,25 @@
+<dynamic_object>
+    <diesel orientation_object="rp_gen_prop_door_metal" materials="units/payday2/props/gen_prop_door_metal/gen_prop_door_metal" />
+    
+	<bodies>
+		<body name="static_body" enabled="true" editable="true" template="static">
+			<object name="rp_gen_prop_door_metal" />
+			<object name="c_box_frame_000" collision_type="box" padding="-2.5"/>
+			<object name="c_box_frame_001" collision_type="box" padding="-2.5"/>
+			<object name="c_box_frame_002" collision_type="box" padding="-2.5"/>
+			<object name="c_box_frame_003" collision_type="box" padding="-2.5"/>
+		</body>
+		<body name="door_body" enabled="true" editable="true" template="static">
+			<object name="c_box_door" collision_type="box" padding="-2.5"/>
+		</body>
+	</bodies>
+  
+	<decal_surfaces default_material="metal_hollow">
+		<decal_mesh name="dm_metal_frame" enabled="true" material="metal_hollow" />
+		<decal_mesh name="dm_metal_door" enabled="true" material="metal_hollow" />
+	</decal_surfaces>
+	
+	<graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,5 @@
+<materials version="3">
+    <material name="des_prop_cardboardbox" decal_material="wood" render_template="generic:DIFFUSE_TEXTURE:INSTANCED" version="2">
+        <diffuse_texture file="units/world/props/desert/des_prop_cardboardbox/des_prop_cardboardbox_df"/>
+    </material>
+</materials>

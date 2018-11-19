@@ -9,6 +9,6 @@
   </bodies>  
   
   <graphics>
-    <object name="g_plane_black_temp" enabled="true"/>    
+    <object name="g_plane_black_temp" instance_struct="world_tm" enabled="true"/>    
   </graphics>
 </dynamic_object>

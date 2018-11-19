@@ -1,0 +1,77 @@
+<materials version="3">
+    <material name="mat_electrical_box02" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/electrical_box/electrical_box02_df"/>
+    </material>
+    <material name="mat_electricalbox02" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/electrical_box/electricalbox02_df"/>
+    </material>
+    <material name="mat_electricalbox01" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/electrical_box/electricalbox01_df"/>
+    </material>
+    <material name="mat_floodlight02" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/floodlight/floodlight02_df"/>
+    </material>
+    <material name="mat_garbage256_composite" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/garbage256_composite/garbage256_composite001a_df"/>
+    </material>
+    <material name="mat_gutter_pipe" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/gutter_pipe/gutter_pipe_256_df"/>
+    </material>
+    <material name="mat_handrail04" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/handrail04/handrail04_corner_df"/>
+    </material>
+    <material name="hospital05_rooftop_stair01_material_1" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/hospital05_rooftop_stair/hospital05_rooftop_stair01_material_1_df"/>
+    </material>
+    <material name="hospital05_rooftop_stair01_material_2" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/hospital05_rooftop_stair/hospital05_rooftop_stair01_material_2_df"/>
+    </material>
+    <material name="hospital05_rooftop_stair01_material_3" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/hospital05_rooftop_stair/hospital05_rooftop_stair01_material_3_df"/>
+    </material>
+    <material name="mat_ladder1" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/ladder1/ladder1_df"/>
+    </material>
+    <material name="mat_ladderaluminium" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/ladderaluminium/ladderaluminium128_df"/>
+    </material>
+    <material name="mat_light_red_mat1" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/light_red/light_red2_material_0_df"/>
+    </material>
+    <material name="mat_light_red_mat2" render_template="generic:DIFFUSE_TEXTURE:SELF_ILLUMINATION" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/light_red/light_red2_material_0_df"/>
+        <self_illumination_texture file="units/world/architecture/hospital/props/rooftop/light_red/light_red2_material_0_il"/>
+        <variable value="megatron" type="scalar" name="il_multiplier"/>
+    </material>
+    <material name="mat_light_spotlight01" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/light_spotlight/light_spotlight01_base_df"/>
+    </material>
+    <material name="mat_paintbucket01" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/paintbucket/paintbucket01_df"/>
+    </material>
+    <material name="mat_powerbox01a" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/powerbox/powerbox01a_df"/>
+    </material>
+    <material name="mat_roof_vent001" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/roof_vent/roof_vent001_df"/>
+    </material>
+    <material name="mat_substation_transformer01a" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/substation_transformer/substation_transformer01a_df"/>
+    </material>
+    <material name="mat_substation_transformer01b" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/substation_transformer/substation_transformer01b_df"/>
+    </material>
+    <material name="mat_vent_large1" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/vent_large/vent_large1_df"/>
+    </material>
+    <material name="mat_ventilationduct01" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/ventilationduct/ventilationduct01_df"/>
+    </material>
+    <material name="mat_ventilationduct02large" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/ventilationduct/ventilationduct02large_df"/>
+    </material>
+    <material name="mat_wirespout" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/rooftop/wirespout/wirespout_df"/>
+    </material>
+    <material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
+</materials>

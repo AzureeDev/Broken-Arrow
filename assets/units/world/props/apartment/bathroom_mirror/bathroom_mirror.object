@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/apartment/bathroom_mirror/bathroom_mirror" orientation_object="rp_bathroom_mirror" />
+  <bodies>
+    <body remove_ray_type="walk vis_graph" name="static_body" enabled="true" template="raycoll_static">
+      <object name="rp_bathroom_mirror" />
+      <object name="c_bathroom_mirror" collision_type="box" padding="-2"/>
+    </body>
+  </bodies>
+  
+  <decal_surfaces default_material="glass_breakable" static="true">
+    <decal_mesh name="g_bathroom_mirror" enabled="true" material="glass_breakable" />
+  </decal_surfaces>
+  
+  <graphics>
+    <object name="g_bathroom_mirror" enabled="true" instance_struct="world_tm"/>
+  </graphics>
+</dynamic_object> 

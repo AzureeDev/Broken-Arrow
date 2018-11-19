@@ -1,0 +1,278 @@
+<dynamic_object>
+	<diesel orientation_object="rp_str_vehicle_bus_metro" materials="units/payday2/vehicles/str_vehicle_bus_metro/str_vehicle_bus_metro" />
+	<sequence_manager file="units/payday2/vehicles/str_vehicle_bus_metro/str_vehicle_bus_metro" />
+	
+	 <animations>
+	    <animation_group name="front_doors" >
+		<object name="anim_front_door_a" enabled="true" />
+		<object name="a_front_door_b" enabled="true" />
+	    </animation_group>
+	    <animation_group name="back_doors" >
+		<object name="anim_back_door_a" enabled="true" />
+		<object name="a_back_door_b" enabled="true" />
+	    </animation_group>
+	    <animation_group name="explosion" >
+		<object name="a_middle" enabled="true" />
+		<object name="a_right" enabled="true" />
+		<object name="a_left" enabled="true" />
+		<object name="a_front" enabled="true" />
+		<object name="a_top_front_left" enabled="true" />
+		<object name="a_top_front_right" enabled="true" />
+		<object name="a_top_middle_right" enabled="true" />
+		<object name="a_top_middle_left" enabled="true" />
+		<object name="a_top_back_left" enabled="true" />
+		<object name="a_top_back_right" enabled="true" />
+	    </animation_group>
+	 </animations>
+	<bodies>
+		<body name="static_body" remove_ray_type="walk" enabled="true" template="static" >
+		    <object name="c_bus" collision_type="mesh_mopp" enabled="true" />
+		</body>
+		<body name="static_body_exploded" remove_ray_type="walk" enabled="true" template="static" >
+		    <object name="c_bus_exploded" collision_type="mesh_mopp" enabled="true" />
+		</body>
+		<body name="graph_block_block" enabled="true" template="graph_blocker" >
+		    <object name="c_graph_blocker" collision_type="mesh_mopp" enabled="true" />
+		</body>
+		
+		<body  name="front_door_a" enabled="false" template="animated">
+		    <object name="c_front_door_a" collision_type="mesh_mopp" enabled="true" />
+		</body>
+		<body  name="front_door_b" enabled="false" template="animated">
+		    <object name="c_front_door_b" collision_type="mesh_mopp" enabled="true" />
+		</body>
+		<body  name="back_door_a" enabled="false" template="animated">
+		    <object name="c_back_door_a" collision_type="mesh_mopp" enabled="true" />
+		</body>
+		<body  name="back_door_b" enabled="false" template="animated">
+		    <object name="c_back_door_b" collision_type="mesh_mopp" enabled="true" />
+		</body>
+		
+		<body remove_ray_type="ai_vision" name="window_left" enabled="true" template="static">
+			<object name="c_glass_left" collision_type="mesh_mopp" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_left_1" enabled="true" template="static">
+			<object name="c_glass_left_1" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_left_2" enabled="true" template="static">
+			<object name="c_glass_left_2" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_left_3" enabled="true" template="static">
+			<object name="c_glass_left_3" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_left_4" enabled="true" template="static">
+			<object name="c_glass_left_4" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_left_5" enabled="true" template="static">
+			<object name="c_glass_left_5" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_left_6" enabled="true" template="static">
+			<object name="c_glass_left_6" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_left_7" enabled="true" template="static">
+			<object name="c_glass_left_7" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_left_8" enabled="true" template="static">
+			<object name="c_glass_left_8" collision_type="box" two_sided="true" />
+		</body>
+		
+		<body remove_ray_type="ai_vision" name="window_right" enabled="true" template="static">
+			<object name="c_glass_right" collision_type="mesh_mopp" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_right_1" enabled="true" template="static">
+			<object name="c_glass_right_1" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_right_2" enabled="true" template="static">
+			<object name="c_glass_right_2" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_right_3" enabled="true" template="static">
+			<object name="c_glass_right_3" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_right_4" enabled="true" template="static">
+			<object name="c_glass_right_4" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_right_5" enabled="true" template="static">
+			<object name="c_glass_right_5" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_right_6" enabled="true" template="static">
+			<object name="c_glass_right_6" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_right_7" enabled="true" template="static">
+			<object name="c_glass_right_7" collision_type="box" two_sided="true" />
+		</body>
+		
+		<body remove_ray_type="ai_vision" name="window_back_door_b" enabled="false" template="animated">
+			<object name="c_glass_back_door_b" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_back_door_b_b" enabled="false" template="animated">
+			<object name="c_glass_back_door_b_b" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_back_door_a" enabled="false" template="animated">
+			<object name="c_glass_back_door_a" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_back_door_a_b" enabled="false" template="animated">
+			<object name="c_glass_back_door_a_b" collision_type="box" two_sided="true" />
+		</body>
+		
+		<body remove_ray_type="ai_vision" name="window_front_door_b" enabled="false" template="animated">
+			<object name="c_glass_front_door_b" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_front_door_b_b" enabled="false" template="animated">
+			<object name="c_glass_front_door_b_b" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_front_door_a" enabled="false" template="animated">
+			<object name="c_glass_front_door_a" collision_type="box" two_sided="true" />
+		</body>
+		<body remove_ray_type="ai_vision" name="window_front_door_a_b" enabled="false" template="animated">
+			<object name="c_glass_front_door_a_b" collision_type="box" two_sided="true" />
+		</body>
+		
+		<body remove_ray_type="bullet" name="nav_graph_ramp_back" enabled="true" template="nav_walk">
+			<object name="rp_str_vehicle_bus_metro" />
+			<object name="c_body_ramp_back" collision_type="convex" />
+			<object name="c_body_ramp_front" collision_type="convex" />
+			<object name="c_body_floor" collision_type="convex" />
+		</body>
+
+		<body name="bag_blocker" enabled="true" template="fence" collision_class="bag_blocker" collides_with_mover="false">
+			<object name="c_body_floor" collision_type="box" />
+		</body>
+		<body name="bag_blocker_roof" enabled="true" template="fence" collision_class="bag_blocker">
+			<object name="c_box_bag_blocker_roof" collision_type="box" />
+		</body>
+	</bodies>
+	<decal_surfaces>
+		<decal_mesh name="dm_bus_rubber" material="rubber" enabled="true" />
+		<decal_mesh name="dm_bus_plastic" material="plastic" enabled="true" />
+		<decal_mesh name="dm_bus_sheet_metal" material="sheet_metal" enabled="true" />
+		<decal_mesh name="dm_bus_glass" material="glass_breakable" enabled="true" />
+		<decal_mesh name="dm_bus_wood" material="wood" enabled="true" />
+		<decal_mesh name="dm_bus_metal" material="metal" enabled="true" />
+		<decal_mesh name="dm_glass_left" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_left_1" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_left_2" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_left_3" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_left_4" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_left_5" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_left_6" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_left_7" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_left_8" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_right" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_right_1" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_right_2" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_right_3" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_right_4" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_right_5" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_right_6" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_glass_right_7" enabled="true" material="glass_breakable" />
+		
+		<decal_mesh name="dm_glass_back_door_b" enabled="false" material="glass_breakable" />
+		<decal_mesh name="dm_glass_back_door_b_b" enabled="false" material="glass_breakable" />
+		<decal_mesh name="dm_glass_back_door_a" enabled="false" material="glass_breakable" />
+		<decal_mesh name="dm_glass_back_door_a_b" enabled="false" material="glass_breakable" />
+		
+		<decal_mesh name="dm_glass_front_door_b" enabled="false" material="glass_breakable" />
+		<decal_mesh name="dm_glass_front_door_b_b" enabled="false" material="glass_breakable" />
+		<decal_mesh name="dm_glass_front_door_a" enabled="false" material="glass_breakable" />
+		<decal_mesh name="dm_glass_front_door_a_b" enabled="false" material="glass_breakable" />
+		
+		<decal_mesh name="dm_front_door_a" enabled="false" material="sheet_metal" />
+		<decal_mesh name="dm_front_door_b" enabled="false" material="sheet_metal" />
+		<decal_mesh name="dm_back_door_a" enabled="false" material="sheet_metal" />
+		<decal_mesh name="dm_back_door_b" enabled="false" material="sheet_metal" />
+	</decal_surfaces>
+	<graphics>
+		<object name="g_sign_il_congress" enabled="true" />
+		<object name="g_decals" enabled="true" />
+		<object name="g_str_vehicle_bus_metro" enabled="true" />
+		<object name="g_str_vehicle_bus_metro_exploaded" enabled="false" />
+		<object name="g_glass_left" enabled="true" />
+		<object name="g_glass_left_1" enabled="true" />
+		<object name="g_glass_left_2" enabled="true" />
+		<object name="g_glass_left_3" enabled="true" />
+		<object name="g_glass_left_4" enabled="true" />
+		<object name="g_glass_left_5" enabled="true" />
+		<object name="g_glass_left_6" enabled="true" />
+		<object name="g_glass_left_7" enabled="true" />
+		<object name="g_glass_left_8" enabled="true" />
+		<object name="g_glass_right" enabled="true" />
+		<object name="g_glass_right_1" enabled="true" />
+		<object name="g_glass_right_2" enabled="true" />
+		<object name="g_glass_right_3" enabled="true" />
+		<object name="g_glass_right_4" enabled="true" />
+		<object name="g_glass_right_5" enabled="true" />
+		<object name="g_glass_right_6" enabled="true" />
+		<object name="g_glass_right_7" enabled="true" />
+		
+		<object name="g_glass_left_dmg" enabled="false" />
+		<object name="g_glass_left_dmg_1" enabled="false" />
+		<object name="g_glass_left_dmg_2" enabled="false" />
+		<object name="g_glass_left_dmg_3" enabled="false" />
+		<object name="g_glass_left_dmg_4" enabled="false" />
+		<object name="g_glass_left_dmg_5" enabled="false" />
+		<object name="g_glass_left_dmg_6" enabled="false" />
+		<object name="g_glass_left_dmg_7" enabled="false" />
+		<object name="g_glass_left_dmg_8" enabled="false" />
+		<object name="g_glass_right_dmg" enabled="false" />
+		<object name="g_glass_right_dmg_1" enabled="false" />
+		<object name="g_glass_right_dmg_2" enabled="false" />
+		<object name="g_glass_right_dmg_3" enabled="false" />
+		<object name="g_glass_right_dmg_4" enabled="false" />
+		<object name="g_glass_right_dmg_5" enabled="false" />
+		<object name="g_glass_right_dmg_6" enabled="false" />
+		<object name="g_glass_right_dmg_7" enabled="false" />
+		
+		<object name="g_front_door_b" enabled="false" />
+		<object name="g_front_door_a" enabled="false" />
+		<object name="g_back_door_b" enabled="false" />
+		<object name="g_back_door_a" enabled="false" />
+		
+		<object name="g_glass_back_door_b" enabled="false" />
+		<object name="g_glass_back_door_b_b" enabled="false" />
+		<object name="g_glass_back_door_a" enabled="false" />
+		<object name="g_glass_back_door_a_b" enabled="false" />
+		
+		<object name="g_glass_front_door_b" enabled="false" />
+		<object name="g_glass_front_door_b_b" enabled="false" />
+		<object name="g_glass_front_door_a" enabled="false" />
+		<object name="g_glass_front_door_a_b" enabled="false" />
+		
+		<object name="g_glass_back_door_dmg_b" enabled="false" />
+		<object name="g_glass_back_door_dmg_b_b" enabled="false" />
+		<object name="g_glass_back_door_dmg_a" enabled="false" />
+		<object name="g_glass_back_door_dmg_a_b" enabled="false" />
+		
+		<object name="g_glass_front_door_dmg_b" enabled="false" />
+		<object name="g_glass_front_door_dmg_b_b" enabled="false" />
+		<object name="g_glass_front_door_dmg_a" enabled="false" />
+		<object name="g_glass_front_door_dmg_a_b" enabled="false" />
+		
+		<object name="s_bus" enabled="true" shadow_caster="true" />
+	</graphics>
+	<objects>
+		<align_point name="e_window_right_1" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" />
+		<align_point name="e_window_right_2" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" />
+		<align_point name="e_window_right_3" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" />
+		<align_point name="e_window_right_4" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" />
+		<align_point name="e_window_right_5" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" />
+		<align_point name="e_window_right_6" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" />
+		<align_point name="e_window_right_7" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" />
+		<align_point name="e_window_left_1" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_left_2" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_left_3" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_left_4" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_left_5" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_left_6" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_left_7" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_left_8" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		
+		<align_point name="e_window_front_door_a" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_front_door_a_b" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_front_door_b" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_front_door_b_b" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_back_door_a" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_back_door_a_b" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_back_door_b" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+		<align_point name="e_window_back_door_b_b" enabled="true" parent="rp_str_vehicle_bus_metro" position="0 0 0" rotation="0 0 0" /> 
+	</objects>
+</dynamic_object>

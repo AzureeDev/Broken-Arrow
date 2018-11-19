@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel orientation_object="rp_hospital_coffee_maker" materials="units/world/architecture/hospital/props/coffee_maker/hospital_coffee_maker" />
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+	<decal_surfaces default_material="metal" static="true">
+		<decal_mesh name="g_g" enabled="true" material="metal" />
+	</decal_surfaces>
+	<bodies>
+		<body name="static_body" enabled="true" template="static">
+			<object name="rp_hospital_coffee_maker" />
+			<object name="c_box" collision_type="box" />
+		</body>
+	</bodies>
+</dynamic_object>

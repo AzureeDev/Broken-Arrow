@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<dynamic_object>
+	<diesel materials="units/payday2/architecture/off_int_fbi/off_int_fbi_floor_carpet" orientation_object="rp_off_int_fbi_floor_carpet_4x4m" />
+    <bodies>
+        <body name="static_body" template="static" enabled="true" >
+            <object name="rp_off_int_fbi_floor_carpet_4x4m"/>
+            <object name="c_box_00" collision_type="box" padding="-2.5"/>
+        </body>
+    </bodies>
+	
+	<decal_surfaces default_material="carpet" static="true">
+		<decal_mesh name="g_g" material="carpet" enabled="true"/>
+	</decal_surfaces> 
+	
+    <graphics>
+        <object enabled="true" name="g_g" shadow_caster="false" />
+    </graphics>
+</dynamic_object> 

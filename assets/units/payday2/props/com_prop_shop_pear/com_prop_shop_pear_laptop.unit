@@ -1,0 +1,8 @@
+<unit type="com" slot="1" >
+    <object file="units/payday2/props/com_prop_shop_pear/com_prop_shop_pear_laptop" />
+    <network sync="spawn"/>
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+        <extension class="UnitDamage" name="damage" />
+    </extensions>
+</unit>

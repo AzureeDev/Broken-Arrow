@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<unit type="str" slot="1">
+<network sync="spawn"/>
+  <object file="units/world/props/street/plywood_fence/plywood_fence_door" />
+  <dependencies>
+    <depends_on bnk="soundbanks/regular_sfx" />
+  </dependencies>
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+    <extension name="damage" class="UnitDamage" />
+  </extensions>
+</unit>

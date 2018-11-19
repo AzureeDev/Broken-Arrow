@@ -1,0 +1,7 @@
+<materials version="3">
+    <material name="door_toilet" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/bank/bank_door_toilet/toilet_door_df"/>
+        <reflection_texture type="cubemap" global_texture="current_global_texture"/>
+        <variable value="0.65000003576279 0.062000002712011 1" type="vector3" name="environment_settings"/>
+    </material>
+</materials>

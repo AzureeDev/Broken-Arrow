@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/payday2/props/stn_prop_office_desk_straight/stn_prop_office_desk_straight" orientation_object="rp_stn_prop_office_desk_straight" />
+	<bodies>
+		<body name="body_desk_collision" enabled="true" template="static">
+			<object name="rp_stn_prop_office_desk_straight" />
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+		</body>
+	</bodies>
+	<decal_surfaces default_material="wood">
+		<decal_mesh name="dm_stn_prop_office_desk_straight" enabled="true" material="wood"/>
+	</decal_surfaces>
+	<graphics>
+		<object name="g_stn_prop_office_desk_straight" enabled="true"  />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,5 @@
+<materials version="3">
+    <material name="hospital_locker" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/locker/hospital_locker_df"/>
+    </material>
+</materials>

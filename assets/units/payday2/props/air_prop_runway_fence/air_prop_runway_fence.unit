@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<unit type="air" slot="1">
+<network sync="spawn"/>
+	<object file="units/payday2/props/air_prop_runway_fence/air_prop_runway_fence" />
+	<dependencies>
+		<depends_on effect="effects/payday2/particles/interact/lighting_fence" />
+		<depends_on bnk="soundbanks/regular_sfx" />
+	</dependencies>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+		<extension name="interaction" class="UseInteractionExt">
+			<var name="tweak_data" value="cut_fence" />
+			<var name="_interact_object" value="int_location"/>
+		</extension>
+	</extensions>
+</unit>

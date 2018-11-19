@@ -1,0 +1,8 @@
+<materials version="3">
+    <material name="garbage_bags" version="2" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:INSTANCED:NORMALMAP">
+        <bump_normal_texture file="units/world/props/street/garbage_bags/garbage_bags_nm"/>
+        <diffuse_texture file="units/world/props/street/garbage_bags/garbage_bags_df"/>
+        <reflection_texture global_texture="current_global_texture" type="cubemap"/>
+        <variable value="4 0.10000000149012 1" type="vector3" name="environment_settings"/>
+    </material>
+</materials>

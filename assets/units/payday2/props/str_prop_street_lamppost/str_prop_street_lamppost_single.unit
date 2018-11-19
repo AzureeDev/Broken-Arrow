@@ -1,0 +1,7 @@
+<unit type="str" slot="1" >
+    <object file="units/payday2/props/str_prop_street_lamppost/str_prop_street_lamppost_single" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+		<extension name="damage" class="UnitDamage" /> 
+    </extensions>
+</unit>

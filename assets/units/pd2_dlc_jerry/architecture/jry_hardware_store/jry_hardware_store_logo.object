@@ -1,0 +1,21 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_logo" orientation_object="rp_jry_hardware_store_logo" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_jry_hardware_store_logo" />
+			<object name="c_box" collision_type="box" padding="-2.5" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+			<object name="c_box_02" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="metal_hollow">
+		<decal_mesh name="dm_metal_hollow" enabled="true" material="metal_hollow" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="lod_g_g">
+			<object name="g_g_lod_0" enabled="true" max_distance="1500" />
+			<object name="g_g_lod_1" enabled="true" />
+		</lod_object>
+		<object name="s_s" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

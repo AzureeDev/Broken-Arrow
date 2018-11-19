@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/office/desk_accessories/desk_accessories" orientation_object="rp_desk_book" />
+  <bodies>
+    <body name="static_body" enabled="true" template="raycoll_static">
+    	<object name="rp_desk_book"/>
+      <object name="c_desk_book" collision_type="box" padding="-2"/>
+    </body>
+    <body name="dynamic_body" enabled="false" template="small_prop" pushed_by_mover="false">
+		<object name="c_desk_book" collision_type="box" material="wood"/>
+    </body>
+  </bodies>
+  
+  <decal_surfaces default_material="plastic">
+    <decal_mesh name="g_desk_book" enabled="true" material="plastic"/>
+  </decal_surfaces>
+  
+  <graphics>
+    <object name="g_desk_book" enabled="true" shadow_caster="false" instance_struct="world_tm" />
+  </graphics>
+</dynamic_object>

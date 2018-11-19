@@ -1,0 +1,23 @@
+<dynamic_object>
+    <diesel orientation_object="rp_ind_prop_warehouse_rack_b" materials="units/payday2/props/ind_prop_warehouse_set/ind_prop_warehouse_racksmall" />
+ 	<bodies>
+		<body name="static_body" enabled="true" template="static">
+			<object name="rp_ind_prop_warehouse_rack_b" />
+			<object name="c_box_02" collision_type="box" padding="-2.5"/>
+			<object name="c_box_04" collision_type="box" padding="-2.5"/>
+			<object name="c_box_05" collision_type="box" padding="-2.5"/>
+			<object name="c_box_06" collision_type="box" padding="-2.5"/>
+			<object name="c_box_07" collision_type="box" padding="-2.5"/>
+			<object name="c_capsule_03" collision_type="capsule" padding="-2.5"/>
+			<object name="c_capsule_04" collision_type="capsule" padding="-2.5"/>
+		</body>
+	</bodies>
+
+	<decal_surfaces default_material="sheet_metal" static="true">
+		<decal_mesh name="dm_metal" enabled="true" material="sheet_metal"/>
+	</decal_surfaces>   
+
+	<graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

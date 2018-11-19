@@ -1,0 +1,11 @@
+<materials version="3">
+    <material version="2" render_template="generic:DIFFUSE_TEXTURE:SELF_ILLUMINATION" name="com_int_store_sushi_df">
+        <diffuse_texture file="units/payday2/architecture/com_int_store_sushi/com_int_store_sushi_df"/>
+        <variable value="searchlight" type="scalar" name="il_multiplier"/>
+        <self_illumination_texture file="units/payday2/architecture/com_int_store_sushi/com_int_store_sushi_il"/>
+    </material>
+    <material name="com_int_store_sushi_il" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/architecture/com_int_store_sushi/com_int_store_sushi_il"/>
+        <variable value="dimlight" type="scalar" name="intensity"/>
+    </material>
+</materials>

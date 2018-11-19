@@ -1,0 +1,10 @@
+<materials version="3">
+    <material name="computer_projector" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/props/office/computer/computer_projector_df"/>
+    </material>
+    <material name="projektor_lens" render_template="generic:DIFFUSE_TEXTURE:SELF_ILLUMINATION" version="2">
+        <diffuse_texture file="units/world/props/office/computer/computer_projector_df"/>
+        <self_illumination_texture file="units/world/props/office/computer/projector_lens_il"/>
+        <variable value="desklight" type="scalar" name="il_multiplier"/>
+    </material>
+</materials>

@@ -1,0 +1,5 @@
+<materials version="3">
+    <material name="coffee_maker" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/coffee_maker/coffee_maker_df"/>
+    </material>
+</materials>

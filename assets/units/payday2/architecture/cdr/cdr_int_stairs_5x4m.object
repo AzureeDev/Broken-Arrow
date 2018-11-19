@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel orientation_object="rp_cdr_int_stairs_5x4m" materials="units/payday2/architecture/cdr/cdr_int" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object name="rp_cdr_int_stairs_5x4m"/>
+            <object collision_type="box" name="c_box_000" padding="-2.5" />
+        </body>
+    </bodies>
+	
+	<decal_surfaces default_material="stone" static="true">
+		<decal_mesh name="dm_stone" material="stone" enabled="true"/>
+	</decal_surfaces> 
+	
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

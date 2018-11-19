@@ -1,0 +1,16 @@
+<dynamic_object>
+    <diesel orientation_object="rp_com_ext_parking_garage_concrete_rubble_a" materials="units/payday2/architecture/com_ext_parking_garage/com_ext_parking_garage_concrete" />
+	
+    <bodies>
+        <body enabled="true" template="raycoll_static" name="raycoll_body">
+			<object name="rp_com_ext_parking_garage_concrete_rubble_a"/>
+			<object name="c_box_raycol" collision_type="box" padding="-2.5"/>
+        </body>
+    </bodies>
+	<decal_surfaces default_material="concrete">
+        <decal_mesh enabled="true" name="dm_concrete" material="concrete" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_g" shadow_caster="true"/>
+    </graphics>
+</dynamic_object>

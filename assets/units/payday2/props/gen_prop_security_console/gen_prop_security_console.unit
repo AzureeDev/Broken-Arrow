@@ -1,0 +1,16 @@
+<unit type="gen" slot="1" >
+	<object file="units/payday2/props/gen_prop_security_console/gen_prop_security_console" />
+	<network sync="spawn"/>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+		<extension name="interaction" class="AccessCameraInteractionExt">
+			<var name="tweak_data" value="access_camera" />
+			<var name="_interact_object" value="interact"/>
+			<var name="_ray_object_names" type="table" >
+				<var value="interact"/>
+				<!-- <var value="a_ray_object_2"/> -->
+			</var>
+		</extension>
+	</extensions>
+</unit>

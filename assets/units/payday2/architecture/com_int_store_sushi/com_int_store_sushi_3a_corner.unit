@@ -1,0 +1,6 @@
+<unit type="com" slot="1" >
+    <object file="units/payday2/architecture/com_int_store_sushi/com_int_store_sushi_3a_corner" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

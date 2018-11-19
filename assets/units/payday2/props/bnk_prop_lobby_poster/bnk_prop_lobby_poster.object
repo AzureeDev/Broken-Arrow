@@ -1,0 +1,21 @@
+<dynamic_object>
+    <diesel orientation_object="rp_bnk_prop_lobby_poster" materials="units/payday2/props/bnk_prop_lobby_poster/bnk_prop_lobby_poster" />
+	<sequence_manager file="units/payday2/props/bnk_prop_lobby_poster/bnk_prop_lobby_poster" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object collision_type="box" name="c_box" />
+        </body>
+        <body enabled="false" template="dynamic" name="dynamic_body" >
+			<object name="rp_bnk_prop_lobby_poster" />
+			<object name="c_box" collision_type="box" mass="5"/>
+			<object name="g_g" />
+        </body>
+    </bodies>
+    <decal_surfaces default_material="metal">
+		<decal_mesh name="dm_metal" material="metal" enabled="true"/>
+		<decal_mesh name="dm_paper" material="sheet_metal" enabled="true"/>
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

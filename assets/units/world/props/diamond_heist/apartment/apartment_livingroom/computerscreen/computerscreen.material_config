@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="mtr_computerscreen" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <bump_normal_texture file="units/world/props/diamond_heist/apartment/apartment_livingroom/textures/t_computerscreen_nm"/>
+        <diffuse_texture file="units/world/props/diamond_heist/apartment/apartment_livingroom/textures/t_computerscreen_df"/>
+    </material>
+</materials>

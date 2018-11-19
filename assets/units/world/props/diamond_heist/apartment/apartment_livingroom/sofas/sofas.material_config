@@ -1,0 +1,9 @@
+<materials version="3">
+    <material name="mtr_sofa" render_template="generic:DIFFUSE_TEXTURE:RL_BIGPROPS:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/world/props/diamond_heist/apartment/apartment_livingroom/sofas/t_sofa_df"/>
+    </material>
+    <material name="mtr_sofa_lod" render_template="generic:DIFFUSE_TEXTURE:RL_BIGPROPS:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/world/props/diamond_heist/apartment/apartment_livingroom/sofas/t_sofa_df" mip="3" />
+    </material>
+    <material version="2" render_template="shadow_caster_only" name="shadow_caster"/>
+</materials>

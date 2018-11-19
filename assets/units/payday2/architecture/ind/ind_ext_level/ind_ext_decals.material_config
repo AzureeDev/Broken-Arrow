@@ -1,0 +1,35 @@
+<materials version="3">
+    <material name="mat_ind_ext_scratches" render_template="decal:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_scratches_df"/>
+    </material>
+    <material name="mat_ind_ext_decal_01" render_template="decal:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_01_df"/>
+    </material>
+    <material version="2" render_template="decal:DIFFUSE_TEXTURE:NORMALMAP:OPACITY_TEXTURE" name="mat_ind_ext_decal_02">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_02_df"/>
+        <opacity_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_02_op"/>
+        <bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_02_nm"/>
+    </material>
+    <material version="2" render_template="decal:DIFFUSE_TEXTURE:NORMALMAP:OPACITY_TEXTURE" name="mat_ind_ext_decal_03">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_03_df"/>
+        <opacity_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_03_op"/>
+        <bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_03_nm"/>
+    </material>
+    <material name="mat_ind_ext_decal_04" render_template="decal:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_04_df"/>
+    </material>
+    <material version="2" render_template="decal:DIFFUSE_TEXTURE" name="mat_ind_ext_stripes_01">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_stripes_01_df"/>
+    </material>
+    <material version="2" decal_material="concrete" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:EXTERNAL_ALPHA_REF:NORMALMAP:RL_ENVIRONMENT" name="mat_ind_ext_stripes_01_alpha">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_stripes_01_df"/>
+        <bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_stripes_01_nm"/>
+        <variable value="0.22000001370907" type="scalar" name="alpha_ref"/>
+    </material>
+    <material name="mat_ind_ext_decal_05" render_template="decal:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_05_df"/>
+    </material>
+    <material name="mat_ind_ext_decal_06" render_template="decal:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_decal_06_df"/>
+    </material>
+</materials>

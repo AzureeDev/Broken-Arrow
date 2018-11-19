@@ -1,0 +1,14 @@
+<materials version="3">
+    <material name="hcm_bdrop_01_antennas_mat" render_template="effect:DIFFUSE0_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/architecture/hcm_bdrop/hcm_bdrop_antennas_df"/>
+        <variable value="identity" type="scalar" name="intensity"/>
+    </material>
+    <material render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:RL_BACKDROP" src="GLOBAL" version="2" name="hcm_bdrop_01_mat">
+        <diffuse_texture file="units/payday2/architecture/hcm_bdrop/hcm_bdrop_01_df"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+    </material>
+    <material version="2" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE" name="hcm_bdrop_01_mat_op">
+        <diffuse_texture file="units/payday2/architecture/hcm_bdrop/hcm_bdrop_01_op"/>
+        <variable value="monitor" type="scalar" name="intensity"/>
+    </material>
+</materials>

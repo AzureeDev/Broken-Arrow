@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<dynamic_object>
+	<diesel materials="units/payday2/architecture/ind/ind_ext_level/ind_ext_decals" orientation_object="rp_ind_ext_stripes_01_2m" />
+	<bodies>
+        <body name="static_body" template="editor" enabled="true" >
+            <object name="rp_ind_ext_stripes_01_2m"/>
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+        </body>
+    </bodies>
+	
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object> 
+
+
+
+

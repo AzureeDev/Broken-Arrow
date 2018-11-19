@@ -1,0 +1,18 @@
+<?xml version="1.0"?> 
+<dynamic_object>
+  <diesel materials="units/world/props/office/desk_accessories/desk_lamp_04_off" orientation_object="rp_floor_lamp" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+			<object name="rp_floor_lamp" />
+			<object name="c_floor_lamp" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  
+  <decal_surfaces default_material="metal" static="true">
+    <decal_mesh name="dm_metal" enabled="true" material="metal_hollow" />
+  </decal_surfaces>
+  
+  <graphics>
+    <object name="g_floor_lamp" enabled="true" shadow_caster="false" instance_struct="world_tm" />
+  </graphics>
+</dynamic_object> 

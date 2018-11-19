@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/office/chair/chairs" orientation_object="rp_chair_02" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_chair_02" />
+      <object name="c_chair_02" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  <decal_surfaces default_material="metal" static="true">
+    <decal_mesh name="dm_cloth_stuffed" enabled="true" material="cloth_stuffed" />
+  </decal_surfaces>
+  <graphics>
+    <object name="g_chair_02" enabled="true" instance_struct="world_tm" />
+  </graphics>
+</dynamic_object>

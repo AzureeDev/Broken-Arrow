@@ -1,0 +1,5 @@
+<materials version="3">
+    <material render_template="generic:DIFFUSE_TEXTURE:INSTANCED" decal_material="cloth" version="2" name="binder">
+        <diffuse_texture file="units/world/props/office/binders/binder_df"/>
+    </material>
+</materials>

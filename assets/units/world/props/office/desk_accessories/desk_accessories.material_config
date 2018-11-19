@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="desk_accessories" decal_material="wood" version="2" render_template="generic:DIFFUSE_TEXTURE:INSTANCED:NORMALMAP">
+        <diffuse_texture file="units/world/props/office/desk_accessories/desk_accessories_df"/>
+        <bump_normal_texture file="units/world/props/office/desk_accessories/desk_accessories_nm"/>
+    </material>
+</materials>

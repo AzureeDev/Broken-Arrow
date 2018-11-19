@@ -1,0 +1,8 @@
+<unit type="cas" slot="1">
+    <object file="units/pd2_dlc_casino/props/cas_prop_concrete_hole/cas_prop_concrete_hole" />
+    <network sync="spawn"/>
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+        <extension name="damage" class="UnitDamage" />
+    </extensions>
+</unit>

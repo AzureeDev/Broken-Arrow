@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<unit type="deprecated" slot="1">
+  <object file="units/world/props/yacht/champaign/lxy_prop_champaign_glass" />
+  <dependencies>
+  	<depends_on effect="effects/particles/dest/bottle_dest" />
+  	
+  </dependencies>
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+    <extension name="damage" class="UnitDamage" />
+  </extensions>
+</unit>

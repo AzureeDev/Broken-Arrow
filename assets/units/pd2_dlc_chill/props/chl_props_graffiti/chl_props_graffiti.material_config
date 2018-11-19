@@ -1,0 +1,179 @@
+<materials version="3">
+	<material name="mat_graffiti1" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti1_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti1_op" />
+	</material>
+	<material name="mat_graffiti2" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti2_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti2_op" />
+	</material>
+	<material name="mat_graffiti3" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti3_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti3_op" />
+	</material>
+	<material name="mat_graffiti4" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti4_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti4_op" />
+	</material>
+	<material name="mat_graffiti5" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti5_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti5_op" />
+	</material>
+	<material name="mat_graffiti6" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti6_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti6_op" />
+	</material>
+	<material name="mat_graffiti7" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti7_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti7_op" />
+	</material>
+	<material name="mat_graffiti8" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti8_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti8_op" />
+	</material>
+	<material name="mat_graffiti9" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti9_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti9_op" />
+	</material>
+	<material name="mat_graffiti10" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti10_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti10_op" />
+	</material>
+	<material name="mat_graffiti11" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti11_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti11_op" />
+	</material>
+	<material name="mat_graffiti12" render_template="decal:DIFFUSE_TEXTURE:OPACITY_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti12_df" />
+		<opacity_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti12_op" />
+	</material>
+	<material name="mat_7200" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_7200_df" />
+	</material>
+	<material name="mat_answer" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_answer_df" />
+	</material>
+	<material name="mat_buff" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_buff_df" />
+	</material>
+	<material name="mat_creatures" render_template="effect:BLEND_MUL:DIFFUSE0_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_creatures_df" />
+		<variable name="intensity" type="scalar" value="identity" />
+	</material>
+	<material name="mat_gefilte_fish" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_gefilte_fish_df" />
+	</material>
+	<material name="mat_heist" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_heist_df" />
+	</material>
+	<material name="mat_naohspree" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_naohspree_df" />
+	</material>
+	<material name="mat_nhk" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_nhk_df" />
+	</material>
+	<material name="mat_team_evil" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_team_evil_df" />
+	</material>
+	<material name="mat_team_heist" render_template="effect:BLEND_MUL:DIFFUSE0_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_team_heist_df" />
+		<variable name="intensity" type="scalar" value="identity" />
+	</material>
+	<material name="mat_tht" render_template="effect:BLEND_MUL:DIFFUSE0_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_tht_df" />
+		<variable name="intensity" type="scalar" value="identity" />
+	</material>
+	<material name="mat_tse" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_tse_df" />
+	</material>
+	<material name="mat_tse_core" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_tse_core_df" />
+	</material>
+	<material name="mat_ww" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_decal_graffiti_clans/str_prop_decal_graffiti_clans_ww_df" />
+	</material>
+	<material name="mat_bginistag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_bginistag_df" />
+	</material>
+	<material name="mat_graffitti_bginisthrow" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_bginisthrow_df" />
+	</material>
+	<material name="mat_chainsgoldmask" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_chainsgoldmask_df" />
+	</material>
+	<material name="mat_coldbloodedpiece" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_coldbloodedpiece_df" />
+	</material>
+	<material name="mat_croll420piece" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_croll420piece_df" />
+	</material>
+	<material name="mat_croll420tag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_croll420tag_df" />
+	</material>
+	<material name="mat_cyanidepiece" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_props_graffiti/chl_props_graffiti_cyanidepiece_df" />
+	</material>
+	<material name="mat_cyanidethrow" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_cyanidethrow_df" />
+	</material>
+	<material name="mat_derdonafrocomb" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_derdonafrocomb_df" />
+	</material>
+	<material name="mat_derdontag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_derdontag_df" />
+	</material>
+	<material name="mat_forblaze" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_forblaze_df" />
+	</material>
+	<material name="mat_gangstercharacter" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_gangstercharacter_df" />
+	</material>
+	<material name="mat_illuminatistencil" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_illuminatistencil_df" />
+	</material>
+	<material name="mat_isleepherewithahatchet" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_isleepherewithahatchet_df" />
+	</material>
+	<material name="mat_kleinerbeartag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_kleinerbeartag_df" />
+	</material>
+	<material name="mat_mattgetmoneytag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_mattgetmoneytag_df" />
+	</material>
+	<material name="mat_methrowup" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_methrowup_df" />
+	</material>
+	<material name="mat_obedtag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_obedtag_df" />
+	</material>
+	<material name="mat_nikopiece" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_nikopiece_df" />
+	</material>
+	<material name="mat_obedpiece" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_obedpiece_df" />
+	</material>
+	<material name="mat_overkillerpiece" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_overkillerpiece_df" />
+	</material>
+	<material name="mat_sp00nerismtag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_sp00nerismtag_df" />
+	</material>
+	<material name="mat_soulspeakertag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_soulspeakertag_df" />
+	</material>
+	<material name="mat_stingertag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_stingertag_df" />
+	</material>
+	<material name="mat_stingerthrowup" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_stingerthrowup_df" />
+	</material>
+	<material name="mat_xraytag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_xraytag_df" />
+	</material>
+	<material name="mat_zombiedusttag" render_template="decal:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_zombiedusttag_df" />
+	</material>
+    <material name="mat_zombiedustthrow" render_template="decal:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_zombiedustthrow_df"/>
+    </material>
+</materials>

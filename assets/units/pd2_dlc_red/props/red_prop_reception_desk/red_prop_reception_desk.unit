@@ -1,0 +1,6 @@
+<unit type="red" slot="1">
+	<object file="units/pd2_dlc_red/props/red_prop_reception_desk/red_prop_reception_desk" />
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+	</extensions>
+</unit>

@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="pallet" render_template="generic:DIFFUSE_TEXTURE:INSTANCED:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/world/props/pallet_01/pallet_01_df"/>
+    </material>
+    <material name="shadow_caster" render_template="shadow_caster_only:INSTANCED" version="2"/>
+</materials>

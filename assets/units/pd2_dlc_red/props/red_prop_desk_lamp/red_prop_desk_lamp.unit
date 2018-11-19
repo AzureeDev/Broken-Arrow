@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<unit type="red" slot="1">
+	<object file="units/pd2_dlc_red/props/red_prop_desk_lamp/red_prop_desk_lamp" />
+	<network sync="spawn"/>
+	<dependencies>
+    <depends_on effect="effects/particles/dest/ceramic_cup_dest" />
+	<depends_on unit="units/world/props/office/desk_accessories/part_desk_lamp_03_head" />
+	<depends_on effect="effects/payday2/particles/flares/indoor_lamp_small" />
+  </dependencies>
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+	 <extension name="damage" class="UnitDamage" />
+  </extensions>
+</unit>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/diamond_heist/apartment/apartment_livingroom/sofas/sofas" orientation_object="rp_two_seat_sofa" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+		<object name="rp_two_seat_sofa"/>
+		<object name="c_two_seat_sofa" collision_type="mesh_mopp" />
+    </body>
+	<body name="nav_block" enabled="true" template="graph_blocker" editor_only="true">
+      <object name="graph_blocker" collision_type="box" />
+    </body>
+  </bodies>
+  
+  <decal_surfaces default_material="cloth_stuffed">
+    <decal_mesh name="g_two_seat_sofa" enabled="true" material="cloth_stuffed" />
+  </decal_surfaces>
+  
+  <graphics>
+          <lod_object name="lod_sofa">
+              <object enabled="true" name="g_two_seat_sofa">
+                  <material materials="mtr_sofa" max_distance="1500"/>
+                  <material materials="mtr_sofa_lod" />
+              </object>
+          </lod_object>
+	<object enabled="true" name="s_two_seat_sofa" shadow_caster="true" />
+  </graphics>
+</dynamic_object>

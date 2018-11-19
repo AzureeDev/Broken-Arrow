@@ -1,0 +1,18 @@
+<dynamic_object>
+	<diesel materials="units/pd2_mcmansion/props/mcm_prop_garden_bush_green/mcm_prop_garden_bush_green_a" orientation_object="rp_mcm_prop_garden_bush_green_a" />
+	<bodies>
+		<body enabled="true" template="foliage" name="ai_viz_blocker_body" >
+			<object name="rp_mcm_prop_garden_bush_green_a" />
+            <object collision_type="box" name="c_box_01" padding="-2.5"/>
+        </body>	
+		<body name="body_nav_walk" enabled="true" add_ray_type="ai_vision" template="nav_walk">
+			<object name="rp_mcm_prop_garden_bush_green_a" />
+			<object name="c_nav_walk_01" collision_type="convex" padding="-2.5"/>
+		</body>
+	</bodies>
+	<graphics>
+		    <object enabled="true" name="g_g" shadow_caster="true" instance_struct="world_tm"/>
+	</graphics>
+</dynamic_object>
+
+

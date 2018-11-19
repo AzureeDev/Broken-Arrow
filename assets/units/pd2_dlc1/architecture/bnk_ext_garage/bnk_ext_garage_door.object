@@ -1,0 +1,53 @@
+<dynamic_object>
+    <diesel orientation_object="rp_bnk_ext_garage_door" materials="units/pd2_dlc1/architecture/bnk_ext_garage/bnk_ext_garage_door" />
+    <sequence_manager file="units/pd2_dlc1/architecture/bnk_ext_garage/bnk_ext_garage_door" />
+
+	<animations>
+		<animation_group name="anim_rollup_door" enabled="false">
+			<object name="a_door" />
+			<object name="a_roll" />
+		</animation_group>
+	</animations>
+
+	<bodies>
+		<body enabled="true" template="animated" name="door_01" >
+				<object name="a_door" />
+				<object collision_type="box" 	name="g_door_01"/>	
+		</body>
+		<body enabled="true" template="animated" name="door_02" >
+				<object name="a_door" />
+				<object collision_type="box" 	name="g_door_02"/>	
+		</body>
+		<body enabled="true" template="animated" name="door_03" >
+				<object name="a_door" />
+				<object collision_type="box" 	name="g_door_03"/>	
+		</body>
+		<body enabled="true" template="animated" name="door_04" >
+				<object name="a_door" />
+				<object collision_type="box" 	name="g_door_04"/>		
+		</body>
+		
+		<body enabled="true" template="static" name="static_body" >
+				<object name="rp_bnk_ext_garage_door" />				
+				<object collision_type="mesh_mopp" 	name="g_door_frame"/>
+				<object collision_type="capsule" 	name="g_door_roll"/>
+		</body>
+	</bodies>
+
+	<graphics>
+		<object name="g_door_frame" enabled="true"/>
+		<object name="g_door_roll" enabled="true"/>
+		
+		<object name="g_door_01" enabled="true"/>
+		<object name="g_door_02" enabled="true"/>
+		<object name="g_door_03" enabled="true"/>
+		<object name="g_door_04" enabled="true"/>
+		
+		<object name="s_door_01" enabled="true" shadow_caster="true"/>
+		<object name="s_door_02" enabled="true" shadow_caster="true"/>
+		<object name="s_door_03" enabled="true" shadow_caster="true"/>
+		<object name="s_door_04" enabled="true" shadow_caster="true"/>
+		
+		<object name="s_s" enabled="true" shadow_caster="true"/>
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,24 @@
+<dynamic_object>
+    <diesel orientation_object="rp_res_prop_store_shelf_c" materials="units/pd2_dlc1/props/res_prop_store/res_prop_store_shelves" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+			<object name="rp_res_prop_store_shelf_c" />
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+			<object name="c_box_02" collision_type="box" padding="-2.5"/>
+			<object name="c_box_03" collision_type="box" padding="-2.5"/>
+			<object name="c_box_04" collision_type="box" padding="-2.5"/>
+        </body>
+        <body enabled="false" template="bag" name="static_body" >
+			<object name="rp_res_prop_store_shelf_c" />
+			<object name="c_convex_bag" collision_type="convex" padding="-2.5"/>
+        </body>
+    </bodies>
+    <graphics>
+		<lod_object name="lod_object">
+			<object enabled="true" name="g_g">
+				<material materials="mat_store_rack" max_distance="1000" />
+				<material materials="mat_store_rack_lod1" />
+			</object>
+		</lod_object>
+    </graphics>
+</dynamic_object>

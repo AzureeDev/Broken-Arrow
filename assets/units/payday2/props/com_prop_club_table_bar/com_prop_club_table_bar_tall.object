@@ -1,0 +1,13 @@
+<dynamic_object>
+    <diesel orientation_object="rp_com_prop_club_table_bar_tall" materials="units/payday2/props/com_prop_club_table_bar/com_prop_club_table_bar" />
+    <bodies>
+        <body enabled="true" template="static" name="body0" >
+            <object name="rp_com_prop_club_table_bar_tall" />
+            <object collision_type="convex" name="c_convex_01" />
+            <object collision_type="capsule" name="c_capsule_01" />
+        </body>
+    </bodies>
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

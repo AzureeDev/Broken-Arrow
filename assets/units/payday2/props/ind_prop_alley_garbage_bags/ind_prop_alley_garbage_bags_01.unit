@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<unit type="ind" slot="1">
+  <object file="units/payday2/props/ind_prop_alley_garbage_bags/ind_prop_alley_garbage_bags_01" />
+  <network sync="spawn"/>
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+    <extension name="damage" class="UnitDamage" />
+  </extensions>
+</unit>

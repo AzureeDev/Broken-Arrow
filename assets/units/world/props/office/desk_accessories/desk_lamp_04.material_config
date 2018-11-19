@@ -1,0 +1,7 @@
+<materials version="3" group="desk_lamp_04">
+    <material name="lamps_set_2" decal_material="sheet_metal" render_template="generic:DIFFUSE_TEXTURE:INSTANCED:SELF_ILLUMINATION" version="2">
+        <diffuse_texture file="units/world/props/office/desk_accessories/lamps_set_2_df"/>
+        <self_illumination_texture file="units/world/props/office/desk_accessories/lamps_set_2_il"/>
+        <variable value="identity" type="scalar" name="il_multiplier"/>
+    </material>
+</materials>

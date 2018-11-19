@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel orientation_object="rp_clipboard_paper" materials="units/world/architecture/hospital/props/clipboard01/clipboard01" />
+    <bodies>
+        <body enabled="true" template="raycoll_static" name="body0" >
+            <object collision_type="box" name="c_box" />
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_clipboard" material="hardwood" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_clipboard" />
+        <object enabled="true" name="g_notes" />
+    </graphics>
+</dynamic_object>

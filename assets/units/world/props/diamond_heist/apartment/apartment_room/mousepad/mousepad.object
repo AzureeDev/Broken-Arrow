@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/diamond_heist/apartment/apartment_room/mousepad/mousepad" orientation_object="rp_mousepad" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_mousepad" />
+      <object name="c_mousepad" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  <decal_surfaces default_material="plastic">
+    <decal_mesh name="g_mousepad" enabled="true" material="plastic" />
+  </decal_surfaces>
+  <graphics>
+    <object name="g_mousepad" enabled="true" instance_struct="world_tm" />
+  </graphics>
+</dynamic_object> 
+
+<!-- no source file-->

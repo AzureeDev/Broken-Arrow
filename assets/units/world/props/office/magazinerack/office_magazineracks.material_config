@@ -1,0 +1,5 @@
+<materials version="3">
+    <material render_template="generic:DIFFUSE_TEXTURE:INSTANCED" decal_material="paper" name="office_magazinerack" version="2">
+        <diffuse_texture file="units/world/props/office/magazinerack/office_magazinerack_df"/>
+    </material>
+</materials>

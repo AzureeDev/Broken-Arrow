@@ -1,0 +1,5 @@
+<materials version="3">
+    <material name="wall_lamp" decal_material="glass_breakable" render_template="generic:DIFFUSE_TEXTURE:INSTANCED" version="2">
+        <diffuse_texture file="units/world/props/office/light/wall_lamp_df"/>
+    </material>
+</materials>

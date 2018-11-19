@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/vegetation/jungle/jungletrees" orientation_object="rp_jungletree_small" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_jungletree_small" />
+      <object name="c_jungletree_small" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  
+  <decal_surfaces default_material="wood" static="true">
+    <decal_mesh name="g_leaves" enabled="true" material="foliage"/>
+    <decal_mesh name="g_trunk" enabled="true" material="wood"/>
+  </decal_surfaces>
+  
+  <graphics>
+    <object name="g_trunk" enabled="true" shadow_caster="true" instance_struct="world_tm" />
+    <object name="g_leaves" enabled="true" shadow_caster="true" instance_struct="world_tm"/>    
+	<object name="g_leaves2" enabled="true" shadow_caster="true" instance_struct="world_tm"/>
+  </graphics>
+</dynamic_object>

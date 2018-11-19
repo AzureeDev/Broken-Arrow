@@ -51,5 +51,5 @@
 	"zm_teleporter" : "Hold $BTN_INTERACT to use the Teleporter",
 	"zm_teleporter_cooling_down" : "Teleporter is cooling down",
 	"zm_teleporter_back" : "Hold $BTN_INTERACT to Teleport back",
-	"zm_teleport_back" : "Teleporting back...",
+	"zm_teleport_back" : "Teleporting back..."
 }

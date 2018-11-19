@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/bank/bank_kitchen_counter/bank_kitchen_fan_01_io" orientation_object="rp_apartment_kitchen_fan_01" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_apartment_kitchen_fan_01" />
+      <object name="c_kitchen_fan" collision_type="mesh_mopp" />
+    </body>
+	<body name="mover" enabled="true" template="mover_blocker">
+      <object name="c_kitchen_fan" collision_type="box" />
+    </body>
+  </bodies>
+  
+  <decal_surfaces default_material="metal_chassis">
+    <decal_mesh name="c_kitchen_fan" enabled="true" material="metal_chassis" />
+  </decal_surfaces>
+  
+  <graphics>
+    <object name="g_kitchen_fan" enabled="true"/>
+  </graphics>
+</dynamic_object> 

@@ -1,0 +1,227 @@
+<materials version="3">
+	<material name="mat_blue_metal" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/gen_prop_door_ind_03_df" />
+		<bump_normal_texture file="units/payday2/props/gen_prop_door_ind_01/gen_prop_door_ind_02_nm" />
+	</material>
+	<material name="mat_blue_metal_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/gen_prop_door_ind_03_df" mip="5"/>
+		<bump_normal_texture file="units/payday2/props/gen_prop_door_ind_01/gen_prop_door_ind_02_nm" mip="5"/>
+	</material>
+	<material name="mat_ind_ext_level_0" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_0_df" />
+			<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_0_nm" />
+	</material>
+	<material name="mat_ind_ext_level_0_v2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_0_v2_df" />
+		<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_0_v2_nm" />
+	</material>
+	
+	<material name="mat_sign_wall" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/ind_prop_cardealership_reception_desk_df" />
+		<bump_normal_texture file="units/pd2_dlc_cage/props/ind_prop_cardealership_reception_desk/ind_prop_cardealership_reception_desk_nm" />
+	</material>
+	<material name="mat_sign_wall_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jre_02/jry_hardware_store/ind_prop_cardealership_reception_desk_df" mip="5" />
+		<bump_normal_texture file="units/pd2_dlc_cage/props/ind_prop_cardealership_reception_desk/ind_prop_cardealership_reception_desk_nm" mip="5" />
+	</material>
+
+	<material name="mat_ind_ext_level_roof_big" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/ind_ext_level_roof_big_df" />
+		<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_nm" />
+	</material>
+	<material name="mat_ind_ext_level_roof_big_lod_1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/ind_ext_level_roof_big_df" mip="3"/>
+		<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_nm" mip="3"/>
+	</material>
+	<material name="mat_ind_ext_level_roof_big_lod_2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/ind_ext_level_roof_big_df" mip="5"/>
+		<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_nm" mip="5"/>
+	</material>
+
+	<material name="mat_reception_ceiling" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_diner/jry_diner_ceiling_b_df" />
+		<bump_normal_texture file="units/pd2_dlc_jerry/architecture/jry_diner/jry_diner_ceiling_nm" />
+	</material>
+	<material name="mat_reception_ceiling_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_diner/jry_diner_ceiling_b_df" mip="5"/>
+		<bump_normal_texture file="units/pd2_dlc_jerry/architecture/jry_diner/jry_diner_ceiling_nm" mip="5"/>
+	</material>
+
+	<material name="mat_entrance_glass" render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE" src="GLOBAL" version="2">
+		<variable name="fresnel_settings" type="vector3" value="0 1 0.66999995708466" />
+		<opacity_texture file="units/payday2/architecture/lux/lux_ext_glass_01_op" />
+		<diffuse_texture file="units/payday2/architecture/lux/lux_ext_glass_01_df" />
+		<reflection_texture global_texture="current_global_texture" type="cube" />
+	</material>
+
+	<material name="mat_entrance_metal1" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/gen_interactable_door_hcm_df" />
+		<bump_normal_texture file="units/payday2/equipment/gen_interactable_door_hcm/gen_interactable_door_hcm_nm" />
+		<reflection_texture file="units/payday2/cubemaps/cubemap_steel" type="cubemap" />
+		<variable name="environment_settings" type="vector3" value="1 0 1d" />
+	</material>
+	<material name="mat_entrance_metal1_lod" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/gen_interactable_door_hcm_df" mip="5"/>
+		<bump_normal_texture file="units/payday2/equipment/gen_interactable_door_hcm/gen_interactable_door_hcm_nm" mip="5"/>
+		<reflection_texture file="units/payday2/cubemaps/cubemap_steel" type="cubemap" />
+		<variable name="environment_settings" type="vector3" value="1 0 1d" />
+	</material>
+
+
+
+	<material name="shadow_caster" render_template="shadow_caster_only" version="2" />
+	<material name="mat_warehouse_floor" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc1/architecture/res_ext_motel/res_ext_motel_ground_c_df" />
+		<bump_normal_texture file="units/pd2_dlc1/architecture/res_ext_motel/res_ext_motel_ground_c_nm" />
+	</material>
+	<material name="mat_rust_metal" render_template="generic:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_df" />
+	</material>
+	<material name="mat_rust_metal_lod" render_template="generic:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_df" mip="6"/>
+	</material>
+
+	<material name="mat_concrete_bottom1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/plaster_white_03_df" />
+		<bump_normal_texture file="units/pd2_dlc_cro/ind_security_building_a/textures/concrete_bare_01_nm" />
+	</material>
+	<material name="mat_concrete_bottom1_lod_1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/plaster_white_03_df" mip="3"/>
+		<bump_normal_texture file="units/pd2_dlc_cro/ind_security_building_a/textures/concrete_bare_01_nm" mip="3"/>
+	</material>
+	<material name="mat_concrete_bottom1_lod_2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/plaster_white_03_df" mip="5"/>
+		<bump_normal_texture file="units/pd2_dlc_cro/ind_security_building_a/textures/concrete_bare_01_nm" mip="5"/>
+	</material>
+
+
+	<material name="mat_rust_metal_b" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_0_df" />
+		<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_0_nm" />
+	</material>
+
+    <material name="mat_diner_sidewalk" render_template="generic:BLEND_DIFFUSE:BLEND_GSMA:BLEND_MASK_CONTROL:BLEND_MASK_CROSSBLEND:BLEND_NORMAL:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_df"/>
+        <bump_normal_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_nm"/>
+        <diffuse_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_df"/>
+        <variable value="0.20000000298023 0.30000001192093 0" type="vector3" name="blend_control"/>
+        <normal_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_nm"/>
+        <material_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_gsma"/>
+        <diffuse_layer2_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_gsma"/>
+    </material>
+	<material name="mat_diner_sidewalk_lod_1" render_template="generic:BLEND_DIFFUSE:BLEND_GSMA:BLEND_MASK_CONTROL:BLEND_MASK_CROSSBLEND:BLEND_NORMAL:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_df" mip="5"/>
+        <bump_normal_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_nm" mip="5"/>
+        <diffuse_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_df" mip="5"/>
+        <variable value="0.20000000298023 0.30000001192093 0" type="vector3" name="blend_control"/>
+        <normal_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_nm" mip="5"/>
+        <material_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_gsma" mip="5"/>
+        <diffuse_layer2_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_gsma" mip="5"/>
+    </material>
+	
+  <material name="mat_warehouse_bricks" render_template="generic:BLEND_DIFFUSE:BLEND_GSMA:BLEND_MASK_CONTROL:BLEND_MASK_CROSSBLEND:BLEND_NORMAL:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_bricks_df"/>
+        <bump_normal_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_bricks_nm"/>
+        <diffuse_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_df"/>
+        <variable value="0.25 0.30000001192093 0" type="vector3" name="blend_control"/>
+        <normal_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_nm"/>
+        <material_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_bricks_gsma"/>
+        <diffuse_layer2_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_gsma"/>
+    </material>
+	
+	<material name="mat_warehouse_bricks_lod" render_template="generic:BLEND_DIFFUSE:BLEND_GSMA:BLEND_MASK_CONTROL:BLEND_MASK_CROSSBLEND:BLEND_NORMAL:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_bricks_df" mip="5"/>
+        <bump_normal_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_bricks_nm" mip="5"/>
+        <diffuse_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_df" mip="5"/>
+        <variable value="0.25 0.30000001192093 0" type="vector3" name="blend_control"/>
+        <normal_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_nm" mip="5"/>
+        <material_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_bricks_gsma" mip="5"/>
+        <diffuse_layer2_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_gsma" mip="5"/>
+    </material>
+	
+	<material name="mat_ind_ext_level_roof_big2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_df" />
+		<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_nm" />
+	</material>
+	<material name="mat_ind_ext_level_roof_big2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_df" mip="5"/>
+		<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_nm" mip="5"/>
+	</material>
+
+	<material name="mat_ind_ext_level_vent" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:VERTEX_COLOR" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_vent_df" />
+		<reflection_texture file="units/payday2/cubemaps/cubemap_steel" type="cubemap" />
+		<variable name="environment_settings" type="vector3" value="2.5 0 2" />
+	</material>
+	<material name="mat_metal_pipe" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_rooftop_ac_unit_a/str_prop_rooftop_ac_unit_a_df" />
+		<bump_normal_texture file="units/payday2/props/str_prop_rooftop_ac_unit_a/str_prop_rooftop_ac_unit_a_nm" />
+		<reflection_texture file="units/payday2/cubemaps/cubemap_steel" type="cubemap" />
+	</material>
+	<material name="mat_metal_pipe_lod" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/props/str_prop_rooftop_ac_unit_a/str_prop_rooftop_ac_unit_a_df" mip="5"/>
+		<bump_normal_texture file="units/payday2/props/str_prop_rooftop_ac_unit_a/str_prop_rooftop_ac_unit_a_nm" mip="5"/>
+		<reflection_texture file="units/payday2/cubemaps/cubemap_steel" type="cubemap" />
+	</material>
+
+	<material name="mat_rust_leak" render_template="effect:BLEND_MUL:DIFFUSE0_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/com_ext_parking_garage_dirt_decals_mull_df" />
+		<variable name="intensity" type="scalar" value="dimlight" />
+	</material>
+	<material name="mat_white_smoke" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE:DIFFUSE0_UVANIM:DIFFUSE1_BLEND_OP_RGB_MUL:DIFFUSE1_TEXTURE:DIFFUSE1_UVANIM" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/tilecloud2_df" />
+		<variable name="intensity" type="scalar" value="streetlight" />
+		<variable name="uv0_speed" type="vector3" value="0.03999999910593 0 0" />
+		<detail_diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/tilecloud_df" />
+		<variable name="uv1_speed" type="vector3" value="0 0 0" />
+	</material>
+
+	<material name="mat_ind_ext_level_stairs" render_template="generic:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_berry/architecture/bry_mountain_tunnel_railings/bry_mountain_tunnel_platform_df" />
+	</material>
+	<material name="mat_ind_ext_level_stairs_lod_1" render_template="generic:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_berry/architecture/bry_mountain_tunnel_railings/bry_mountain_tunnel_platform_df" mip="2"/>
+	</material>
+	<material name="mat_ind_ext_level_stairs_lod_2" render_template="generic:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_berry/architecture/bry_mountain_tunnel_railings/bry_mountain_tunnel_platform_df" mip="5"/>
+	</material>
+
+	<material name="mat_warehouse_roof" render_template="generic:BLEND_DIFFUSE:BLEND_MASK_SEPERATE:BLEND_NORMAL:BLEND_SMOOTH:DIFFUSE_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_df"/>
+        <bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_nm"/>
+        <diffuse_layer0_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_df"/>
+        <diffuse_layer1_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_gsma"/>
+        <normal_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_nm"/>
+    </material>
+	<material name="mat_warehouse_roof_lod" render_template="generic:BLEND_DIFFUSE:BLEND_MASK_SEPERATE:BLEND_NORMAL:BLEND_SMOOTH:DIFFUSE_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_df" mip="5"/>
+        <bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_nm" mip="5"/>
+        <diffuse_layer0_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_roof_big_df" mip="5"/>
+        <diffuse_layer1_texture file="units/pd2_dlc_jerry/terrain/jry_sidewalk_gsma" mip="5"/>
+        <normal_layer0_texture file="units/pd2_dlc_jerry/terrain/jry_gravel_path_nm" mip="5"/>
+    </material>
+
+	<material name="mat_corrugated_to_rust" render_template="generic:BLEND_DIFFUSE:BLEND_MASK_SEPERATE:BLEND_NORMAL:BLEND_SMOOTH:DIFFUSE_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/matcap_rust_df" />
+		<bump_normal_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_metal_nm" />
+		<diffuse_layer0_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_metal_df" />
+		<diffuse_layer1_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_metal_df" />
+		<normal_layer0_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_metal_nm" />
+	</material>
+	<material name="mat_corrugated_to_rust_lod" render_template="generic:BLEND_DIFFUSE:BLEND_MASK_SEPERATE:BLEND_NORMAL:BLEND_SMOOTH:DIFFUSE_TEXTURE:NORMALMAP:VERTEX_COLOR" version="2">
+		<diffuse_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/matcap_rust_df" mip="5" />
+		<bump_normal_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_metal_nm" mip="5" />
+		<diffuse_layer0_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_metal_df" mip="5" />
+		<diffuse_layer1_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_metal_df" mip="5" />
+		<normal_layer0_texture file="units/pd2_dlc_jerry/architecture/jry_hardware_store/jry_hardware_store_metal_nm" mip="5" />
+	</material>
+	<material name="mat_ind_ext_level_0_v2_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_0_v2_df" mip="5" />
+		<bump_normal_texture file="units/payday2/architecture/ind/ind_ext_level/ind_ext_level_0_v2_nm" mip="5" />
+	</material>
+	
+	<material name="mat_warehouse_floor_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc1/architecture/res_ext_motel/res_ext_motel_ground_c_df" mip="6" />
+		<bump_normal_texture file="units/pd2_dlc1/architecture/res_ext_motel/res_ext_motel_ground_c_nm" mip="6" />
+	</material>
+</materials>

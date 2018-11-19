@@ -1,0 +1,6 @@
+<materials version="3">
+    <material render_template="generic:DIFFUSE_TEXTURE:INSTANCED:NORMALMAP" name="tra_prop_waterbottle" decal_material="plastic" version="2">
+        <diffuse_texture file="units/world/props/train/tra_prop_waterbottle/tra_prop_waterbottle_df"/>
+        <bump_normal_texture file="units/world/props/train/tra_prop_waterbottle/tra_prop_waterbottle_nm"/>
+    </material>
+</materials>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/office/computer/computer_projector" orientation_object="rp_computer_projector" />
+  <sequence_manager file="units/world/props/office/computer/computer_projector" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_computer_projector" />
+      <object name="c_computer_projector" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  <decal_surfaces default_material="metal" static="true">
+    <decal_mesh name="dm_metal" enabled="true" material="metal" />
+  </decal_surfaces>
+  <graphics>
+    <object name="g_computer_projector" enabled="true"  />
+    <object name="g_computer_projector_lens" enabled="true"  />
+  </graphics>
+  <lights>
+    <light editable="true" name="li_lens" enabled="true" type="spot|specular" />
+  </lights>
+  <objects>
+    <object name="e_lens" />
+  </objects>
+</dynamic_object>

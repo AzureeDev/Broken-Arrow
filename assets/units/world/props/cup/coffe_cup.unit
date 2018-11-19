@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<unit type="fwb" slot="1">	
+	<object file="units/world/props/cup/coffe_cup" />
+	<mass>
+		<spawn in="1600" method="enable" out="2000" />
+	</mass>
+	<dependencies>
+		<depends_on effect="effects/particles/dest/ceramic_cup_dest" />
+	</dependencies>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+</unit>

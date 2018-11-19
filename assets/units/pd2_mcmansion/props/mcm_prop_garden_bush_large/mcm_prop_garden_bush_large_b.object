@@ -1,0 +1,20 @@
+<dynamic_object>
+    <diesel orientation_object="rp_mcm_prop_garden_bush_large_b" materials="units/pd2_mcmansion/props/mcm_prop_garden_bush_large/mcm_prop_garden_bush_large_a" />
+    <bodies>
+        <!-- <body enabled="true" template="foliage" name="ai_viz_blocker_body" >
+			<object name="rp_mcm_prop_garden_bush_large_b" />
+            <object collision_type="capsule" name="c_capsule_leaves_01" padding="-2.5"/>
+        </body> -->
+        <body enabled="true" template="graph_blocker" name="static_body" >
+			<object name="rp_mcm_prop_garden_bush_large_b" />
+            <object collision_type="capsule" name="c_capsule_01" padding="-2.5" />
+        </body>
+    </bodies>
+    <graphics>
+        <object enabled="true" name="g_leaves" shadow_caster="true" instance_struct="world_tm"/>
+        <object enabled="true" name="g_bark" instance_struct="world_tm"/>
+        <object enabled="true" name="g_bark" shadow_caster="true"/>
+    </graphics>
+</dynamic_object>
+
+

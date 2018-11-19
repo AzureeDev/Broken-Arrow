@@ -1,0 +1,10 @@
+<materials version="3" group="roof_lamp">
+    <material name="roof_lamp" render_template="generic:DIFFUSE_TEXTURE:SKINNED_1WEIGHT" version="2">
+        <diffuse_texture file="units/world/props/office/roof_lamp/roof_lamp_df"/>
+    </material>
+    <material name="lamp_light" render_template="generic:DIFFUSE_TEXTURE:SELF_ILLUMINATION:SKINNED_1WEIGHT" version="2">
+        <diffuse_texture file="units/world/props/office/roof_lamp/projector_lens_il"/>
+        <self_illumination_texture file="units/world/props/office/roof_lamp/projector_lens_il"/>
+        <variable value="match" type="scalar" name="il_multiplier"/>
+    </material>
+</materials>

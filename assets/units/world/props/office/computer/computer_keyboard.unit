@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<unit type="fwb" slot="1">
+  <object file="units/world/props/office/computer/computer_keyboard" />
+	<mass>
+		<spawn in="2500" method="enable" out="3000" />
+	</mass>
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+    <extension name="damage" class="UnitDamage" />
+  </extensions>
+</unit>

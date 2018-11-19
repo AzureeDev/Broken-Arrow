@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<unit type="dia" slot="1"> 
+  <object file="units/world/props/diamond_heist/apartment/apartment_livingroom/pictureframe/pictureframe" />
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+	<extension name="damage" class="UnitDamage" /><extension name="sync_unit_data" class="SyncUnitData" />
+  </extensions>
+</unit> 

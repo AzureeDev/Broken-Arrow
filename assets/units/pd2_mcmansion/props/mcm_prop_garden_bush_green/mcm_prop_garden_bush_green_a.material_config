@@ -1,0 +1,57 @@
+<materials version="3">
+    <material version="2" render_template="generic:ALIGN_NORMAL_WORLD_Z:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:INSTANCED:NORMALMAP:VEGETATION_BENDING" name="mat_mcm_prop_garden_bush_green">
+        <diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_garden_bush_green/mcm_prop_garden_bush_green_a_df"/>
+        <variable value="0.63400000333786" type="scalar" name="normal_world_z_blend"/>
+        <variable value="0.5" type="scalar" name="speed"/>
+        <variable value="1 0.5 0" type="vector3" name="detail_settings"/>
+        <variable value="5 0.18999999761581 0" type="vector3" name="branch_settings"/>
+        <variable value="0.010000000707805" type="scalar" name="alpha_ref"/>
+    </material>
+    <material version="2" render_template="generic:ALIGN_NORMAL_WORLD_Z:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:INSTANCED:NORMALMAP:VEGETATION_BENDING" name="mat_mcm_prop_garden_bush_green_lod">
+        <diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_garden_bush_green/mcm_prop_garden_bush_green_a_df" mip="4"/>
+        <variable value="0.63400000333786" type="scalar" name="normal_world_z_blend"/>
+        <variable value="0.5" type="scalar" name="speed"/>
+        <variable value="1 0.5 0" type="vector3" name="detail_settings"/>
+        <variable value="5 0.18999999761581 0" type="vector3" name="branch_settings"/>
+        <variable value="0.010000000707805" type="scalar" name="alpha_ref"/>
+    </material>
+
+    <material version="2" render_template="generic:ALIGN_NORMAL_WORLD_Z:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:INSTANCED:NORMALMAP:VEGETATION_BENDING" name="mat_mcm_prop_garden_bush_large_b_1">
+        <diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_garden_bush_green/mcm_prop_garden_bush_green_b1_df"/>
+        <variable value="0.63400000333786" type="scalar" name="normal_world_z_blend"/>
+        <variable value="0.5" type="scalar" name="speed"/>
+        <variable value="1 0.5 0" type="vector3" name="detail_settings"/>
+        <variable value="5 0.18999999761581 0" type="vector3" name="branch_settings"/>
+        <variable value="0.0099999997764826" type="scalar" name="alpha_ref"/>
+        <bump_normal_texture file="units/payday2/textures/blank_nm"/>
+    </material>
+    <material version="2" render_template="generic:ALIGN_NORMAL_WORLD_Z:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:INSTANCED:NORMALMAP:VEGETATION_BENDING" name="mat_mcm_prop_garden_bush_large_b_1_lod">
+        <diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_garden_bush_green/mcm_prop_garden_bush_green_b1_df" mip="4"/>
+        <variable value="0.63400000333786" type="scalar" name="normal_world_z_blend"/>
+        <variable value="0.5" type="scalar" name="speed"/>
+        <variable value="1 0.5 0" type="vector3" name="detail_settings"/>
+        <variable value="5 0.18999999761581 0" type="vector3" name="branch_settings"/>
+        <variable value="0.0099999997764826" type="scalar" name="alpha_ref"/>
+        <bump_normal_texture file="units/payday2/textures/blank_nm"/>
+    </material>
+
+    <material version="2" render_template="generic:ALIGN_NORMAL_WORLD_Z:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:INSTANCED:NORMALMAP:VEGETATION_BENDING" name="mat_mcm_prop_garden_bush_large_b_2">
+        <diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_garden_bush_green/mcm_prop_garden_bush_green_b2_df"/>
+        <variable value="0.63400000333786" type="scalar" name="normal_world_z_blend"/>
+        <variable value="0.5" type="scalar" name="speed"/>
+        <variable value="1 0.5 0" type="vector3" name="detail_settings"/>
+        <variable value="5 0.18999999761581 0" type="vector3" name="branch_settings"/>
+        <variable value="0.038000002503395" type="scalar" name="alpha_ref"/>
+        <bump_normal_texture file="units/payday2/textures/blank_nm"/>
+    </material>
+    <material version="2" render_template="generic:ALIGN_NORMAL_WORLD_Z:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:INSTANCED:NORMALMAP:VEGETATION_BENDING" name="mat_mcm_prop_garden_bush_large_b_2_lod">
+        <diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_garden_bush_green/mcm_prop_garden_bush_green_b2_df" mip="4"/> 
+        <variable value="0.63400000333786" type="scalar" name="normal_world_z_blend"/>
+        <variable value="0.5" type="scalar" name="speed"/>
+        <variable value="1 0.5 0" type="vector3" name="detail_settings"/>
+        <variable value="5 0.18999999761581 0" type="vector3" name="branch_settings"/>
+        <variable value="0.038000002503395" type="scalar" name="alpha_ref"/>
+        <bump_normal_texture file="units/payday2/textures/blank_nm"/>
+    </material>
+    <material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
+</materials>

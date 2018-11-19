@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/office/light/wall_lamp" orientation_object="rp_wall_lamp" />
+  <bodies>
+    <body remove_ray_type="walk vis_graph" name="static_body" enabled="true" template="raycoll_static">
+	  <object name="rp_wall_lamp" />
+      <object name="c_box" collision_type="box" padding="-2"/>
+    </body>
+  </bodies>
+  <decal_surfaces default_material="metal">
+    <decal_mesh name="dm_wall_lamp" enabled="true" material="metal" />
+  </decal_surfaces>
+  <graphics>
+    <object name="g_wall_lamp" enabled="true" shadow_caster="false" instance_struct="world_tm" />
+  </graphics>
+</dynamic_object>

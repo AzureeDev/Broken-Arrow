@@ -1,0 +1,5 @@
+<materials version="3">
+    <material name="books_professional" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/props/off_prop_officehigh_books/off_prop_officehigh_books_professional_df"/>
+    </material>
+</materials>
