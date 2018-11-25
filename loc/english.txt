@@ -1,9 +1,9 @@
 {
 	"quest_a_better_tomorrow" : "A Better Tomorrow",
 	"heist_zm_broken_arrow_name" : "Broken Arrow",
-	"heist_zm_broken_arrow_brief" : "Broken Arrow brief placeholder",
-	"heist_zm_bank_name" : "Broken Arrow",
-	"heist_zm_bank_brief" : "Broken Arrow desc placeholder",
+	"heist_zm_broken_arrow_brief" : "After crash landing 10 blocks away from where Alpha picked you up. The crew gets themselves into a nearby bank after the whole city seems to have turned into zombies. \n At this point, the crew has only themselves to get out into safety...",
+	"heist_broken_arrow2_name" : "Broken Arrow",
+	"heist_broken_arrow2_brief" : "After crash landing 10 blocks away from where Alpha picked you up. The crew gets themselves into a nearby bank after the whole city seems to have turned into zombies. \n At this point, the crew has only themselves to get out into safety...",
     "hud_assault_zombie" : "Zombie Assault in progress",
     "zm_buy_weapon" : "Buying...",
 	"zm_hack" : "Hacking...",
@@ -51,5 +51,7 @@
 	"zm_teleporter" : "Hold $BTN_INTERACT to use the Teleporter",
 	"zm_teleporter_cooling_down" : "Teleporter is cooling down",
 	"zm_teleporter_back" : "Hold $BTN_INTERACT to Teleport back",
-	"zm_teleport_back" : "Teleporting back..."
+	"zm_teleport_back" : "Teleporting back...",
+	"zm_return_round" : "Come back next round",
+	"zm_require_all_crystals" : "Requires all crystals connected to teleporter"
 }

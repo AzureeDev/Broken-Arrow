@@ -4264,4 +4264,5 @@
 		<object force="true" path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile1_4x4m_b" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/lcm_b/lcm_b" unload="true"/>
 	</add>
+	<movie path="movies/ascension"/>
 </table>

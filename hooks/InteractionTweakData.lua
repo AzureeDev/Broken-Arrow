@@ -305,6 +305,22 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		equipment_text_id = "zm_no_power",
 	}
 	
+	self.zm_require_all_crystals = { 
+		text_id = "zm_teleporter",
+		action_text_id = "zm_use_teleporter",
+		start_active = false,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_require_all_crystals",
+	}
+	
+	self.zm_return_round = { 
+		text_id = "zm_teleporter",
+		action_text_id = "zm_use_teleporter",
+		start_active = false,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_return_round",
+	}
+	
 	self.zm_grab_crystal = { 
 		text_id = "zm_grab_crystal",
 		action_text_id = "zm_grabing_part",
