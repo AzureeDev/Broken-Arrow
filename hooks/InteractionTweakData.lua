@@ -297,6 +297,18 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		start_active = false,
 	}
 	
+	self.zm_next_song = {
+		text_id = "zm_next_song",
+		action_text_id = "zm_music",
+		start_active = false,
+	}
+	
+	self.zm_previous_song = {
+		text_id = "zm_previous_song",
+		action_text_id = "zm_music",
+		start_active = false,
+	}
+	
 	self.zm_power_req = { 
 		text_id = "zm_teleporter",
 		action_text_id = "zm_use_teleporter",
