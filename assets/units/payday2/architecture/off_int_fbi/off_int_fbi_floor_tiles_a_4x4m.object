@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<dynamic_object>
+	<diesel materials="units/payday2/architecture/off_int_fbi/off_int_fbi_tiles" orientation_object="rp_off_int_fbi_floor_tiles_a_4x4m" />
+    <bodies>
+        <body name="static_body" template="static" enabled="true" >
+            <object name="rp_off_int_fbi_floor_tiles_a_4x4m"/>
+            <object name="c_box_00" collision_type="box" padding="-2.5"/>
+        </body>
+    </bodies>
+	
+	<decal_surfaces default_material="tile" static="true">
+		<decal_mesh name="dm_tile" material="tile" enabled="true"/>
+	</decal_surfaces> 
+	
+    <graphics>
+        <object enabled="true" name="g_g" shadow_caster="false" />
+    </graphics>
+</dynamic_object> 

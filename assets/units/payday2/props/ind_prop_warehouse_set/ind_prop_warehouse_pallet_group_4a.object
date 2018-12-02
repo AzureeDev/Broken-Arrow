@@ -1,0 +1,49 @@
+<dynamic_object>
+    <diesel orientation_object="rp_ind_prop_warehouse_pallet_group_4a" materials="units/payday2/props/ind_prop_warehouse_set/ind_prop_warehouse_pallet_group_4a" />
+    <bodies>
+        <body enabled="true" template="fence" name="fence_body" >
+			<object name="rp_ind_prop_warehouse_pallet_group_4a" />				
+            <object collision_type="box" name="c_box_01" padding="-2.5"/>
+            <object collision_type="box" name="c_box_02" padding="-2.5"/>
+            <object collision_type="box" name="c_box_03" padding="-2.5"/>
+            <object collision_type="box" name="c_box_04" padding="-2.5"/>
+        </body>	
+        <body enabled="true" template="static" name="static_body" >
+			<object name="rp_ind_prop_warehouse_pallet_group_4a" />			
+            <object collision_type="mesh_mopp" name="c_mesh_mopp_01" padding="-2.5"/>
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_cloth" material="cloth" />
+    </decal_surfaces>
+    <graphics>
+<lod_object name="g_boxes_small_a_lod">
+        <object enabled="true" name="g_boxes_small_a" >
+		  <material materials="mat_ind_prop_warehouse_box_small_a" max_distance="4500"/>
+                <material materials="mat_ind_prop_warehouse_box_small_a_lod1" />
+		</object>
+		</lod_object>
+		
+		<lod_object name="g_boxes_med_a_lod">
+        <object enabled="true" name="g_boxes_med_a" >
+		  <material materials="mat_ind_prop_warehouse_box_med_a" max_distance="4500"/>
+                <material materials="mat_ind_prop_warehouse_box_med_a_lod1" />
+		</object>
+			</lod_object>
+		
+		<lod_object name="g_pallets_blue_lod">
+        <object enabled="true" name="g_pallets_blue" >
+		  <material materials="mat_ind_prop_warehouse_pallet_blue" max_distance="4500"/>
+                <material materials="mat_ind_prop_warehouse_pallet_blue_lod1" />
+		
+		</object>
+			</lod_object>
+		
+		<lod_object name="g_pallets_lod">
+        <object enabled="true" name="g_pallets" >
+		  <material materials="mat_ind_prop_warehouse_pallet" max_distance="4500"/>
+                <material materials="mat_ind_prop_warehouse_pallet_lod1" />
+		</object>
+			</lod_object>
+    </graphics>
+</dynamic_object>

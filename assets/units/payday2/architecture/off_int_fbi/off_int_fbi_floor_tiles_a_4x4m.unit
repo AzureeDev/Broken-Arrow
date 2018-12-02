@@ -1,0 +1,6 @@
+<unit type="off" slot="1" >
+    <object file="units/payday2/architecture/off_int_fbi/off_int_fbi_floor_tiles_a_4x4m" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

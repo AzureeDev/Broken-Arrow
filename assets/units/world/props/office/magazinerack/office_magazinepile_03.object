@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/office/magazinerack/office_magazineracks" orientation_object="rp_magazinepile_03" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+		<object name="rp_magazinepile_03"/>
+      <object name="c_box" collision_type="box"/>
+    </body>
+  </bodies>
+  <decal_surfaces default_material="thin_layer" static="true">
+    <decal_mesh name="dm_dm" enabled="true" material="thin_layer" />
+  </decal_surfaces>
+  <graphics>
+    <object name="g_g" enabled="true" shadow_caster="false" instance_struct="world_tm" />
+  </graphics>
+</dynamic_object>

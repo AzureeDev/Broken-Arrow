@@ -1,0 +1,5 @@
+<materials version="3">
+    <material name="mat_paper" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/props/off_prop_officehigh_paperstacks/off_prop_officehigh_paperstacks_df"/>
+    </material>
+</materials>

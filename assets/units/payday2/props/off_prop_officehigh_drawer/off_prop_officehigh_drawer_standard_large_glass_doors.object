@@ -1,0 +1,29 @@
+<dynamic_object>
+    <diesel orientation_object="rp_off_prop_officehigh_drawer_standard_large_glass_doors" materials="units/payday2/props/off_prop_officehigh_drawer/off_prop_officehigh_drawer_standard" />
+    <sequence_manager file="units/payday2/props/off_prop_officehigh_drawer/off_prop_officehigh_drawer_standard_large_glass_doors" />
+	<bodies>
+        <body enabled="true" template="static" name="body0" >
+            <object name="rp_off_prop_officehigh_drawer_standard_large_glass_doors" />
+            <object collision_type="mesh_mopp" name="c_mesh" />
+        </body>
+		<body enabled="true" template="static" name="body_glass_01" >
+            <object collision_type="box" name="g_glass_01" />
+        </body>		
+		<body enabled="true" template="static" name="body_glass_02" >
+            <object collision_type="box" name="g_glass_02" />
+        </body>
+    </bodies>
+	<decal_surfaces static="true" default_material="wood">
+        <decal_mesh enabled="true" name="dm_wood" material="wood" />
+        <decal_mesh enabled="true" name="g_glass_01" material="glass_breakable" />
+        <decal_mesh enabled="true" name="g_glass_02" material="glass_breakable" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_glass_01" />
+        <object enabled="true" name="g_glass_02" />
+        <object enabled="true" name="g_handle_01" />
+        <object enabled="true" name="g_handle_02" />
+        <object enabled="true" name="g_mesh" />
+    </graphics>
+</dynamic_object>
+

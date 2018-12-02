@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel orientation_object="rp_gen_prop_store_closed_sign" materials="units/payday2/props/gen_prop_store_closed_sign/gen_prop_store_closed_sign" />
+    <bodies>
+        <body name="editor_body" enabled="true" template="editor">
+            <object name="rp_gen_prop_store_closed_sign"/>
+            <object name="c_box_000" collision_type="box" padding="-2.5"/>
+        </body>
+       
+    </bodies>
+   
+    <graphics>
+        <object name="g_g" enabled="true"/>
+    </graphics>
+</dynamic_object>

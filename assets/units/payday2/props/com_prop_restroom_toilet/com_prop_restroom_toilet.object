@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/payday2/props/com_prop_restroom_toilet/com_prop_restroom_toilet" orientation_object="rp_restroom_toilet" />
+	<bodies>
+		<body name="static_body" enabled="true" template="static">
+			<object name="rp_restroom_toilet" />
+			<object name="c_capsule_01" collision_type="capsule" padding="-2.5"/>
+			<object name="c_convex_01" collision_type="convex" padding="-2.5"/>
+		</body>
+	</bodies>
+	<decal_surfaces default_material="metal">
+		<decal_mesh name="dm_ceramic" enabled="true" material="ceramic"/>
+		<decal_mesh name="dm_plastc" enabled="true" material="plastic"/>
+	</decal_surfaces>
+	<graphics>
+		<object name="g_restroom_toilet" enabled="true"/>
+	</graphics>
+</dynamic_object> 

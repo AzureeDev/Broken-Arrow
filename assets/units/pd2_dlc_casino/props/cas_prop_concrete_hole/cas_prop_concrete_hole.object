@@ -1,0 +1,37 @@
+<dynamic_object>
+    <diesel orientation_object="rp_cas_destroyable_floor" materials="units/pd2_dlc_casino/props/cas_prop_concrete_hole/cas_prop_concrete_hole" />
+    <sequence_manager file="units/pd2_dlc_casino/props/cas_prop_concrete_hole/cas_prop_concrete_hole" />
+    <bodies>
+        <body enabled="true" template="static" name="body_carpet">
+            <object name="rp_cas_destroyable_floor" />
+            <object name="c_box_carpet" collision_type="box" padding="-2.5" />
+        </body>
+        <body enabled="false" template="static" name="body_hole">
+            <object name="rp_cas_destroyable_floor" />
+            <object name="c_convex_hole" collision_type="convex" padding="-2.5" />
+            <object name="c_convex_hole_2" collision_type="convex" padding="-2.5" />
+            <object name="c_convex_hole_3" collision_type="convex" padding="-2.5" />
+            <object name="c_convex_hole_4" collision_type="convex" padding="-2.5" />
+            <object name="c_convex_hole_5" collision_type="convex" padding="-2.5" />
+            <object name="c_convex_hole_6" collision_type="convex" padding="-2.5" />
+            <object name="c_convex_hole_7" collision_type="convex" padding="-2.5" />
+        </body>
+        <body enabled="false" template="static" name="body_flat">
+            <object name="rp_cas_destroyable_floor" />
+            <object name="c_box_flat" collision_type="box" padding="-2.5" />
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh name="dm_carpet_01" enabled="true" material="carpet" />
+        <decal_mesh name="dm_carpet_02" enabled="true" material="concrete" />
+        <decal_mesh name="dm_flat_01" enabled="false" material="carpet" />
+        <decal_mesh name="dm_flat_02" enabled="false" material="concrete" />
+        <decal_mesh name="dm_hole_01" enabled="false" material="carpet" />
+        <decal_mesh name="dm_hole_02" enabled="false" material="concrete" />
+    </decal_surfaces>
+    <graphics>
+        <object name="g_carpet" enabled="true" />
+        <object name="g_flat" enabled="false" />
+        <object name="g_hole" enabled="false" />
+    </graphics>
+</dynamic_object>

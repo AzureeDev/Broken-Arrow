@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel orientation_object="rp_com_prop_store_selfservice_counter_trash" materials="units/payday2/props/com_prop_store_selfservice_counter/com_prop_store_selfservice_counter" />
+    <bodies>
+        <body enabled="true" template="static" name="body0" >
+            <object collision_type="convex" name="c_convex_01" />
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_sheet_metal" material="sheet_metal" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

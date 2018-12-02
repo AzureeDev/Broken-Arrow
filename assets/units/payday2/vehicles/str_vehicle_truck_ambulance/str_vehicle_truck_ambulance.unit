@@ -1,0 +1,8 @@
+<unit type="str" slot="1" >
+    <object file="units/payday2/vehicles/str_vehicle_truck_ambulance/str_vehicle_truck_ambulance" />
+    <network sync="spawn"/>
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+		<extension name="damage" class="UnitDamage" />
+    </extensions>
+</unit>

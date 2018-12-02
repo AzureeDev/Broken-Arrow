@@ -1,0 +1,10 @@
+<materials version="3">
+    <material name="mat_concrete" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/architecture/com_ext_parking_garage/com_ext_parking_garage_concrete_df"/>
+    </material>
+    <material name="mat_concrete_decals" version="2" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:EXTERNAL_ALPHA_REF:NORMALMAP">
+        <diffuse_texture file="units/payday2/architecture/com_ext_parking_garage/com_ext_parking_garage_concrete_decals_df"/>
+        <variable value="0.014999999664724" type="scalar" name="alpha_ref"/>
+        <bump_normal_texture file="units/payday2/architecture/com_ext_parking_garage/com_ext_parking_garage_concrete_decals_nm"/>
+    </material>
+</materials>

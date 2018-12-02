@@ -1,0 +1,15 @@
+<materials version="3">
+    <material name="mat_newsbox_a" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <bump_normal_texture file="units/payday2/props/str_prop_street_newsbox/str_prop_street_newsbox_nm"/>
+        <diffuse_texture file="units/payday2/props/str_prop_street_newsbox/str_prop_street_newsbox_a_df"/>
+    </material>
+    <material name="mat_newsbox_b" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <bump_normal_texture file="units/payday2/props/str_prop_street_newsbox/str_prop_street_newsbox_nm"/>
+        <diffuse_texture file="units/payday2/props/str_prop_street_newsbox/str_prop_street_newsbox_b_df"/>
+    </material>
+    <material name="mat_newsbox_c" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <bump_normal_texture file="units/payday2/props/str_prop_street_newsbox/str_prop_street_newsbox_nm"/>
+        <diffuse_texture file="units/payday2/props/str_prop_street_newsbox/str_prop_street_newsbox_c_df"/>
+    </material>
+    <material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
+</materials>

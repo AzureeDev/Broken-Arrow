@@ -1,0 +1,6 @@
+<unit type="str" slot="1" >
+    <object file="units/payday2/props/str_prop_street_signs/str_prop_street_signs_store_lease" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

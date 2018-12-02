@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/tables/table_coffee_01" orientation_object="rp_table_coffee_02" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_table_coffee_02" />
+      <object name="c_table_coffee_02" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  
+  <decal_surfaces default_material="metal_hollow">
+    <decal_mesh name="g_table_coffee_02" material="metal_hollow" enabled="true" />
+    <decal_mesh name="g_table_coffee_02_glass" material="glass_breakable" enabled="true" />
+  </decal_surfaces>
+  
+  <graphics>
+    <object name="g_table_coffee_02" enabled="true" shadow_caster="false"  />
+    <object name="g_table_coffee_02_glass" enabled="true" shadow_caster="false"  />
+  </graphics>
+</dynamic_object>

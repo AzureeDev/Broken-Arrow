@@ -1,0 +1,30 @@
+<materials version="3">	
+	<material render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP" name="mat_des_prop_crane_terminal" version="2">
+        <diffuse_texture file="units/pd2_dlc_des/props/des_prop_crane_terminal/des_prop_crane_terminal_df"/>
+        <bump_normal_texture file="units/pd2_dlc_des/props/des_prop_crane_terminal/des_prop_crane_terminal_nm"/>
+        <material_texture file="units/pd2_dlc_des/props/des_prop_crane_terminal/des_prop_crane_terminal_gsma"/>
+        <reflection_texture file="units/pd2_dlc_dah/environments/cubemaps/cubemap_metal" type="cubemap"/>
+    </material>
+	<material render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP" name="mat_keyboard" version="2">
+        <diffuse_texture file="units/pd2_dlc_des/props/des_prop_crane_terminal/des_prop_crane_terminal_keyboard_df"/>
+        <bump_normal_texture file="units/pd2_dlc_des/props/des_prop_crane_terminal/des_prop_crane_terminal_keyboard_nm"/>
+        <reflection_texture file="units/pd2_dlc_dah/environments/cubemaps/cubemap_metal" type="cubemap"/>
+        <material_texture file="units/pd2_dlc_des/props/des_prop_crane_terminal/des_prop_crane_terminal_keyboard_gsma"/>
+    </material>
+	<material render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP:VERTEX_COLOR" name="mat_laser_room_panel" version="2">
+        <diffuse_texture file="units/pd2_dlc_des/props/des_prop_laser_panel/des_prop_laser_panel_df"/>
+        <bump_normal_texture file="units/pd2_dlc_des/props/des_prop_laser_panel/des_prop_laser_panel_nm" mip="1"/>
+        <material_texture file="units/pd2_dlc_des/props/des_prop_laser_panel/des_prop_laser_panel_gsma"/>
+        <reflection_texture file="units/pd2_dlc_dah/environments/cubemaps/cubemap_white_highlight_blurry" type="cubemap"/>
+    </material>	
+	<material name="mat_screen_hack_a_v2" render_template="generic:DIFFUSE_TEXTURE:SELF_ILLUMINATION" version="2">
+		<diffuse_texture file="units/payday2/equipment/gen_interactable_hack_computer/gen_interactable_hack_computer_screen_a_background_variations_df" />
+		<diffuse_texture file="units/payday2/equipment/gen_interactable_hack_computer/gen_interactable_hack_computer_screen_a_background_variations_df" />
+	</material>
+	<material name="mat_monitor_hack_ecm" render_template="generic:CONTOUR:DIFFUSE_TEXTURE:NORMALMAP" unique="true" version="2">
+        <bump_normal_texture file="units/payday2/props/off_prop_appliance_monitor/monitor_nm"/>
+        <diffuse_texture file="units/payday2/props/off_prop_appliance_monitor/monitor_df"/>
+        <variable value="1 0.5 0" type="vector3" name="contour_color"/>
+        <variable value="0" type="scalar" name="contour_opacity"/>
+    </material>
+</materials>

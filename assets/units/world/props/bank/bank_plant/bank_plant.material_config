@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="plant" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:EXTERNAL_ALPHA_REF:INSTANCED:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/world/props/bank/bank_plant/plant_df"/>
+        <variable value="0.03999999910593" type="scalar" name="alpha_ref"/>
+    </material>
+</materials>

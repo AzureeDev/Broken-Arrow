@@ -1,0 +1,12 @@
+<dynamic_object>
+    <diesel orientation_object="rp_off_prop_officehigh_drawer_wenge_large_shelves_12" materials="units/payday2/props/off_prop_officehigh_drawer/off_prop_officehigh_drawer_wenge" />
+    <bodies>
+        <body enabled="true" template="static" name="body0" >
+            <object name="rp_off_prop_officehigh_drawer_wenge_large_shelves_12" />
+            <object collision_type="box" name="c_mesh" />
+        </body>
+    </bodies>
+    <graphics>
+        <object enabled="true" name="g_mesh" />
+    </graphics>
+</dynamic_object>

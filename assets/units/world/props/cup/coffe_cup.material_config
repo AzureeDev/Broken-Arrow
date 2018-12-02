@@ -1,0 +1,5 @@
+<materials version="3">
+    <material render_template="generic:DIFFUSE_TEXTURE:VERTEX_COLOR" decal_material="stone" version="2" name="coffe_cup">
+        <diffuse_texture file="units/world/props/cup/coffe_cup_df"/>
+    </material>
+</materials>

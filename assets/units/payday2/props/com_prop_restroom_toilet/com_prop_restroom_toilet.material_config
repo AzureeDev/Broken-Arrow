@@ -1,0 +1,7 @@
+<materials version="3">
+    <material name="mat_restroom_toilet" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/props/com_prop_restroom_toilet/com_prop_restroom_toilet_df"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+        <variable value="1 0 2" type="vector3" name="environment_settings"/>
+    </material>
+</materials>

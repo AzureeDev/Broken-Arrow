@@ -1,0 +1,7 @@
+<materials version="3">
+    <material name="counter" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/world/props/bank/bank_kitchen_counter/bank_kitchen_atlas_df"/>
+        <bump_normal_texture file="units/world/props/bank/bank_kitchen_counter/bank_kitchen_atlas_nm"/>
+        <variable value="0" type="scalar" name="specular_power"/>
+    </material>
+</materials>

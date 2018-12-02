@@ -1,0 +1,18 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_arena/props/are_prop_office_telephone/are_prop_office_telephone" orientation_object="rp_are_prop_office_telephone" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_are_prop_office_telephone" />
+			<object name="c_convex" collision_type="convex" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="plastic">
+		<decal_mesh name="dm_plastic" enabled="true" material="plastic" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="grp_lod_g_telephone">
+			<object name="g_telephone_lod0" enabled="true" max_distance="1500" />
+			<object name="g_telephone_lod1" enabled="true" />
+		</lod_object>
+	</graphics>
+</dynamic_object>

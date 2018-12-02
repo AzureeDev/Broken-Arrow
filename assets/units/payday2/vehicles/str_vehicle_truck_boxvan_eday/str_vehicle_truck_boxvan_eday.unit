@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<unit type="str" slot="1" >
+	<object file="units/payday2/vehicles/str_vehicle_truck_boxvan_eday/str_vehicle_truck_boxvan_eday" />
+	<network sync="spawn"/>	
+	<dependencies>
+		<depends_on effect="effects/payday2/particles/window/storefront_window_small" />
+		<depends_on unit="units/payday2/equipment/gen_equipment_shape_charge/gen_equipment_shape_charge" />
+		<depends_on unit="units/payday2/equipment/item_door_drill_small/item_door_drill_small" />
+		<depends_on effect="effects/particles/explosions/explosion_grenade" />
+		<depends_on effect="effects/particles/dest/smoke_pocket_puff" />
+		<depends_on bnk="soundbanks/regular_sfx" />
+	</dependencies>
+	<extensions>
+		<extension name="base" class="MissionDoor" >
+			<var name="tweak_data" value="truck" />
+		</extension>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+		<extension name="interaction" class="UseInteractionExt">
+			<var name="tweak_data" value="hold_place_gps_tracker" />
+			<var name="_interact_object" value="anim_body"/>
+		</extension>
+	</extensions>
+</unit>

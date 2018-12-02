@@ -1,0 +1,7 @@
+<materials version="3">
+    <material name="shelf_books_01" decal_material="wood" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <variable value="0" type="scalar" name="specular_power"/>
+        <diffuse_texture file="units/world/props/shelfs/shelf_books_etc_df"/>
+        <bump_normal_texture file="units/world/props/shelfs/shelf_books_etc_nm"/>
+    </material>
+</materials>

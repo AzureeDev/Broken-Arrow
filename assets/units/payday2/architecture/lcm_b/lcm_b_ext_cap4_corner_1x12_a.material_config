@@ -1,0 +1,8 @@
+<materials version="3">
+    <material version="2" render_template="shadow_caster_only" name="shadow_caster"/>
+    <material version="2" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP:RL_CORE_ENVIRONMENT:VERTEX_COLOR" name="mat_lcm_b_ext_01a">
+        <diffuse_texture file="units/payday2/architecture/lcm_b/lcm_b_ext_01a_df"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+        <bump_normal_texture file="units/payday2/architecture/lcm_b/lcm_b_ext_01a_nm"/>
+    </material>
+</materials>

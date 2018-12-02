@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel orientation_object="rp_books_05" materials="units/payday2/props/off_prop_officehigh_books/off_prop_officehigh_books" />
+    <bodies>
+        <body enabled="true" template="editor" name="body0" >
+            <object name="rp_books_05" />
+            <object collision_type="box" name="c_box_01" />
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_mesh" material="paper" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_mesh" />
+    </graphics>
+</dynamic_object>

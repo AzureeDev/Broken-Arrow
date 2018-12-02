@@ -1,0 +1,119 @@
+<materials version="3">
+
+	<material name="mat_table_end" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/table_end/table_end_df"/>
+        <reflection_texture type="cubemap" file="environments/cubemaps/cubemap_hospital_01"/>
+        <variable value="1 0 2" type="vector3" name="environment_settings"/>
+    </material>
+    <material name="mat_refrigerator03" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/refrigerator03/refrigerator03_df"/>
+    </material>
+    <material name="mat_warehouse_shelf003" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/warehouse_shelf003/warehouse_shelf003_df"/>
+    </material>
+    <material name="mat_toilet" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/toilet/toilet_df"/>
+    </material>
+    <material name="mat_security_desk1" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/security_desk1/security_desk1_df"/>
+    </material>
+    <material version="2" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE" name="mat_security_desk1_cube">
+        <diffuse_texture file="units/world/architecture/hospital/props/security_desk1/security_desk1_df"/>
+        <reflection_texture type="cubemap" file="environments/cubemaps/cubemap_hospital_01"/>
+        <variable value="1 0 2" type="vector3" name="environment_settings"/>
+    </material>
+   <!--  <material version="2" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:EXTERNAL_ALPHA_REF:INSTANCED" name="mat_roomnumbers_hospital_411_icu">
+        <diffuse_texture file="units/world/architecture/hospital/props/icu/roomnumbers_hospital_411_icu_df"/>
+        <variable value="0.61700004339218" type="scalar" name="alpha_ref"/>
+    </material>
+
+    <material version="2" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:EXTERNAL_ALPHA_REF" name="mat_logo_mercyhospital">
+        <diffuse_texture file="units/world/architecture/hospital/props/logo_mercyhospital/logo_mercyhospital_df"/>
+        <variable value="0.15800000727177" type="scalar" name="alpha_ref"/>
+    </material>
+    <material version="2" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:EXTERNAL_ALPHA_REF:INSTANCED" name="mat_sign_biohazard_00">
+        <diffuse_texture file="units/world/architecture/hospital/props/sign_biohazard_00/sign_biohazard_00_df"/>
+        <variable value="0.61700004339218" type="scalar" name="alpha_ref"/>
+    </material>
+    <material version="2" render_template="generic:DIFFUSE_TEXTURE:DOUBLE_SIDED" name="mat_hospitalcurtain01">
+        <diffuse_texture file="units/world/architecture/hospital/props/hospitalcurtain01/hospitalcurtain01_df"/>
+    </material>
+    <material version="2" render_template="generic:DIFFUSE_TEXTURE:DOUBLE_SIDED" name="mat_hospitalcurtain02">
+        <diffuse_texture file="units/world/architecture/hospital/props/hospitalcurtain02/hospitalcurtain02_df"/>
+    </material>
+    <material name="mat_painting_landscape01a" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/painting_landscape01/painting_landscape01a_df"/>
+    </material>
+    <material name="mat_painting_doc_certificate_01a" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/painting_doc_certificate_01/painting_doc_certificate_01a_df"/>
+    </material>
+    <material name="mat_painting_landscape01b" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/painting_landscape01/painting_landscape01b_df"/>
+    </material>
+    <material name="mat_sofa_chair02" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/sofa_chair02/sofa_chair02_df"/>
+    </material>
+    <material name="mat_sofa02" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/sofa02/sofa02_df"/>
+    </material>
+    
+    <material name="mat_vending_machine" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/vending_machine/vending_machine_df"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+        <variable value="1 0 2" type="vector3" name="environment_settings"/>
+    </material>
+    
+    <material name="mat_urinal01" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/urinal01/urinal01_df"/>
+    </material>
+    
+    <material name="mat_table_cafeteria" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/table_cafeteria/table_cafeteria_df"/>
+        <reflection_texture type="cubemap" file="environments/cubemaps/cubemap_hospital_01"/>
+        <variable value="1 0 2" type="vector3" name="environment_settings"/>
+    </material>
+    <material name="mat_shelves_metal" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/shelves_metal/shelves_metal_df"/>
+    </material>
+    
+    <material name="mat_medicinecabinet01_mirror" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/medicinecabinet01_mirror/medicinecabinet01_mirror_df"/>
+        <reflection_texture type="cubemap" file="environments/cubemaps/cubemap_hospital_01"/>
+        <variable value="1 0 2" type="vector3" name="environment_settings"/>
+    </material>
+    <material name="mat_magazine_rack" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/magazine_rack/magazine_rack_df"/>
+    </material>
+    <material name="mat_controlroom_monitor001b_scrolling2" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:DIFFUSE_UVANIM:SELF_ILLUMINATION:SELF_ILLUMINATION_UVANIM:VERTEX_COLOR" version="2">
+        <diffuse_texture file="units/world/architecture/hospital/props/controlroom_monitor001b/controlroom_monitor001b_scroll_df"/>
+        <reflection_texture file="environments/cubemaps/cubemap_hospital_01" type="cubemap"/>
+        <variable value="match" type="scalar" name="il_multiplier"/>
+        <self_illumination_texture file="units/world/architecture/hospital/props/controlroom_monitor001b/controlroom_monitor001b_scroll_il"/>
+        <variable value="0 0.35000002384186 0" type="vector3" name="uv_speed"/>
+    </material>
+    <material version="2" render_template="generic:DIFFUSE_TEXTURE:INSTANCED:SELF_ILLUMINATION" name="mat_xray_board">
+        <diffuse_texture file="units/world/architecture/hospital/env_textures/xray_board_df"/>
+        <self_illumination_texture file="units/world/architecture/hospital/env_textures/xray_board_il"/>
+        <variable value="identity" type="scalar" name="il_multiplier"/>
+    </material>
+    <material version="2" render_template="generic:DIFFUSE_TEXTURE:INSTANCED" name="mat_xray_board_dmg">
+        <diffuse_texture file="units/world/architecture/hospital/env_textures/xray_board_df"/>
+    </material>
+    <material render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE" decal_material="glass_breakable" version="2" name="glass">
+        <opacity_texture file="units/world/props/bank/paintings/textures/glass_op"/>
+        <diffuse_texture file="units/world/props/bank/paintings/textures/glass_df"/>
+        <reflection_texture type="cubemap" global_texture="current_global_texture"/>
+        <variable value="12 1 0" type="vector3" name="fresnel_settings"/>
+    </material>
+    <material name="glass_shattered" decal_material="glass_breakable" version="2" render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE:NORMALMAP">
+        <variable value="12 -1 -1" type="vector3" name="fresnel_settings"/>
+        <opacity_texture file="units/payday2/glass/hospital_glass_shattered_op"/>
+        <diffuse_texture file="units/payday2/glass/glass_shattered_df"/>
+        <reflection_texture type="cubemap" global_texture="current_global_texture"/>
+        <bump_normal_texture file="units/payday2/glass/glass_shattered_nm"/>
+    </material>
+    
+    <material version="2" render_template="generic:DIFFUSE_TEXTURE:SKINNED_3WEIGHTS" name="mat_bodybag_skinned">
+        <diffuse_texture file="units/world/architecture/hospital/props/bodybags/bodybag_df"/>
+    </material> -->
+</materials>

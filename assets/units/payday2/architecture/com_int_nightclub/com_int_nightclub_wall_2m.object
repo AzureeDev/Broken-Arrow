@@ -1,0 +1,16 @@
+<dynamic_object>
+    <diesel orientation_object="rp_com_int_nightclub_wall_2m" materials="units/payday2/architecture/com_int_nightclub/com_int_nightclub" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object name="rp_com_int_nightclub_wall_2m"/>
+            <object collision_type="box" name="c_box_000" padding="-2.5"/>
+        </body>
+    </bodies>
+    <decal_surfaces default_material="wood" static="true">
+        <decal_mesh enabled="true" name="dm_wood" material="wood" />
+        <decal_mesh enabled="true" name="dm_plaster" material="plaster" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

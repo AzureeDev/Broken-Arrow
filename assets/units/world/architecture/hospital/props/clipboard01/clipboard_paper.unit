@@ -1,0 +1,6 @@
+<unit type="hsp" slot="1" >
+    <object file="units/world/architecture/hospital/props/clipboard01/clipboard_paper" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<unit type="fwb" slot="1">
+	<mass>
+		<spawn in="2500" method="enable" out="2700" />
+	</mass>
+  <object file="units/world/props/office/magazinerack/office_magazinerack_table_01" />
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+  </extensions>
+</unit>

@@ -1,0 +1,10 @@
+<materials version="3">
+    <material name="mat_carpet" version="2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <diffuse_texture file="units/payday2/architecture/off_int_fbi/off_int_fbi_floor_carpet_df"/>
+        <bump_normal_texture file="units/payday2/architecture/off_int_fbi/off_int_fbi_floor_carpet_nm"/>
+    </material>
+	<material name="mat_carpet_vc" version="2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:VERTEX_COLOR">
+        <diffuse_texture file="units/payday2/architecture/off_int_fbi/off_int_fbi_floor_carpet_df"/>
+        <bump_normal_texture file="units/payday2/architecture/off_int_fbi/off_int_fbi_floor_carpet_nm"/>
+    </material>
+</materials>

@@ -1,0 +1,32 @@
+<materials version="3">
+    <material version="2" decal_material="concrete" name="deco_trash_concrete" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <variable value="0" type="scalar" name="specular_power"/>
+        <diffuse_texture file="units/world/street/trash_pile/dcty_trashset_concrete_df"/>
+        <bump_normal_texture file="units/world/street/trash_pile/dcty_trashset_concrete_nm"/>
+    </material>
+    <material version="2" decal_material="metal" name="deco_trash_garbage" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <variable value="0" type="scalar" name="specular_power"/>
+        <diffuse_texture file="units/world/street/trash_pile/dcty_trashset_garbage_df"/>
+        <bump_normal_texture file="units/world/street/trash_pile/dcty_trashset_garbage_nm"/>
+    </material>
+    <material version="2" decal_material="metal" name="deco_trash_metallic" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <variable value="0" type="scalar" name="specular_power"/>
+        <diffuse_texture file="units/world/street/trash_pile/dcty_trashset_metal_df"/>
+        <bump_normal_texture file="units/world/street/trash_pile/dcty_trashset_metal_nm"/>
+    </material>
+    <material version="2" decal_material="metal" name="deco_trash_mix" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <variable value="0" type="scalar" name="specular_power"/>
+        <diffuse_texture file="units/world/street/trash_pile/dcty_trashset_mixed_df"/>
+        <bump_normal_texture file="units/world/street/trash_pile/dcty_trashset_mixed_nm"/>
+    </material>
+    <material version="2" decal_material="plaster" name="deco_trash_plaster" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <variable value="0" type="scalar" name="specular_power"/>
+        <diffuse_texture file="units/world/street/trash_pile/dcty_trashset_plaster_df"/>
+        <bump_normal_texture file="units/world/street/trash_pile/dcty_trashset_plaster_nm"/>
+    </material>
+    <material version="2" decal_material="wood" name="deco_trash_wood" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <variable value="0" type="scalar" name="specular_power"/>
+        <diffuse_texture file="units/world/street/trash_pile/dcty_trashset_wood_df"/>
+        <bump_normal_texture file="units/world/street/trash_pile/dcty_trashset_wood_nm"/>
+    </material>
+</materials>

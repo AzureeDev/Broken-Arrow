@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<unit type="slh" slot="1">
+  <object file="units/world/props/pallet_01/pallet_01" />
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+  </extensions>
+</unit>

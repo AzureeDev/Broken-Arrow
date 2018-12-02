@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel orientation_object="rp_lcm_b_ext_cap4_corner_1x12_a" materials="units/payday2/architecture/lcm_b/lcm_b_ext_cap4_corner_1x12_a" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object name="rp_lcm_b_ext_cap4_corner_1x12_a" />
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+			<object name="c_box_02" collision_type="box" padding="-2.5"/>
+        </body>
+    </bodies>
+    <graphics>
+		<object name="g_g" enabled="true"/>
+		<object name="s_s" enabled="true" shadow_caster="true"/>
+    </graphics>
+</dynamic_object>

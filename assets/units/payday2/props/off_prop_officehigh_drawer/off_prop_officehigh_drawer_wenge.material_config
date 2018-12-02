@@ -1,0 +1,12 @@
+<materials version="3">
+    <material render_template="generic:DIFFUSE_TEXTURE" decal_material="wood" name="mat_wood_wenge" version="2">
+        <diffuse_texture file="units/payday2/props/off_prop_officehigh_desk/off_prop_officehigh_desk_wenge_df"/>
+    </material>
+    <material src="GLOBAL" name="mat_glass" decal_material="glass_breakable" render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE:VERTEX_COLOR" version="2">
+        <variable value="0 0.87999999523163 0.31999999284744" type="vector3" name="fresnel_settings"/>
+        <diffuse_texture file="units/payday2/glass/glass_clear_small_dark_df"/>
+        <opacity_texture file="units/payday2/glass/glass_clear_small_dark_op"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+    </material>
+    <material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
+</materials>

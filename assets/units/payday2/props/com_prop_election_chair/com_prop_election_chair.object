@@ -1,0 +1,16 @@
+<dynamic_object>
+    <diesel orientation_object="rp_chair" materials="units/payday2/props/com_prop_election_chair/com_prop_election_chair" />
+    <bodies>
+        <body enabled="true" template="static" name="body0" >
+            <object name="rp_chair" />
+            <object collision_type="box" name="c_box_01" />
+            <object collision_type="box" name="c_box_02" />
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_plastic" material="plastic" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_mesh" instance_struct="world_tm"/>
+    </graphics>
+</dynamic_object>

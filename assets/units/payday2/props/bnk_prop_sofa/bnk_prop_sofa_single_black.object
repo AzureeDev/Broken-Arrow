@@ -1,0 +1,18 @@
+<dynamic_object>
+    <diesel orientation_object="rp_bnk_prop_sofa_single_black" materials="units/payday2/props/bnk_prop_sofa/bnk_prop_sofa_black" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object name="rp_bnk_prop_sofa_single_black" />
+            <object collision_type="mesh_mopp" name="c_sofa_a_single" />
+        </body>
+    </bodies>
+	
+    <decal_surfaces>
+		<decal_mesh name="dm_fabric" enabled="true" material="thin_layer"/>
+    </decal_surfaces>
+	
+    <graphics>
+		<object name="g_sofa_a_single" enabled="true"/>
+		<object name="s_s" enabled="true" shadow_caster="true"/>
+    </graphics>
+</dynamic_object>

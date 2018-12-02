@@ -1,0 +1,29 @@
+<dynamic_object>
+    <diesel orientation_object="rp_str_prop_street_newsbox_a" materials="units/payday2/props/str_prop_street_newsbox/str_prop_street_newsbox" />
+    <sequence_manager file="units/payday2/props/str_prop_street_newsbox/str_prop_street_newsbox" />
+    
+	<bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object name="rp_str_prop_street_newsbox_a" />
+            <object collision_type="box" name="c_box_000" padding="-2.5"/>
+            <object collision_type="box" name="c_box_001" padding="-2.5"/>
+        </body>
+        <body enabled="false" name="dynamic_body" template="dynamic" pushed_by_mover="false" collides_with_mover="true" ang_damping="0.5" collides_with_wheels="true">
+            <object name="rp_str_prop_street_newsbox_a" />
+            <object collision_type="box" name="c_box_000" mass="10" />
+            <object collision_type="box" name="c_box_001" mass="10" />
+            
+        </body>     
+
+    </bodies>
+	
+	<decal_surfaces default_material="sheet_metal">
+        <decal_mesh enabled="true" name="dm_sheet_metal" material="sheet_metal" />
+        <decal_mesh enabled="true" name="dm_glass_breakable" material="glass_breakable" />
+    </decal_surfaces>
+	
+	<graphics>
+        <object enabled="true" name="g_g" />
+        <object enabled="true" name="s_s" shadow_caster="true" />
+    </graphics>
+</dynamic_object>

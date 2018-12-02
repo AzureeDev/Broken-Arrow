@@ -1,9 +1,9 @@
 {
 	"quest_a_better_tomorrow" : "A Better Tomorrow",
 	"heist_zm_broken_arrow_name" : "Broken Arrow",
-	"heist_zm_broken_arrow_brief" : "Broken Arrow brief placeholder",
-	"heist_zm_bank_name" : "Broken Arrow",
-	"heist_zm_bank_brief" : "Broken Arrow desc placeholder",
+	"heist_zm_broken_arrow_brief" : "",
+	"heist_broken_arrow2_name" : "Broken Arrow",
+	"heist_broken_arrow2_brief" : "",
     "hud_assault_zombie" : "Zombie Assault in progress",
     "zm_buy_weapon" : "Buying...",
 	"zm_hack" : "Hacking...",
@@ -52,4 +52,9 @@
 	"zm_teleporter_cooling_down" : "Teleporter is cooling down",
 	"zm_teleporter_back" : "Hold $BTN_INTERACT to Teleport back",
 	"zm_teleport_back" : "Teleporting back...",
+	"zm_return_round" : "Come back next round",
+	"zm_require_all_crystals" : "Requires all crystals connected to teleporter",
+	"zm_next_song" : "Press $BTN_INTERACT to go to the next song",
+	"zm_previous_song" : "Press $BTN_INTERACT to go to the previous song",
+	"zm_restart_song" : "Press $BTN_INTERACT to go to restart the song"
 }

@@ -1,0 +1,24 @@
+<dynamic_object>
+    <diesel orientation_object="rp_gen_prop_police_barrier" materials="units/payday2/props/gen_prop_police_barrier/gen_prop_police_barrier" />
+	<sequence_manager file="units/payday2/props/gen_prop_police_barrier/gen_prop_police_barrier" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object name="rp_gen_prop_police_barrier" />
+            <object collision_type="box" name="c_box" />
+            <object collision_type="convex" name="c_convex_1" />
+            <object collision_type="convex" name="c_convex_2" />
+        </body>
+        <body enabled="false" name="dynamic_body" template="dynamic" pushed_by_mover="false" collides_with_mover="true" ang_damping="0.5" collides_with_wheels="true">
+            <object name="rp_gen_prop_police_barrier" />
+            <object collision_type="box" name="c_box" mass="10" />
+            <object collision_type="convex" name="c_convex_1" mass="10"/>
+            <object collision_type="convex" name="c_convex_2" mass="10"/>
+        </body>		
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_barrier" material="plastic" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_barrier" shadow_caster="true" />
+    </graphics>
+</dynamic_object>

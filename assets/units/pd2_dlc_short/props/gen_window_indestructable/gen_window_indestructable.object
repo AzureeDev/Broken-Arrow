@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/architecture/bank/bank_window/bank_window_io" orientation_object="rp_bank_window_conferense_inside_01" />
+  <bodies>
+    <body name="boarder" enabled="true" template="static">
+      <object name="c_bank_window_cf_inside_01_boarder" collision_type="mesh_mopp" />
+    </body>
+    <body name="body_block_bullets" enabled="true" template="static">
+      <object name="rp_bank_window_conferense_inside_01" />
+      <object name="c_box_01" collision_type="box" />
+    </body>
+  </bodies>
+  <graphics>
+    <object name="g_bank_window_cf_inside_01" enabled="true" />
+    <object name="g_bank_window_cf_inside_01_dmg"  />
+    <object name="g_bank_window_cf_inside_01_shattered"  />
+    <object name="g_bank_window_cf_inside_01_boarder" enabled="true" />
+  </graphics>
+  
+  <decal_surfaces default_material="glass_breakable">
+    <decal_mesh name="g_bank_window_cf_inside_01" enabled="true" material="glass_breakable" />
+    <decal_mesh name="g_bank_window_cf_inside_01_boarder" enabled="true" material="metal" />
+  </decal_surfaces>
+  
+  <objects>
+    <align_point name="e_bank_window_cf_inside_01" enabled="true" parent="rp_bank_window_conferense_inside_01" position="0 0 0" rotation="0 0 0" />
+  </objects>
+</dynamic_object> 

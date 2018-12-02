@@ -1,0 +1,19 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_des/props/des_prop_inter_hack_computer/des_inter_hack_computer" orientation_object="rp_des_inter_hack_computer" />
+	<sequence_manager file="units/pd2_dlc_des/props/des_prop_inter_hack_computer/des_inter_hack_computer" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_des_inter_hack_computer" />
+			<object name="c_screen_convex" collision_type="convex" padding="-2.5" />
+			<object name="c_bottom_box" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="metal">
+		<decal_mesh name="dm_metal" enabled="true" material="metal" />		
+	</decal_surfaces>
+	<graphics>
+		<object name="g_off" enabled="true" />
+		<object name="g_on" enabled="false" />
+		<object name="g_console" enabled="true" />
+	</graphics>
+</dynamic_object>

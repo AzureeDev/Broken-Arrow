@@ -1,0 +1,5 @@
+<materials version="3" group="desk_lamp_04">
+    <material name="lamps_set_2" decal_material="sheet_metal" render_template="generic:DIFFUSE_TEXTURE:INSTANCED" version="2">
+        <diffuse_texture file="units/world/props/office/desk_accessories/lamps_set_2_df"/>
+    </material>
+</materials> 
