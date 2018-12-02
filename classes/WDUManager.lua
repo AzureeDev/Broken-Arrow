@@ -311,7 +311,7 @@ function WDUManager:_on_wdu_map()
         return false
     end
     
-    if managers.job:current_level_id() == "zm_bank" then
+    if managers.job:current_level_id() == "zm_broken_arrow" then
         return true
     end
 

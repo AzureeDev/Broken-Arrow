@@ -303,6 +303,12 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		start_active = false,
 	}
 	
+	self.zm_restart_song = {
+		text_id = "zm_restart_song",
+		action_text_id = "zm_music",
+		start_active = false,
+	}
+	
 	self.zm_previous_song = {
 		text_id = "zm_previous_song",
 		action_text_id = "zm_music",

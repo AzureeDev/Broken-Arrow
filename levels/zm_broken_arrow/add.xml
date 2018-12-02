@@ -7,6 +7,7 @@
 	<texture force="true" path="effects/textures/bullet_hit/e_muzzle_flash03_mgsj2"/>
 	<texture force="true" path="effects/textures/bullet_hit/glow_ball"/>
 	<texture force="true" path="effects/textures/smoke/e_smoke_04_6x6_seq"/>
+	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 	<texture force="true" path="map_assets/perks" unload="true"/>
 	<texture force="true" path="map_assets/perks_2" unload="true"/>
 	<texture path="units/skins/pap_1/base_gradient/base_pack-a-punch"/>
@@ -4284,4 +4285,28 @@
 		<material_config force="true" path="units/payday2/architecture/lcm_b/lcm_b" unload="true"/>
 	</add>
 	<movie path="movies/ascension"/>
+	<movie path="sound/music/bank/bankpowerup_assault"/>
+	<movie path="sound/music/bank/bankpowerup_intro"/>
+	<movie path="sound/music/bank/bankpowerup_end"/>
+	<movie path="sound/music/Nightclub/nightclubpowerup_intro"/>
+	<movie path="sound/music/Nightclub/nightclubpowerup_introintro"/>
+	<movie path="sound/music/Nightclub/nightclubpowerup_assault"/>
+	<movie path="sound/music/Nightclub/nightclubpowerup_end"/>
+	<movie path="sound/music/Bus/buspowerup_intro"/>
+	<movie path="sound/music/Bus/buspowerup_assault"/>
+	<movie path="sound/music/Bus/buspowerup_end"/>
+	<movie path="sound/buzzer_fail"/>
+	<movie path="sound/music/Store/storepowerup_intro"/>
+	<movie path="sound/music/Store/storepowerup_assault"/>
+	<movie path="sound/music/Store/storepowerup_end"/>
+	<movie path="sound/music/ee/115"/>
+	<movie path="sound/music/ee/BeautyRemix"/>
+	<movie path="sound/music/ee/Beginning"/>
+	<movie path="sound/music/ee/ComingHome"/>
+	<movie path="sound/music/ee/FallDown"/>
+	<movie path="sound/music/ee/Rusty"/>
+	<movie path="sound/music/ee/WhosWho"/>
+	<movie path="sound/music/ee/finsternis"/>
+	<movie path="sound/music/ee/stop"/>
+	<movie path="sound/music/ee/buzz"/>
 </table>

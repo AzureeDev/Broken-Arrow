@@ -54,6 +54,7 @@
 	"zm_teleport_back" : "Teleporting back...",
 	"zm_return_round" : "Come back next round",
 	"zm_require_all_crystals" : "Requires all crystals connected to teleporter",
-	"zm_next_song" : "Press $BTN_INTERACT to go to next song",
-	"zm_previous_song" : "Press $BTN_INTERACT to go to previous song"
+	"zm_next_song" : "Press $BTN_INTERACT to go to the next song",
+	"zm_previous_song" : "Press $BTN_INTERACT to go to the previous song",
+	"zm_restart_song" : "Press $BTN_INTERACT to go to restart the song"
 }
