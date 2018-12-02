@@ -56,5 +56,17 @@
 	"zm_require_all_crystals" : "Requires all crystals connected to teleporter",
 	"zm_next_song" : "Press $BTN_INTERACT to go to the next song",
 	"zm_previous_song" : "Press $BTN_INTERACT to go to the previous song",
-	"zm_restart_song" : "Press $BTN_INTERACT to go to restart the song"
+	"zm_restart_song" : "Press $BTN_INTERACT to go to restart the song",
+	"zm_upgrade_weapon" : "Upgrading a weapon",
+	"zm_opening_path" : "Opening path",
+	"zm_buy_weapon" : "Buying a weapon",
+    "zm_buy_perk" : "Buying a perk",
+	"zm_no_power" : "You must turn on the Power first!",
+    "hud_perk_speedcola" : "Perk : Speed Cola",
+    "hud_perk_juggernog" : "Perk : Juggernog",
+    "hud_perk_doubletap" : "Perk : Double Tap",
+    "hud_perk_quickrevive" : "Perk : Quick Revive",
+    "hud_perk_deadshot" : "Perk : Dead Shot",
+	"zm_broken_arrow_perks_name" : "Available Perks",
+    "zm_broken_arrow_perks_2_name" : "Available Perks (continued)"
 }

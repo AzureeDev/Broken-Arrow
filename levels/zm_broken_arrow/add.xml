@@ -4299,14 +4299,15 @@
 	<movie path="sound/music/Store/storepowerup_intro"/>
 	<movie path="sound/music/Store/storepowerup_assault"/>
 	<movie path="sound/music/Store/storepowerup_end"/>
-	<movie path="sound/music/ee/115"/>
-	<movie path="sound/music/ee/BeautyRemix"/>
 	<movie path="sound/music/ee/Beginning"/>
-	<movie path="sound/music/ee/ComingHome"/>
-	<movie path="sound/music/ee/FallDown"/>
-	<movie path="sound/music/ee/Rusty"/>
-	<movie path="sound/music/ee/WhosWho"/>
-	<movie path="sound/music/ee/finsternis"/>
+	<movie path="sound/music/ee/1"/>
+	<movie path="sound/music/ee/2"/>
+	<movie path="sound/music/ee/3"/>
+	<movie path="sound/music/ee/4"/>
+	<movie path="sound/music/ee/5"/>
+	<movie path="sound/music/ee/6"/>
+	<movie path="sound/music/ee/Who"/>
+	<movie path="sound/music/ee/fin"/>
 	<movie path="sound/music/ee/stop"/>
 	<movie path="sound/music/ee/buzz"/>
 </table>
