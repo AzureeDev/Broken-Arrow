@@ -552,11 +552,12 @@
 			<sound path="speed_sting.ogg"/>
 			<sound path="revive_sting.ogg"/>
 			<sound path="juggernog_sting.ogg"/>
-			<sound id="bar_drill_fix" path="box_interact.ogg"/>
-			<sound id="bag_light_drop" path="box_interact_stop.ogg"/>
+			<sound path="phone/ring_to_tone.ogg"/>
+			<sound id="bar_thermal_lance_fix" path="box_interact.ogg"/>
+			<sound id="bar_thermal_lance_fix_cancel" path="box_interact_stop.ogg"/>
 			<sound id="bar_take_watertank" path="Door_buy1.ogg"/>
 			<sound id="und_limo_chassis_open" path="Door_buy2.ogg"/>
-			<sound id="bar_crowbar_open_metal_cancel" path="Door_buy3.ogg"/>
+			<sound id="bar_pick_lock" path="Door_buy3.ogg"/>
 			<sound id="bar_c4_apply_cancel" path="Drink.ogg"/>
 			<sound path="hum.ogg"/>
 			<sound id="liquid_pour" path="easter_egg_activate.ogg"/>

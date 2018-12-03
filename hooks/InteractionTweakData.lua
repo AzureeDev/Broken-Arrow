@@ -288,8 +288,8 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		points_cost = 950,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
-		sound_start = "bar_drill_fix",
-		sound_interupt = "bag_light_drop",
+		sound_start = "bar_thermal_lance_fix",
+		sound_interupt = "bar_thermal_lance_fix_cancel",
 		axis = "y",
 		timer = 4
 	}
