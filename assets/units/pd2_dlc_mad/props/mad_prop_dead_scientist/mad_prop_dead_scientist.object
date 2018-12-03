@@ -1,0 +1,46 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" orientation_object="rp_mad_prop_dead_scientist" />
+	<sequence_manager file="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_mad_prop_dead_scientist" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+			<object name="c_box_02" collision_type="box" padding="-2.5" />
+			<object name="c_box_03" collision_type="box" padding="-2.5" />
+			<object name="c_box_04" collision_type="box" padding="-2.5" />
+			<object name="c_box_05" collision_type="box" padding="-2.5" />
+			<object name="c_box_06" collision_type="box" padding="-2.5" />
+			<object name="c_box_07" collision_type="box" padding="-2.5" />
+			<object name="c_box_08" collision_type="box" padding="-2.5" />
+			<object name="c_box_09" collision_type="box" padding="-2.5" />
+			<object name="c_box_010" collision_type="box" padding="-2.5" />
+			<object name="c_box_011" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="flesh">
+		<decal_mesh name="dm_flesh" enabled="true" material="flesh" />
+		<decal_mesh name="dm_flesh_no_hand" enabled="false" material="flesh" />
+		<decal_mesh name="dm_metal" enabled="true" material="metal" />
+	</decal_surfaces>
+	<graphics>
+		<graphic_group name="grp_char" enabled="true" >
+			<lod_object name="lod_g">
+				<object name="g_lod0" enabled="true" max_distance="1000" />
+				<object name="g_lod1" enabled="true" />
+			</lod_object>
+		</graphic_group>
+
+		<graphic_group name="grp_char_no_hand" enabled="false" >
+			<lod_object name="lod_g_no_hand">
+				<object name="g_no_hand_lod0" enabled="true" max_distance="1000" />
+				<object name="g_no_hand_lod1" enabled="true" />
+			</lod_object>
+		</graphic_group>
+		<graphic_group name="grp_outline" enabled="true" >
+			<lod_object name="g_outline">
+				<object name="g_outline_lod0" enabled="true"  max_distance="300" />
+				<object name="g_outline_lod1" enabled="true"/>
+			</lod_object>
+		</graphic_group>
+	</graphics>
+</dynamic_object>

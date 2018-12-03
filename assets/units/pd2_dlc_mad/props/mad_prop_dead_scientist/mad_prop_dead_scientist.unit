@@ -1,0 +1,12 @@
+<unit type="mad" slot="1">
+	<network sync="spawn"/>
+	<object file="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" />
+	<extensions>
+		<extension name="interaction" class="UseInteractionExt">
+			<var name="tweak_data" value="hold_remove_hand" />
+			<var name="_interact_object" value="interact"/>
+		</extension>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+</unit>

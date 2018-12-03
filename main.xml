@@ -538,7 +538,7 @@
 			<sound id="zm_special_wave_end" path="specialwave_end.ogg"/>
 			<sound id="zm_power_on" path="power_on.ogg"/>
 			<sound id="zm_boom" path="boom.ogg"/>
-			<sound id="zm_cashin" path="cashin.ogg"/>
+			<sound id="bar_plant_breaching_charges" path="cashin.ogg"/>
 			<sound id="zm_denied" path="denied.ogg"/>
 			<sound id="zm_hs_1" path="headshot_1.ogg"/>
 			<sound id="zm_hs_2" path="headshot_2.ogg"/>
@@ -552,18 +552,15 @@
 			<sound path="speed_sting.ogg"/>
 			<sound path="revive_sting.ogg"/>
 			<sound path="juggernog_sting.ogg"/>
-			<sound path="belch.ogg.ogg"/>
-			<sound path="box_interact.ogg"/>
-			<sound path="box_interact_stop.ogg"/>
-			<sound path="box_move.ogg"/>
-			<sound path="box_moved.ogg"/>
-			<sound path="dispense.ogg"/>
-			<sound path="Door_buy1.ogg"/>
-			<sound path="Door_buy2.ogg"/>
-			<sound path="Door_buy3.ogg"/>
+			<sound id="bar_drill_fix" path="box_interact.ogg"/>
+			<sound id="bag_light_drop" path="box_interact_stop.ogg"/>
+			<sound id="bar_take_watertank" path="Door_buy1.ogg"/>
+			<sound id="und_limo_chassis_open" path="Door_buy2.ogg"/>
+			<sound id="bar_crowbar_open_metal_cancel" path="Door_buy3.ogg"/>
+			<sound id="bar_c4_apply_cancel" path="Drink.ogg"/>
 			<sound path="hum.ogg"/>
-			<sound path="Secret_nearby.ogg"/>
-			<sound path="swallow.ogg"/>
+			<sound id="liquid_pour" path="easter_egg_activate.ogg"/>
+			<sound path="easter_egg_loop.ogg"/>
 			<sound path="special_spawn.ogg"/>
 			<sound path="Ambience.ogg"/>
 			<sound id="pregame" path="pregame.ogg"/>
