@@ -53,7 +53,7 @@ function WeaponFactoryTweakData:_init_wunderwaffe()
     self.parts.wpn_fps_spe_wunderwaffe_body = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_body.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body"
     self.parts.wpn_fps_spe_wunderwaffe_body.type = "barrel"
-    self.parts.wpn_fps_spe_wunderwaffe_body.third_unit = "units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_body"
+    self.parts.wpn_fps_spe_wunderwaffe_body.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
 	
     self.parts.wpn_fps_spe_wunderwaffe_illum = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_illum.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"
@@ -117,7 +117,7 @@ function WeaponFactoryTweakData:_init_wunderwaffe_dg3()
     self.parts.wpn_fps_spe_wunderwaffe_dg3_body = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_dg3_body.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_body"
     self.parts.wpn_fps_spe_wunderwaffe_dg3_body.type = "barrel"
-    self.parts.wpn_fps_spe_wunderwaffe_dg3_body.third_unit = "units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"
+    self.parts.wpn_fps_spe_wunderwaffe_dg3_body.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
 	
     self.parts.wpn_fps_spe_wunderwaffe_dg3_illum = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_dg3_illum.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"

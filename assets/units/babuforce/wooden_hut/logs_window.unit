@@ -1,6 +1,0 @@
-<unit type="deprecated" slot="1" >
-	<object file="units/babuforce/wooden_hut/logs_window" />
-	<extensions>
-        <extension class="ScriptUnitData" name="unit_data" />
-    </extensions>
-</unit>

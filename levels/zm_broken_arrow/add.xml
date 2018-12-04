@@ -266,16 +266,6 @@
 	<texture path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/textures/wunderwaffe_metal_nm"/>
 	<texture path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/textures/wunderwaffe_pipes_nm"/>
 	<texture path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/textures/wunderwaffe_wood_nm"/>
-	<cooked_physics path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_body"/>
-	<model path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_body"/>
-	<object path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_body"/>
-	<unit path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_body"/>
-	<material_config path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_body"/>
-	<cooked_physics path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
-	<model path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
-	<object path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
-	<unit path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
-	<material_config path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
@@ -330,8 +320,6 @@
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum_thq"/>
-	<texture path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wunderwaffe_df"/>
-	<texture path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wunderwaffe_dg3_df"/>
 	<cooked_physics path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
@@ -451,22 +439,6 @@
 	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display_thq"/>
-	<cooked_physics path="units/babuforce/wooden_hut/logs_wall"/>
-	<model path="units/babuforce/wooden_hut/logs_wall"/>
-	<object path="units/babuforce/wooden_hut/logs_wall"/>
-	<unit path="units/babuforce/wooden_hut/logs_wall"/>
-	<material_config path="units/babuforce/wooden_hut/logs"/>
-	<cooked_physics path="units/babuforce/wooden_hut/logs_window"/>
-	<model path="units/babuforce/wooden_hut/logs_window"/>
-	<object path="units/babuforce/wooden_hut/logs_window"/>
-	<unit path="units/babuforce/wooden_hut/logs_window"/>
-	<texture path="units/babuforce/wooden_hut/woodlog_df"/>
-	<texture path="units/babuforce/wooden_hut/woodlog_nm"/>
-	<cooked_physics force="true" path="units/babuforce/tree/giant_tree"/>
-	<model force="true" path="units/babuforce/tree/giant_tree"/>
-	<unit force="true" path="units/babuforce/tree/giant_tree"/>
-	<object force="true" path="units/babuforce/tree/giant_tree"/>
-	<material_config force="true" path="units/babuforce/tree/giant_tree"/>
 	<cooked_physics path="power_ups/max_ammo/max_ammo"/>
 	<model path="power_ups/max_ammo/max_ammo"/>
 	<object path="power_ups/max_ammo/max_ammo"/>
@@ -603,8 +575,6 @@
 		<texture path="units/babuforce/teleporter/vacuum_tube_df"/>
 		<texture path="units/babuforce/teleporter/vacuum_tube_op"/>
 		<texture path="units/babuforce/teleporter/vacuum_tube_il"/>
-		<cooked_physics path="units/babuforce/teleporter/teleporter"/>
-		<model path="units/babuforce/teleporter/teleporter"/>
 		<object path="units/babuforce/teleporter/teleporter"/>
 		<sequence_manager path="units/babuforce/teleporter/teleporter"/>
 		<unit path="units/babuforce/teleporter/teleporter"/>
@@ -4310,10 +4280,15 @@
 	<movie path="sound/music/ee/stop"/>
 	<movie path="sound/music/ee/buzz"/>
 	<add path="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" type="unit">
-		<unit force="true" path="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" unload="true"/>
-		<object force="true" path="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" unload="true"/>
+		<object force="true" path="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile5_4x4m_b" type="unit">
+		<unit force="true" path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile5_4x4m_b" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile5_4x4m_b" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/lcm_b/lcm_b" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>

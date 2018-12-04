@@ -15,4 +15,9 @@
     <effect load="true" path="effects/zm/zm_teleport"/>
     <effect load="true" path="effects/zm/zm_teleport_sparks"/>
     <effect load="true" path="effects/zm/zm_glow"/>
+    <effect load="true" path="effects/zm/zm_special_spawn"/>
+    <effect load="true" path="effects/zm/zm_powerup_glow"/>
+
+    <font load="true" path="fonts/murderer"/>
+    <texture path="fonts/murderer"/>
 </table>

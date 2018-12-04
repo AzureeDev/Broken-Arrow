@@ -59,7 +59,7 @@ function WDUPowerUps:execute_firesale()
     self._source:post_event("zm_announcer_firesale")
     managers.wdu:_setup_event_state("firesale", true)
 
-    managers.wdu:_element_play_sound({
+    --[[managers.wdu:_element_play_sound({
         name = "firesale_inbound",
         file_name = "firesale.ogg",
         sound_type = "music",
@@ -68,7 +68,7 @@ function WDUPowerUps:execute_firesale()
         is_loop = false,
         is_3d = false,
         use_velocity = false
-    })
+    })--]]
 
     managers.wdu:wait(30, "firesale_timer_wait", function()
         managers.wdu:_setup_event_state("firesale", false)

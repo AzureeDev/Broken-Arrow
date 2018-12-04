@@ -21,8 +21,8 @@ function HUDZMWaves:_create_zm_waves_hud(parent)
         layer = 1,
         text = "",
         color = Color(1, 0.6, 0, 0),
-        font_size = tweak_data.menu.pd2_large_font_size,
-        font = tweak_data.menu.pd2_large_font,
+        font_size = tweak_data.menu.pd2_large_font_size + 10,
+        font = "fonts/murderer",
         visible = true
     })
     zm_wave_text:set_world_center_y(zm_wave_panel:world_center_y())

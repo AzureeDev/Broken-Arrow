@@ -606,10 +606,10 @@ function WDUManager:wait(t, uniqid, ect)
 end
 
 function WDUManager:_respawn()
-    local peer_id = self:_peer_id()
-
-    if managers.trade:is_peer_in_custody(peer_id) then
-        IngameWaitingForRespawnState.request_player_spawn(peer_id)
+    for i = 1, 4, 1 do
+        if managers.trade:is_peer_in_custody(i) then
+            IngameWaitingForRespawnState.request_player_spawn(i)
+        end
     end
 end
 
