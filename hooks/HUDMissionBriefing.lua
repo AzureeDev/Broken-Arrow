@@ -3,7 +3,7 @@ Hooks:PostHook(HUDMissionBriefing, "init", "zm_postinit_music", function(self, h
         managers.music:post_event("stop_all_music")
     end)
 
-    managers.wdu:_play_music("pregame")
+    --managers.wdu:_play_music("pregame")
 end)
 
 Hooks:PostHook(HUDMissionBriefing, "set_player_slot", "zm_postinit_set_player", function(self, nr, params)

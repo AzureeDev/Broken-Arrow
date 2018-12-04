@@ -20,6 +20,7 @@
 			<hook file="CivilianDamage.lua" source_file="lib/units/civilians/civiliandamage"/>
 			<hook file="ElementSpawnEnemyDummy.lua" source_file="lib/managers/mission/elementspawnenemydummy"/>
 			<hook file="EquipmentsTweakdata.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
+			<hook file="GroupAIStateBase.lua" source_file="lib/managers/group_ai_states/groupaistatebase"/>
 			<hook file="GroupAIStateBesiege.lua" source_file="lib/managers/group_ai_states/groupaistatebesiege"/>
 			<hook file="GroupAITweakData.lua" source_file="lib/tweak_data/groupaitweakdata"/>
 			<hook file="HUDAssaultCorner.lua" source_file="lib/managers/hud/hudassaultcorner"/>

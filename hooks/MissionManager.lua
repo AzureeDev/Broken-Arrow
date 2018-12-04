@@ -8,3 +8,15 @@ dofile(Path .. "hooks/ElementDynamicEnv.lua")
 dofile(Path .. "hooks/ElementPlayVideo.lua")
 dofile(Path .. "hooks/ElementXAudio.lua")
 dofile(Path .. "hooks/ElementSpawnSafeEnemyDummy.lua")
+dofile(Path .. "hooks/ElementCinematicCamera.lua")
+dofile(Path .. "hooks/ElementReviveInstigator.lua")
+
+function MissionManager:get_mission_element(element_id)
+	for _, data in pairs(self._scripts) do
+		for id, element in pairs(data:elements()) do
+			if element:id() == element_id then
+				return element
+			end
+		end
+	end
+end
