@@ -559,7 +559,7 @@
 			<sound id="bar_thermal_lance_fix_cancel" path="box_interact_stop.ogg"/>
 			<sound id="bar_take_watertank" path="Door_buy1.ogg"/>
 			<sound id="und_limo_chassis_open" path="Door_buy2.ogg"/>
-			<sound id="bar_pick_lock" path="Door_buy3.ogg"/>
+			<sound id="bar_unlock_grate_door" path="Door_buy3.ogg"/>
 			<sound id="bar_c4_apply_cancel" path="Drink.ogg"/>
 			<sound path="hum.ogg"/>
 			<sound id="liquid_pour" path="easter_egg_activate.ogg"/>
