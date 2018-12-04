@@ -15,8 +15,10 @@ function ElementReviveInstigator:on_executed(instigator)
 		return
     end
     
-    if alive(instigator) then
-        instigator:character_damage():revive(true)
+    if instigator then
+        DelayedCalls:Add("delayed_revive_" .. math.random(1, 99999), 1, function()
+            instigator:character_damage():revive(true)
+        end)
     end
 
 	ElementReviveInstigator.super.on_executed(self, instigator)
