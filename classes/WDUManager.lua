@@ -481,10 +481,10 @@ function WDUManager:_start_new_wave(t, was_special_wave)
     end)
 end
 
-function WDUManager:PostWave15Apocalypse()
+function WDUManager:_is_apocalypse()
     if not self:_is_special_wave() then
-        if self:_get_current_wave() > 15 then
-            if math.random(0, 100) > 94 then
+        if self:_get_current_wave() > 9 then
+            if math.random(0, 100) > 91 then
                 return true
             end
         end
@@ -686,6 +686,20 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         elseif power_up == 5 then
             managers.wdu:power_ups():execute_kaboom()
         end
+    end
+
+    if id == "SpecialWave_PlayShadowSpook" then
+        local pos = string_to_vector(data)
+
+        managers.wdu:_element_play_sound({
+            name = "play_shadow_spook",
+            custom_dir = "sound/shadowow",
+            file_name = "post_mortem.ogg",
+            is_loop = false,
+            is_relative = false,
+            is_3d = true,
+            position = pos
+        })
     end
 
     if id == "SpecialWave_SpawnPosition" then

@@ -27,19 +27,19 @@ function ElementSpawnEnemyDummy:produce(params)
 	if params and params.name then
 		local unit
 
-		if managers.wdu:PostWave15Apocalypse() or managers.wdu:_is_special_wave() then
+		if managers.wdu:_is_apocalypse() or managers.wdu:_is_special_wave() then
 			units_special_wave = {
 				Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_1/ene_bulldozer_hvh_1"),
 				Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_2/ene_bulldozer_hvh_2"),
 				Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_3/ene_bulldozer_hvh_3"),
 				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_uno/characters/ene_shadow_cloaker_1/ene_shadow_cloaker_1"),
 				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
 				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_uno/characters/ene_shadow_cloaker_1/ene_shadow_cloaker_1"),
 				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
+				Idstring("units/pd2_dlc_uno/characters/ene_shadow_cloaker_1/ene_shadow_cloaker_1"),
+				Idstring("units/pd2_dlc_uno/characters/ene_shadow_cloaker_1/ene_shadow_cloaker_1"),
 				Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1")
 			}
 
@@ -68,7 +68,7 @@ function ElementSpawnEnemyDummy:produce(params)
 	else
 		local enemy_name
 
-		if managers.wdu:PostWave15Apocalypse() or managers.wdu:_is_special_wave() then
+		if managers.wdu:_is_apocalypse() or managers.wdu:_is_special_wave() then
 			enemy_name = units_special_wave[ math.random( #units_special_wave ) ]
 		else
 			enemy_name = self:value("enemy") or self._enemy_name
