@@ -26,7 +26,7 @@ function CharacterTweakData:_multiply_by_wave_nb(wave)
 		self.bolivian_indoors.HEALTH_INIT = self.bolivian_indoors.HEALTH_INIT + addition
 		self.drug_lord_boss.HEALTH_INIT = self.drug_lord_boss.HEALTH_INIT + addition
 		self.drug_lord_boss_stealth.HEALTH_INIT = self.drug_lord_boss_stealth.HEALTH_INIT + addition
-
+		self.shadow_spooc.HEALTH_INIT = self.shadow_spooc.HEALTH_INIT + addition
 		return
 	end
 
@@ -57,6 +57,7 @@ function CharacterTweakData:_multiply_by_wave_nb(wave)
 	self.bolivian_indoors.HEALTH_INIT = self.bolivian_indoors.HEALTH_INIT * base + (wave / divider)
 	self.drug_lord_boss.HEALTH_INIT = self.drug_lord_boss.HEALTH_INIT * base + (wave / divider)
 	self.drug_lord_boss_stealth.HEALTH_INIT = self.drug_lord_boss_stealth.HEALTH_INIT * base + (wave / divider)
+	self.shadow_spooc.HEALTH_INIT = self.shadow_spooc.HEALTH_INIT * base + (wave / divider)
 end
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi", "zm_disable_surrenders", function(self, presets)
