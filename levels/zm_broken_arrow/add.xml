@@ -4286,9 +4286,36 @@
 		<unit force="true" path="units/pd2_dlc_mad/props/mad_prop_dead_scientist/mad_prop_dead_scientist" unload="true"/>
 	</add>
 	<add path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile5_4x4m_b" type="unit">
-		<unit force="true" path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile5_4x4m_b" unload="true"/>
-		<object force="true" path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile5_4x4m_b" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/lcm_b/lcm_b" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile5_4x4m_b" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lcm_b/lcm_b_ext_vtile5_4x4m_b" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc_berry/vehicles/fps_vehicle_helicopter_blackhawk_1/fps_vehicle_helicopter_blackhawk_1" type="unit">
+		<animation_def force="true" path="anims/units/level/berry/blackhawk_1/def" unload="true"/>
+		<animation_subset force="true" path="anims/units/level/berry/blackhawk_1/anims" unload="true"/>
+		<animation force="true" path="anims/level/berry/blackhawk_1/lift" unload="true"/>
+		<animation force="true" path="anims/level/berry/blackhawk_1/propellers_start" unload="true"/>
+		<animation force="true" path="anims/level/berry/blackhawk_1/propellers_loop" unload="true"/>
+		<animation force="true" path="anims/level/berry/blackhawk_1/propellers_stop" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/vehicle/vehicle_damage_small_smoke" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/vehicle/vehicle_damage_big_smoke" unload="true"/>
+		<animation_state_machine force="true" path="anims/units/level/berry/blackhawk_1/machine" unload="true"/>
+		<animation_states force="true" path="anims/units/level/berry/blackhawk_1/states" unload="true"/>
+		<animation_def force="true" path="anims/units/level/berry/blackhawk_1/def" unload="true"/>
+		<animation_subset force="true" path="anims/units/level/berry/blackhawk_1/anims" unload="true"/>
+		<animation force="true" path="anims/level/berry/blackhawk_1/lift" unload="true"/>
+		<animation force="true" path="anims/level/berry/blackhawk_1/propellers_start" unload="true"/>
+		<animation force="true" path="anims/level/berry/blackhawk_1/propellers_loop" unload="true"/>
+		<animation force="true" path="anims/level/berry/blackhawk_1/propellers_stop" unload="true"/>
+		<animation_state_machine force="true" path="anims/units/level/berry/blackhawk_1/machine" unload="true"/>
+		<animation_states force="true" path="anims/units/level/berry/blackhawk_1/states" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/vehicle/vehicle_damage_small_smoke" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/vehicle/vehicle_damage_big_smoke" unload="true"/>
+		<bnk force="true" path="soundbanks/regular_sfx" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_berry/vehicles/fps_vehicle_helicopter_blackhawk_1/fps_vehicle_helicopter_blackhawk_1" unload="true"/>
+		<object force="true" path="units/pd2_dlc_berry/vehicles/fps_vehicle_helicopter_blackhawk_1/fps_vehicle_helicopter_blackhawk_1" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_berry/vehicles/fps_vehicle_helicopter_blackhawk_1/fps_vehicle_helicopter_blackhawk_1" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_berry/vehicles/fps_vehicle_helicopter_blackhawk_1/fps_vehicle_helicopter_blackhawk_1" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>

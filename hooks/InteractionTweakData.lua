@@ -212,7 +212,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		points_cost = 1500,
 		action_text_id = "zm_opening_path",
 		start_active = false,
-		sound_done = "bar_pick_lock",
+		sound_done = "bar_unlock_grate_door",
 		timer = 1.5,
 	}
 	
@@ -243,7 +243,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		interact_distance = 500,
-		sound_done = "bar_pick_lock",
+		sound_done = "bar_unlock_grate_door",
 		timer = 1.5,
 	}
 	

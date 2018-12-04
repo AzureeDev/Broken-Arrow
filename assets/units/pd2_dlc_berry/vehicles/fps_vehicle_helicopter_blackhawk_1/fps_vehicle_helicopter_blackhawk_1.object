@@ -1,0 +1,255 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_berry/vehicles/fps_vehicle_helicopter_blackhawk_1/fps_vehicle_helicopter_blackhawk_1" orientation_object="rp_fps_vehicle_helicopter_blackhawk_1" />
+	<sequence_manager file="units/pd2_dlc_berry/vehicles/fps_vehicle_helicopter_blackhawk_1/fps_vehicle_helicopter_blackhawk_1" />
+	<animation_def name="anims/units/level/berry/blackhawk_1/def" />
+
+	<animations>
+		<animation_group name="anim_door_front_left" enabled="false">
+			<object name="anim_door_front_left" />
+		</animation_group>
+		<animation_group name="anim_door_front_right" enabled="false">
+				<object name="anim_door_front_right" />
+		</animation_group>
+		<animation_group name="ag_speedometer" enabled="false">
+				<object name="a_speedometer" />
+		</animation_group>
+		<animation_group name="ag_rpm_meter" enabled="false">
+				<object name="a_rpm_meter" />
+		</animation_group>
+		<animation_group name="anim_steering_wheel_left" enabled="false">
+				<object name="anim_steering_wheel_left" />
+		</animation_group>
+		<animation_group name="anim_steering_wheel_right" enabled="false">
+				<object name="anim_steering_wheel_right" />
+		</animation_group>
+		<animation_group name="anim_straighten_main_blades" enabled="false">
+			<object name="jt_blade_1_a" />
+			<object name="jt_blade_1_b" />
+			<object name="jt_blade_1_c" />
+			<object name="jt_blade_1_d" />
+			<object name="jt_blade_1_e" />
+			<object name="jt_blade_1_f" />
+
+			<object name="jt_blade_2_a" />
+			<object name="jt_blade_2_b" />
+			<object name="jt_blade_2_c" />
+			<object name="jt_blade_2_d" />
+			<object name="jt_blade_2_e" />
+			<object name="jt_blade_2_f" />
+
+			<object name="jt_blade_3_a" />
+			<object name="jt_blade_3_b" />
+			<object name="jt_blade_3_c" />
+			<object name="jt_blade_3_d" />
+			<object name="jt_blade_3_e" />
+			<object name="jt_blade_3_f" />
+
+			<object name="jt_blade_4_a" />
+			<object name="jt_blade_4_b" />
+			<object name="jt_blade_4_c" />
+			<object name="jt_blade_4_d" />
+			<object name="jt_blade_4_e" />
+			<object name="jt_blade_4_f" />
+		</animation_group>
+	</animations>
+
+	<bodies>
+		<body name="body_static_vehicle" enabled="true" template="animated" >
+			<object name="anim_body" />
+			<object name="c_box_middle_bottom"		collision_type="box"	padding="-2.5"/>
+			<object name="c_box_middle_top"			collision_type="box"	padding="-2.5"/>
+			<object name="c_convex_back_back_1"		collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_back_back_2"		collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_back_back_3"		collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_back_horiz_fin"	collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_back_verti_fin"	collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_front"			collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_middle_back"		collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_top_1"			collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_top_2"			collision_type="convex"	padding="-2.5"/>
+		</body>
+		<body name="body_chassis" enabled="false" template="vehicle" collision_script_filter="1" collision_script_quiet_time="0.5" collision_script_tag="vehicle_collision" give_standing_velocity="false" >
+			<object name="rp_fps_vehicle_helicopter_blackhawk_1" />
+			<object name="c_box_lifter_back" 	collision_type="convex" />
+			<object name="c_box_lifter_bottom" 	collision_type="convex" />
+			<object name="c_box_lifter_front" 	collision_type="convex" />
+			<object name="c_box_lifter_top" 	collision_type="convex" />
+		</body>
+		<body name="body_blocker_mover" enabled="true" template="mover_blocker" keyframed="true" collision_class="vehicle"  collision_script_filter="1" collision_script_quiet_time="0.5" collision_script_tag="vehicle_collision" give_standing_velocity="false" >
+			<object name="anim_body" />
+			<object name="c_box_blocker_mover" collision_type="box" padding="-2.5"/>
+		</body>
+	 </bodies>
+
+	 <effects>
+		<effect_spawner
+			name="es_smoke_med"
+			enabled="false"
+			object="snd_engine"
+			effect="effects/payday2/particles/vehicle/vehicle_damage_small_smoke"
+		/>
+		<effect_spawner
+			name="es_smoke_full"
+			enabled="false"
+			object="snd_engine"
+			effect="effects/payday2/particles/vehicle/vehicle_damage_big_smoke"
+		/>
+	</effects>
+
+	<lights>
+		<light name="light_interior"
+									enabled="false"
+									editable="false"
+									type="omni|specular"
+									multiplier="reddot"
+									near_range="5"
+									far_range="100"
+									falloff="1.0"
+		/>
+	</lights>
+
+	<decal_surfaces default_material="metal_chassis">
+		<decal_mesh name="g_body"				enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_door_front_left"	enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_door_front_right"	enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_door_left"			enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_door_right"			enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_middle_doors"		enabled="true" material="metal_chassis" />
+
+		<decal_mesh name="g_main_rotor"			enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_tailrotor"			enabled="true" material="metal_chassis" />
+
+		<decal_mesh name="g_interior"			enabled="true" material="plastic" />
+	</decal_surfaces>
+
+	<graphics>
+		<graphic_group name="grp_vehicle" enabled="true">
+			<lod_object name="lod_body">
+				<object name="g_body"			enabled="true"  max_distance="3000" />
+				<object name="g_body_lod1"		enabled="true" />
+			</lod_object>
+			
+			<lod_object name="lod_interior">
+				<object name="g_interior"			enabled="true"  max_distance="3000" />
+				<object name="g_interior_lod1"		enabled="true" />
+			</lod_object>
+
+			<lod_object name="lod_glass">
+				<object name="g_glass"			enabled="true"  max_distance="3000" />
+				<object name="g_glass_lod1"		enabled="true" />
+			</lod_object>
+
+			<lod_object name="lod_il">
+				<object name="g_il"			enabled="true"  max_distance="3000" />
+				<object name="g_il_lod1"	enabled="true" />
+			</lod_object>
+
+			<lod_object name="lod_door_front_left">
+				<object name="g_door_front_left"			enabled="true"  max_distance="3000" />
+				<object name="g_door_front_left_lod1"		enabled="true" />
+			</lod_object>
+
+			<lod_object name="lod_door_front_right">
+				<object name="g_door_front_right"			enabled="true"  max_distance="3000" />
+				<object name="g_door_front_right_lod1"		enabled="true" />
+			</lod_object>
+
+			<lod_object name="lod_door_left">
+				<object name="g_door_left"			enabled="true"  max_distance="3000" />
+				<object name="g_door_left_lod1"		enabled="true" />
+			</lod_object>
+
+			<lod_object name="lod_door_right">
+				<object name="g_door_right"				enabled="true"  max_distance="3000" />
+				<object name="g_door_right_lod1"		enabled="true" />
+			</lod_object>
+
+			<lod_object name="lod_middle_doors">
+				<object name="g_middle_doors"			enabled="true"  max_distance="3000" />
+				<object name="g_middle_doors_lod1"		enabled="true" />
+			</lod_object>
+
+			<object name="g_locke"				enabled="false" />
+
+			<object name="g_lootbag1"			enabled="false" />
+			<object name="g_lootbag2"			enabled="false" />
+			<object name="g_lootbag3"			enabled="false" />
+			<object name="g_lootbag4"			enabled="false" />
+		</graphic_group>
+
+		<graphic_group name="grp_rotor_blurred" enabled="false" >
+			<object name="g_main_rotor_blurred" enabled="true" />
+			<object name="g_tailrotor_blurred" enabled="true" />
+		</graphic_group>
+
+		<graphic_group name="grp_rotor_solid" enabled="true" >
+			<lod_object name="lod_main_rotor">
+				<object name="g_main_rotor"			enabled="true"  max_distance="2000" />
+				<object name="g_main_rotor_lod1"	enabled="true" />
+			</lod_object>
+
+			<lod_object name="lod_tailrotor">
+				<object name="g_tailrotor"			enabled="true"  max_distance="2000" />
+				<object name="g_tailrotor_lod1"		enabled="true" />
+			</lod_object>
+		</graphic_group>
+		
+
+		<graphic_group name="grp_icon_entry" enabled="true">
+			<lod_object name="lod_icon_drive">
+				<object name="g_icon_door_drive_lod0" enabled="true"  max_distance="450" />
+				<object name="g_icon_door_drive_lod1" enabled="true" />
+			</lod_object>
+			<lod_object name="lod_icon_front_r_pass">
+				<object name="g_icon_door_front_r_pass_lod0" enabled="true"  max_distance="450" />
+				<object name="g_icon_door_front_r_pass_lod1" enabled="true" />
+			</lod_object>
+			<lod_object name="lod_icon_rear_l_pass">
+				<object name="g_icon_door_rear_l_pass_lod0" enabled="true"  max_distance="450" />
+				<object name="g_icon_door_rear_l_pass_lod1" enabled="true" />
+			</lod_object>
+			<lod_object name="lod_icon_rear_r_pass">
+				<object name="g_icon_door_rear_r_pass_lod0" enabled="true"  max_distance="450" />
+				<object name="g_icon_door_rear_r_pass_lod1" enabled="true" />
+			</lod_object>
+		</graphic_group>
+
+		<!-- <graphic_group name="grp_icon_loot" enabled="true">
+			<lod_object name="lod_icon_loot">
+				<object name="g_icon_loot_lod0" enabled="true"  max_distance="450" />
+				<object name="g_icon_loot_lod1" enabled="true" />
+			</lod_object>
+		</graphic_group> -->
+
+		<graphic_group name="grp_icon_repair" enabled="true">
+			<lod_object name="lod_icon_repair">
+				<object name="g_icon_repair_lod0" enabled="true"  max_distance="450" />
+				<object name="g_icon_repair_lod1" enabled="true" />
+			</lod_object>
+		</graphic_group>
+	</graphics>
+
+	<vehicle name="vhc_vehicle">
+		<!-- IMPORTANT: suspension supported_mass must be 1/4 of chassis mass, if not vehicle behavior is undefined -->
+		<chassis body="body_chassis" mass="2000" center_of_mass_offset="0.0 0.0 0.1" inertia_multiplier="1.0 1.0 1.0" downforce_strength="1.0" drag_strength="1.0" />
+		<wheels>
+			<wheel spin_object="anim_tire_front_left"	turn_object=""	radius="0.325" width="0.25" mass="50" transmission_ratio="1.0" is_steering="false" max_steering="0.01" braking_torque="10000" handbrake_torque="0" />
+			<wheel spin_object="anim_tire_front_right"	turn_object=""	radius="0.325" width="0.25" mass="50" transmission_ratio="1.0" is_steering="false" max_steering="0.01" braking_torque="10000" handbrake_torque="0" />
+			<wheel spin_object="anim_tire_rear_left"	turn_object=""	radius="0.325" width="0.25" mass="50" transmission_ratio="1.0" is_steering="false" max_steering="0.01" braking_torque="10000" handbrake_torque="0" />
+			<wheel spin_object="anim_tire_rear_right"	turn_object=""	radius="0.325" width="0.25" mass="50" transmission_ratio="1.0" is_steering="false" max_steering="0.01" braking_torque="10000" handbrake_torque="0" />
+		</wheels>
+		<suspension max_compression="0.18" max_extension="0.22" spring_strength="55000" damper_rate="4500" supported_mass="500" />
+		<gearbox switch_time="0.1" ratio_multiplier="4.0">
+			<ratios>
+				<ratio value="-3.0" />
+				<ratio value="0.0" />
+				<ratio value="4.0" />
+				<ratio value="2.0" />
+				<ratio value="1.6" />
+				<ratio value="1.2" />
+			</ratios>
+		</gearbox>
+		<engine max_torque="1" max_rpm="4500"/>
+	</vehicle>
+
+</dynamic_object>

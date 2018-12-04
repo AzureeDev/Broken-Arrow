@@ -1,0 +1,54 @@
+<unit type="vhc" slot="39">
+	<object file="units/pd2_dlc_berry/vehicles/fps_vehicle_helicopter_blackhawk_1/fps_vehicle_helicopter_blackhawk_1" />
+	<network sync="bodies" />
+	<anim_state_machine name="anims/units/level/berry/blackhawk_1/machine" />
+	<dependencies>
+		<depends_on animation_def="anims/units/level/berry/blackhawk_1/def"/>
+		<depends_on animation_state_machine="anims/units/level/berry/blackhawk_1/machine"/>
+		<depends_on effect="effects/payday2/particles/vehicle/vehicle_damage_small_smoke" />
+		<depends_on effect="effects/payday2/particles/vehicle/vehicle_damage_big_smoke" />
+		<depends_on bnk="soundbanks/regular_sfx" />
+	</dependencies>
+	<extensions>
+		<extension name="base" class="AnimatedVehicleBase">
+			<var name="_body_name" value="anim_body" />
+		</extension>
+		<extension class="ScriptUnitData" name="unit_data" />
+		<extension name="sync_unit_data" class="SyncUnitData" />
+		<extension name="network" class="NetworkBaseExtension" />
+		<extension class="UnitDamage" name="damage" />
+		<extension name="interaction" class="DrivingInteractionExt">
+			<var name="tweak_data" value="driving_drive" />
+			<var name="_interact_object" value="anim_body"/>
+			<var name="_ray_object_names" type="table" >
+				<var value="interact_driver"/>
+				<var value="interact_passenger_front"/>
+				<var value="interact_passenger_back_left"/>
+				<var value="interact_passenger_back_right"/>
+				<var value="loot_left"/>
+				<var value="loot_right"/>
+				<var value="interact_loot"/>
+				<!-- <var value="interact_trunk"/> -->
+			</var>
+		</extension>
+        <extension name="character_damage" class="VehicleDamage" />
+		<extension name="attention" class="AIAttentionObject">
+			<var name="_attention_obj_name" value="attention" />
+		</extension>
+		<extension class="VehicleDrivingExt" name="vehicle_driving" >
+			<!--
+				Dino: Not used for now, this parameter has no effect - for future use
+				Inertia modifier determines feel of drive on bumps and curves
+				Reasonable vaules are from 0.5 - 20
+				0.5 - Tractor with really bad seating
+				20  - Ferrari
+			-->
+			<var name="inertia_modifier" value="7.0"/>
+			<var name="tweak_data" value="blackhawk_1"/>
+		</extension>
+	</extensions>
+	<sounds>
+		<default_soundsource source="snd_engine"/>
+		<soundsource name="engine" source="snd_engine" />
+	</sounds>
+</unit>
