@@ -16,9 +16,9 @@ function ElementReviveInstigator:on_executed(instigator)
     end
     
     if instigator then
-        DelayedCalls:Add("delayed_revive_" .. math.random(1, 99999), 1, function()
+        if instigator == managers.player:player_unit() then
             instigator:character_damage():revive(true)
-        end)
+        end
     end
 
 	ElementReviveInstigator.super.on_executed(self, instigator)

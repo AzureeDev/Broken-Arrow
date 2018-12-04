@@ -605,6 +605,14 @@ function WDUManager:wait(t, uniqid, ect)
     DelayedCalls:Add(uniqid, t, ect)
 end
 
+function WDUManager:_respawn()
+    local peer_id = self:_peer_id()
+
+    if managers.trade:is_peer_in_custody(peer_id) then
+        IngameWaitingForRespawnState.request_player_spawn(peer_id)
+    end
+end
+
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "ZMUpdatePoints" then
         local points = tonumber(data)

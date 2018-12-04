@@ -15,6 +15,10 @@ function ElementWave:on_executed(instigator)
 		return
     end
 
+    if not self._values.ending_check then
+        managers.wdu:_respawn()
+    end
+
     local current_wave = managers.wdu:_get_current_wave()
 
     if self._values.special_wave then
