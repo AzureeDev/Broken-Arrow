@@ -17,7 +17,14 @@
     <effect load="true" path="effects/zm/zm_glow"/>
     <effect load="true" path="effects/zm/zm_special_spawn"/>
     <effect load="true" path="effects/zm/zm_powerup_glow"/>
+    <effect load="true" path="effects/payday2/environment/fire_biggy"/>
 
     <font load="true" path="fonts/murderer"/>
     <texture path="fonts/murderer"/>
+    <font load="true" path="fonts/escom"/>
+    <texture path="fonts/escom"/>
+    <font load="true" path="fonts/escom_outline"/>
+    <texture path="fonts/escom_outline"/>
+    <font load="true" path="fonts/beyond"/>
+    <texture path="fonts/beyond"/>
 </table>

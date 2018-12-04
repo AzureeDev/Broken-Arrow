@@ -8,7 +8,7 @@ dofile(Path .. "hooks/ElementDynamicEnvironment.lua")
 dofile(Path .. "hooks/ElementPlayVideo.lua")
 dofile(Path .. "hooks/ElementXAudio.lua")
 dofile(Path .. "hooks/ElementSpawnSafeEnemyDummy.lua")
-dofile(Path .. "hooks/ElementCinematicCamera.lua")
+dofile(Path .. "hooks/ElementSoraCinematicCamera.lua")
 dofile(Path .. "hooks/ElementReviveInstigator.lua")
 
 function MissionManager:get_mission_element(element_id)

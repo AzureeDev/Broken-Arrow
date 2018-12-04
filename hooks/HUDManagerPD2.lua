@@ -45,7 +45,7 @@ function HUDZMWaves:_create_gift_hud(parent)
     self.gift_panel = gift_panel
 
     local weapon_name_bottom_right = gift_panel:text({
-        font = "fonts/font_large_mf",
+        font = "fonts/escom_outline",
         font_size = 18,
         color = Color(0.8, 0.8, 0.8),
         text = "",
@@ -509,7 +509,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         color = tweak_data.chat_colors[1],
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font,
+        font = "fonts/escom_outline",
         visible = false
     })
     managers.hud:make_fine_text(peer_1_points)
@@ -532,7 +532,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         color = tweak_data.chat_colors[2],
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font,
+        font = "fonts/escom_outline",
         visible = false
     })
     managers.hud:make_fine_text(peer_2_points)
@@ -555,7 +555,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         color = tweak_data.chat_colors[3],
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font,
+        font = "fonts/escom_outline",
         visible = false
     })
     managers.hud:make_fine_text(peer_3_points)
@@ -578,7 +578,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         color = tweak_data.chat_colors[4],
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font,
+        font = "fonts/escom_outline",
         visible = false
     })
     managers.hud:make_fine_text(peer_4_points)
@@ -614,7 +614,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         visible = true,
         color = Color(1, 1, 0),
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font
+        font = "fonts/escom_outline"
     })
     managers.hud:make_fine_text(peer_1_points_gained)
     peer_1_points_gained:set_left(peer_1_avatar:right() + 60)
@@ -630,7 +630,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         visible = true,
         color = Color(1, 1, 0),
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font
+        font = "fonts/escom_outline"
     })
     managers.hud:make_fine_text(peer_2_points_gained)
     peer_2_points_gained:set_left(peer_2_avatar:right() + 60)
@@ -646,7 +646,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         visible = true,
         color = Color(1, 1, 0),
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font
+        font = "fonts/escom_outline"
     })
     managers.hud:make_fine_text(peer_3_points_gained)
     peer_3_points_gained:set_left(peer_3_avatar:right() + 60)
@@ -662,7 +662,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         visible = true,
         color = Color(1, 1, 0),
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font
+        font = "fonts/escom_outline"
     })
     managers.hud:make_fine_text(peer_4_points_gained)
     peer_4_points_gained:set_left(peer_4_avatar:right() + 60)
@@ -804,7 +804,7 @@ function HUDZMPoints:GenerateDuplicates(parent_panel, player_id, proper_id)
         visible = true,
         color = Color(1, 1, 0),
         font_size = tweak_data.menu.pd2_small_font_size,
-        font = tweak_data.menu.pd2_large_font
+        font = "fonts/escom_outline"
     }
 
     local dupe_text = parent_panel:text(params)
@@ -884,4 +884,59 @@ function HUDManager:_setup_zm_element()
 	local hud = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_PD2)
     self._hud_zm_waves = HUDZMWaves:new(hud.panel)
 	self._hud_zm_points = HUDZMPoints:new(hud.panel)
+end
+
+function HUDManager:init_ending_screen()
+    
+
+    if NepgearsyHUDReborn then
+        managers.hud:hide_panels("assault_panel_v2", "custody_panel", "hostages_panel", "gift_panel", "heist_timer_panel", "teammates_panel")
+    else
+        managers.hud:hide_panels("assault_panel", "custody_panel", "hostages_panel", "gift_panel", "heist_timer_panel", "teammates_panel")
+    end
+
+    local hud = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_PD2)
+    local panel = hud.panel
+    local default_font = "fonts/escom_outline"
+    local default_font_size = 16
+
+    local result_panel = panel:panel({
+        name = "zm_result_panel",
+        y = 180,
+        valign = "top"
+    })
+
+    local game_over = result_panel:text({
+        font = default_font,
+        font_size = 48,
+        color = Color.white,
+        text = "GAME OVER",
+        align = "center",
+        vertical = "top",
+        alpha = 0
+    })
+
+    local wave_survived = result_panel:text({
+        font = default_font,
+        font_size = 34,
+        y = 50,
+        color = Color.white,
+        text = "You Survived 999999 rounds",
+        align = "center",
+        vertical = "top",
+        alpha = 0
+    })
+
+    local current_wave_survived = managers.wdu:_get_current_wave()
+    local wave_survived_s = current_wave_survived > 1 and "s" or ""
+    wave_survived:set_text("You Survived " .. current_wave_survived .. " Round" .. wave_survived_s)
+
+    game_over:animate(callback(self, self, "_animate_fade_ending"))
+    wave_survived:animate(callback(self, self, "_animate_fade_ending"))
+end
+
+function HUDManager:_animate_fade_ending(o)
+    play_value(o, "alpha", 1)
+    wait(25)
+    play_value(o, "alpha", 0)
 end
