@@ -78,6 +78,7 @@
 			<value_node value="levels/instances/unique/mad/mad_door/world/world"/>
 			<value_node value="levels/instances/unique/kenaz/owners_office/world/world"/>
 			<value_node value="levels/instances/unique/unobtanium/world_sounds"/>
+			<value_node value="packages/dlcs/vit/job_vit"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
@@ -555,6 +556,8 @@
 			<sound path="revive_sting.ogg"/>
 			<sound path="juggernog_sting.ogg"/>
 			<sound path="phone/ring_to_tone.ogg"/>
+			<sound path="phone/tone.ogg"/>
+			<sound path="phone/vo/Bain_voice_mail.ogg"/>
 			<sound id="bar_thermal_lance_fix" path="box_interact.ogg"/>
 			<sound id="bar_thermal_lance_fix_cancel" path="box_interact_stop.ogg"/>
 			<sound id="bar_take_watertank" path="Door_buy1.ogg"/>
