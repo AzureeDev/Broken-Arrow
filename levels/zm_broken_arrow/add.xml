@@ -4670,13 +4670,10 @@
 	</add>
 	<add path="units/pd2_dlc_uno/characters/ene_shadow_cloaker_2/ene_shadow_cloaker_2_husk" type="unit">
 		<unit force="true" path="units/pd2_dlc_uno/characters/ene_shadow_cloaker_2/ene_shadow_cloaker_2_husk" unload="true"/>
-		<animation_state_machine force="true" path="anims/units/enemies/cop/cop_machine" unload="true"/>
 		<animation_states force="true" path="anims/units/enemies/cop/std" unload="true"/>
 		<animation_states force="true" path="anims/units/enemies/cop/civilian" unload="true"/>
 		<object force="true" path="units/pd2_dlc_uno/characters/ene_shadow_cloaker_2/ene_shadow_cloaker_2" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_uno/characters/ene_shadow_cloaker_2/ene_shadow_cloaker_2" unload="true"/>
-		<sequence_manager force="true" path="units/pd2_dlc_uno/characters/ene_shadow_cloaker_2/ene_shadow_cloaker_2" unload="true"/>
-		<animation_def force="true" path="anims/units/enemies/cop/cop_def" unload="true"/>
 		<animation_subset force="true" path="anims/units/enemies/cop/std" unload="true"/>
 		<animation_subset force="true" path="anims/units/enemies/cop/neutral_legs" unload="true"/>
 		<animation_subset force="true" path="anims/units/enemies/cop/neutral_rifle" unload="true"/>
@@ -4730,11 +4727,23 @@
 		<effect force="true" load="true" path="effects/payday2/particles/smoke_trail/smoke_puff" unload="true"/>
 		<effect force="true" load="true" path="effects/payday2/particles/smoke_trail/smoke_puff" unload="true"/>
 		<effect force="true" load="true" path="effects/payday2/particles/smoke_trail/smoke_puff" unload="true"/>
-		<bnk force="true" path="soundbanks/regular_vox" unload="true"/>
 		<effect force="true" load="true" path="effects/payday2/particles/smoke_trail/drone_smoke" unload="true"/>
 		<unit force="true" path="units/payday2/characters/ene_acc_baton/ene_acc_baton" unload="true"/>
 		<object force="true" path="units/payday2/characters/ene_acc_baton/ene_acc_baton" unload="true"/>
 		<material_config force="true" path="units/payday2/characters/ene_acc_baton/ene_acc_baton" unload="true"/>
+		<animation_def force="true" path="anims/units/enemies/cop/cop_def" unload="true"/>
+		<animation_state_machine force="true" path="anims/units/enemies/cop/cop_machine" unload="true"/>
+		<bnk force="true" path="soundbanks/regular_vox" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_uno/characters/ene_shadow_cloaker_2/ene_shadow_cloaker_2" unload="true"/>
+	</add>
+	<add path="units/world/props/bottle/bottle_9" type="unit">
+		<unit force="true" path="units/world/props/bottle/bottle_9" unload="true"/>
+		<object force="true" path="units/world/props/bottle/bottle_9" unload="true"/>
+		<material_config force="true" path="units/world/props/bottle/bottle_9_io" unload="true"/>
+		<sequence_manager force="true" path="units/world/props/bottle/bottle_9" unload="true"/>
+		<effect force="true" load="true" path="effects/particles/dest/brown_bottle_dest" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>
