@@ -439,6 +439,20 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.deamon_secondary= deep_clone(self.deamon_primary)
     self.deamon_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
 
+    self.elastic_primary = deep_clone(self.elastic)
+    self.elastic_primary.animations.reload_name_id = "elastic"
+    self.elastic_primary.weapon_hold = "elastic"
+    self.elastic_primary.stats_modifiers = {damage = 3}
+    self.elastic_primary.NR_CLIPS_MAX = self.elastic_primary.NR_CLIPS_MAX * 2
+    self.elastic_primary.AMMO_MAX = self.elastic_primary.CLIP_AMMO_MAX * self.elastic_primary.NR_CLIPS_MAX
+    self.elastic_primary.use_data = {selection_index = PRIMARY, align_place = "left_hand"}
+    self.elastic_primary.timers = {
+        reload_not_empty = 1,
+        reload_empty = 1
+	}
+    self.elastic_secondary = deep_clone(self.elastic_primary)
+    self.elastic_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
+
     self:_init_upgraded_zm_weapons()
 end
 
@@ -889,4 +903,10 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.deamon_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.deamon_upg_secondary = deep_clone(self.deamon_upg_primary)
     self.deamon_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
+
+    self.elastic_upg_primary = deep_clone(self.elastic_primary)
+    self.elastic_upg_primary.name_id = "wpn_elastic_upg_name"
+    self.elastic_upg_primary.stats_modifiers = {damage = 14}
+    self.elastic_upg_secondary = deep_clone(self.elastic_upg_primary)
+    self.elastic_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
 end

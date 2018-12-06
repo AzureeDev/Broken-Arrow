@@ -40,6 +40,33 @@ function PowerUps:_pickup(unit)
                     player_manager:add_grenade_amount(self._ammo_count or 1)
                     picked_up = true
                 end
+            else
+                local available_selections = {}
+    
+                for i, weapon in pairs(inventory:available_selections()) do
+                    if inventory:is_equipped(i) then
+                        table.insert(available_selections, 1, weapon)
+                    else
+                        table.insert(available_selections, weapon)
+                    end
+                end
+    
+                local success, add_amount = nil
+    
+                for _, weapon in ipairs(available_selections) do
+                    if not self._weapon_category or self._weapon_category == weapon.unit:base():weapon_tweak_data().categories[1] then
+                        success, add_amount = weapon.unit:base():add_ammo(1, self._ammo_count)
+                        picked_up = success or picked_up
+    
+                        if self._ammo_count then
+                            self._ammo_count = math.max(math.floor(self._ammo_count - add_amount), 0)
+                        end
+    
+                        if picked_up and tweak_data.achievement.pickup_sticks and self._weapon_category == tweak_data.achievement.pickup_sticks.weapon_category then
+                            managers.achievment:award_progress(tweak_data.achievement.pickup_sticks.stat)
+                        end
+                    end
+                end
             end
 
             if picked_up then
@@ -80,16 +107,18 @@ function PowerUps:_pickup(unit)
             managers.network:session():send_to_host("sync_pickup", self._unit)
         end
 
-        managers.wdu:_element_play_sound({
-            name = "power_up_taken",
-            file_name = "gift_taken.ogg",
-            sound_type = "sfx",
-            custom_dir = "sound",
-            is_relative = false,
-            is_loop = false,
-            is_3d = false,
-            use_velocity = false
-        })
+        if self._power_up_id then
+            managers.wdu:_element_play_sound({
+                name = "power_up_taken",
+                file_name = "gift_taken.ogg",
+                sound_type = "sfx",
+                custom_dir = "sound",
+                is_relative = false,
+                is_loop = false,
+                is_3d = false,
+                use_velocity = false
+            })
+        end
 
         self:consume()
 

@@ -434,9 +434,32 @@ function WeaponFactoryTweakData:_init_multiplix()
     self.wpn_fps_sho_deamon_primary.unit = "new_weapon_units/wpn_fps_sho_deamon_primary"
     self.wpn_fps_sho_deamon_secondary = deep_clone(self.wpn_fps_sho_boot)
     self.wpn_fps_sho_deamon_secondary.unit = "new_weapon_units/wpn_fps_sho_deamon_secondary"
+
+    self.wpn_fps_bow_elastic_primary = deep_clone(self.wpn_fps_bow_elastic)
+    self.wpn_fps_bow_elastic_primary.unit = "new_weapon_units/wpn_fps_bow_elastic_primary"
+    self.wpn_fps_bow_elastic_secondary = deep_clone(self.wpn_fps_bow_elastic)
+    self.wpn_fps_bow_elastic_secondary.unit = "new_weapon_units/wpn_fps_bow_elastic_secondary"
 end
 
 function WeaponFactoryTweakData:_init_upgraded_multiplix()
+    self.parts.wpn_fps_bow_elastic_m_explosive_mk2 = {
+		is_a_unlockable = true,
+		texture_bundle_folder = "ram",
+		a_obj = "a_m",
+		type = "ammo",
+		parent = "lower_reciever",
+		name_id = "bm_wp_elastic_m_explosive",
+		unit = "units/pd2_dlc_ram/weapons/wpn_fps_bow_elastic_pts/wpn_fps_bow_elastic_m_standard",
+		pcs = {},
+		bullet_objects = {
+			amount = 1,
+			prefix = "g_bullet_"
+		},
+		custom_stats = {
+			launcher_grenade = "elastic_arrow_exp_mk2"
+		}
+    }
+    
     self.wpn_fps_ass_m14_upg_primary = deep_clone(self.wpn_fps_ass_m14)
     self.wpn_fps_ass_m14_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_m14_upg_primary"
     self.wpn_fps_ass_m14_upg_primary.default_blueprint = {
@@ -773,4 +796,18 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     }
     self.wpn_fps_sho_deamon_upg_secondary = deep_clone(self.wpn_fps_sho_deamon_upg_primary)
     self.wpn_fps_sho_deamon_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_sho_deamon_upg_secondary"
+
+    self.wpn_fps_bow_elastic_upg_primary = deep_clone(self.wpn_fps_bow_elastic)
+    self.wpn_fps_bow_elastic_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_primary"
+    self.wpn_fps_bow_elastic_upg_primary.default_blueprint = {
+        "wpn_fps_bow_elastic_bow",
+        "wpn_fps_bow_elastic_body_regular",
+        "wpn_fps_bow_elastic_g_1",
+        "wpn_fps_bow_elastic_pin",
+        "wpn_fps_bow_elastic_whisker",
+        "wpn_fps_bow_elastic_m_explosive_mk2",
+        "wpn_fps_bow_elastic_sight"
+    }
+    self.wpn_fps_bow_elastic_upg_secondary = deep_clone(self.wpn_fps_bow_elastic_upg_primary)
+    self.wpn_fps_bow_elastic_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_secondary"
 end

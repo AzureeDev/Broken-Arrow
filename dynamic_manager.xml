@@ -18,6 +18,8 @@
     <effect load="true" path="effects/zm/zm_special_spawn"/>
     <effect load="true" path="effects/zm/zm_powerup_glow"/>
     <effect load="true" path="effects/payday2/environment/fire_biggy"/>
+    <effect load="true" path="effects/zm/env/braises_10x10"/>
+    <texture path="effects/zm/env/textures/braises_2x2"/>
 
     <font load="true" path="fonts/murderer"/>
     <texture path="fonts/murderer"/>

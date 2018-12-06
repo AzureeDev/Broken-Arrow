@@ -1,0 +1,6 @@
+<unit type="com" slot="1" >
+    <object file="units/pd2_dlc2/architecture/gov_c_ext/gov_c_ext_roof_a_8x3m" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

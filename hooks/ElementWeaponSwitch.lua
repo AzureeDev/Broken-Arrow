@@ -118,7 +118,22 @@ function ElementWeaponSwitch:on_executed(instigator)
 		end
 	end
 	
-	managers.player:_change_player_state()
+    managers.player:_change_player_state()
+    --[[
+    if not managers.wdu:_is_solo() then
+        local peer_to_update
+
+        if not self._values.instigator_only then
+            peer_to_update = managers.network:session():peer_by_unit(instigator)
+            
+            for _, peer in pairs(managers.network:session():all_peers()) do
+                if peer:id() == peer_to_update:id() then
+                    peer:_reload_outfit()
+                    log("Updated peer outfit.")
+                end
+            end
+        end
+    end--]]
 
     ElementWeaponSwitch.super.on_executed(self, instigator)
 end

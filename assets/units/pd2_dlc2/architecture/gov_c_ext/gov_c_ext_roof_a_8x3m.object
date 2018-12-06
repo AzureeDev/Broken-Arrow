@@ -1,0 +1,19 @@
+<dynamic_object>
+    <diesel orientation_object="rp_gov_c_ext_roof_a_8x3m" materials="units/pd2_dlc2/architecture/gov_c_ext/gov_c_ext_roof_trim" />
+    
+	<bodies>
+		<body enabled="true" template="static" name="static_body" >
+				<object name="rp_gov_c_ext_roof_a_8x3m" />
+				<object name="c_box_00" collision_type="box" padding="-2.5"/>
+				<object name="c_convex_00" collision_type="convex" padding="-2.5"/>
+		</body>
+	</bodies>
+	
+	<decal_surfaces default_material="concrete" static="true">
+        <decal_mesh name="dm_concrete" material="concrete" enabled="true"/>
+    </decal_surfaces>
+	
+	<graphics>
+        <object enabled="true" name="g_g" shadow_caster="true"/>
+    </graphics>
+</dynamic_object>

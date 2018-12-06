@@ -23,4 +23,14 @@ Hooks:PostHook(BlackMarketTweakData, "_init_projectiles", "zm_new_nade_amount", 
 
     self.projectiles.rocket_frag.time_cheat = 0
     self.projectiles.launcher_frag_arbiter.time_cheat = 0
+
+    self.projectiles.elastic_arrow_exp_mk2 = {
+		unit = "units/pd2_dlc_overkill_pack/weapons/wpn_third_rpg7_fired_rocket/wpn_third_rpg7_fired_rocket",
+		weapon_id = "elastic_upg_secondary",
+		no_cheat_count = true,
+		impact_detonation = true,
+		is_explosive = true,
+		physic_effect = Idstring("physic_effects/anti_gravitate"),
+        adjust_z = 0
+    }
 end)

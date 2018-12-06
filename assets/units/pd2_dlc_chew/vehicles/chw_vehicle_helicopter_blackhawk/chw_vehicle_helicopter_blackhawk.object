@@ -1,0 +1,119 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_chew/vehicles/chw_vehicle_helicopter_blackhawk/chw_vehicle_helicopter_blackhawk" orientation_object="rp_helicopter" />
+	<sequence_manager file="units/pd2_dlc_chew/vehicles/chw_vehicle_helicopter_blackhawk/chw_vehicle_helicopter_blackhawk" />
+	<animation_def name="anims/units/level/chew/fps_blackhawk/def" />
+
+	<animations>
+		<animation_group name="anim_door_front_left" 				enabled="false">
+			<object name="anim_door_front_left" />
+		</animation_group>
+		<animation_group name="anim_door_front_right" 				enabled="false">
+				<object name="anim_door_front_right" />
+		</animation_group>
+		<animation_group name="anim_propeller" enabled="true" loop="true" >
+				<object name="anim_rotor" />
+				<object name="anim_tailrotor" />
+		</animation_group>
+		<animation_group name="anim_push_off" enabled="false">
+				<object name="anim_push_player" />
+		</animation_group>
+	</animations>
+
+	<bodies>
+		<body name="body_static_vehicle" enabled="true" template="animated" >
+			<object name="a_body" />
+			<object name="c_box_middle_bottom"		collision_type="box"	padding="-2.5"/>
+			<object name="c_box_middle_top"			collision_type="box"	padding="-2.5"/>
+			<object name="c_convex_back_back_1"		collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_back_back_2"		collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_back_back_3"		collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_back_horiz_fin"	collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_back_verti_fin"	collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_front"			collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_middle_back"		collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_top_1"			collision_type="convex"	padding="-2.5"/>
+			<object name="c_convex_top_2"			collision_type="convex"	padding="-2.5"/>
+		</body>
+		<body name="body_blocker_mover" enabled="false" template="mover_blocker" keyframed="true" collision_class="vehicle"  collision_script_filter="1" collision_script_quiet_time="0.5" collision_script_tag="vehicle_collision" give_standing_velocity="false" >
+			<object name="a_body" />
+			<object name="c_box_blocker_mover" collision_type="box" padding="-2.5"/>
+		</body>
+		<body name="body_blocker_pusher" enabled="true" template="mover_blocker" keyframed="true" collision_class="vehicle"  collision_script_filter="1" collision_script_quiet_time="0.5" collision_script_tag="vehicle_collision" give_standing_velocity="false" >
+			<object name="anim_push_player" />
+			<object name="c_box_blocker_mover_02" collision_type="box" padding="-2.5"/>
+			<object name="c_box_blocker_mover_03" collision_type="box" padding="-2.5"/>
+			<object name="c_box_blocker_mover_04" collision_type="box" padding="-2.5"/>
+			<object name="c_box_blocker_mover_05" collision_type="box" padding="-2.5"/>
+			<object name="c_box_blocker_mover_06" collision_type="box" padding="-2.5"/>
+		</body>
+	 </bodies>
+
+	<lights>
+		<light name="light_interior"
+									enabled="false"
+									editable="false"
+									type="omni|specular"
+									multiplier="reddot"
+									near_range="5"
+									far_range="100"
+									falloff="1.0"
+		/>
+	</lights>
+
+	<decal_surfaces default_material="metal_chassis">
+		<decal_mesh name="g_body"						enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_door_front_left"			enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_door_front_right"			enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_door_left"					enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_door_right"					enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_middle_doors"				enabled="true" material="metal_chassis" />
+		<decal_mesh name="g_interior"					enabled="true" material="plastic" />
+	</decal_surfaces>
+
+	<graphics>
+		<graphic_group name="grp_vehicle" enabled="true">
+			<lod_object name="lod_body">
+				<object name="g_body"					enabled="true"  max_distance="3000" />
+				<object name="g_body_lod1"				enabled="true" />
+			</lod_object>			
+			<lod_object name="lod_interior">
+				<object name="g_interior"				enabled="true"  max_distance="3000" />
+				<object name="g_interior_lod1"			enabled="true" />
+			</lod_object>
+			<lod_object name="lod_glass">
+				<object name="g_glass"					enabled="true"  max_distance="3000" />
+				<object name="g_glass_lod1"				enabled="true" />
+			</lod_object>
+			<lod_object name="lod_il">
+				<object name="g_il"						enabled="true"  max_distance="3000" />
+				<object name="g_il_lod1"				enabled="true" />
+			</lod_object>
+			<lod_object name="lod_door_front_left">
+				<object name="g_door_front_left"		enabled="true"  max_distance="3000" />
+				<object name="g_door_front_left_lod1"	enabled="true" />
+			</lod_object>
+			<lod_object name="lod_door_front_right">
+				<object name="g_door_front_right"		enabled="true"  max_distance="3000" />
+				<object name="g_door_front_right_lod1"	enabled="true" />
+			</lod_object>
+			<lod_object name="lod_door_left">
+				<object name="g_door_left"				enabled="true"  max_distance="3000" />
+				<object name="g_door_left_lod1"			enabled="true" />
+			</lod_object>
+			<lod_object name="lod_door_right">
+				<object name="g_door_right"				enabled="true"  max_distance="3000" />
+				<object name="g_door_right_lod1"		enabled="true" />
+			</lod_object>
+			<lod_object name="lod_middle_doors">
+				<object name="g_middle_doors"			enabled="true"  max_distance="3000" />
+				<object name="g_middle_doors_lod1"		enabled="true" />
+			</lod_object>
+			<object name="g_pilot"						enabled="true" />
+		</graphic_group>
+
+		<graphic_group name="grp_rotor_blurred" 		enabled="true" >
+			<object name="g_main_rotor_blurred" 		enabled="true" />
+			<object name="g_tailrotor_blurred" 			enabled="true" />
+		</graphic_group>
+	</graphics>
+</dynamic_object>

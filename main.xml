@@ -8,7 +8,7 @@
 	</Hooks>
 	<Localization default="english.txt" directory="loc"/>
 	<contact assets_gui="guis/mission_briefing/preload_contact_bain" desc_id="quest_a_better_tomorrow_d" id="a_better_tomorrow" name_id="quest_a_better_tomorrow" package="packages/contact_bain"/>
-	<level ai_group_type="zombie" briefing_dialog="" gamemode_type="3arc_zm" id="zm_broken_arrow" max_bags="0" music="no_music" team_ai_off="false">
+	<level ai_group_type="zombie" briefing_dialog="" gamemode_type="3arc_zm" id="zm_broken_arrow" max_bags="0" music="no_music" team_ai_off="true">
 		<add file="levels/zm_broken_arrow/add.xml"/>
 		<hooks directory="hooks">
 			<hook file="Setup.lua" source_file="lib/setups/gamesetup"/>

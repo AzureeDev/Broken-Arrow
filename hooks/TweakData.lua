@@ -6,6 +6,12 @@
 	
 	tweak_data.projectiles.fir_com.damage = 15	--Incendiary Grenade
 
+	tweak_data.projectiles.elastic_arrow_exp_mk2 = {
+		launch_speed = 3000,
+		adjust_z = 0,
+		push_at_body_index = 0
+	}
+
  	tweak_data.pickups.max_ammo = {
 		unit = Idstring("power_ups/max_ammo/max_ammo")
 	}

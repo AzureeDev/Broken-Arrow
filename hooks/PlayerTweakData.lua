@@ -211,4 +211,9 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.deamon_upg_primary.steelsight.shoulders.translation = Vector3(-9.335, -5, 3)
 	self.stances.deamon_upg_secondary = deep_clone(self.stances.boot)
 	self.stances.deamon_upg_secondary.steelsight.shoulders.translation = Vector3(-9.335, -5, 3)
+
+	self.stances.elastic_primary = deep_clone(self.stances.elastic)
+	self.stances.elastic_secondary = deep_clone(self.stances.elastic)
+	self.stances.elastic_upg_primary = deep_clone(self.stances.elastic)
+	self.stances.elastic_upg_secondary = deep_clone(self.stances.elastic)
 end)

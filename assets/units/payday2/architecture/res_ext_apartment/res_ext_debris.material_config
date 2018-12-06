@@ -1,0 +1,10 @@
+<materials version="3">
+    <material render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:INSTANCED:NORMALMAP" name="mat_res_ext_apartment_wall_broken" version="2">
+        <diffuse_texture file="units/payday2/architecture/res_ext_apartment/res_apartment_wall_broken_df"/>
+        <bump_normal_texture file="units/payday2/architecture/res_ext_apartment/res_apartment_wall_broken_nm"/>
+        <reflection_texture type="cubemap" file="units/payday2/cubemaps/cubemap_zero_df"/>
+    </material>
+    <material render_template="decal:DIFFUSE_TEXTURE:INSTANCED" name="mat_res_ext_apartment_wall_decal" version="2">
+        <diffuse_texture file="units/payday2/architecture/res_ext_apartment/res_apartment_wall_debris_df"/>
+    </material>
+</materials>

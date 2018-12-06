@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<unit type="brush" slot="29">
+  <mass>
+    <spawn in="1500" method="pool" out="2500" />
+  </mass>
+  <object file="units/world/brushes/concrete_debris/concrete_debris" />
+</unit>

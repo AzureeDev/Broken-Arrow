@@ -1,0 +1,24 @@
+<unit type="chw" slot="1">
+	<object file="units/pd2_dlc_chew/vehicles/chw_vehicle_helicopter_blackhawk/chw_vehicle_helicopter_blackhawk" />
+	<anim_state_machine name="anims/units/level/chew/fps_blackhawk/machine" />
+	<network sync="spawn"/>
+	<dependencies>
+		<depends_on animation_def="anims/units/level/chew/fps_blackhawk/def"/>
+		<depends_on animation_state_machine="anims/units/level/chew/fps_blackhawk/machine"/>
+		<depends_on bnk="soundbanks/regular_sfx" />
+	</dependencies>
+	<extensions>
+		<extension name="base" class="AnimatedVehicleBase">
+			<var name="_body_name" value="a_body"/>
+		</extension>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+		<extension name="sync_unit_data" class="SyncUnitData" />
+	</extensions>
+	<sounds>
+		<default_soundsource source="anim_rotor"/>
+		<soundsource name="snd" source="anim_rotor" />
+		<soundsource name="snd_01" source="sound_source" />
+		<spawn_event source="snd" name="heli_loop" stop_when_killed="true"/>
+	</sounds>
+</unit>
