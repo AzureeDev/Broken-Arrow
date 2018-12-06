@@ -1,0 +1,5 @@
+<materials version="3">
+      <material name="mat_officeboard" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/props/air_prop_office_billboard/air_prop_office_billboard_df"/>
+    </material>
+</materials>

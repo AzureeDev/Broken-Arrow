@@ -1,0 +1,11 @@
+<dynamic_object>
+    <diesel orientation_object="rp_whiteboard_wall_180_121" materials="units/payday2/props/off_prop_starbreeze_mockup/off_prop_starbreeze_whiteboard" />
+    <bodies>
+        <body enabled="true" template="static" name="body0" >
+            <object collision_type="box" name="c_box_01" />
+        </body>
+    </bodies>
+    <graphics>
+        <object enabled="true" name="g_mesh" />
+    </graphics>
+</dynamic_object>

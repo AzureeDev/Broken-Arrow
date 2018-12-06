@@ -1,0 +1,21 @@
+<dynamic_object>
+    <diesel orientation_object="rp_bnk_prop_lobby_painting_f" materials="units/payday2/props/bnk_prop_lobby_paintings/bnk_prop_lobby_painting_f" />
+		<sequence_manager file="units/payday2/props/bnk_prop_lobby_paintings/bnk_prop_lobby_paintings" />
+	<bodies>
+        <body enabled="true" template="static" name="static_body" >
+			<object name="rp_bnk_prop_lobby_painting_f" />			
+            <object collision_type="convex" name="c_convex_01" padding="-2.5"/>
+        </body>
+		<body enabled="false" template="small_prop" name="dynamic_body" >
+			<object name="rp_bnk_prop_lobby_painting_f" />			
+            <object collision_type="convex" name="c_convex_01" padding="-2.5"/>
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_wood" material="wood" />
+        <decal_mesh enabled="true" name="dm_cloth" material="cloth" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

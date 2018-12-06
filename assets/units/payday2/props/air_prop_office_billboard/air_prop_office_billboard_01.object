@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel orientation_object="rp_air_office_billboard_01" materials="units/payday2/props/air_prop_office_billboard/air_prop_office_billboard" />
+    <bodies>
+        <body enabled="true" template="static" name="body0" >
+            <object name="c_c" collision_type="box" />
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh name="dm_wood" enabled="true"  material="wood" />
+    </decal_surfaces>
+    <graphics>
+        <object name="rp_air_office_billboard_01" enabled="true" />
+        <object name="g_billboard" enabled="true" />
+        <object name="g_pins" enabled="true" />
+        <object name="g_commercial_flyers" enabled="true"  />
+    </graphics>
+</dynamic_object>

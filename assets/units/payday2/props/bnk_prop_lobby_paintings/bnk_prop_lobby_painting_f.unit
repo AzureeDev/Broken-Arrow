@@ -1,0 +1,11 @@
+<unit type="bnk" slot="1" >
+    <object file="units/payday2/props/bnk_prop_lobby_paintings/bnk_prop_lobby_painting_f" />
+		<network sync="spawn"/>
+	<dependencies>
+		<depends_on physic_effect="physic_effects/push_sphere_unit" />
+	</dependencies>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+</unit>
