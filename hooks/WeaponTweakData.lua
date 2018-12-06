@@ -907,6 +907,19 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.elastic_upg_primary = deep_clone(self.elastic_primary)
     self.elastic_upg_primary.name_id = "wpn_elastic_upg_name"
     self.elastic_upg_primary.stats_modifiers = {damage = 14}
+    self.elastic_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.elastic_upg_secondary = deep_clone(self.elastic_upg_primary)
     self.elastic_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
+
+    self.stryk_upg_secondary = deep_clone(self.glock_18c)
+    self.stryk_upg_secondary.name_id = "wpn_stryk_upg_name"
+    self.stryk_upg_secondary.CLIP_AMMO_MAX = 47
+    self.stryk_upg_secondary.NR_CLIPS_MAX = 7
+    self.stryk_upg_secondary.AMMO_MAX = self.stryk_upg_secondary.CLIP_AMMO_MAX * self.stryk_upg_secondary.NR_CLIPS_MAX
+    self.stryk_upg_secondary.sounds.fire = "zm_pew_m1911"
+    self.stryk_upg_secondary.sounds.fire_single = "zm_pew_m1911"
+    self.stryk_upg_secondary.stats_modifiers = {damage = 12}
+    self.stryk_upg_secondary.stats.recoil = 99
+    self.stryk_upg_secondary.stats.spread = 99
+    self.stryk_upg_secondary.muzzleflash = "effects/zm/zm_pap_muzzle"
 end

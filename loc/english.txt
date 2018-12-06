@@ -70,5 +70,6 @@
 	"zm_broken_arrow_perks_name" : "Available Perks",
     "zm_broken_arrow_perks_2_name" : "Available Perks (continued)",
 	"menu_jukebox_track_zm_broken_arrow" : "with your little shovel",
-    "wpn_elastic_upg_name" : "Broken Arrow"
+    "wpn_elastic_upg_name" : "Broken Arrow",
+    "wpn_stryk_upg_name" : "Lazer-Gun"
 }

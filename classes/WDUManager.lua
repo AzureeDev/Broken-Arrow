@@ -596,7 +596,8 @@ function WDUManager:_convert_factory_to_upgrade()
         wpn_fps_sho_deamon_primary = "wpn_fps_sho_deamon_upg_primary",
         wpn_fps_sho_deamon_secondary = "wpn_fps_sho_deamon_upg_secondary",
         wpn_fps_bow_elastic_primary = "wpn_fps_bow_elastic_upg_primary",
-        wpn_fps_bow_elastic_secondary = "wpn_fps_bow_elastic_upg_secondary"
+        wpn_fps_bow_elastic_secondary = "wpn_fps_bow_elastic_upg_secondary",
+        wpn_fps_pis_g22c = "wpn_fps_pis_stryk_upg_secondary"
 	}
 end
 

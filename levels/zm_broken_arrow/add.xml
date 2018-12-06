@@ -200,6 +200,7 @@
 	<unit path="new_weapon_units/wpn_fps_bow_elastic_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_stryk_upg_secondary"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
