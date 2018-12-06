@@ -24,6 +24,7 @@
 	<texture path="perks/gift_double_points"/>
 	<texture path="perks/gift_instakill"/>
 	<texture path="perks/power"/>
+	<texture path="skies/top_clouds_dark_df"/>
 	<sequence_manager force="true" path="units/payday2/equipment/gen_interactable_door_reinforced/gen_interactable_door_reinforced" unload="true"/>
 	<sequence_manager force="true" path="units/payday2/equipment/gen_interactable_door_wooden_a/gen_interactable_door_wooden_a" unload="true"/>
 	<sequence_manager force="true" path="units/payday2/props/gen_prop_bank_atm_standing/gen_prop_bank_atm_standing" unload="true"/>

@@ -112,7 +112,7 @@ function WDUManager:_init_new_player(data)
     end
 
     self:_set_player_name(data.id, data.name)
-    self:_set_start_money(data.id, 500000)
+    self:_set_start_money(data.id, 500)
 end
 
 function WDUManager:_number_of_players()
@@ -495,7 +495,7 @@ end
 
 function WDUManager:_get_weapons_in_mystery_box()
     return {
-       --[[ "wpn_fps_spe_wunderwaffe",
+        "wpn_fps_spe_wunderwaffe",
 		"wpn_fps_special_roach",
 		"wpn_fps_ass_m14",
 		"wpn_fps_shot_b682",
@@ -519,7 +519,7 @@ function WDUManager:_get_weapons_in_mystery_box()
 		"wpn_fps_pis_breech",
 		"wpn_fps_spe_rpg7",
         "wpn_fps_smg_tec9",
-        "wpn_fps_sho_deamon",--]]
+        "wpn_fps_sho_deamon",
         "wpn_fps_bow_elastic"
     }
 end
