@@ -623,7 +623,7 @@
 		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
-</unit_load>
+	</unit_load>
 	<movie path="movies/ascension"/>
 	<movie path="sound/music/bank/bankpowerup_assault"/>
 	<movie path="sound/music/bank/bankpowerup_intro"/>
@@ -1770,4 +1770,48 @@
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_b/dah_prop_vending_machine_b" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/100315"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/dome_occlusion"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102207"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/100802"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102208"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102209"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102679"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102678"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102677"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102210"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/100322"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102681"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102682"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102680"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/100323"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102686"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102685"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102684"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102683"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102690"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102688"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102689"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102697"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102698"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102699"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102696"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102695"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102693"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102692"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102691"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102694"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102703"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102702"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102700"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102701"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102704"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102712"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102711"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102710"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102709"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102708"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102707"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102706"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/102705"/>
 </table>

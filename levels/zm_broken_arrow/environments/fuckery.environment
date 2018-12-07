@@ -12,7 +12,7 @@
 			<param key="sun_ray_color_scale" value="0"/>
 			<param key="global_world_overlay_texture" value=""/>
 			<param key="sun_ray_color" value="0 0.59607845544815 0.79215687513351"/>
-			<param key="global_texture" value="environments/cubemaps/cubemap_evening_hcm"/>
+			<param key="global_texture" value="levels/mods/zm_broken_arrow/cube_lights/102208"/>
 		</others>
 		<post_effect>
 			<deferred>

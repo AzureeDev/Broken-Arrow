@@ -1,4 +1,4 @@
-<table global_key="ZM_BANK" name="broken_arrow2">
+<table global_key="ZM_BANK" name="Broken Arrow">
 	<AddFiles file="dynamic_manager.xml"/>
 	<Hooks directory="hooks">
 		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
@@ -85,6 +85,8 @@
 			<value_node value="levels/narratives/classics/red2/world/world"/>
 			<value_node value="levels/narratives/short2/stage1/nightclub_interior/nightclub_interior"/>
 			<value_node value="levels/narratives/locke/brb/art/art"/>
+			<value_node value="levels/narratives/classics/glace/level_art/level_art"/>
+			<value_node value="levels/narratives/e_framing_frame/stage_1/world"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
@@ -578,7 +580,7 @@
 			<sound id="pregame" path="pregame.ogg"/>
 		</sounds>
 	</level>
-	<narrative contact="a_better_tomorrow" id="broken_arrow2">
+	<narrative contact="a_better_tomorrow" icon="map_assets/map_icon" id="broken_arrow2">
 		<chain>
 			<table level_id="zm_broken_arrow" type="d" type_id="heist_type_assault"/>
 		</chain>

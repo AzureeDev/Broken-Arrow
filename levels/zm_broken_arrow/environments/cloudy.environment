@@ -12,7 +12,7 @@
 			<param key="sun_ray_color_scale" value="0"/>
 			<param key="global_world_overlay_texture" value=""/>
 			<param key="sun_ray_color" value="1 1 1"/>
-			<param key="global_texture" value="environments/cubemaps/cubemap_evening_lcm"/>
+			<param key="global_texture" value="levels/mods/zm_broken_arrow/cube_lights/102209"/>
 		</others>
 		<post_effect>
 			<deferred>
@@ -25,8 +25,8 @@
 						<param key="fog_far_low_color" value="0.17647059261799 0.074509806931019 0"/>
 						<param key="ambient_falloff_scale" value="0"/>
 						<param key="sky_bottom_color_scale" value="0"/>
-						<param key="ambient_color_scale" value="0.23000000417233"/>
-						<param key="ambient_color" value="0.10980392247438 0.0078431377187371 0"/>
+						<param key="ambient_color_scale" value="1.1722816228867"/>
+						<param key="ambient_color" value="0.1843137294054 0.0078431377187371 0"/>
 						<param key="fog_max_range" value="4341.7607421875"/>
 						<param key="bloom_threshold" value="0"/>
 						<param key="sky_top_color_scale" value="0"/>
