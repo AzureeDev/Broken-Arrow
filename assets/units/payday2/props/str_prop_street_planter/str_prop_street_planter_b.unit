@@ -1,6 +1,0 @@
-<unit type="str" slot="1" >
-    <object file="units/payday2/props/str_prop_street_planter/str_prop_street_planter_b" />
-    <extensions>
-        <extension class="ScriptUnitData" name="unit_data" />
-    </extensions>
-</unit>

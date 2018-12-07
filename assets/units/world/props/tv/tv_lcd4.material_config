@@ -1,6 +1,0 @@
-<materials version="3">
-    <material render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" decal_material="plastic" version="2" name="tv_lcd_new">
-        <diffuse_texture file="units/world/props/tv/tv_lcd4_df"/>
-        <bump_normal_texture file="units/world/props/tv/tv_lcd4_nm"/>
-    </material>
-</materials>

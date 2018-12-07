@@ -1,7 +1,0 @@
-<materials version="3">
-    <material name="projector_picture" render_template="generic:DIFFUSE_TEXTURE:SELF_ILLUMINATION:VERTEX_COLOR" version="2">
-        <diffuse_texture file="units/world/props/office/computer/computer_projectorcloth_picture_df"/>
-        <self_illumination_texture file="units/world/props/office/computer/computer_projectorcloth_picture_df"/>
-        <variable value="identity" type="scalar" name="il_multiplier"/>
-    </material>
-</materials>

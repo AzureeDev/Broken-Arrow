@@ -1,0 +1,15 @@
+<materials version="3">
+    <material render_template="generic:DIFFUSE_TEXTURE" name="mat_f35" version="2">
+        <diffuse_texture file="units/pd2_dlc_vit/props/vit_prop_f35/vit_prop_f35_df"/>
+    </material>
+    <material render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE:DIFFUSE0_UVANIM:VERTEX_COLOR" name="mat_contrails" version="2">
+        <diffuse_texture file="units/pd2_dlc_vit/props/vit_prop_f35/vit_prop_f35_contrails_df"/>
+        <variable type="scalar" name="intensity" value="streetlight"/>
+        <variable type="vector3" name="uv0_speed" value="1 -1 0"/>
+    </material>
+    <material render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE:DIFFUSE0_UVANIM" name="mat_navlights" version="2">
+        <diffuse_texture file="units/pd2_dlc_vit/props/vit_prop_f35/vit_prop_f35_navlights_df"/>
+        <variable type="scalar" name="intensity" value="megatron"/>
+        <variable type="vector3" name="uv0_speed" value="0 1 0"/>
+    </material>
+</materials>

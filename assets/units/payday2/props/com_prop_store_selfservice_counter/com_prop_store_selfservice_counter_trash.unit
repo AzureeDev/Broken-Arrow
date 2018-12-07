@@ -1,6 +1,0 @@
-<unit type="com" slot="1" >
-    <object file="units/payday2/props/com_prop_store_selfservice_counter/com_prop_store_selfservice_counter_trash" />
-    <extensions>
-        <extension class="ScriptUnitData" name="unit_data" />
-    </extensions>
-</unit>

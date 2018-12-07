@@ -1,6 +1,0 @@
-<materials version="3">
-    <material name="tvtable" render_template="generic:DIFFUSE_TEXTURE" version="2">
-        <variable value="0" type="scalar" name="specular_power"/>
-        <diffuse_texture file="units/world/props/diamond_heist/apartment/apartment_room/tv_table/tv_table_df"/>
-    </material>
-</materials>

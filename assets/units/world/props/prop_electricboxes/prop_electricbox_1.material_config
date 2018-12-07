@@ -1,9 +1,0 @@
-<materials version="3">
-    <material name="prop_electricboxes_material" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
-        <diffuse_texture file="units/world/props/prop_electricboxes/prop_electricboxes_df"/>
-        <bump_normal_texture file="units/world/props/prop_electricboxes/prop_electricboxes_nm"/>
-    </material>
-    <diffuse_texture file="units/world/props/prop_electricboxes/prop_electricboxes_df">
-        <material name="shadow_caster" render_template="generic" version="2"/>
-    </diffuse_texture>
-</materials>

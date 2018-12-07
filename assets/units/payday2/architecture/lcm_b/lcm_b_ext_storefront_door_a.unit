@@ -1,6 +1,0 @@
-<unit type="lcm" slot="1">
-	<object file="units/payday2/architecture/lcm_b/lcm_b_ext_storefront_door_a" />
-	<extensions>
-		<extension name="unit_data" class="ScriptUnitData" />
-	</extensions>
-</unit>

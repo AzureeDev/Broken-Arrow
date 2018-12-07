@@ -1,7 +1,0 @@
-<materials version="3">
-    <material name="bathroom_mirror" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:INSTANCED" version="2">
-        <variable value="1.5500000715256 0.68700003623962 14.39999961853" type="vector3" name="environment_settings"/>
-        <diffuse_texture file="units/world/props/apartment/bathroom_mirror/bathroom_mirror_df"/>
-        <reflection_texture type="cubemap" global_texture="current_global_texture"/>
-    </material>
-</materials>

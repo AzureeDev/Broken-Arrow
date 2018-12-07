@@ -799,15 +799,6 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 
     self.wpn_fps_bow_elastic_upg_primary = deep_clone(self.wpn_fps_bow_elastic)
     self.wpn_fps_bow_elastic_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_primary"
-    self.wpn_fps_bow_elastic_upg_primary.default_blueprint = {
-        "wpn_fps_bow_elastic_bow",
-        "wpn_fps_bow_elastic_body_regular",
-        "wpn_fps_bow_elastic_g_1",
-        "wpn_fps_bow_elastic_pin",
-        "wpn_fps_bow_elastic_whisker",
-        "wpn_fps_bow_elastic_m_explosive_mk2",
-        "wpn_fps_bow_elastic_sight"
-    }
     self.wpn_fps_bow_elastic_upg_secondary = deep_clone(self.wpn_fps_bow_elastic_upg_primary)
     self.wpn_fps_bow_elastic_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_secondary"
 

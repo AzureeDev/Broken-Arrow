@@ -1,6 +1,0 @@
-<unit type="brb" slot="1" >
-    <object file="units/pd2_dlc_brb/props/brb_ext_slab_parking_2m_01_a/brb_ext_slab_parking_2m_01_a" />
-    <extensions>
-        <extension class="ScriptUnitData" name="unit_data" />
-    </extensions>
-</unit>

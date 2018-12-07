@@ -913,6 +913,8 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.stryk_upg_secondary = deep_clone(self.glock_18c)
     self.stryk_upg_secondary.name_id = "wpn_stryk_upg_name"
+    self.stryk_upg_secondary.animations.reload_name_id = "glock_18c"
+    self.stryk_upg_secondary.weapon_hold = "glock"
     self.stryk_upg_secondary.CLIP_AMMO_MAX = 47
     self.stryk_upg_secondary.NR_CLIPS_MAX = 7
     self.stryk_upg_secondary.AMMO_MAX = self.stryk_upg_secondary.CLIP_AMMO_MAX * self.stryk_upg_secondary.NR_CLIPS_MAX

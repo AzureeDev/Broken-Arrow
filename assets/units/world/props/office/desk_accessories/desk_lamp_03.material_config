@@ -1,7 +1,0 @@
-<materials version="3">
-    <material version="2" decal_material="sheet_metal" name="desk_lamp_03" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
-        <variable value="0" type="scalar" name="specular_power"/>
-        <diffuse_texture file="units/world/props/office/desk_accessories/desk_lamp_03_df"/>
-        <bump_normal_texture file="units/world/props/office/desk_accessories/desk_lamp_03_nm"/>
-    </material>
-</materials>

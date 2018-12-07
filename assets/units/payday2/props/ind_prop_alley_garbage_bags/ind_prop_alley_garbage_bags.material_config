@@ -1,9 +1,0 @@
-<materials version="3">
-    <material name="garbage_bags" version="2" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:INSTANCED:NORMALMAP">
-        <bump_normal_texture file="units/payday2/props/ind_prop_alley_garbage_bags/ind_prop_alley_garbage_bags_nm"/>
-        <diffuse_texture file="units/payday2/props/ind_prop_alley_garbage_bags/ind_prop_alley_garbage_bags_df"/>
-        <reflection_texture global_texture="current_global_texture" type="cubemap"/>
-        <variable value="4 0.10000000149012 1" type="vector3" name="environment_settings"/>
-    </material>
-    <material name="shadow_caster" version="2" render_template="shadow_caster_only"/>  
-</materials>

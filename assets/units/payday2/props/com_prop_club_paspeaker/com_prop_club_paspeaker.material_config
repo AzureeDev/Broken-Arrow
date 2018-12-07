@@ -1,6 +1,0 @@
-<materials version="3">
-    <material name="mat_speakers" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
-        <diffuse_texture file="units/payday2/props/com_prop_club_paspeaker/com_prop_club_paspeaker_df"/>
-        <bump_normal_texture file="units/payday2/props/com_prop_club_paspeaker/com_prop_club_paspeaker_nm"/>
-    </material>
-</materials>

@@ -1,6 +1,0 @@
-<materials version="3">
-    <material name="concrete_debris" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:EXTERNAL_ALPHA_REF:INSTANCED" version="2">
-        <diffuse_texture file="units/world/brushes/concrete_debris/concrete_debris_df"/>
-        <variable value="0.029999999329448" type="scalar" name="alpha_ref"/>
-    </material>
-</materials>

@@ -1,6 +1,0 @@
-<unit type="are" slot="1" >
-    <object file="units/payday2/architecture/are/are_off_int_floor_plastic_4m_v2" />
-    <extensions>
-        <extension class="ScriptUnitData" name="unit_data" />
-    </extensions>
-</unit>

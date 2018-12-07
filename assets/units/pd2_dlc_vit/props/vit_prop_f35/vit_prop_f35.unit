@@ -1,0 +1,15 @@
+<unit type="vit" slot="1">
+	<object file="units/pd2_dlc_vit/props/vit_prop_f35/vit_prop_f35" />
+	<network sync="spawn"/>
+	<dependencies>
+		<depends_on bnk="soundbanks/regular_sfx" />
+	</dependencies>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+	<sounds>
+		<default_soundsource source="rp_vit_prop_f35"/>
+		<soundsource name="snd" source="a_flight" />
+	</sounds>
+</unit>

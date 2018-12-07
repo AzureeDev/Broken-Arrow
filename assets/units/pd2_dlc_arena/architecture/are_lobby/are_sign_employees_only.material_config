@@ -1,6 +1,0 @@
-<materials version="3">
-	<material name="mat_are_sign_employees_only" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
-		<diffuse_texture file="units/pd2_dlc_arena/architecture/are_lobby/are_sign_employees_only_df" />
-		<bump_normal_texture file="units/pd2_dlc_arena/architecture/are_lobby/are_sign_employees_only_nm" />
-	</material>
-</materials>

@@ -1,5 +1,0 @@
-<materials version="3">
-    <material render_template="generic:DIFFUSE_TEXTURE:INSTANCED:VERTEX_COLOR" decal_material="stone" version="2" name="coffe_cup">
-        <diffuse_texture file="units/payday2/props/air_prop_terminal_coffecup/air_prop_terminal_coffecup_df"/>
-    </material>
-</materials>

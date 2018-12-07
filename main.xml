@@ -52,6 +52,7 @@
 			<hook file="CoreUnit.lua" source_file="core/lib/utils/coreunit"/>
 			<hook file="PowerUps.lua" source_file="lib/units/pickups/ammoclip"/>
 			<hook file="GamePlayCentralManager.lua" source_file="lib/managers/gameplaycentralmanager"/>
+			<hook file="ProjectileBase.lua" source_file="lib/units/weapons/projectiles/projectilebase"/>
 		</hooks>
 		<include directory="levels/zm_broken_arrow">
 			<file file="world.world" type="binary"/>
@@ -79,6 +80,11 @@
 			<value_node value="levels/instances/unique/kenaz/owners_office/world/world"/>
 			<value_node value="levels/instances/unique/unobtanium/world_sounds"/>
 			<value_node value="packages/dlcs/vit/job_vit"/>
+			<value_node value="levels/narratives/h_firestarter/stage_3/world/world"/>
+			<value_node value="levels/narratives/vlad/nightclub/world/world"/>
+			<value_node value="levels/narratives/classics/red2/world/world"/>
+			<value_node value="levels/narratives/short2/stage1/nightclub_interior/nightclub_interior"/>
+			<value_node value="levels/narratives/locke/brb/art/art"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">

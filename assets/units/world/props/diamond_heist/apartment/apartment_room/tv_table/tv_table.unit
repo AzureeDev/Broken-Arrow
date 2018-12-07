@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<unit type="dia" slot="1">
-	 <!--<network sync="spawn" />-->
-  <object file="units/world/props/diamond_heist/apartment/apartment_room/tv_table/tv_table" />
-  <extensions>
-    <extension name="unit_data" class="ScriptUnitData" />
-    <!--<extension name="damage" class="UnitDamage" />-->
-  </extensions>
-</unit>

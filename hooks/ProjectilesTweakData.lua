@@ -25,7 +25,8 @@ Hooks:PostHook(BlackMarketTweakData, "_init_projectiles", "zm_new_nade_amount", 
     self.projectiles.launcher_frag_arbiter.time_cheat = 0
 
     self.projectiles.elastic_arrow_exp_mk2 = {
-		unit = "units/pd2_dlc_overkill_pack/weapons/wpn_third_rpg7_fired_rocket/wpn_third_rpg7_fired_rocket",
+        unit = "projectiles/wpn_fps_bow_boom",
+        local_unit = "projectiles/wpn_fps_bow_boom",
 		weapon_id = "elastic_upg_secondary",
 		no_cheat_count = true,
 		impact_detonation = true,

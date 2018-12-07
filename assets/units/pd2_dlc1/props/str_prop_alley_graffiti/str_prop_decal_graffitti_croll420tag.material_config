@@ -1,9 +1,0 @@
-<materials version="3">
-    <material name="mat_croll420tag" render_template="decal:DIFFUSE_TEXTURE" version="2">
-        <diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_croll420tag_df"/>
-    </material>
-	
-	  <material name="mat_croll420tag_lod1" render_template="decal:DIFFUSE_TEXTURE" version="2">
-        <diffuse_texture file="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_decal_graffitti_croll420tag_df" mip="5"/>
-    </material>
-</materials>

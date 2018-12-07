@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<unit type="jun" slot="1">
-  <object file="units/world/vegetation/jungle/jungletree_small" />
-  <extensions>
-    <extension name="unit_data" class="ScriptUnitData" />
-  </extensions>
-</unit>

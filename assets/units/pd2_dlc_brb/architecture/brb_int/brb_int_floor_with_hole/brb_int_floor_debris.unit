@@ -1,6 +1,0 @@
-<unit type="brb" slot="1">
-	<object file="units/pd2_dlc_brb/architecture/brb_int/brb_int_floor_with_hole/brb_int_floor_debris" />
-	<extensions>
-		<extension name="unit_data" class="ScriptUnitData" />
-	</extensions>
-</unit>

@@ -1,6 +1,0 @@
-<unit type="hsp" slot="1" >
-    <object file="units/world/architecture/hospital/props/coffee_maker/hospital_coffee_maker" />
-    <extensions>
-        <extension class="ScriptUnitData" name="unit_data" />
-    </extensions>
-</unit>

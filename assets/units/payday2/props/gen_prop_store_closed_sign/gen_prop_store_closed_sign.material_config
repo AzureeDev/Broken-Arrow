@@ -1,5 +1,0 @@
-<materials version="3">
-    <material name="mat_sign" render_template="generic:DIFFUSE_TEXTURE" version="2">
-        <diffuse_texture file="units/payday2/props/gen_prop_store_closed_sign/gen_prop_store_closed_sign_df"/>
-    </material>
-</materials>
