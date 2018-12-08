@@ -1,0 +1,127 @@
+<dynamic_object>
+	<diesel materials="units/payday2/architecture/hcm/hcm_int_wall_explosion" orientation_object="rp_hcm_int_wall_explosion_debris" />
+	<bodies>		
+		<body name="dynamic_box_wood_1" enabled="true" template="debris" >
+			<object name="c_box_wood_1" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_wood_2" enabled="true" template="debris" >
+			<object name="c_box_wood_2" collision_type="box" mass="100" />
+		</body>
+		
+		<body name="dynamic_box_splinter_1" enabled="true" template="debris" >
+			<object name="c_box_splinter_1" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_splinter_2" enabled="true" template="debris" >
+			<object name="c_box_splinter_2" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_splinter_3" enabled="true" template="debris" >
+			<object name="c_box_splinter_3" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_splinter_4" enabled="true" template="debris" >
+			<object name="c_box_splinter_4" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_splinter_5" enabled="true" template="debris" >
+			<object name="c_box_splinter_5" collision_type="box" mass="100" />
+		</body>
+		
+		<body name="dynamic_box_small_1" enabled="true" template="debris" >
+			<object name="c_box_small_1" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_small_2" enabled="true" template="debris" >
+			<object name="c_box_small_2" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_small_3" enabled="true" template="debris" >
+			<object name="c_box_small_3" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_small_4" enabled="true" template="debris" >
+			<object name="c_box_small_4" collision_type="box" mass="100" />
+		</body>
+		<body name="dynamic_box_small_5" enabled="true" template="debris" >
+			<object name="c_box_small_5" collision_type="box" mass="100" />
+		</body>
+		
+		<body name="dynamic_box_medium_1" enabled="true" template="debris" >
+			<object name="c_box_medium_1" collision_type="box" mass="300" />
+		</body>
+		<body name="dynamic_box_medium_2" enabled="true" template="debris" >
+			<object name="c_box_medium_2" collision_type="box" mass="300" />
+		</body>
+		<body name="dynamic_box_medium_3" enabled="true" template="debris" >
+			<object name="c_box_medium_3" collision_type="box" mass="300" />
+		</body>
+		
+		<body name="dynamic_box_half_1" enabled="true" template="debris" >
+			<object name="c_box_half_1" collision_type="box" mass="200" />
+		</body>
+		<body name="dynamic_box_half_2" enabled="true" template="debris" >
+			<object name="c_box_half_2" collision_type="box" mass="200" />
+		</body>
+		<body name="dynamic_box_half_3" enabled="true" template="debris" >
+			<object name="c_box_half_3" collision_type="box" mass="200" />
+		</body>
+		<body name="dynamic_box_half_4" enabled="true" template="debris" >
+			<object name="c_box_half_4" collision_type="box" mass="200" />
+		</body>
+		<body name="dynamic_box_half_5" enabled="true" template="debris" >
+			<object name="c_box_half_5" collision_type="box" mass="200" />
+		</body>
+		
+		<body name="dynamic_box_large_1" enabled="true" template="debris" >
+			<object name="c_box_large_1" collision_type="box" mass="300" />
+		</body>
+		<body name="dynamic_box_large_2" enabled="true" template="debris" >
+			<object name="c_box_large_2" collision_type="box" mass="300" />
+		</body>
+		<body name="dynamic_box_large_3" enabled="true" template="debris" >
+			<object name="c_box_large_3" collision_type="box" mass="300" />
+		</body>
+		<body name="dynamic_box_large_4" enabled="true" template="debris" >
+			<object name="c_box_large_4" collision_type="box" mass="300" />
+		</body>
+		<body name="dynamic_box_large_5" enabled="true" template="debris" >
+			<object name="c_box_large_5" collision_type="box" mass="300" />
+		</body>
+	</bodies>
+	
+	<decal_surfaces static="true" default_material="concrete">
+	</decal_surfaces>
+
+	<effects>
+		<effect_spawner name="es_e_trail_1"			enabled="true"	object="e_trail_1"			effect="effects/payday2/particles/explosions/trail_explosion"/>
+		<effect_spawner name="es_e_trail_2"			enabled="true"	object="e_trail_2"			effect="effects/payday2/particles/explosions/trail_explosion"/>
+		<effect_spawner name="es_e_trail_3"			enabled="true"	object="e_trail_3"			effect="effects/payday2/particles/explosions/trail_explosion"/>
+		<effect_spawner name="es_e_trail_4"			enabled="true"	object="e_trail_4"			effect="effects/payday2/particles/explosions/trail_explosion"/>
+		<effect_spawner name="es_e_trail_5"			enabled="true"	object="e_trail_5"			effect="effects/payday2/particles/explosions/trail_explosion"/>
+		<effect_spawner name="es_e_trail_wood_1"	enabled="true"	object="e_trail_wood_1"		effect="effects/payday2/particles/explosions/trail_explosion"/>
+		<effect_spawner name="es_e_trail_wood_2"	enabled="true"	object="e_trail_wood_2"		effect="effects/payday2/particles/explosions/trail_explosion"/>
+	</effects>
+
+	<graphics>
+		<object name="g_box_half_1" 		enabled="true"/>
+		<object name="g_box_half_2" 		enabled="true"/>
+		<object name="g_box_half_3" 		enabled="true"/>
+		<object name="g_box_half_4" 		enabled="true"/>
+		<object name="g_box_half_5" 		enabled="true"/>
+		<object name="g_box_large_1" 		enabled="true"/>
+		<object name="g_box_large_2" 		enabled="true"/>
+		<object name="g_box_large_3" 		enabled="true"/>
+		<object name="g_box_large_4" 		enabled="true"/>
+		<object name="g_box_large_5" 		enabled="true"/>
+		<object name="g_box_medium_1" 		enabled="true"/>
+		<object name="g_box_medium_2" 		enabled="true"/>
+		<object name="g_box_medium_3" 		enabled="true"/>
+		<object name="g_box_small_1" 		enabled="true"/>
+		<object name="g_box_small_2" 		enabled="true"/>
+		<object name="g_box_small_3" 		enabled="true"/>
+		<object name="g_box_small_4" 		enabled="true"/>
+		<object name="g_box_small_5" 		enabled="true"/>
+		<object name="g_box_splinter_1" 	enabled="true"/>
+		<object name="g_box_splinter_2" 	enabled="true"/>
+		<object name="g_box_splinter_3" 	enabled="true"/>
+		<object name="g_box_splinter_4" 	enabled="true"/>
+		<object name="g_box_splinter_5" 	enabled="true"/>
+		<object name="g_box_wood_1" 		enabled="true"/>
+		<object name="g_box_wood_2" 		enabled="true"/>
+	</graphics>
+
+</dynamic_object>

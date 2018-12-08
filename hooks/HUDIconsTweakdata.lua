@@ -52,5 +52,15 @@ Hooks:PostHook(HudIconsTweakData, "init", "init_zm_icons_gui", function(self)
 			128,
 			128
 		}
+	}
+	
+	self.perk_staminup = {
+        texture = "perks/staminup",
+		texture_rect = {
+			0,
+			0,
+			128,
+			128
+		}
     }
 end)

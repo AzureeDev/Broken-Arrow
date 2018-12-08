@@ -1,0 +1,29 @@
+<dynamic_object>
+	<diesel materials="units/payday2/architecture/hcm/hcm_int_wall_explosion" orientation_object="rp_hcm_int_wall_explosion" />
+	<sequence_manager file="units/payday2/architecture/hcm/hcm_int_wall_explosion" />
+	
+	<bodies>
+		<body name="static_body" enabled="true" template="static" >
+			<object name="rp_hcm_int_wall_explosion" />
+			<object name="c_box" collision_type="box" padding="-2.5"/>
+			<object name="c_convex_01" collision_type="convex" padding="-2.5"/>
+			<object name="c_convex_02" collision_type="convex" padding="-2.5"/>
+			<object name="c_convex_03" collision_type="convex" padding="-2.5"/>
+		</body>
+	</bodies>
+
+	<decal_surfaces static="true" default_material="plaster">
+		<decal_mesh name="dm_concrete" enabled="true" material="concrete"/>
+		<decal_mesh name="dm_plaster" enabled="true" material="plaster"/>
+		<decal_mesh name="dm_wood" enabled="true" material="wood"/>
+	</decal_surfaces>
+
+	<graphics>
+		<object name="g_decals" 			enabled="false" />
+		<object name="g_decals_other" 		enabled="false" />
+		<object name="g_decals_wall" 		enabled="false" />		
+		<object name="g_hcm_int_wall_4m_a" 	enabled="true" />
+		<object name="g_boarder" 			enabled="true" />
+	</graphics>
+
+</dynamic_object>

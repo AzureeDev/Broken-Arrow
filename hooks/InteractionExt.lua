@@ -64,6 +64,23 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 			end
 		end
 
+		if self._tweak_data.dyn_price_by_wave then
+			local base_price = self._tweak_data.dyn_price_base or 1000
+			local increase_by_wave = self._tweak_data.dyn_price_increase or 1000
+			local current_wave = managers.wdu:_get_current_wave()
+			local item_name = self._tweak_data.dyn_price_item_name
+			text = self._tweak_data.text_id
+
+			local transformed_price = base_price + (increase_by_wave * current_wave)
+
+			if current_money >= transformed_price then
+				text = text .. " [Cost : " .. transformed_price .. "]"
+			else
+				local points_needed = transformed_price - current_money
+				text = "You need " .. points_needed .. " more points to buy the " .. item_name 
+			end
+		end
+
 		if self._tweak_data.perk then
 			local item = self._tweak_data.perk
 
@@ -209,6 +226,17 @@ function BaseInteractionExt:can_interact(player)
     
     local count_perks = managers.player:_count_nb_perks()
 	local max_perks = 4
+
+	if self._tweak_data.dyn_price_by_wave then
+		local base_price = self._tweak_data.dyn_price_base or 1000
+		local increase_by_wave = self._tweak_data.dyn_price_increase or 1000
+		local current_wave = managers.wdu:_get_current_wave()
+		local real_cost = base_price + (increase_by_wave * current_wave)
+
+		if current_money < real_cost then
+			return false
+		end
+	end
 	
 	if self._tweak_data.is_teleporter and not managers.wdu:_is_teleporter_available() then
 		return false

@@ -39,6 +39,7 @@
 			<hook file="PlayerTased.lua" source_file="lib/units/beings/player/states/playertased"/>
 			<hook file="PlayerManager.lua" source_file="lib/managers/playermanager"/>
 			<hook file="PlayerStandard.lua" source_file="lib/units/beings/player/states/playerstandard"/>
+			<hook file="PlayerMovement.lua" source_file="lib/units/beings/player/playermovement"/>
 			<hook file="PlayerTweakData.lua" source_file="lib/tweak_data/playertweakdata"/>
 			<hook file="ProjectilesTweakData.lua" source_file="lib/tweak_data/blackmarket/projectilestweakdata"/>
 			<hook file="RaycastWeaponBase.lua" source_file="lib/units/weapons/raycastweaponbase"/>

@@ -1,0 +1,15 @@
+<unit type="rvd" slot="1">
+	<object file="units/pd2_dlc_rvd/props/rvd_prop_warehouse_radio/rvd_prop_warehouse_radio" />
+  	<dependencies>
+  	  <depends_on effect="effects/particles/dest/security_camera_dest" />
+  	  <depends_on bnk="soundbanks/regular_sfx" />
+  	</dependencies>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+  	<sounds>
+  		<default_soundsource source="rp_rvd_prop_warehouse_radio"/>
+  		<soundsource name="boombox" source="rp_rvd_prop_warehouse_radio" />
+  	</sounds>
+</unit>

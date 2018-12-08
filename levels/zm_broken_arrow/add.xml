@@ -20,6 +20,7 @@
 	<texture path="perks/juggernog"/>
 	<texture path="perks/revive"/>
 	<texture path="perks/speedcola"/>
+	<texture path="perks/staminup"/>
 	<texture path="perks/gift_firesale"/>
 	<texture path="perks/gift_double_points"/>
 	<texture path="perks/gift_instakill"/>
@@ -616,6 +617,8 @@
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/juggernog_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/double_tap_on" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/stamin" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/stamin_on" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a_df" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/who" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/who_on" unload="true"/>
@@ -630,6 +633,8 @@
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_deadshot_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_who" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_who_il" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_staminup" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_staminup_il" unload="true"/>
 		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
@@ -2002,5 +2007,118 @@
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 		<physic_effect force="true" path="physic_effects/push_sphere" unload="true"/>
 	</add>
+	<add path="units/payday2/architecture/lux/lux_int_wall1_4m_a" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lux/lux" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lux/lux_int_wall1_4m_a" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall1_4m_a" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lux/lux_int_wall1_2m_door_a" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lux/lux" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lux/lux_int_wall1_2m_door_a" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall1_2m_door_a" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_corridor_wall_piece_broken" type="unit">
+		<material_config force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_corridor_wall_piece_broken" unload="true"/>
+		<model force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_corridor_wall_piece_broken" unload="true"/>
+		<object force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_corridor_wall_piece_broken" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_corridor_wall_piece_broken" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/hcm/hcm_int_wall_explosion" type="unit">
+		<unit force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion" unload="true"/>
+		<object force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion_debris" unload="true"/>
+		<object force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion_debris" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion_debris" unload="true"/>
+		<object force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion_debris" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion_debris" unload="true"/>
+		<object force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion_debris" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/trail_explosion" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/fastburn_debri" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/explosions/fire/smoke_afterburn" unload="true"/>
+		<physic_effect force="true" path="physic_effects/push_sphere" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/architecture/hcm/hcm_int_wall_explosion" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc_bph/props/bph_prop_body_medic_01/bph_prop_body_medic_01" type="unit">
+		<material_config force="true" path="units/pd2_dlc_bph/props/bph_prop_body_medic_01/bph_prop_body_medic_01" unload="true"/>
+		<object force="true" path="units/pd2_dlc_bph/props/bph_prop_body_medic_01/bph_prop_body_medic_01" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_bph/props/bph_prop_body_medic_01/bph_prop_body_medic_01" unload="true"/>
+	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/103696"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/103695"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/103694"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/103693"/>
 </table>

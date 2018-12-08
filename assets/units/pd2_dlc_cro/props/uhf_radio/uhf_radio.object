@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel orientation_object="rp_uhf_radio" materials="units/pd2_dlc_cro/props/uhf_radio/uhf_radio" />
+    <sequence_manager file="units/pd2_dlc_cro/props/uhf_radio/uhf_radio" />
+	<bodies>
+        <body enabled="true" template="static" name="static_body">
+            <object name="rp_uhf_radio" />
+            <object name="c_box_01" collision_type="box" />
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh name="dm_metal" enabled="true" material="metal" />
+    </decal_surfaces>
+    <graphics>
+        <object name="g_radio" enabled="true" />
+        <object name="s_shadow" enabled="true" shadow_caster="true" />
+    </graphics>
+</dynamic_object>

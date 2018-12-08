@@ -494,4 +494,26 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		sound_done = "bar_c4_apply_cancel",
 		special_equipment_block = "perk_deadshot"
 	}
+
+	self.zm_call_gunship = {
+		dyn_price_by_wave = true,
+		dyn_price_base = 0,
+		dyn_price_increase = 350,
+		text_id = "zm_buy_gunship",
+		start_active = false,
+		timer = 3
+	}
+
+	self.zm_perk_stamin = {
+		zm_interaction = true,
+		points_cost = 3000,
+		perk = "Stamin' Up",
+		is_perk_interaction = true,
+		action_text_id = "zm_buy_perk",
+		start_active = false,
+		axis = "y",
+		timer = 3,	
+		sound_done = "bar_c4_apply_cancel",
+		special_equipment_block = "perk_staminup"
+	}
 end)

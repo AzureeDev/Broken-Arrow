@@ -1,0 +1,12 @@
+<unit type="ind" slot="1">
+	<network sync="spawn"/>
+    <object file="units/pd2_dlc_cro/props/uhf_radio/uhf_radio" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+		<extension name="damage" class="UnitDamage" />
+		<extension name="interaction" class="UseInteractionExt">
+			<var name="tweak_data" value="hold_call_captain" />
+			<!--var name="_interact_object" value="int_locator"/-->
+		</extension>
+    </extensions>
+</unit>

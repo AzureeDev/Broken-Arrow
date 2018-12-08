@@ -925,3 +925,22 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.stryk_upg_secondary.stats.spread = 99
     self.stryk_upg_secondary.muzzleflash = "effects/zm/zm_pap_muzzle"
 end
+
+Hooks:PostHook(WeaponTweakData, "_init_data_sentry_gun_npc", "zm_tweak_swat_turret", function(self)
+    self.sentry_gun.DAMAGE = 15
+    self.sentry_gun.FIRE_RANGE = 20000
+    self.sentry_gun.auto.fire_rate = 0.30
+    self.sentry_gun.alert_size = 10000
+    self.sentry_gun.DETECTION_DELAY = {
+		{
+			900,
+			0.3
+		},
+		{
+			3500,
+			1.5
+		}
+    }
+    self.sentry_gun.muzzleflash = "effects/payday2/particles/weapons/big_762_auto"
+    self.sentry_gun.DETECTION_RANGE = self.sentry_gun.FIRE_RANGE
+end)

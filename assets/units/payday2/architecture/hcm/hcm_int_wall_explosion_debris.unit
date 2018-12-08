@@ -1,0 +1,11 @@
+<unit type="debris" slot="18" >
+	<object file="units/payday2/architecture/hcm/hcm_int_wall_explosion_debris" />
+	
+	<dependencies>
+		<depends_on effect="effects/payday2/particles/explosions/trail_explosion" />
+	</dependencies>
+	
+	<extensions>
+		<extension class="ScriptUnitData" name="unit_data" />
+	</extensions>
+</unit>

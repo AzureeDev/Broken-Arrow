@@ -1,0 +1,19 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_bph/props/bph_prop_body_medic_01/bph_prop_body_medic_01" orientation_object="rp_bph_prop_body_medic_01" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_bph_prop_body_medic_01" />
+			<object name="c_meshmopp" collision_type="mesh_mopp" />
+		</body>
+		<body name="body_nav_walk" add_ray_type="ai_vision" enabled="true" template="nav_walk">
+			<object name="rp_bph_prop_body_medic_01" />
+			<object name="c_nav_walk_01" collision_type="mesh_mopp" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="flesh">
+		<decal_mesh name="dm_flesh" enabled="true" material="flesh" />
+	</decal_surfaces>
+	<graphics>
+		<object name="g_body" enabled="true" />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,20 @@
+<unit type="hcm" slot="1" >
+	<network sync="spawn"/>
+	<object file="units/payday2/architecture/hcm/hcm_int_wall_explosion" />
+	
+	<dependencies>
+		<depends_on physic_effect="physic_effects/push_sphere" />
+		<depends_on effect="effects/payday2/particles/explosions/shapecharger_explosion" />
+		<depends_on unit="units/payday2/architecture/hcm/hcm_int_wall_explosion_debris" />
+	</dependencies>
+
+	<extensions>
+		<extension class="ScriptUnitData" name="unit_data" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+	
+	<sounds>
+		<default_soundsource source="sound_explosion"/>
+		<soundsource name="sound_explosion" source="sound_explosion" />
+	</sounds>
+</unit>
