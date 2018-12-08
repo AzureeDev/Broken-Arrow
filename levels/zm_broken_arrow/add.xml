@@ -2116,9 +2116,38 @@
 		<object force="true" path="units/pd2_dlc_bph/props/bph_prop_body_medic_01/bph_prop_body_medic_01" unload="true"/>
 		<unit force="true" path="units/pd2_dlc_bph/props/bph_prop_body_medic_01/bph_prop_body_medic_01" unload="true"/>
 	</add>
-	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/103696"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/103695"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/103694"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/103693"/>
+	<add path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond" type="unit">
+		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond" unload="true"/>
+		<model force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond" unload="true"/>
+		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond" unload="true"/>
+		<material_config path="units/pd2_dlc_dah/props/dah_prop_red_diamond/golden_diamond"/>
+		<material_config path="units/pd2_dlc_dah/props/dah_prop_red_diamond/green_diamond"/>
+		<material_config path="units/pd2_dlc_dah/props/dah_prop_red_diamond/skyblue_diamond"/>
+		<material_config path="units/pd2_dlc_dah/props/dah_prop_red_diamond/white_diamond"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond_df" unload="true"/>
+		<texture path="units/pd2_dlc_dah/props/dah_prop_red_diamond/golden_diamond"/>
+		<texture path="units/pd2_dlc_dah/props/dah_prop_red_diamond/green_diamond"/>
+		<texture path="units/pd2_dlc_dah/props/dah_prop_red_diamond/skyblue_diamond"/>
+		<texture path="units/pd2_dlc_dah/props/dah_prop_red_diamond/white_diamond"/>
+		<texture force="true" path="units/world/props/diamondheist_diamond_pickups/gems_op" unload="true"/>
+		<texture force="true" path="environments/cubemaps/cubemap_gold_strong_df" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond_back_df" unload="true"/>
+		<texture force="true" path="environments/cubemaps/cubemap_gold_strong_df" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond_back_df" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond_pillow_df" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond_pillow_nm" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond_pillow_edge_df" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_window_cleaning_platform/dah_prop_wire_nm" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_diamond_display_pillow/dah_prop_diamond_display_pillow_df" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond_df" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/grab/grab_money" unload="true"/>
+		<texture force="true" path="effects/textures/dollar_bill_effect_edf" unload="true"/>
+	</add>
+	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>
