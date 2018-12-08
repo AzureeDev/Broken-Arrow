@@ -63,6 +63,12 @@
 	<model path="units/weapon_walls/wpn_msr"/>
 	<object path="units/weapon_walls/wpn_msr"/>
 	<unit path="units/weapon_walls/wpn_msr"/>
+	<texture path="units/weapon_walls/code"/>
+	<cooked_physics path="units/weapon_walls/code"/>
+	<material_config path="units/weapon_walls/code"/>
+	<model path="units/weapon_walls/code"/>
+	<object path="units/weapon_walls/code"/>
+	<unit path="units/weapon_walls/code"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_secondary"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3"/>
@@ -611,6 +617,8 @@
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/double_tap_on" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a_df" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/who" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/who_on" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_doubletap" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_quickrevive" unload="true"/>
@@ -620,6 +628,8 @@
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_doubletap_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_deadshot_il" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_who" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_who_il" unload="true"/>
 		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
@@ -1289,10 +1299,12 @@
 		<unit force="true" path="units/dev_tools/level_tools/dev_ai_vis_blocker/dev_ai_vis_blocker_005x1x2m" unload="true"/>
 	</add>
 	<add path="units/world/props/bottle/bottle_2" type="unit">
+		<object force="true" path="units/world/props/bottle/bottle_2" unload="true"/>
+		<object force="true" path="units/world/props/bottle/bottle_2" unload="true"/>
 		<effect force="true" load="true" path="effects/particles/dest/green_bottle_dest" unload="true"/>
 		<material_config force="true" path="units/world/props/bottle/bottle_2" unload="true"/>
-		<object force="true" path="units/world/props/bottle/bottle_2" unload="true"/>
 		<sequence_manager force="true" path="units/world/props/bottle/bottle_2" unload="true"/>
+		<texture force="true" path="units/world/props/bottle/bottle_2_df" unload="true"/>
 		<unit force="true" path="units/world/props/bottle/bottle_2" unload="true"/>
 	</add>
 	<add path="units/dev_tools/level_tools/navigation_blocker_1" type="unit">
@@ -1984,11 +1996,11 @@
 		<unit force="true" path="units/payday2/vehicles/gen_vehicle_turret/spawn_turret_debris" unload="true"/>
 		<object force="true" path="units/payday2/vehicles/gen_vehicle_turret/spawn_turret_debris" unload="true"/>
 		<material_config force="true" path="units/payday2/vehicles/gen_vehicle_turret/gen_vehicle_turret" unload="true"/>
-		<physic_effect force="true" path="physic_effects/push_sphere" unload="true"/>
 		<bnk force="true" path="soundbanks/weapon_swatturret" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<physic_effect force="true" path="physic_effects/push_sphere" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>
