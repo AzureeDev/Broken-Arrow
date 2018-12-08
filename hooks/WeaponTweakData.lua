@@ -926,12 +926,12 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.stryk_upg_secondary.muzzleflash = "effects/zm/zm_pap_muzzle"
 end
 
-Hooks:PostHook(WeaponTweakData, "_init_data_sentry_gun_npc", "zm_tweak_swat_turret", function(self)
-    self.sentry_gun.DAMAGE = 15
-    self.sentry_gun.FIRE_RANGE = 20000
-    self.sentry_gun.auto.fire_rate = 0.30
-    self.sentry_gun.alert_size = 10000
-    self.sentry_gun.DETECTION_DELAY = {
+Hooks:PostHook(WeaponTweakData, "_init_data_swat_van_turret_module_npc", "zm_tweak_swat_turret", function(self)
+    self.swat_van_turret_module.DAMAGE = 15
+    self.swat_van_turret_module.FIRE_RANGE = 20000
+    self.swat_van_turret_module.auto.fire_rate = 0.15
+    self.swat_van_turret_module.alert_size = 10000
+    self.swat_van_turret_module.DETECTION_DELAY = {
 		{
 			900,
 			0.3
@@ -941,6 +941,34 @@ Hooks:PostHook(WeaponTweakData, "_init_data_sentry_gun_npc", "zm_tweak_swat_turr
 			1.5
 		}
     }
-    self.sentry_gun.muzzleflash = "effects/payday2/particles/weapons/big_762_auto"
-    self.sentry_gun.DETECTION_RANGE = self.sentry_gun.FIRE_RANGE
+    self.swat_van_turret_module.muzzleflash = "effects/payday2/particles/weapons/big_762_auto"
+    self.swat_van_turret_module.DETECTION_RANGE = self.swat_van_turret_module.FIRE_RANGE
+end)
+
+Hooks:PostHook(WeaponTweakData, "_set_normal", "zm_td__set_normal", function(self)
+    self.swat_van_turret_module.DAMAGE = 3
+end)
+
+Hooks:PostHook(WeaponTweakData, "_set_hard", "zm_td__set_hard", function(self)
+    self.swat_van_turret_module.DAMAGE = 6
+end)
+
+Hooks:PostHook(WeaponTweakData, "_set_overkill", "zm_td__set_overkill", function(self)
+    self.swat_van_turret_module.DAMAGE = 6
+end)
+
+Hooks:PostHook(WeaponTweakData, "_set_overkill_145", "zm_td__set_overkill_145", function(self)
+    self.swat_van_turret_module.DAMAGE = 8
+end)
+
+Hooks:PostHook(WeaponTweakData, "_set_easy_wish", "zm_td__set_easy_wish", function(self)
+    self.swat_van_turret_module.DAMAGE = 9
+end)
+
+Hooks:PostHook(WeaponTweakData, "_set_overkill_290", "zm_td__set_overkill_290", function(self)
+    self.swat_van_turret_module.DAMAGE = 11
+end)
+
+Hooks:PostHook(WeaponTweakData, "_set_sm_wish", "zm_td_smwish", function(self)
+    self.swat_van_turret_module.DAMAGE = 14
 end)

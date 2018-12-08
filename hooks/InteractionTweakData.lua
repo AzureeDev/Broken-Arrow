@@ -496,9 +496,11 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	}
 
 	self.zm_call_gunship = {
+		zm_interaction = true,
 		dyn_price_by_wave = true,
 		dyn_price_base = 0,
 		dyn_price_increase = 350,
+		dyn_price_item_name = "Chopper Gunner",
 		text_id = "zm_buy_gunship",
 		start_active = false,
 		timer = 3

@@ -74,7 +74,7 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 			local transformed_price = base_price + (increase_by_wave * current_wave)
 
 			if current_money >= transformed_price then
-				text = text .. " [Cost : " .. transformed_price .. "]"
+				text = "Hold " .. managers.localization:btn_macro("interact") .. " to call the " .. item_name .. " [Cost : " .. transformed_price .. "]"
 			else
 				local points_needed = transformed_price - current_money
 				text = "You need " .. points_needed .. " more points to buy the " .. item_name 
@@ -344,6 +344,27 @@ function BaseInteractionExt:interact(player)
 	self._tweak_data_at_interact_start = nil
 
 	if self._tweak_data.zm_interaction then
+
+		if self._tweak_data.dyn_price_by_wave then
+			local base_price = self._tweak_data.dyn_price_base or 1000
+			local increase_by_wave = self._tweak_data.dyn_price_increase or 1000
+			local current_wave = managers.wdu:_get_current_wave()
+			local transformed_price = 0 - (base_price + (increase_by_wave * current_wave))
+
+			local peer_id = 1
+
+			if managers and managers.network then
+				local peer = managers.network:session():peer_by_unit(player)
+				peer_id = peer:id()
+			end
+
+			if peer_id == managers.wdu:_peer_id() then
+				managers.wdu:_add_money_to(peer_id, transformed_price)
+			end
+
+			return
+		end
+
 		local amount_to_deduct = 0 - self._tweak_data.points_cost
 
 		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
