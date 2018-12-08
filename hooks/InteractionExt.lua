@@ -226,6 +226,7 @@ function BaseInteractionExt:can_interact(player)
     
     local count_perks = managers.player:_count_nb_perks()
 	local max_perks = 4
+	local current_money = managers.wdu:_get_own_money()
 
 	if self._tweak_data.dyn_price_by_wave then
 		local base_price = self._tweak_data.dyn_price_base or 1000
@@ -247,7 +248,6 @@ function BaseInteractionExt:can_interact(player)
 	end
 	
 	if self._tweak_data.zm_interaction then
-		local current_money = managers.wdu:_get_own_money()
 		local cost = self._tweak_data.points_cost or 0
 
 		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
