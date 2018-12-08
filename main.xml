@@ -8,7 +8,7 @@
 	</Hooks>
 	<Localization default="english.txt" directory="loc"/>
 	<contact assets_gui="guis/mission_briefing/preload_contact_bain" desc_id="quest_a_better_tomorrow_d" id="a_better_tomorrow" name_id="quest_a_better_tomorrow" package="packages/contact_bain"/>
-	<level ai_group_type="zombie" briefing_dialog="" gamemode_type="3arc_zm" id="zm_broken_arrow" max_bags="0" music="no_music" team_ai_off="true">
+	<level ai_group_type="zombie" gamemode_type="3arc_zm" id="zm_broken_arrow" intro_event="broken_arrow_blackscreen_intro" max_bags="0" music="no_music" quest_zm_001="true" team_ai_off="true">
 		<add file="levels/zm_broken_arrow/add.xml"/>
 		<hooks directory="hooks">
 			<hook file="Setup.lua" source_file="lib/setups/gamesetup"/>
@@ -53,6 +53,7 @@
 			<hook file="PowerUps.lua" source_file="lib/units/pickups/ammoclip"/>
 			<hook file="GamePlayCentralManager.lua" source_file="lib/managers/gameplaycentralmanager"/>
 			<hook file="ProjectileBase.lua" source_file="lib/units/weapons/projectiles/projectilebase"/>
+			<hook file="SentryGunMovement.lua" source_file="lib/units/equipment/sentry_gun/sentrygunmovement"/>
 		</hooks>
 		<include directory="levels/zm_broken_arrow">
 			<file file="world.world" type="binary"/>
@@ -578,20 +579,21 @@
 			<sound path="special_spawn.ogg"/>
 			<sound path="Ambience.ogg"/>
 			<sound id="pregame" path="pregame.ogg"/>
+			<sound id="broken_arrow_blackscreen_intro" path="intro.ogg"/>
 		</sounds>
 	</level>
-	<narrative contact="a_better_tomorrow" icon="map_assets/map_icon" id="broken_arrow2">
+	<narrative contact="a_better_tomorrow" icon="map_assets/map_icon" id="broken_arrow2" quest_zm_001="true" quest_zm_001_icon="map_assets/ee_icon_done">
 		<chain>
 			<table level_id="zm_broken_arrow" type="d" type_id="heist_type_assault"/>
 		</chain>
 		<contract_cost>
-			<value_node value="4000"/>
-			<value_node value="8000"/>
-			<value_node value="20000"/>
-			<value_node value="40000"/>
-			<value_node value="100000"/>
-			<value_node value="100000"/>
-			<value_node value="100000"/>
+			<value_node value="0"/>
+			<value_node value="0"/>
+			<value_node value="0"/>
+			<value_node value="0"/>
+			<value_node value="0"/>
+			<value_node value="0"/>
+			<value_node value="0"/>
 		</contract_cost>
 		<crimenet_callouts>
 			<value_node value="nothing"/>
@@ -610,31 +612,31 @@
 			<value_node value="3"/>
 		</experience_mul>
 		<max_mission_xp>
-			<value_node value="8000"/>
-			<value_node value="8000"/>
-			<value_node value="8000"/>
-			<value_node value="8000"/>
-			<value_node value="8000"/>
-			<value_node value="8000"/>
-			<value_node value="8000"/>
-		</max_mission_xp>
-		<min_mission_xp>
-			<value_node value="2000"/>
-			<value_node value="2000"/>
-			<value_node value="2000"/>
-			<value_node value="2000"/>
-			<value_node value="2000"/>
-			<value_node value="2000"/>
-			<value_node value="2000"/>
-		</min_mission_xp>
-		<payout>
-			<value_node value="6000"/>
-			<value_node value="12000"/>
+			<value_node value="25000"/>
 			<value_node value="30000"/>
+			<value_node value="35000"/>
+			<value_node value="40000"/>
+			<value_node value="45000"/>
 			<value_node value="50000"/>
 			<value_node value="60000"/>
+		</max_mission_xp>
+		<min_mission_xp>
+			<value_node value="25000"/>
+			<value_node value="30000"/>
+			<value_node value="35000"/>
+			<value_node value="40000"/>
+			<value_node value="45000"/>
+			<value_node value="50000"/>
 			<value_node value="60000"/>
-			<value_node value="60000"/>
+		</min_mission_xp>
+		<payout>
+			<value_node value="300000"/>
+			<value_node value="300000"/>
+			<value_node value="300000"/>
+			<value_node value="500000"/>
+			<value_node value="700000"/>
+			<value_node value="900000"/>
+			<value_node value="1e+006"/>
 		</payout>
 	</narrative>
 </table>

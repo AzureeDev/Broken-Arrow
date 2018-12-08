@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<unit type="lxy" slot="1">
+	<network sync="spawn"/>
+	<anim_state_machine name="anims/units/helicopter/helicopter" />
+  <object file="units/pd2_dlc_fish/lxy_vehicle_blackhawk/lxy_vehicle_blackhawk" />
+  <dependencies>
+  	
+  	<depends_on effect="effects/particles/weapons/flashlight/flashlight" />
+    <depends_on effect="effects/payday2/particles/window/storefront_window_small" />
+  </dependencies>
+  <extensions>
+  	<extension name="base" class="AnimatedVehicleBase">
+  		<var name="_body_name" value="a_body" />
+  	</extension>
+    <extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+  </extensions>  
+  <sounds>
+  	<default_soundsource source="a_body"/>
+  	<soundsource name="body" source="a_body" />
+  </sounds>
+</unit>
