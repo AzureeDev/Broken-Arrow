@@ -65,6 +65,10 @@
 			<file file="world_cameras.world_cameras" type="binary"/>
 			<file file="below_fix/below_fix.continent" type="binary"/>
 			<file file="below_fix/below_fix.mission" type="binary"/>
+			<file file="dev_cupcake/dev_cupcake.continent" type="binary"/>
+			<file file="dev_cupcake/dev_cupcake.mission" type="binary"/>
+			<file file="dev_sora/dev_sora.continent" type="binary"/>
+			<file file="dev_sora/dev_sora.mission" type="binary"/>
 			<file file="world/world.continent" type="binary"/>
 			<file file="world/world.mission" type="binary"/>
 			<file file="dev/dev.continent" type="binary"/>
@@ -91,6 +95,7 @@
 			<value_node value="levels/narratives/locke/brb/art/art"/>
 			<value_node value="levels/narratives/classics/glace/level_art/level_art"/>
 			<value_node value="levels/narratives/e_framing_frame/stage_1/world"/>
+			<value_node value="levels/narratives/vlad/jewelry_store/world/world"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
