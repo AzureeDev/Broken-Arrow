@@ -622,7 +622,7 @@ end
 
 function WDUManager:_was_last_cop_alive()
     local current_total_spawned = self.level.zombies.currently_spawned
-    local supposed_last_zm = self.level.zombies.max_special_wave_total_spawns
+    local supposed_last_zm = self.level.zombies.max_special_wave_total_spawns * self:_number_of_players()
 
     if current_total_spawned == supposed_last_zm then
         return true
