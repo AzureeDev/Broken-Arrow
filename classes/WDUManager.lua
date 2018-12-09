@@ -138,7 +138,7 @@ function WDUManager:_is_solo()
         return true
     end
 
-    local nb_players = managers.network:session() and managers.network:session():amount_of_players()
+    local nb_players = self:_number_of_players()
     
     if nb_players == 1 then
         return true
@@ -618,6 +618,17 @@ function WDUManager:_respawn()
             IngameWaitingForRespawnState.request_player_spawn(i)
         end
     end
+end
+
+function WDUManager:_was_last_cop_alive()
+    local current_total_spawned = self.level.zombies.currently_spawned
+    local supposed_last_zm = self.level.zombies.max_special_wave_total_spawns
+
+    if current_total_spawned == supposed_last_zm then
+        return true
+    end
+    
+    return false
 end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)

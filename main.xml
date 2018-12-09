@@ -63,6 +63,8 @@
 			<file file="nav_manager_data.nav_data" type="binary"/>
 			<file file="world_sounds.world_sounds" type="binary"/>
 			<file file="world_cameras.world_cameras" type="binary"/>
+			<file file="below_fix/below_fix.continent" type="binary"/>
+			<file file="below_fix/below_fix.mission" type="binary"/>
 			<file file="world/world.continent" type="binary"/>
 			<file file="world/world.mission" type="binary"/>
 			<file file="dev/dev.continent" type="binary"/>
