@@ -1,0 +1,32 @@
+<dynamic_object>
+    <diesel orientation_object="rp_com_prop_jewelry_shelf_back_05" materials="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry" />
+	<sequence_manager file="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_double" />
+	<bodies>
+		<body name="glass_body_01" enabled="true" template="static">
+			<object name="c_box_06" collision_type="box" padding="-2.5"/>
+		</body>
+		<body name="glass_body_02" enabled="false" template="static">
+			<object name="c_box_07" collision_type="box" padding="-2.5"/>
+		</body>
+		<body name="static_body" enabled="true" template="static">
+			<object name="rp_com_prop_jewelry_shelf_back_05" />
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+			<object name="c_box_02" collision_type="box" padding="-2.5"/>
+			<object name="c_box_03" collision_type="box" padding="-2.5"/>
+			<object name="c_box_04" collision_type="box" padding="-2.5"/>
+			<object name="c_box_05" collision_type="box" padding="-2.5"/>
+		</body>
+	</bodies>
+	<decal_surfaces>
+		<decal_mesh name="dm_sheet_metal" enabled="true" material="sheet_metal"/>
+		<decal_mesh name="dm_wood" enabled="true" material="wood"/>
+		<decal_mesh name="g_glass_01" enabled="true" material="glass_breakable"/>
+		<decal_mesh name="g_glass_02" enabled="true" material="glass_breakable"/>
+	</decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_com_prop_jewelry_shelf_back_05" />
+		<object name="g_glass_01" enabled="true"/>
+		<object name="g_glass_02" enabled="true"/>
+		<object name="g_sunray" enabled="true"/>		
+    </graphics>
+</dynamic_object>

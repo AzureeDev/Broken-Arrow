@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<dynamic_object>
+	<diesel materials="units/payday2/props/com_prop_shop_pear/com_prop_store_adds_wall" orientation_object="rp_adds_wall" />
+	<bodies>
+        <body name="static_body" template="static" enabled="true" >
+            <object name="rp_adds_wall"/>
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+        </body>
+    </bodies>
+	
+	<decal_surfaces default_material="plastic">
+        <decal_mesh enabled="true" name="dm_plastic" material="plastic" />
+	</decal_surfaces>
+
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+	
+</dynamic_object> 

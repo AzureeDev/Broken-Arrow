@@ -2160,9 +2160,117 @@
 		<unit force="true" path="units/payday2/architecture/com_int_construction_floor/com_int_construction_concrete_floor_8x8m" unload="true"/>
 	</add>
 	<add path="units/payday2/architecture/hcm/hcm_int_floor_4x4m_a_marble_black" type="unit">
-		<unit force="true" path="units/payday2/architecture/hcm/hcm_int_floor_4x4m_a_marble_black" unload="true"/>
-		<object force="true" path="units/payday2/architecture/hcm/hcm_int_floor_4x4m_a_marble_black" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/hcm/hcm_int" unload="true"/>
+		<object force="true" path="units/payday2/architecture/hcm/hcm_int_floor_4x4m_a_marble_black" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/hcm/hcm_int_floor_4x4m_a_marble_black" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lcm/lcm_int_room_12x16m_b" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lcm/lcm_int_room_12x16m_b" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lcm/lcm_int_room_12x16m_b" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lcm/lcm_int_room_12x16m_b" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lux/lux_int_wall5_4m_a" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lux/lux" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lux/lux_int_wall5_4m_a" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall5_4m_a" unload="true"/>
+	</add>
+	<add path="units/payday2/props/com_prop_shop_pear/com_prop_store_adds_wall" type="unit">
+		<material_config force="true" path="units/payday2/props/com_prop_shop_pear/com_prop_store_adds_wall" unload="true"/>
+		<object force="true" path="units/payday2/props/com_prop_shop_pear/com_prop_store_adds_wall" unload="true"/>
+		<unit force="true" path="units/payday2/props/com_prop_shop_pear/com_prop_store_adds_wall" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lux/lux_int_wall5_4m_a_familyjewelsvent" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lux/lux" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lux/lux_int_wall5_4m_a_familyjewelsvent" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall5_4m_a_familyjewelsvent" unload="true"/>
+	</add>
+	<add path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_table_05" type="unit">
+		<material_config force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/window/jewelry_counter_1" unload="true"/>
+		<object force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_table_05" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_single" unload="true"/>
+		<unit force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_table_05" unload="true"/>
+	</add>
+	<add path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_corner" type="unit">
+		<material_config force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/window/jewelry_counter_1" unload="true"/>
+		<object force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_corner" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_single" unload="true"/>
+		<unit force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_corner" unload="true"/>
+	</add>
+	<add path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_teller_10" type="unit">
+		<material_config force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry" unload="true"/>
+		<object force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_teller_10" unload="true"/>
+		<unit force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_teller_10" unload="true"/>
+	</add>
+	<add path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_10" type="unit">
+		<material_config force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/window/jewelry_counter_1" unload="true"/>
+		<object force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_10" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_single" unload="true"/>
+		<unit force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_10" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lcm/lcm_int_door_wood_01_frame" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lcm/lcm_int_door_wood_01" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lcm/lcm_int_door_wood_01_frame" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lcm/lcm_int_door_wood_01_frame" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lux/lux_int_wall5_2m_door_a" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lux/lux" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lux/lux_int_wall5_2m_door_a" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall5_2m_door_a" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/lux/lux_int_wall5_1m_a" type="unit">
+		<material_config force="true" path="units/payday2/architecture/lux/lux" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lux/lux_int_wall5_1m_a" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall5_1m_a" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/com_int_basement/com_int_basement_wall_8x3m" type="unit">
+		<material_config force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall" unload="true"/>
+		<object force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_8x3m" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_8x3m" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc_rvd/architecture/rvd_ext/rvd_ext_jewelry_store/rvd_int_marble_wall_unit" type="unit">
+		<material_config force="true" path="units/pd2_dlc_rvd/architecture/rvd_ext/rvd_ext_jewelry_store/rvd_ext_jewelry_store" unload="true"/>
+		<object force="true" path="units/pd2_dlc_rvd/architecture/rvd_ext/rvd_ext_jewelry_store/rvd_int_marble_wall_unit" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_rvd/architecture/rvd_ext/rvd_ext_jewelry_store/rvd_int_marble_wall_unit" unload="true"/>
+	</add>
+	<add path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_wall_back_05" type="unit">
+		<material_config force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry" unload="true"/>
+		<object force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_wall_back_05" unload="true"/>
+		<unit force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_wall_back_05" unload="true"/>
+	</add>
+	<add path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_shelf_back_05" type="unit">
+		<unit force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_shelf_back_05" unload="true"/>
+		<object force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_shelf_back_05" unload="true"/>
+		<material_config force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_double" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/window/jewelry_counter_1" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>

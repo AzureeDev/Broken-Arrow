@@ -1,0 +1,12 @@
+<unit type="com" slot="1" >
+    <object file="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_counter_corner" />
+	<network sync="spawn" />
+	<dependencies>
+		<depends_on effect="effects/payday2/particles/window/jewelry_counter_1" />
+	</dependencies>
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+		<extension class="UnitDamage" name="damage"/>
+		<extension name="attention" class="AIAttentionObject" />
+    </extensions>
+</unit>

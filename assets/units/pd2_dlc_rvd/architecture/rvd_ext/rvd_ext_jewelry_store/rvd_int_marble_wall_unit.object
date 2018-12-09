@@ -1,0 +1,15 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_rvd/architecture/rvd_ext/rvd_ext_jewelry_store/rvd_ext_jewelry_store" orientation_object="rp_rvd_int_marble_wall_unit" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_rvd_int_marble_wall_unit" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="marble">
+		<decal_mesh name="dm_marble" enabled="true" material="marble" />
+	</decal_surfaces>
+	<graphics>
+		<object name="g_g" enabled="true" />
+	</graphics>
+</dynamic_object>

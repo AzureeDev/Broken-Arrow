@@ -1,0 +1,19 @@
+<dynamic_object>
+    <diesel orientation_object="rp_com_prop_jewelry_counter_teller_10" materials="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry" />
+	<bodies>
+		<body name="static_body" enabled="true" template="static">
+			<object name="rp_com_prop_jewelry_counter_teller_10" />
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+			<object name="c_box_02" collision_type="box" padding="-2.5"/>
+			<object name="c_box_03" collision_type="box" padding="-2.5"/>
+			<object name="c_box_04" collision_type="box" padding="-2.5"/>
+		</body>
+	</bodies>
+	<decal_surfaces>
+		<decal_mesh name="dm_sheet_metal" enabled="true" material="sheet_metal"/>
+		<decal_mesh name="dm_wood" enabled="true" material="wood"/>
+	</decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_com_prop_jewelry_counter_teller_10" />
+    </graphics>
+</dynamic_object>
