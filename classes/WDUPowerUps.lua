@@ -1,6 +1,11 @@
 WDUPowerUps = WDUPowerUps or class(WDUManager)
 
 function WDUPowerUps:init()
+    WDUManager:wait(5, "dcall_wait_settings", function()
+        self._default_color_grading = managers.user:get_setting("video_color_grading")
+        self._default_fov = managers.user:get_setting("fov_standard")
+        log(tostring(self._default_color_grading))
+    end)
 end
 
 function WDUPowerUps:execute_max_ammo()
@@ -121,6 +126,49 @@ function WDUPowerUps:execute_kaboom()
 
     local double_point_effect = managers.wdu:_is_event_active("double_points") and 2 or 1
 
+    if alive(managers.player:player_unit()) then
+        local feedback = managers.feedback:create("mission_triggered")
+        feedback:set_unit(managers.player:player_unit())
+        feedback:set_enabled("camera_shake", true)
+        feedback:set_enabled("rumble", true)
+        feedback:set_enabled("above_camera_effect", false)
+
+        local params = {
+            "camera_shake",
+            "multiplier",
+            1,
+            "camera_shake",
+            "amplitude",
+            0.5,
+            "camera_shake",
+            "attack",
+            0.05,
+            "camera_shake",
+            "sustain",
+            0.15,
+            "camera_shake",
+            "decay",
+            0.5,
+            "rumble",
+            "multiplier_data",
+            1,
+            "rumble",
+            "peak",
+            0.5,
+            "rumble",
+            "attack",
+            0.05,
+            "rumble",
+            "sustain",
+            0.15,
+            "rumble",
+            "release",
+            0.5
+        }
+
+        feedback:play(unpack(params))
+    end
+
     managers.wdu:wait(1, "kaboom_wait", function()
         local function nukeunit(pawn)
             local col_ray = { }
@@ -173,4 +221,57 @@ function WDUPowerUps:execute_blood_money()
     local random_cash = cash_table[math.random(#cash_table)] * double_points
     local peer_id = managers.wdu:_peer_id()
     managers.wdu:_add_money_to(peer_id, random_cash)
+end
+
+function WDUPowerUps:execute_zombie_blood()
+    local previous_grading = self._default_color_grading
+    local zb_grading = "color_sin_classic"
+    local zb_duration = 30
+    local fov_player = self._default_fov * 1.25
+    local team_data_player = managers.groupai:state():team_data(tweak_data.levels:get_default_team_ID("player"))
+    local team_data_enemy = managers.groupai:state():team_data(tweak_data.levels:get_default_team_ID("non_combatant"))
+    local my_peer_id = managers.wdu:_peer_id()
+
+    managers.wdu:_element_play_sound({
+        name = "zombie_blood_pickup",
+        file_name = "gift_taken.ogg",
+        sound_type = "sfx",
+        custom_dir = "sound",
+        is_relative = false,
+        is_loop = false,
+        is_3d = false,
+        use_velocity = false
+    })
+
+    self._source = SoundDevice:create_source("zombieblood_announcer")
+    self._source:post_event("zm_announcer_zombie_blood")
+
+    managers.hud._hud_zm_waves:_set_gift_visible("icon_zombie_blood", true)
+    managers.wdu:_setup_event_state("zombie_blood", true)
+
+    -- Set Fov
+    managers.user:set_setting("fov_standard", fov_player)
+
+    -- Set Grading
+    managers.environment_controller:set_default_color_grading(zb_grading)
+    managers.environment_controller:refresh_render_settings()
+
+    -- Set Default Team
+    local unit = managers.criminals:character_unit_by_peer_id(my_peer_id)
+    
+    if alive(unit) then
+        unit:movement():set_team(team_data_enemy)
+    end
+
+    managers.wdu:wait(31, "zombie_blood_duration", function()
+        -- Revert changes
+        managers.environment_controller:set_default_color_grading(previous_grading)
+        managers.environment_controller:refresh_render_settings()
+
+        if alive(unit) then
+            unit:movement():set_team(team_data_player)
+        end
+
+        managers.wdu:_setup_event_state("zombie_blood", false)
+    end)
 end

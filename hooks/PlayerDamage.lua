@@ -44,6 +44,9 @@ Hooks:PreHook(PlayerDamage, "on_downed", "zm_remove_perks_on_down", function(sel
 	end
 	if managers.player:has_special_equipment("perk_deadshot") then
         managers.player:remove_special("perk_deadshot")
+	end
+	if managers.player:has_special_equipment("perk_staminup") then
+        managers.player:remove_special("perk_staminup")
     end
     if not managers.wdu:_is_solo() and managers.player:has_special_equipment("perk_quickrevive") then
         managers.player:remove_special("perk_quickrevive")

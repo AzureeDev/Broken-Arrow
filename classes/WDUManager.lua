@@ -9,7 +9,7 @@ function WDUManager:init()
     self:_setup_xaudio()
     self:_setup_video_panel()
 
-    self._power_ups = WDUPowerUps
+    self._power_ups = WDUPowerUps:new()
     
     if LocalizationManager then
         LocalizationManager:load_localization_file( self:_get_mod_path() .. "loc/unique_lines.txt" )
@@ -66,7 +66,8 @@ function WDUManager:_init_variables()
             double_points = false,
             instakill = false,
             firesale = false,
-            firesale_box_swap = false
+            firesale_box_swap = false,
+            zombie_blood = false
         },
         power_up_chance = 66,
         power_up_table = {
@@ -75,7 +76,8 @@ function WDUManager:_init_variables()
             "firesale",
             "instakill",
             "nuke",
-            "blood_money"
+            "blood_money",
+            "zombie_blood"
         },
         teleporter = {
             active = true

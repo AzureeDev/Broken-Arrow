@@ -133,6 +133,7 @@ function PlayerManager:_count_nb_perks()
     if self:has_special_equipment("perk_speedcola") then count_perks = count_perks + 1 end
     if self:has_special_equipment("perk_doubletap") then count_perks = count_perks + 1 end
 	if self:has_special_equipment("perk_deadshot") then count_perks = count_perks + 1 end
+	if self:has_special_equipment("perk_staminup") then count_perks = count_perks + 1 end
 	
 	return count_perks
 end
@@ -227,8 +228,6 @@ function PlayerManager:check_skills()
 	else
 		self._message_system:unregister(Message.OnEnemyKilled, "bloodthirst_reload_speed")
 	end
-
-	self._super_syndrome_count = 99999
 
 	if self:has_category_upgrade("player", "dodge_shot_gain") then
 		local last_gain_time = 0

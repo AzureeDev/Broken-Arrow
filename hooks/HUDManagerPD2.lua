@@ -34,6 +34,7 @@ function HUDZMWaves:_create_gift_hud(parent)
     local is_firesale = managers.wdu:_is_event_active("firesale")
     local is_instakill = managers.wdu:_is_event_active("instakill")
     local is_double_points = managers.wdu:_is_event_active("double_points")
+    local is_zombie_blood = managers.wdu:_is_event_active("zombie_blood")
 
     local gift_panel = parent:panel({
         name = "gift_panel",
@@ -84,6 +85,16 @@ function HUDZMWaves:_create_gift_hud(parent)
         visible = is_double_points
     })
     icon_double_points:set_left(icon_instakill:right())
+
+    local icon_zombie_blood = gift_panel:bitmap({
+        name = "icon_zombie_blood",
+        texture = "perks/gift_zombie_blood",
+        w = 64,
+        h = 64,
+        visible = is_zombie_blood
+    })
+
+    icon_zombie_blood:set_left(icon_double_points:right())
 end
 
 function HUDZMWaves:_set_gift_visible(gift, visible)

@@ -24,6 +24,7 @@
 	<texture path="perks/gift_firesale"/>
 	<texture path="perks/gift_double_points"/>
 	<texture path="perks/gift_instakill"/>
+	<texture path="perks/gift_zombie_blood"/>
 	<texture path="perks/power"/>
 	<texture path="skies/top_clouds_dark_df"/>
 	<sequence_manager force="true" path="units/payday2/equipment/gen_interactable_door_reinforced/gen_interactable_door_reinforced" unload="true"/>
@@ -486,11 +487,19 @@
 	<material_config path="power_ups/nuke/nuke"/>
 	<texture path="power_ups/nuke/nuke_df"/>
 	<texture path="power_ups/nuke/nuke_nm"/>
+	<cooked_physics path="power_ups/blood_money/blood_money"/>
 	<model path="power_ups/blood_money/blood_money"/>
 	<object path="power_ups/blood_money/blood_money"/>
 	<unit load="true" path="power_ups/blood_money/blood_money"/>
 	<material_config path="power_ups/blood_money/blood_money"/>
 	<texture path="power_ups/blood_money/blood_money_df"/>
+	<cooked_physics path="power_ups/zombie_blood/zombie_blood"/>
+	<model path="power_ups/zombie_blood/zombie_blood"/>
+	<object path="power_ups/zombie_blood/zombie_blood"/>
+	<unit load="true" path="power_ups/zombie_blood/zombie_blood"/>
+	<material_config path="power_ups/zombie_blood/zombie_blood"/>
+	<texture path="power_ups/zombie_blood/zombie_blood_df"/>
+	<texture path="power_ups/zombie_blood/zombie_blood_nm"/>
 	<cooked_physics path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
 	<model path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
 	<object path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
