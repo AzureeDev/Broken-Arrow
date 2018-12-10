@@ -670,6 +670,13 @@
 	<movie path="sound/music/ee/fin"/>
 	<movie path="sound/music/ee/stop"/>
 	<movie path="sound/music/ee/buzz"/>
+	<movie path="sound/music/Warehouse/whintro"/>
+	<movie path="sound/music/Warehouse/whoutro"/>
+	<movie path="sound/music/Warehouse/whloop1"/>
+	<movie path="sound/music/Warehouse/whloop2"/>
+	<movie path="sound/music/Warehouse/whloop3"/>
+	<movie path="sound/music/Warehouse/whintrohackjammed"/>
+	<movie path="sound/music/Warehouse/whloophackjammed"/>
 	<add path="units/pd2_dlc_des/props/des_prop_inter_hack_computer/des_inter_hack_computer" type="unit">
 		<bnk force="true" path="soundbanks/regular_sfx" unload="true"/>
 		<gui force="true" path="guis/timer_gui" unload="true"/>
