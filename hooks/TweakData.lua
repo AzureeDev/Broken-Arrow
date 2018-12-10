@@ -31,3 +31,11 @@
 	tweak_data.pickups.nuke = {
 		unit = Idstring("power_ups/nuke/nuke")
 	}
+
+	tweak_data.pickups.blood_money = {
+		unit = Idstring("power_ups/blood_money/blood_money")
+	}
+
+	tweak_data.pickups.zombie_blood = {
+		unit = Idstring("power_ups/zombie_blood/zombie_blood")
+	}

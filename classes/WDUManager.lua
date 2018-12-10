@@ -68,13 +68,14 @@ function WDUManager:_init_variables()
             firesale = false,
             firesale_box_swap = false
         },
-        power_up_chance = 3,
+        power_up_chance = 66,
         power_up_table = {
             "max_ammo",
             "double_points",
             "firesale",
             "instakill",
-            "nuke"
+            "nuke",
+            "blood_money"
         },
         teleporter = {
             active = true

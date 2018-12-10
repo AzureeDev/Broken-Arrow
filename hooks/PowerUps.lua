@@ -8,6 +8,10 @@ function PowerUps:init(unit)
     self._power_up_id = self._power_up_id or nil
 
     if self._power_up_id then
+        self._source = SoundDevice:create_source("power_up_loop")
+        self._source:post_event("power_up_loop")
+        self._source:set_position(unit:position())
+
         self:init_lifetime()
     end
 end
@@ -101,6 +105,8 @@ function PowerUps:_pickup(unit)
         elseif self._power_up_id == 5 then -- KABOOM
             managers.wdu:power_ups():execute_kaboom()
             LuaNetworking:SendToPeers( "PWUP_EXECUTE", "5" )
+        elseif self._power_up_id == 6 then -- BLOOD MONEY
+            managers.wdu:power_ups():execute_blood_money()
         end
 
         if Network:is_client() then

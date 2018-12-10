@@ -29,6 +29,7 @@
 			<hook file="HUDManagerPD2.lua" source_file="lib/managers/hudmanagerpd2"/>
 			<hook file="HUDMissionBriefing.lua" source_file="lib/managers/hud/hudmissionbriefing"/>
 			<hook file="HUDStageEndScreen.lua" source_file="lib/managers/hud/hudstageendscreen"/>
+			<hook file="HUDHitConfirm.lua" source_file="lib/managers/hud/hudhitconfirm"/>
 			<hook file="HuskPlayerMovement.lua" source_file="lib/units/beings/player/huskplayermovement"/>
 			<hook file="InteractionExt.lua" source_file="lib/units/interactions/interactionext"/>
 			<hook file="InteractionTweakData.lua" source_file="lib/tweak_data/interactiontweakdata"/>
@@ -105,14 +106,17 @@
 		<sounds directory="assets/sound">
 			<sounds directory="deamon">
 				<sound id="zm_sam_laugh" path="demon_sam_laugh.ogg"/>
-				<sound id="zm_announcer_max_ammo" path="demon_sam_max_ammo.ogg"/>
-				<sound id="zm_announcer_firesale" path="demon_sam_firesale.ogg"/>
-				<sound id="zm_announcer_firesale_first" path="demon_sam_firesale_first.ogg"/>
-				<sound id="zm_announcer_double_points" path="demon_sam_double_points.ogg"/>
-				<sound id="zm_announcer_instakill" path="demon_sam_instakill.ogg"/>
-				<sound id="zm_announcer_kaboom" path="demon_dempsey_kaboom.ogg"/>
 				<sound id="zm_announcer_wunder" path="LIGHTNING_IS_POWER.ogg"/>
 				<sound id="zm_announcer_roach" path="demon_sam_present.ogg"/>
+				<sounds directory="sora">
+					<sound id="zm_announcer_max_ammo" path="max_ammo.ogg"/>
+					<sound id="zm_announcer_firesale" path="firesale.ogg"/>
+					<sound id="zm_announcer_double_points" path="double_points.ogg"/>
+					<sound id="zm_announcer_instakill" path="instakill.ogg"/>
+					<sound id="zm_announcer_kaboom" path="kaboom.ogg"/>
+					<sound id="zm_announcer_zombie_blood" path="zombie_blood.ogg"/>
+					<sound id="zm_announcer_blood_money" path="blood_money.ogg"/>
+				</sounds>
 			</sounds>
 			<sounds directory="pew" prefix="regular" use_fix="true">
 				<sound id="zm_pew_lmg" path="lmg_m240_base.ogg" prefix="regular" use_fix="true"/>
@@ -590,6 +594,7 @@
 			<sound path="Ambience.ogg"/>
 			<sound id="pregame" path="pregame.ogg"/>
 			<sound id="broken_arrow_blackscreen_intro" path="intro.ogg"/>
+			<sound id="power_up_loop" path="power_up_loop.ogg"/>
 		</sounds>
 	</level>
 	<narrative contact="a_better_tomorrow" icon="map_assets/map_icon" id="broken_arrow2" quest_zm_001="true" quest_zm_001_icon="map_assets/ee_icon_done">

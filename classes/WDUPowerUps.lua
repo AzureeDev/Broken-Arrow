@@ -59,7 +59,7 @@ function WDUPowerUps:execute_firesale()
     self._source:post_event("zm_announcer_firesale")
     managers.wdu:_setup_event_state("firesale", true)
 
-    --[[managers.wdu:_element_play_sound({
+    managers.wdu:_element_play_sound({
         name = "firesale_inbound",
         file_name = "firesale.ogg",
         sound_type = "music",
@@ -68,7 +68,7 @@ function WDUPowerUps:execute_firesale()
         is_loop = false,
         is_3d = false,
         use_velocity = false
-    })--]]
+    })
 
     managers.wdu:wait(30, "firesale_timer_wait", function()
         managers.wdu:_setup_event_state("firesale", false)
@@ -142,4 +142,35 @@ function WDUPowerUps:execute_kaboom()
 
         managers.wdu:_add_money_to(managers.wdu:_peer_id(), 400 * double_point_effect)
     end)
+end
+
+function WDUPowerUps:execute_blood_money()
+    managers.wdu:_element_play_sound({
+        name = "blood_money_pickup",
+        file_name = "gift_taken.ogg",
+        sound_type = "sfx",
+        custom_dir = "sound",
+        is_relative = false,
+        is_loop = false,
+        is_3d = false,
+        use_velocity = false
+    })
+
+    self._source = SoundDevice:create_source("bloodmoney_announcer")
+    self._source:post_event("zm_announcer_blood_money")
+
+    local cash_table = {
+        250,
+        300,
+        400,
+        500,
+        750,
+        1000,
+        1500
+    }
+
+    local double_points = managers.wdu.level.active_events.double_points and 2 or 1
+    local random_cash = cash_table[math.random(#cash_table)] * double_points
+    local peer_id = managers.wdu:_peer_id()
+    managers.wdu:_add_money_to(peer_id, random_cash)
 end

@@ -1,9 +1,9 @@
 {
 	"quest_a_better_tomorrow" : "A Better Tomorrow",
 	"heist_zm_broken_arrow_name" : "Broken Arrow",
-	"heist_zm_broken_arrow_brief" : "",
+	"heist_zm_broken_arrow_brief" : "You thought you were safe in that chopper. But the curse is spreading. It's time to put them down once and for all.",
 	"heist_broken_arrow2_name" : "Broken Arrow",
-	"heist_broken_arrow2_brief" : "",
+	"heist_broken_arrow2_brief" : "You thought you were safe in that chopper. But the curse is spreading. It's time to put them down once and for all.",
     "hud_assault_zombie" : "Zombie Assault in progress",
     "zm_buy_weapon" : "Buying...",
 	"zm_hack" : "Hacking...",

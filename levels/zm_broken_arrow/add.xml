@@ -486,6 +486,11 @@
 	<material_config path="power_ups/nuke/nuke"/>
 	<texture path="power_ups/nuke/nuke_df"/>
 	<texture path="power_ups/nuke/nuke_nm"/>
+	<model path="power_ups/blood_money/blood_money"/>
+	<object path="power_ups/blood_money/blood_money"/>
+	<unit load="true" path="power_ups/blood_money/blood_money"/>
+	<material_config path="power_ups/blood_money/blood_money"/>
+	<texture path="power_ups/blood_money/blood_money_df"/>
 	<cooked_physics path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
 	<model path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
 	<object path="units/sora/shoot_at_trigger/shoot_at_5x5"/>
