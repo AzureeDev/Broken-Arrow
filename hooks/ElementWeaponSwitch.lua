@@ -98,6 +98,16 @@ function ElementWeaponSwitch:on_executed(instigator)
         instant = false,
         cosmetics = cosmetics or "nil-1-0"
     }
+
+    local sync_blueprint = new_weapon_data.blueprint
+
+    if type(new_weapon_data.blueprint) == "string" then
+        sync_blueprint = managers.blackmarket:unpack_blueprint_from_string(new_weapon_data.factory_id, new_weapon_data.blueprint)
+    end
+
+    local is_local_peer = managers.network:session():local_peer() == managers.wdu:_peer_id()
+    managers.weapon_factory:preload_blueprint(new_weapon_data.factory_id, sync_blueprint, false, not is_local_peer, function ()
+	end, true)
     
     -- Adding the weapon
     if self._values.instigator_only then
@@ -119,22 +129,7 @@ function ElementWeaponSwitch:on_executed(instigator)
 	end
 	
     managers.player:_change_player_state()
-    --[[
-    if not managers.wdu:_is_solo() then
-        local peer_to_update
-
-        if not self._values.instigator_only then
-            peer_to_update = managers.network:session():peer_by_unit(instigator)
-            
-            for _, peer in pairs(managers.network:session():all_peers()) do
-                if peer:id() == peer_to_update:id() then
-                    peer:_reload_outfit()
-                    log("Updated peer outfit.")
-                end
-            end
-        end
-    end--]]
-
+    
     ElementWeaponSwitch.super.on_executed(self, instigator)
 end
 
