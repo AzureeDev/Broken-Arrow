@@ -309,6 +309,14 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		interact_distance = 250
 	}
 	
+	self.zm_bottle = {
+		text_id = "zm_activate_song_invisible",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		interact_distance = 250,
+		sound_done = "bar_c4_apply_cancel"
+	}
+	
 	self.zm_authorization = {
 		text_id = "zm_activate_song_invisible",
 		action_text_id = "zm_grabbing_hand",
