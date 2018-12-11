@@ -408,6 +408,15 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		interact_distance = 500
 	}
 	
+	self.zm_teleporter_end = {
+		is_teleporter = true,
+		text_id = "zm_teleporter",
+		action_text_id = "zm_teleport_end",
+		start_active = false,
+		timer = 1,
+		interact_distance = 500
+	}
+	
 	self.zm_teleport_back = {
 		is_teleporter = true,
 		text_id = "zm_teleporter_back",

@@ -74,5 +74,6 @@
     "wpn_elastic_upg_name" : "Broken Arrow",
     "wpn_stryk_upg_name" : "Lazer-Gun",
     "zm_buy_gunship" : "Hold $BTN_INTERACT to call a Chopper Gunner",
-	"zm_security" : "Its being locked by an external power source"
+	"zm_security" : "Its being locked by an external power source",
+	"zm_teleport_end" : "Hold $BTN_INTERACT to teleport to the whitehouse (The End)"
 }
