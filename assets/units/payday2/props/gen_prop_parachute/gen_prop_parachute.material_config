@@ -1,0 +1,10 @@
+<materials version="3">
+	<material name="mtr_parachute" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/props/gen_prop_parachute/gen_prop_parachute_df" mip="1" />
+		<bump_normal_texture file="units/payday2/props/gen_prop_parachute/gen_prop_parachute_nm" mip="1" />
+	</material>
+	<material name="shadow_caster" render_template="shadow_caster_only" version="2" />
+	<material name="mtr_parachute_lod" render_template="generic:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/payday2/props/gen_prop_parachute/gen_prop_parachute_df" mip="6" />
+	</material>
+</materials>

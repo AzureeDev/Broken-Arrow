@@ -1,0 +1,18 @@
+<dynamic_object>
+	<diesel materials="units/payday2/props/gen_prop_parachute/gen_prop_parachute" orientation_object="rp_gen_prop_parachute" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_gen_prop_parachute" />
+			<object name="c_convex_big" collision_type="convex" padding="-2.5" />
+			<object name="c_convex_small" collision_type="convex" padding="-2.5" />
+		</body>
+	</bodies>
+	<graphics>
+		<lod_object name="lod_g_parachute">
+			<object name="g_parachute_lod0" enabled="true" max_distance="2500" />
+			<object name="g_parachute_lod1" enabled="true" max_distance="5000" />
+			<object name="g_parachute_lod2" enabled="true" />
+		</lod_object>
+		<object name="s_parachute" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

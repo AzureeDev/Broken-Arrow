@@ -2274,15 +2274,29 @@
 		<unit force="true" path="units/payday2/props/com_prop_jewelry_counters/com_prop_jewelry_shelf_back_05" unload="true"/>
 	</add>
 	<add path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" type="unit">
-		<unit force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
-		<object force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
-		<sequence_manager force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 		<effect force="true" load="true" path="effects/payday2/particles/window/storefront_window_large" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lcm/lcm_ext_storefront_4x8m_a1" unload="true"/>
+	</add>
+	<add path="units/payday2/props/gen_prop_parachute/gen_prop_parachute" type="unit">
+		<material_config force="true" path="units/payday2/props/gen_prop_parachute/gen_prop_parachute" unload="true"/>
+		<object force="true" path="units/payday2/props/gen_prop_parachute/gen_prop_parachute" unload="true"/>
+		<unit force="true" path="units/payday2/props/gen_prop_parachute/gen_prop_parachute" unload="true"/>
+	</add>
+	<add path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" type="unit">
+		<unit force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
+		<object force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
+		<material_config force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
