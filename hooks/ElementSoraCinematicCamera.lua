@@ -13,7 +13,9 @@ function ElementSoraCinematicCamera:on_executed(instigator)
 	if not self._values.enabled then
 		self._mission_script:debug_output("Element '" .. self._editor_name .. "' not enabled. Skip.", Color(1, 1, 0, 0))
 		return
-	end
+    end
+    
+    local lifetime = self._values.lifetime or 6
 
     self._camera_object = World:create_camera()
     self._camera_object:set_near_range(20)
@@ -26,7 +28,7 @@ function ElementSoraCinematicCamera:on_executed(instigator)
     self._vp:set_camera(self._camera_object)
     self._vp:set_active(true)
 
-    DelayedCalls:Add("zm_deactivate_camera_" .. self._editor_name, 6, function()
+    DelayedCalls:Add("zm_deactivate_camera_" .. self._editor_name, lifetime, function()
         self._vp:set_active(false)
     end)
 
