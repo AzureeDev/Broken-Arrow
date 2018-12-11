@@ -69,7 +69,7 @@ function WDUManager:_init_variables()
             firesale_box_swap = false,
             zombie_blood = false
         },
-        power_up_chance = 66,
+        power_up_chance = 2,
         power_up_table = {
             "max_ammo",
             "double_points",
@@ -706,6 +706,18 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
             managers.wdu:power_ups():execute_firesale()
         elseif power_up == 5 then
             managers.wdu:power_ups():execute_kaboom()
+        elseif power_up == 7 then
+            local unit_by_peer = managers.criminals:character_unit_by_peer_id(sender)
+            if alive(unit_by_peer) then
+                unit_by_peer:movement():set_team(managers.groupai:state():team_data(tweak_data.levels:get_default_team_ID("non_combatant")))
+            end
+        end
+    end
+
+    if id == "ZombieBloodEnded" then
+        local unit_by_peer = managers.criminals:character_unit_by_peer_id(sender)
+        if alive(unit_by_peer) then
+            unit_by_peer:movement():set_team(managers.groupai:state():team_data(tweak_data.levels:get_default_team_ID("player")))
         end
     end
 

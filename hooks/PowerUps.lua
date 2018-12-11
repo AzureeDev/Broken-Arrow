@@ -109,7 +109,7 @@ function PowerUps:_pickup(unit)
             managers.wdu:power_ups():execute_blood_money()
         elseif self._power_up_id == 7 then -- ZOMBIE BLOOD
             managers.wdu:power_ups():execute_zombie_blood()
-            --LuaNetworking:SendToPeers( "PWUP_EXECUTE", "7" )
+            LuaNetworking:SendToPeers( "PWUP_EXECUTE", "7" )
         end
 
         if Network:is_client() then

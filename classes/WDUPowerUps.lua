@@ -1,4 +1,5 @@
 WDUPowerUps = WDUPowerUps or class(WDUManager)
+WDUPowerUps._CURRENT_SECRET_STEP = 1
 
 function WDUPowerUps:init()
     WDUManager:wait(5, "dcall_wait_settings", function()
@@ -243,6 +244,25 @@ function WDUPowerUps:execute_zombie_blood()
         use_velocity = false
     })
 
+    self._source_ambiance = SoundDevice:create_source("zombieblood_ambiance")
+    self._source_ambiance:post_event("zm_blood_ambiance")
+--[[
+    managers.wdu:wait(5, "zombie_blood_secret_hint", function()
+        local steps_hints = {
+            "",
+            "zm_hint_step_2",
+            "zm_hint_step_3",
+            "zm_hint_step_4",
+            "zm_hint_step_5",
+            "zm_hint_step_6",
+            "zm_hint_step_7"
+        }
+
+        local current_step = WDUPowerUps._CURRENT_SECRET_STEP
+
+
+    end)
+]]
     self._source = SoundDevice:create_source("zombieblood_announcer")
     self._source:post_event("zm_announcer_zombie_blood")
 
@@ -272,6 +292,7 @@ function WDUPowerUps:execute_zombie_blood()
             unit:movement():set_team(team_data_player)
         end
 
+        LuaNetworking:SendToPeers( "ZombieBloodEnded", "1" )
         managers.wdu:_setup_event_state("zombie_blood", false)
     end)
 end
