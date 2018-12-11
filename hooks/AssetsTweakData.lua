@@ -5,12 +5,6 @@ Hooks:PostHook(AssetsTweakData, "_init_assets", "zm_init_assets", function(self,
 		stages = {"zm_broken_arrow"},
 		no_mystery = true
 	}
-    self.zm_broken_arrow_perks_2 = {
-		name_id = "zm_broken_arrow_perks_2_name",
-		texture = "map_assets/perks_2",
-		stages = {"zm_broken_arrow"},
-		no_mystery = true
-	}
 end)
 
 Hooks:PostHook(AssetsTweakData, "_init_risk_assets", "zm_ignore_risk_asset", function(self, tweak_data)

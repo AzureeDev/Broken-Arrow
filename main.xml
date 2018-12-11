@@ -105,6 +105,7 @@
 		</script_data_mods>
 		<sounds directory="assets/sound">
 			<sounds directory="deamon">
+				<sound id="zm_blood_ambiance" path="zmblood_ambiance.ogg"/>
 				<sound id="zm_sam_laugh" path="demon_sam_laugh.ogg"/>
 				<sound id="zm_announcer_wunder" path="LIGHTNING_IS_POWER.ogg"/>
 				<sound id="zm_announcer_roach" path="demon_sam_present.ogg"/>

@@ -5,7 +5,6 @@ function WDUPowerUps:init()
     WDUManager:wait(5, "dcall_wait_settings", function()
         self._default_color_grading = managers.user:get_setting("video_color_grading")
         self._default_fov = managers.user:get_setting("fov_standard")
-        log(tostring(self._default_color_grading))
     end)
 end
 
