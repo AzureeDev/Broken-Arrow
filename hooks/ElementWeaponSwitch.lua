@@ -102,10 +102,10 @@ function ElementWeaponSwitch:on_executed(instigator)
     local sync_blueprint = new_weapon_data.blueprint
 
     if type(new_weapon_data.blueprint) == "string" then
-        sync_blueprint = managers.blackmarket:unpack_blueprint_from_string(new_weapon_data.factory_id, new_weapon_data.blueprint)
+        sync_blueprint = managers.weapon_factory:unpack_blueprint_from_string(new_weapon_data.factory_id, new_weapon_data.blueprint)
     end
 
-    local is_local_peer = managers.network:session():local_peer() == managers.wdu:_peer_id()
+    local is_local_peer = managers.network:session():local_peer():id() == managers.wdu:_peer_id()
     managers.weapon_factory:preload_blueprint(new_weapon_data.factory_id, sync_blueprint, false, not is_local_peer, function ()
 	end, true)
     

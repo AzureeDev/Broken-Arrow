@@ -275,13 +275,21 @@ end
 function WeaponFactoryTweakData:_init_multiplix()
     self.wpn_fps_pis_1911_primary = deep_clone(self.wpn_fps_pis_1911)
     self.wpn_fps_pis_1911_primary.unit = "new_weapon_units/wpn_fps_pis_1911_primary"
+    self.wpn_fps_pis_1911_primary_npc = deep_clone(self.wpn_fps_pis_1911)
+	self.wpn_fps_pis_1911_primary_npc.unit = "units/payday2/weapons/wpn_fps_pis_1911/wpn_fps_pis_1911_npc"
     self.wpn_fps_pis_1911_secondary = deep_clone(self.wpn_fps_pis_1911)
     self.wpn_fps_pis_1911_secondary.unit = "new_weapon_units/wpn_fps_pis_1911_secondary"
+    self.wpn_fps_pis_1911_secondary_npc = deep_clone(self.wpn_fps_pis_1911)
+	self.wpn_fps_pis_1911_secondary_npc.unit = "units/payday2/weapons/wpn_fps_pis_1911/wpn_fps_pis_1911_npc"
 
     self.wpn_fps_ass_m14_primary = deep_clone(self.wpn_fps_ass_m14)
     self.wpn_fps_ass_m14_primary.unit = "new_weapon_units/wpn_fps_ass_m14_primary"
+    self.wpn_fps_ass_m14_primary_npc = deep_clone(self.wpn_fps_ass_m14)
+	self.wpn_fps_ass_m14_primary_npc.unit = "units/payday2/weapons/wpn_fps_ass_m14/wpn_fps_ass_m14_npc"
     self.wpn_fps_ass_m14_secondary = deep_clone(self.wpn_fps_ass_m14)
     self.wpn_fps_ass_m14_secondary.unit = "new_weapon_units/wpn_fps_ass_m14_secondary"
+    self.wpn_fps_ass_m14_secondary_npc = deep_clone(self.wpn_fps_ass_m14)
+	self.wpn_fps_ass_m14_secondary_npc.unit = "units/payday2/weapons/wpn_fps_ass_m14/wpn_fps_ass_m14_npc"
 
     self.wpn_fps_shot_b682_primary = deep_clone(self.wpn_fps_shot_b682)
     self.wpn_fps_shot_b682_primary.unit = "new_weapon_units/wpn_fps_shot_b682_primary"
@@ -387,13 +395,21 @@ function WeaponFactoryTweakData:_init_multiplix()
 	--I should go make more Nepgear shovel pics
 	self.wpn_fps_ass_74_primary = deep_clone(self.wpn_fps_ass_74)
     self.wpn_fps_ass_74_primary.unit = "new_weapon_units/wpn_fps_ass_74_primary"
+    self.wpn_fps_ass_74_primary_npc = deep_clone(self.wpn_fps_ass_74)
+	self.wpn_fps_ass_74_primary_npc.unit = "units/payday2/weapons/wpn_fps_ass_74/wpn_fps_ass_74_npc"
     self.wpn_fps_ass_74_secondary = deep_clone(self.wpn_fps_ass_74)
     self.wpn_fps_ass_74_secondary.unit = "new_weapon_units/wpn_fps_ass_74_secondary"
+    self.wpn_fps_ass_74_secondary_npc = deep_clone(self.wpn_fps_ass_74)
+	self.wpn_fps_ass_74_secondary_npc.unit = "units/payday2/weapons/wpn_fps_ass_74/wpn_fps_ass_74_npc"
 	
 	self.wpn_fps_ass_ching_primary = deep_clone(self.wpn_fps_ass_ching)
     self.wpn_fps_ass_ching_primary.unit = "new_weapon_units/wpn_fps_ass_ching_primary"
+    self.wpn_fps_ass_ching_primary_npc = deep_clone(self.wpn_fps_ass_ching)
+	self.wpn_fps_ass_ching_primary_npc.unit = "units/pd2_dlc_old/weapons/wpn_fps_ass_ching/wpn_fps_ass_ching_npc"
     self.wpn_fps_ass_ching_secondary = deep_clone(self.wpn_fps_ass_ching)
     self.wpn_fps_ass_ching_secondary.unit = "new_weapon_units/wpn_fps_ass_ching_secondary"
+    self.wpn_fps_ass_ching_secondary_npc = deep_clone(self.wpn_fps_ass_ching)
+	self.wpn_fps_ass_ching_secondary_npc.unit = "units/pd2_dlc_old/weapons/wpn_fps_ass_ching/wpn_fps_ass_ching_npc"
 	
 	self.wpn_fps_pis_lemming_primary = deep_clone(self.wpn_fps_pis_lemming)
     self.wpn_fps_pis_lemming_primary.unit = "new_weapon_units/wpn_fps_pis_lemming_primary"
@@ -437,8 +453,14 @@ function WeaponFactoryTweakData:_init_multiplix()
 
     self.wpn_fps_bow_elastic_primary = deep_clone(self.wpn_fps_bow_elastic)
     self.wpn_fps_bow_elastic_primary.unit = "new_weapon_units/wpn_fps_bow_elastic_primary"
+    self.wpn_fps_bow_elastic_primary_npc = deep_clone(self.wpn_fps_bow_elastic)
+	self.wpn_fps_bow_elastic_primary_npc.unit = "units/pd2_dlc_ram/weapons/wpn_fps_bow_elastic/wpn_fps_bow_elastic_npc"
+	self.wpn_fps_bow_elastic_primary_npc.skip_thq_parts = true
     self.wpn_fps_bow_elastic_secondary = deep_clone(self.wpn_fps_bow_elastic)
     self.wpn_fps_bow_elastic_secondary.unit = "new_weapon_units/wpn_fps_bow_elastic_secondary"
+    self.wpn_fps_bow_elastic_secondary_npc = deep_clone(self.wpn_fps_bow_elastic)
+	self.wpn_fps_bow_elastic_secondary_npc.unit = "units/pd2_dlc_ram/weapons/wpn_fps_bow_elastic/wpn_fps_bow_elastic_npc"
+	self.wpn_fps_bow_elastic_secondary_npc.skip_thq_parts = true
 end
 
 function WeaponFactoryTweakData:_init_upgraded_multiplix()
