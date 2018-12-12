@@ -112,6 +112,7 @@ function ElementWeaponSwitch:on_executed(instigator)
     -- Adding the weapon
     if self._values.instigator_only then
         instigator:inventory():add_unit_by_factory_name(new_weapon_data.factory_id, new_weapon_data.equip, new_weapon_data.instant, new_weapon_data.blueprint, new_weapon_data.cosmetics)
+        
         if instigator:movement().sync_equip_weapon then
             instigator:movement():sync_equip_weapon()
         end
@@ -120,6 +121,7 @@ function ElementWeaponSwitch:on_executed(instigator)
 		end
     else
         managers.player:player_unit():inventory():add_unit_by_factory_name(new_weapon_data.factory_id, new_weapon_data.equip, new_weapon_data.instant, new_weapon_data.blueprint, new_weapon_data.cosmetics)
+        
         if managers.player:player_unit():movement().sync_equip_weapon then
             managers.player:player_unit():movement():sync_equip_weapon()
         end
@@ -128,7 +130,7 @@ function ElementWeaponSwitch:on_executed(instigator)
 		end
 	end
 	
-    managers.player:_change_player_state()
+    --managers.player:_change_player_state()
     
     ElementWeaponSwitch.super.on_executed(self, instigator)
 end
@@ -145,9 +147,8 @@ function ElementWeaponSwitch:_get_random_weapon()
 	elseif managers.player._roach_unlocked and managers.player._wunderwaffe_unlocked then
 		table.remove(table_available_weapons_mystery_box, 1)
     end
-
-	local random_entry = table_available_weapons_mystery_box[math.random(#table_available_weapons_mystery_box)]
-
+    
+    local random_entry = table_available_weapons_mystery_box[math.random(#table_available_weapons_mystery_box)]
 	return random_entry
 end
 

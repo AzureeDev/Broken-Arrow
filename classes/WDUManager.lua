@@ -499,7 +499,6 @@ end
 function WDUManager:_get_weapons_in_mystery_box()
     return {
         "wpn_fps_spe_wunderwaffe",
-		"wpn_fps_special_roach",
 		"wpn_fps_ass_m14",
 		"wpn_fps_shot_b682",
 		"wpn_fps_smg_mp9",
@@ -524,7 +523,8 @@ function WDUManager:_get_weapons_in_mystery_box()
         "wpn_fps_smg_tec9",
         "wpn_fps_sho_deamon",
         "wpn_fps_bow_elastic",
-        "wpn_fps_pis_1911"
+        "wpn_fps_pis_1911",
+        "wpn_fps_ass_contraband_rifle"
     }
 end
 
@@ -601,7 +601,9 @@ function WDUManager:_convert_factory_to_upgrade()
         wpn_fps_sho_deamon_secondary = "wpn_fps_sho_deamon_upg_secondary",
         wpn_fps_bow_elastic_primary = "wpn_fps_bow_elastic_upg_primary",
         wpn_fps_bow_elastic_secondary = "wpn_fps_bow_elastic_upg_secondary",
-        wpn_fps_pis_g22c = "wpn_fps_pis_stryk_upg_secondary"
+        wpn_fps_pis_g22c = "wpn_fps_pis_stryk_upg_secondary",
+        wpn_fps_ass_contraband_rifle_primary = "wpn_fps_ass_contraband_rifle_upg_primary",
+        wpn_fps_ass_contraband_rifle_secondary = "wpn_fps_ass_contraband_rifle_secondary"
 	}
 end
 

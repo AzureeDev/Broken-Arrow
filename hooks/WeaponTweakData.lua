@@ -1,5 +1,6 @@
 local PRIMARY = 2
 local SECONDARY = 1
+local UNDERBARREL = 3
 
 Hooks:PostHook(WeaponTweakData, "_init_new_weapons", "zm_init_new_weapons", function(self, weapon_data)
     self.nothing2_primary = deep_clone(self.m134)
@@ -86,9 +87,9 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.colt_1911_primary.animations.reload_name_id = "colt_1911"
     self.colt_1911_primary.weapon_hold = "colt_1911"
     self.colt_1911_primary.CLIP_AMMO_MAX = 7
-    self.colt_1911_primary.NR_CLIPS_MAX = 6
+    self.colt_1911_primary.NR_CLIPS_MAX = 10
     self.colt_1911_primary.AMMO_MAX = self.colt_1911_primary.CLIP_AMMO_MAX * self.colt_1911_primary.NR_CLIPS_MAX
-    self.colt_1911.stats.damage = 80
+    self.colt_1911_primary.stats_modifiers = {damage = 3}
     self.colt_1911_primary.use_data = {selection_index = PRIMARY}
     self.colt_1911_secondary = deep_clone(self.colt_1911_primary)
     self.colt_1911_secondary.use_data = {selection_index = SECONDARY}
@@ -404,7 +405,6 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.schakal_primary = deep_clone(self.schakal)
     self.schakal_primary.animations.reload_name_id = "schakal"
     self.schakal_primary.weapon_hold = "schakal"
-    self.schakal_primary.stats_modifiers = {damage = 2}
     self.schakal_primary.NR_CLIPS_MAX = self.schakal_primary.NR_CLIPS_MAX * 2
     self.schakal_primary.AMMO_MAX = self.schakal_primary.CLIP_AMMO_MAX * self.schakal_primary.NR_CLIPS_MAX
     self.schakal_primary.use_data = {selection_index = PRIMARY}
@@ -449,9 +449,21 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.elastic_primary.timers = {
         reload_not_empty = 1,
         reload_empty = 1
-	}
+    }
+    self.elastic_primary.charge_data = {
+		max_t = 1
+    }
+    self.elastic_primary.bow_reload_speed_multiplier = 3
     self.elastic_secondary = deep_clone(self.elastic_primary)
     self.elastic_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
+
+    self.contraband_rifle_primary = deep_clone(self.contraband)
+    self.contraband_rifle_primary.animations.reload_name_id = "contraband"
+    self.contraband_rifle_primary.stats_modifiers = {damage = 2}
+    self.contraband_rifle_primary.NR_CLIPS_MAX = 5
+    self.contraband_rifle_primary.AMMO_MAX = self.contraband_rifle_primary.CLIP_AMMO_MAX * self.contraband_rifle_primary.NR_CLIPS_MAX
+    self.contraband_rifle_secondary = deep_clone(self.contraband_rifle_primary)
+    self.contraband_rifle_secondary.use_data = {selection_index = SECONDARY}
 
     self:_init_upgraded_zm_weapons()
 end
@@ -835,7 +847,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.schakal_upg_primary.name_id = "wpn_ump45_upg_name"
     self.schakal_upg_primary.sounds.fire = "zm_pew_smg"
     self.schakal_upg_primary.sounds.fire_single = "zm_pew_smg"
-    self.schakal_upg_primary.stats_modifiers = {damage = 14}
+    self.schakal_upg_primary.stats_modifiers = {damage = 10}
     self.schakal_upg_primary.CLIP_AMMO_MAX = 48
     self.schakal_upg_primary.NR_CLIPS_MAX = 6
     self.schakal_upg_primary.AMMO_MAX = self.schakal_upg_primary.CLIP_AMMO_MAX * self.schakal_upg_primary.NR_CLIPS_MAX
@@ -924,12 +936,23 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.stryk_upg_secondary.stats.recoil = 99
     self.stryk_upg_secondary.stats.spread = 99
     self.stryk_upg_secondary.muzzleflash = "effects/zm/zm_pap_muzzle"
+
+    self.contraband_rifle_upg_primary = deep_clone(self.contraband_rifle_primary)
+    self.contraband_rifle_upg_primary.name_id = "wpn_contraband_upg_name"
+    self.contraband_rifle_upg_primary.CLIP_AMMO_MAX = 40
+    self.contraband_rifle_upg_primary.NR_CLIPS_MAX = 8
+    self.contraband_rifle_upg_primary.AMMO_MAX = self.contraband_rifle_upg_primary.CLIP_AMMO_MAX * self.contraband_rifle_upg_primary.NR_CLIPS_MAX
+    self.contraband_rifle_upg_primary.sounds.fire = "zm_pew_rifle"
+    self.contraband_rifle_upg_primary.sounds.fire_single = "zm_pew_rifle"
+    self.contraband_rifle_upg_primary.stats_modifiers = {damage = 16}
+    self.contraband_rifle_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.contraband_rifle_upg_secondary = deep_clone(self.contraband_rifle_upg_primary)
+    self.contraband_rifle_upg_secondary.use_data = {selection_index = SECONDARY}
 end
 
 Hooks:PostHook(WeaponTweakData, "_init_data_swat_van_turret_module_npc", "zm_tweak_swat_turret", function(self)
     self.swat_van_turret_module.DAMAGE = 15
     self.swat_van_turret_module.FIRE_RANGE = 20000
-    self.swat_van_turret_module.auto.fire_rate = 0.15
     self.swat_van_turret_module.alert_size = 10000
     self.swat_van_turret_module.DETECTION_DELAY = {
 		{
@@ -937,38 +960,46 @@ Hooks:PostHook(WeaponTweakData, "_init_data_swat_van_turret_module_npc", "zm_twe
 			0.3
 		},
 		{
-			3500,
-			1.5
+			self.swat_van_turret_module.FIRE_RANGE,
+			0.3
 		}
     }
     self.swat_van_turret_module.muzzleflash = "effects/payday2/particles/weapons/big_762_auto"
     self.swat_van_turret_module.DETECTION_RANGE = self.swat_van_turret_module.FIRE_RANGE
+    self.swat_van_turret_module.MAX_VEL_SPIN = 72 * 2
+	self.swat_van_turret_module.MIN_VEL_SPIN = self.swat_van_turret_module.MAX_VEL_SPIN * 0.05
+	self.swat_van_turret_module.SLOWDOWN_ANGLE_SPIN = 30 * 2
+	self.swat_van_turret_module.ACC_SPIN = self.swat_van_turret_module.MAX_VEL_SPIN * 5
+	self.swat_van_turret_module.MAX_VEL_PITCH = 60 * 2
+	self.swat_van_turret_module.MIN_VEL_PITCH = self.swat_van_turret_module.MAX_VEL_PITCH * 0.05
+	self.swat_van_turret_module.SLOWDOWN_ANGLE_PITCH = 20 * 2
+	self.swat_van_turret_module.ACC_PITCH = self.swat_van_turret_module.MAX_VEL_PITCH * 5
 end)
 
 Hooks:PostHook(WeaponTweakData, "_set_normal", "zm_td__set_normal", function(self)
-    self.swat_van_turret_module.DAMAGE = 3
+    self.swat_van_turret_module.DAMAGE = 4
 end)
 
 Hooks:PostHook(WeaponTweakData, "_set_hard", "zm_td__set_hard", function(self)
-    self.swat_van_turret_module.DAMAGE = 6
+    self.swat_van_turret_module.DAMAGE = 7
 end)
 
 Hooks:PostHook(WeaponTweakData, "_set_overkill", "zm_td__set_overkill", function(self)
-    self.swat_van_turret_module.DAMAGE = 6
+    self.swat_van_turret_module.DAMAGE = 7
 end)
 
 Hooks:PostHook(WeaponTweakData, "_set_overkill_145", "zm_td__set_overkill_145", function(self)
-    self.swat_van_turret_module.DAMAGE = 8
-end)
-
-Hooks:PostHook(WeaponTweakData, "_set_easy_wish", "zm_td__set_easy_wish", function(self)
     self.swat_van_turret_module.DAMAGE = 9
 end)
 
+Hooks:PostHook(WeaponTweakData, "_set_easy_wish", "zm_td__set_easy_wish", function(self)
+    self.swat_van_turret_module.DAMAGE = 10
+end)
+
 Hooks:PostHook(WeaponTweakData, "_set_overkill_290", "zm_td__set_overkill_290", function(self)
-    self.swat_van_turret_module.DAMAGE = 11
+    self.swat_van_turret_module.DAMAGE = 12
 end)
 
 Hooks:PostHook(WeaponTweakData, "_set_sm_wish", "zm_td_smwish", function(self)
-    self.swat_van_turret_module.DAMAGE = 14
+    self.swat_van_turret_module.DAMAGE = 15
 end)

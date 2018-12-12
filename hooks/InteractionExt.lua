@@ -254,6 +254,18 @@ function BaseInteractionExt:can_interact(player)
 			cost = 10
 		end
 
+		if self._tweak_data.pack_a_punch then
+			local current_state = managers.player:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				local weapon_id = current_weapon.name_id
+				
+				if string.find(weapon_id, "_upg_") then
+					return false
+				end
+			end
+		end
+
 		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then
 			local current_state = managers.player:get_current_state()
 			if current_state then

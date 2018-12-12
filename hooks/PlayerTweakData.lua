@@ -218,4 +218,9 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.elastic_upg_secondary = deep_clone(self.stances.elastic)
 
 	self.stances.stryk_upg_secondary = deep_clone(self.stances.glock_18c)
+
+	self.stances.contraband_rifle_primary = deep_clone(self.stances.contraband)
+	self.stances.contraband_rifle_secondary = deep_clone(self.stances.contraband)
+	self.stances.contraband_rifle_upg_primary = deep_clone(self.stances.contraband)
+	self.stances.contraband_rifle_upg_secondary = deep_clone(self.stances.contraband)
 end)
