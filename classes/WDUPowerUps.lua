@@ -4,8 +4,14 @@ WDUPowerUps._CURRENT_SECRET_STEP = 1
 function WDUPowerUps:init()
     WDUManager:wait(5, "dcall_wait_settings", function()
         self._default_color_grading = managers.user:get_setting("video_color_grading")
-        self._default_fov = managers.user:get_setting("fov_standard")
     end)
+
+    self._zombie_blood_obj = {
+        Idstring("Spine1"),
+        Idstring("Head")
+    }
+
+    self._zombie_blood_current_effects = {}
 end
 
 function WDUPowerUps:execute_max_ammo()
@@ -227,7 +233,6 @@ function WDUPowerUps:execute_zombie_blood()
     local previous_grading = self._default_color_grading
     local zb_grading = "color_sin_classic"
     local zb_duration = 30
-    local fov_player = self._default_fov * 1.25
     local team_data_player = managers.groupai:state():team_data(tweak_data.levels:get_default_team_ID("player"))
     local team_data_enemy = managers.groupai:state():team_data(tweak_data.levels:get_default_team_ID("non_combatant"))
     local my_peer_id = managers.wdu:_peer_id()
@@ -268,9 +273,6 @@ function WDUPowerUps:execute_zombie_blood()
     managers.hud._hud_zm_waves:_set_gift_visible("icon_zombie_blood", true)
     managers.wdu:_setup_event_state("zombie_blood", true)
 
-    -- Set Fov
-    managers.user:set_setting("fov_standard", fov_player)
-
     -- Set Grading
     managers.environment_controller:set_default_color_grading(zb_grading)
     managers.environment_controller:refresh_render_settings()
@@ -293,5 +295,26 @@ function WDUPowerUps:execute_zombie_blood()
 
         LuaNetworking:SendToPeers( "ZombieBloodEnded", "1" )
         managers.wdu:_setup_event_state("zombie_blood", false)
+    end)
+end
+
+function WDUPowerUps:execute_zombie_blood_on(unit)
+    if not alive(unit) then
+        return
+    end
+
+    for id, obj in pairs(self._zombie_blood_obj) do
+        self._zombie_blood_current_effects[id] = World:effect_manager():spawn({
+            effect = Idstring("effects/payday2/particles/smoke_trail/smoke_distorted"),
+            parent = unit:get_object(obj)
+        })
+    end
+
+    managers.wdu:wait(30, "zm_blood_effect_fade", function()
+        for k, effect in pairs(self._zombie_blood_current_effects) do
+            World:effect_manager():fade_kill(effect)
+        end
+
+        self._zombie_blood_current_effects = {}
     end)
 end

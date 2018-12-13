@@ -2,15 +2,21 @@ local PowerUps = AmmoClip
 
 function PowerUps:init(unit)
 	PowerUps.super.init(self, unit)
-
-	--self._ammo_type = ""
-    --self._ammo_box = self._unit:name() == Idstring("units/pickups/ammo/ammo_pickup")
     self._power_up_id = self._power_up_id or nil
+    self._random_identifier = math.random(1, 10000)
 
     if self._power_up_id then
-        --self._source = SoundDevice:create_source("power_up_loop")
-        --self._source:post_event("power_up_loop")
-        --self._source:set_position(unit:position())
+        managers.wdu:_element_play_sound({
+            name = "power_up_loop" .. self._random_identifier,
+            file_name = "power_up_loop.ogg",
+            sound_type = "sfx",
+            custom_dir = "sound",
+            is_relative = false,
+            is_loop = false,
+            is_3d = true,
+            position = unit:position(),
+            use_velocity = false
+        })
 
         self:init_lifetime()
     end
@@ -20,7 +26,7 @@ function PowerUps:reload_contour()
 end
 
 function PowerUps:init_lifetime()
-    managers.wdu:wait(30, "lifetime_power_up_" .. self._power_up_id .. "_" .. math.random(0,1000), function()
+    managers.wdu:wait(30, "lifetime_power_up_" .. self._power_up_id .. "_" .. math.random(0,10000), function()
         if alive(self._unit) then
             self:consume()
         end
@@ -124,7 +130,8 @@ function PowerUps:_pickup(unit)
                 custom_dir = "sound",
                 is_relative = false,
                 is_loop = false,
-                is_3d = false,
+                is_3d = true,
+                position = unit:position(),
                 use_velocity = false
             })
         end
@@ -145,3 +152,7 @@ end
 
 function PowerUps:sync_net_event(event, peer)
 end
+
+Hooks:PostHook(AmmoClip, "consume", "post_init_consume_zm", function(self)
+    managers.wdu:_destroy_source("power_up_loop" .. self._random_identifier)
+end)

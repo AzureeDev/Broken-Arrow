@@ -392,6 +392,14 @@ function WDUManager:_element_play_sound(data)
     end
 end
 
+function WDUManager:_destroy_source(id)
+    if self._sound_sources[id] then
+		self._sound_buffers[id]:close()
+        self._sound_sources[id]:close()
+        self._sound_sources[id] = nil
+    end
+end
+
 function WDUManager:_play_music(event)
     if not self.xaudio_initialized then
         return
@@ -714,6 +722,8 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
             if alive(unit_by_peer) then
                 unit_by_peer:movement():set_team(managers.groupai:state():team_data(tweak_data.levels:get_default_team_ID("non_combatant")))
             end
+
+            managers.wdu:power_ups():execute_zombie_blood_on(unit_by_peer._unit)
         end
     end
 

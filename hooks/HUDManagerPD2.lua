@@ -898,8 +898,6 @@ function HUDManager:_setup_zm_element()
 end
 
 function HUDManager:init_ending_screen()
-    
-
     if NepgearsyHUDReborn then
         managers.hud:hide_panels("assault_panel_v2", "custody_panel", "hostages_panel", "gift_panel", "heist_timer_panel", "teammates_panel")
     else

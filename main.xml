@@ -53,9 +53,9 @@
 			<hook file="EnemyManager.lua" source_file="lib/managers/enemymanager"/>
 			<hook file="CoreUnit.lua" source_file="core/lib/utils/coreunit"/>
 			<hook file="PowerUps.lua" source_file="lib/units/pickups/ammoclip"/>
-			<hook file="GamePlayCentralManager.lua" source_file="lib/managers/gameplaycentralmanager"/>
 			<hook file="ProjectileBase.lua" source_file="lib/units/weapons/projectiles/projectilebase"/>
 			<hook file="SentryGunMovement.lua" source_file="lib/units/equipment/sentry_gun/sentrygunmovement"/>
+			<hook file="FPCameraPlayerBase.lua" source_file="lib/units/cameras/fpcameraplayerbase"/>
 		</hooks>
 		<include directory="levels/zm_broken_arrow">
 			<file file="world.world" type="binary"/>
