@@ -22,6 +22,10 @@
     <effect load="true" path="effects/payday2/environment/fire_biggy"/>
     <effect load="true" path="effects/zm/env/braises_10x10"/>
     <texture path="effects/zm/env/textures/braises_2x2"/>
+    <effect load="true" path="effects/zm/zm_blood_smoke_distorted"/>
+    <effect load="true" path="effects/zm/zm_blood_smoke_distorted_small"/>
+    <effect load="true" path="effects/zm/zm_blood_smoke_trail_small"/>
+
 
     <font load="true" path="fonts/murderer"/>
     <texture path="fonts/murderer"/>

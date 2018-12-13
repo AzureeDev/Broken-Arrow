@@ -37,10 +37,6 @@ function WDUPowerUps:init()
         Idstring("LeftFoot"),
         Idstring("RightFoot")
     }
-
-    self._zombie_blood_current_effects = {}
-    self._zombie_blood_current_effects_small = {}
-    self._zombie_blood_current_effects_trails = {}
 end
 
 function WDUPowerUps:execute_max_ammo()
@@ -333,40 +329,23 @@ function WDUPowerUps:execute_zombie_blood_on(unit)
     end
 
     for id, obj in pairs(self._zombie_blood_obj) do
-        self._zombie_blood_current_effects[id] = World:effect_manager():spawn({
-            effect = Idstring("effects/payday2/particles/smoke_trail/smoke_distorted"),
+        World:effect_manager():spawn({
+            effect = Idstring("effects/zm/zm_blood_smoke_distorted"),
             parent = unit:get_object(obj)
         })
     end
 
-    for id, obj in pairs(self._zombie_blood_obj_small) do
-        self._zombie_blood_current_effects_small[id] = World:effect_manager():spawn({
-            effect = Idstring("effects/payday2/particles/smoke_trail/smoke_distorted_small"),
-            parent = unit:get_object(obj)
+    for id_small, obj_small in pairs(self._zombie_blood_obj_small) do
+        World:effect_manager():spawn({
+            effect = Idstring("effects/zm/zm_blood_smoke_distorted_small"),
+            parent = unit:get_object(obj_small)
         })
     end
 
-    for id, obj in pairs(self._zombie_blood_obj_trails) do
-        self._zombie_blood_current_effects_trails[id] = World:effect_manager():spawn({
-            effect = Idstring("effects/payday2/particles/smoke_trail/smoke_trail_small"),
-            parent = unit:get_object(obj)
+    for id_trail, obj_trail in pairs(self._zombie_blood_obj_trails) do
+        World:effect_manager():spawn({
+            effect = Idstring("effects/zm/zm_blood_smoke_trail_small"),
+            parent = unit:get_object(obj_trail)
         })
     end
-
-    managers.wdu:wait(30, "zm_blood_effect_fade", function()
-        for k, effect in pairs(self._zombie_blood_current_effects) do
-            World:effect_manager():fade_kill(effect)
-            table.remove(self._zombie_blood_current_effects, k)
-        end
-
-        for k, effect in pairs(self._zombie_blood_current_effects_small) do
-            World:effect_manager():fade_kill(effect)
-            table.remove(self._zombie_blood_current_effects_small, k)
-        end
-
-        for k, effect in pairs(self._zombie_blood_current_effects_trails) do
-            World:effect_manager():fade_kill(effect)
-            table.remove(self._zombie_blood_current_effects_trails, k)
-        end
-    end)
 end
