@@ -899,9 +899,9 @@ end
 
 function HUDManager:init_ending_screen()
     if NepgearsyHUDReborn then
-        managers.hud:hide_panels("assault_panel_v2", "custody_panel", "hostages_panel", "gift_panel", "heist_timer_panel", "teammates_panel")
+        managers.hud:hide_panels("zm_point_panel", "assault_panel_v2", "custody_panel", "hostages_panel", "gift_panel", "heist_timer_panel", "teammates_panel")
     else
-        managers.hud:hide_panels("assault_panel", "custody_panel", "hostages_panel", "gift_panel", "heist_timer_panel", "teammates_panel")
+        managers.hud:hide_panels("zm_point_panel", "assault_panel", "custody_panel", "hostages_panel", "gift_panel", "heist_timer_panel", "teammates_panel")
     end
 
     local hud = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_PD2)
@@ -912,7 +912,8 @@ function HUDManager:init_ending_screen()
     local result_panel = panel:panel({
         name = "zm_result_panel",
         y = 180,
-        valign = "top"
+        valign = "top",
+        layer = 9999999
     })
 
     local game_over = result_panel:text({
@@ -940,11 +941,181 @@ function HUDManager:init_ending_screen()
     local wave_survived_s = current_wave_survived > 1 and "s" or ""
     wave_survived:set_text("You Survived " .. current_wave_survived .. " Round" .. wave_survived_s)
 
+    self:_init_result_table(result_panel)
+
     game_over:animate(callback(self, self, "_animate_fade_ending"))
     wave_survived:animate(callback(self, self, "_animate_fade_ending"))
 end
 
+function HUDManager:_init_result_table(panel)
+    local all_panels = {}
+
+    for id = 1, 4, 1 do
+        local player_data = managers.wdu.players[id]
+        local player_exists = false
+        if tonumber(player_data.steam_id) > 0 then
+            player_exists = true
+        end
+
+        local panel_w = 600
+        all_panels[id] = panel:panel({
+            name = "player_table_" .. id,
+            y = 120,
+            w = panel_w,
+            h = 68,
+            x = panel:w() / 2 - panel_w / 2,
+            visible = player_exists
+        })
+
+        if player_exists then
+            local avatar = all_panels[id]:bitmap({
+                name = "steam_avatar",
+                texture = "guis/textures/pd2/none_icon",
+                w = 64,
+                h = 64,
+                x = 2,
+                y = 2
+            })
+
+            Steam:friend_avatar(2, player_data.steam_id, function (texture)
+                local avatar = texture or "guis/textures/pd2/none_icon"
+                all_panels[id]:child("steam_avatar"):set_image(avatar)
+            end)
+            managers.wdu:wait(1, "table_steam_avatar_try_again_" .. id, function()
+                Steam:friend_avatar(2, player_data.steam_id, function (texture)
+                    local avatar = texture or "guis/textures/pd2/none_icon"
+                    all_panels[id]:child("steam_avatar"):set_image(avatar)
+                end)
+            end)
+
+            local player_name = all_panels[id]:text({
+                font = "fonts/escom_outline",
+                font_size = 24,
+                text = "AAAAAAAAAAAAAAAA",
+                color = Color.white
+            })
+            managers.hud:make_fine_text(player_name)
+            player_name:set_world_center_y(all_panels[id]:world_center_y())
+            player_name:set_left(avatar:right() + 20)
+            player_name:set_text(player_data.player_name)
+
+            local total_score = all_panels[id]:text({
+                font = "fonts/escom_outline",
+                font_size = 24,
+                text = "9999999",
+                color = Color.white
+            })
+
+            managers.hud:make_fine_text(total_score)
+            total_score:set_world_center_y(all_panels[id]:world_center_y())
+            total_score:set_left(player_name:right())
+            total_score:set_text(tostring(player_data.total_score))
+
+            local total_score_header = all_panels[id]:text({
+                font = "fonts/escom_outline",
+                font_size = 16,
+                text = "SCORE",
+                color = Color(0.4, 0.4, 0.4)
+            })
+            managers.hud:make_fine_text(total_score_header)
+            total_score_header:set_bottom(total_score:top())
+            total_score_header:set_left(total_score:left())
+
+            local total_kills = all_panels[id]:text({
+                name = "total_kills",
+                font = "fonts/escom_outline",
+                font_size = 24,
+                text = "9999",
+                color = Color.white
+            })
+
+            managers.hud:make_fine_text(total_kills)
+            total_kills:set_world_center_y(all_panels[id]:world_center_y())
+            total_kills:set_left(total_score:right() + 40)
+
+            local total_kill_header = all_panels[id]:text({
+                font = "fonts/escom_outline",
+                font_size = 16,
+                text = "KILLS",
+                color = Color(0.4, 0.4, 0.4)
+            })
+            managers.hud:make_fine_text(total_kill_header)
+            total_kill_header:set_bottom(total_kills:top())
+            total_kill_header:set_left(total_kills:left())
+
+            local total_downs = all_panels[id]:text({
+                name = "total_downs",
+                font = "fonts/escom_outline",
+                font_size = 24,
+                text = "9999",
+                color = Color.white
+            })
+
+            managers.hud:make_fine_text(total_downs)
+            total_downs:set_world_center_y(all_panels[id]:world_center_y())
+            total_downs:set_left(total_kills:right() + 40)
+
+            local total_downs_header = all_panels[id]:text({
+                font = "fonts/escom_outline",
+                font_size = 16,
+                text = "DOWNS",
+                color = Color(0.4, 0.4, 0.4)
+            })
+            managers.hud:make_fine_text(total_downs_header)
+            total_downs_header:set_bottom(total_downs:top())
+            total_downs_header:set_left(total_downs:left())
+
+            local total_revives = all_panels[id]:text({
+                name = "total_revives",
+                font = "fonts/escom_outline",
+                font_size = 24,
+                text = "9999",
+                color = Color.white
+            })
+
+            managers.hud:make_fine_text(total_revives)
+            total_revives:set_world_center_y(all_panels[id]:world_center_y())
+            total_revives:set_left(total_downs:right() + 40)
+
+            local total_revives_header = all_panels[id]:text({
+                font = "fonts/escom_outline",
+                font_size = 16,
+                text = "REVIVES",
+                color = Color(0.4, 0.4, 0.4)
+            })
+            managers.hud:make_fine_text(total_revives_header)
+            total_revives_header:set_bottom(total_revives:top())
+            total_revives_header:set_left(total_revives:left())
+        end
+
+        local debug = all_panels[id]:rect({
+            name = "background",
+            color = Color.black,
+            alpha = 0.4,
+            visible = true,
+            layer = -1,
+            halign = "scale",
+            valign = "scale"
+        })
+
+        if id > 1 then
+            all_panels[id]:set_top(all_panels[id - 1]:bottom() + 10)
+        end
+
+        all_panels[id]:animate(callback(self, self, "_stats_animate_fade_ending"))
+    end
+
+    self._zm_result_panel = all_panels
+end
+
 function HUDManager:_animate_fade_ending(o)
+    play_value(o, "alpha", 1)
+    wait(25)
+    play_value(o, "alpha", 0)
+end
+
+function HUDManager:_stats_animate_fade_ending(o)
+    wait(1)
     play_value(o, "alpha", 1)
     wait(25)
     play_value(o, "alpha", 0)

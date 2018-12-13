@@ -26,25 +26,29 @@ function WDUManager:_init_variables()
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0
+            max_waves_survived = 0,
+            steam_id = 0
         },
         [2] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0
+            max_waves_survived = 0,
+            steam_id = 0
         },
         [3] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0
+            max_waves_survived = 0,
+            steam_id = 0
         },
         [4] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0
+            max_waves_survived = 0,
+            steam_id = 0
         }
     }
     self.level = {
@@ -241,7 +245,6 @@ function WDUManager:_add_money_to(peer_id, amount)
     if amount and type(amount) == "number" then
         local additional_amount = math.floor(amount)
         self.players[peer_id].money = self.players[peer_id].money + additional_amount
-        self.players[peer_id].total_score = self.players[peer_id].total_score + additional_amount
 
         if not self:_is_solo() then
             LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
@@ -254,6 +257,10 @@ function WDUManager:_add_money_to(peer_id, amount)
             positive = false
         end
 
+        if positive then
+            self.players[peer_id].total_score = self.players[peer_id].total_score + additional_amount
+        end
+
         managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, positive)
         self:_update_hud_element()
     end
@@ -263,16 +270,30 @@ function WDUManager:_update_hud_element()
     if not Global.game_settings.single_player then
         if managers and managers.network and managers.network:session() then
             for _, peer in pairs(managers.network:session():all_peers()) do
+
+                    self.players[peer:id()].steam_id = peer:user_id()
+
                     Steam:friend_avatar(2, peer:user_id(), function (texture)
                         local avatar = texture or "guis/textures/pd2/none_icon"
                         managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_image(avatar)
                         managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
                     end)
+
+                    self:wait(1, "steam_avatar_try_again_" .. peer:id(), function()
+                        Steam:friend_avatar(2, peer:user_id(), function (texture)
+                            local avatar = texture or "guis/textures/pd2/none_icon"
+                            managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_image(avatar)
+                            managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
+                        end)
+                    end)
+
                     managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
                     managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
             end
         end
     else
+        self.players[1].steam_id = Steam:userid()
+
         Steam:friend_avatar(2, Steam:userid(), function (texture)
             local avatar = texture or "guis/textures/pd2/none_icon"
             managers.hud._hud_zm_points._zmp_avatars[1]:set_image(avatar)
@@ -398,30 +419,6 @@ function WDUManager:_destroy_source(id)
         self._sound_sources[id]:close()
         self._sound_sources[id] = nil
     end
-end
-
-function WDUManager:_play_music(event)
-    if not self.xaudio_initialized then
-        return
-    end
-
-    if not XAudio then
-        return
-    end
-
-    Global.music_manager.source:post_event("stop_all_music")
-
-    if self._music_source then
-        self._buffer:close(true)
-        self._music_source:close()
-        self._music_source = nil
-    end
-
-    self._buffer = XAudio.Buffer:new(self:_get_mod_path() .. "assets/sound/" .. event .. ".ogg")
-    self._music_source = XAudio.Source:new(self._buffer)
-
-    self._music_source:set_type("music")
-    self._music_source:set_relative(true)
 end
 
 function WDUManager:_get_mod_path()
@@ -812,6 +809,20 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
                 end
             end)
         end
+    end
+
+    if id == "ZMStatsEndGame" then
+        local player_id = sender
+        local panel_endgame = managers.hud._zm_result_panel[player_id]
+        local kills_text = panel_endgame:child("total_kills")
+        local downs_text = panel_endgame:child("total_downs")
+        local revives_text = panel_endgame:child("total_revives")
+
+        local stats = LuaNetworking:StringToTable(data)
+
+        kills_text:set_text(stats.kills)
+        downs_text:set_text(stats.downs)
+        revives_text:set_text(stats.revives)
     end
 end)
 

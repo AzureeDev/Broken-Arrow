@@ -1,3 +1,7 @@
+Hooks:PostHook(StatisticsManager, "init", "zm_init_vars_stats", function(self)
+    self._session_player_revives = 0
+end)
+
 Hooks:PostHook(StatisticsManager, "killed", "zm_init_add_zmpoints", function(self, data)
 
     local double_point_effect = managers.wdu.level.active_events.double_points and 2 or 1
@@ -22,8 +26,44 @@ Hooks:PostHook(StatisticsManager, "killed", "zm_init_add_zmpoints", function(sel
     if alive(managers.player:player_unit()) then
         local random = math.random(0, 100)
 
-        if random <= 2 then
+        if random <= 1 then
             managers.player:player_unit():sound():say("v46", true, true)
         end
     end
+end)
+
+function StatisticsManager:send_zm_stats()
+	local total_kills = self:session_total_kills()
+    local total_specials_kills = self:session_total_specials_kills()
+    local total_kills_combined = total_kills + total_specials_kills
+	local downs = self:total_downed()
+    local revives = self._session_player_revives
+
+    local tbl = {
+        kills = total_kills_combined,
+        downs = downs,
+        revives = revives
+    }
+    
+    local panel_endgame = managers.hud._zm_result_panel[managers.wdu:_peer_id()]
+    local kills_text = panel_endgame:child("total_kills")
+    local downs_text = panel_endgame:child("total_downs")
+    local revives_text = panel_endgame:child("total_revives")
+    kills_text:set_text(tostring(tbl.kills))
+    downs_text:set_text(tostring(tbl.downs))
+    revives_text:set_text(tostring(tbl.revives))
+
+    if not managers.network:session() then
+		return
+	end
+
+    LuaNetworking:SendToPeers( "ZMStatsEndGame", LuaNetworking:TableToString(tbl) )
+end
+
+Hooks:PostHook(StatisticsManager, "revived", "zm_count_revives", function(self, data)
+    if not data.reviving_unit or data.reviving_unit ~= managers.player:player_unit() then
+		return
+    end
+    
+    self._session_player_revives = self._session_player_revives + 1
 end)

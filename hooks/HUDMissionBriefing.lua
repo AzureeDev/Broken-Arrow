@@ -1,9 +1,18 @@
 Hooks:PostHook(HUDMissionBriefing, "init", "zm_postinit_music", function(self, hud, workspace)
-    DelayedCalls:Add("zm_remove_current_song", 0.05, function()
+    DelayedCalls:Add("zm_remove_current_song", 0.1, function()
         managers.music:post_event("stop_all_music")
     end)
 
-    managers.wdu:_play_music("pregame")
+    managers.wdu:_element_play_sound({
+        name = "pregame_music",
+        file_name = "pregame.ogg",
+        sound_type = "music",
+        custom_dir = "sound",
+        is_relative = false,
+        is_loop = false,
+        is_3d = false,
+        use_velocity = false
+    })
 end)
 
 Hooks:PostHook(HUDMissionBriefing, "set_player_slot", "zm_postinit_set_player", function(self, nr, params)
