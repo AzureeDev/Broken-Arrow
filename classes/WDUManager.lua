@@ -723,7 +723,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
                 unit_by_peer:movement():set_team(managers.groupai:state():team_data(tweak_data.levels:get_default_team_ID("non_combatant")))
             end
 
-            managers.wdu:power_ups():execute_zombie_blood_on(unit_by_peer._unit)
+            managers.wdu:power_ups():execute_zombie_blood_on(unit_by_peer)
         end
     end
 

@@ -2,16 +2,45 @@ WDUPowerUps = WDUPowerUps or class(WDUManager)
 WDUPowerUps._CURRENT_SECRET_STEP = 1
 
 function WDUPowerUps:init()
-    WDUManager:wait(5, "dcall_wait_settings", function()
-        self._default_color_grading = managers.user:get_setting("video_color_grading")
-    end)
+    self._default_color_grading = "color_payday"
 
     self._zombie_blood_obj = {
         Idstring("Spine1"),
-        Idstring("Head")
+        Idstring("Head"),
+        Idstring("Spine2"),
+        Idstring("Spine"),
+        Idstring("Neck")
+    }
+
+    self._zombie_blood_obj_small = {
+        Idstring("LeftShoulder"),
+        Idstring("LeftArm"),
+        Idstring("LeftForeArm"),
+        Idstring("LeftForeArmRoll"),
+        Idstring("LeftHand"),
+        Idstring("RightShoulder"),
+        Idstring("RightArm"),
+        Idstring("RightForeArm"),
+        Idstring("RightForeArmRoll"),
+        Idstring("RightHand"),
+        Idstring("LeftUpLeg"),
+        Idstring("LeftLeg"),
+        Idstring("LeftFoot"),
+        Idstring("RightUpLeg"),
+        Idstring("RightLeg"),
+        Idstring("RightFoot")
+    }
+
+    self._zombie_blood_obj_trails = {
+        Idstring("LeftHand"),
+        Idstring("RightHand"),
+        Idstring("LeftFoot"),
+        Idstring("RightFoot")
     }
 
     self._zombie_blood_current_effects = {}
+    self._zombie_blood_current_effects_small = {}
+    self._zombie_blood_current_effects_trails = {}
 end
 
 function WDUPowerUps:execute_max_ammo()
@@ -299,7 +328,7 @@ function WDUPowerUps:execute_zombie_blood()
 end
 
 function WDUPowerUps:execute_zombie_blood_on(unit)
-    if not alive(unit) then
+    if not unit then
         return
     end
 
@@ -310,11 +339,34 @@ function WDUPowerUps:execute_zombie_blood_on(unit)
         })
     end
 
+    for id, obj in pairs(self._zombie_blood_obj_small) do
+        self._zombie_blood_current_effects_small[id] = World:effect_manager():spawn({
+            effect = Idstring("effects/payday2/particles/smoke_trail/smoke_distorted_small"),
+            parent = unit:get_object(obj)
+        })
+    end
+
+    for id, obj in pairs(self._zombie_blood_obj_trails) do
+        self._zombie_blood_current_effects_trails[id] = World:effect_manager():spawn({
+            effect = Idstring("effects/payday2/particles/smoke_trail/smoke_trail_small"),
+            parent = unit:get_object(obj)
+        })
+    end
+
     managers.wdu:wait(30, "zm_blood_effect_fade", function()
         for k, effect in pairs(self._zombie_blood_current_effects) do
             World:effect_manager():fade_kill(effect)
+            table.remove(self._zombie_blood_current_effects, k)
         end
 
-        self._zombie_blood_current_effects = {}
+        for k, effect in pairs(self._zombie_blood_current_effects_small) do
+            World:effect_manager():fade_kill(effect)
+            table.remove(self._zombie_blood_current_effects_small, k)
+        end
+
+        for k, effect in pairs(self._zombie_blood_current_effects_trails) do
+            World:effect_manager():fade_kill(effect)
+            table.remove(self._zombie_blood_current_effects_trails, k)
+        end
     end)
 end
