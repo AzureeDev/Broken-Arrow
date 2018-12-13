@@ -598,7 +598,7 @@
 			<sound id="power_up_loop" path="power_up_loop.ogg"/>
 		</sounds>
 	</level>
-	<narrative contact="a_better_tomorrow" icon="map_assets/map_icon" id="broken_arrow2" quest_zm_001="true" quest_zm_001_icon="map_assets/ee_icon_done">
+	<narrative contact="a_better_tomorrow" icon="map_assets/ba_map_icon" id="broken_arrow2" quest_zm_001="true" quest_zm_001_icon="map_assets/ee_icon_done">
 		<chain>
 			<table level_id="zm_broken_arrow" type="d" type_id="heist_type_assault"/>
 		</chain>
