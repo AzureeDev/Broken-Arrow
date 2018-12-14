@@ -2218,11 +2218,16 @@
 		<unit force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
 	</add>
 	<add path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" type="unit">
-		<unit force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall" unload="true"/>
 		<object force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" unload="true"/>
+	</add>
+	<texture path="levels/mods/zm_broken_arrow/cubemaps/102208"/>
+	<texture path="levels/mods/zm_broken_arrow/cubemaps/102209"/>
+	<add path="units/payday2/architecture/com_int_basement/com_int_basement_wall_6x3m" type="unit">
+		<unit force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_6x3m" unload="true"/>
+		<object force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_6x3m" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
-	<texture path="levels/mods/zm_broken_arrow/cubemaps/102208"/>
-	<texture path="levels/mods/zm_broken_arrow/cubemaps/102209"/>
 </table>
