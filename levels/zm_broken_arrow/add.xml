@@ -2223,4 +2223,6 @@
 		<material_config force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
+	<texture path="levels/mods/zm_broken_arrow/cubemaps/102208"/>
+	<texture path="levels/mods/zm_broken_arrow/cubemaps/102209"/>
 </table>

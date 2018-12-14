@@ -964,7 +964,8 @@ function HUDManager:_init_result_table(panel)
             w = panel_w,
             h = 68,
             x = panel:w() / 2 - panel_w / 2,
-            visible = player_exists
+            visible = player_exists,
+            alpha = 0
         })
 
         if player_exists then
@@ -1000,6 +1001,7 @@ function HUDManager:_init_result_table(panel)
             player_name:set_text(player_data.player_name)
 
             local total_score = all_panels[id]:text({
+                name = "total_score",
                 font = "fonts/escom_outline",
                 font_size = 24,
                 text = "9999999",
@@ -1115,8 +1117,8 @@ function HUDManager:_animate_fade_ending(o)
 end
 
 function HUDManager:_stats_animate_fade_ending(o)
-    wait(1)
+    wait(4)
     play_value(o, "alpha", 1)
-    wait(25)
+    wait(22)
     play_value(o, "alpha", 0)
 end

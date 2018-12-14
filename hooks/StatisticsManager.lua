@@ -42,7 +42,8 @@ function StatisticsManager:send_zm_stats()
     local tbl = {
         kills = total_kills_combined,
         downs = downs,
-        revives = revives
+        revives = revives,
+        total_score = managers.wdu.players[managers.wdu:_peer_id()].total_score
     }
     
     local panel_endgame = managers.hud._zm_result_panel[managers.wdu:_peer_id()]
