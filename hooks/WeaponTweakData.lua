@@ -952,6 +952,7 @@ end
 
 Hooks:PostHook(WeaponTweakData, "_init_data_swat_van_turret_module_npc", "zm_tweak_swat_turret", function(self)
     self.swat_van_turret_module.DAMAGE = 15
+    self.swat_van_turret_module.CLIP_SIZE = 1000
     self.swat_van_turret_module.FIRE_RANGE = 20000
     self.swat_van_turret_module.alert_size = 10000
     self.swat_van_turret_module.DETECTION_DELAY = {
