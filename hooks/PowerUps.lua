@@ -3,11 +3,10 @@ local PowerUps = AmmoClip
 function PowerUps:init(unit)
 	PowerUps.super.init(self, unit)
     self._power_up_id = self._power_up_id or nil
-    self._random_identifier = math.random(1, 10000)
 
     if self._power_up_id then
         managers.wdu:_element_play_sound({
-            name = "power_up_loop" .. self._random_identifier,
+            name = "power_up_loop" .. self._power_up_id,
             file_name = "power_up_loop.ogg",
             sound_type = "sfx",
             custom_dir = "sound",
@@ -154,5 +153,5 @@ function PowerUps:sync_net_event(event, peer)
 end
 
 Hooks:PostHook(AmmoClip, "consume", "post_init_consume_zm", function(self)
-    managers.wdu:_destroy_source("power_up_loop" .. self._random_identifier)
+    managers.wdu:_destroy_source("power_up_loop" .. self._power_up_id)
 end)

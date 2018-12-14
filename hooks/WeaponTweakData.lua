@@ -78,6 +78,43 @@ Hooks:PostHook(WeaponTweakData, "_init_new_weapons", "zm_init_new_weapons", func
     self.wunderwaffe_dg3_secondary = deep_clone(self.wunderwaffe_dg3_primary)
     self.wunderwaffe_dg3_secondary.use_data = {selection_index = 1}
 
+    self.waffle_prim_crew = {
+        usage = "is_sniper",
+		anim_usage = "is_bullpup",
+		sounds = {},
+		use_data = {},
+		auto = {}
+    }
+    self.waffle_prim_crew.categories = clone(self.wa2000.categories)
+	self.waffle_prim_crew.sounds.prefix = "lakner_npc"
+	self.waffle_prim_crew.use_data.selection_index = PRIMARY
+	self.waffle_prim_crew.DAMAGE = 1
+	self.waffle_prim_crew.muzzleflash = "effects/particles/weapons/wunder_fire"
+	self.waffle_prim_crew.muzzleflash_silenced = "effects/particles/weapons/wunder_fire"
+	self.waffle_prim_crew.shell_ejection = "effects/payday2/particles/weapons/shells/shell_empty"
+	self.waffle_prim_crew.CLIP_AMMO_MAX = 3
+	self.waffle_prim_crew.NR_CLIPS_MAX = 6
+	self.waffle_prim_crew.auto.fire_rate = 0.5
+	self.waffle_prim_crew.hold = {
+		"bullpup",
+		"rifle"
+	}
+	self.waffle_prim_crew.alert_size = 5000
+	self.waffle_prim_crew.suppression = 1
+    self.waffle_prim_crew.FIRE_MODE = "single"
+    
+    self.waffle_seco_crew = clone(self.waffle_prim_crew)
+    self.waffle_seco_crew.use_data.selection_index = SECONDARY
+
+    self.waffle_dg3_prim_crew = clone(self.waffle_prim_crew)
+    self.waffle_dg3_prim_crew.muzzleflash = "effects/particles/weapons/wunder_dg3_fire"
+    self.waffle_dg3_prim_crew.muzzleflash_silenced = "effects/particles/weapons/wunder_dg3_fire"
+    self.waffle_dg3_prim_crew.CLIP_AMMO_MAX = 6
+    self.waffle_dg3_prim_crew.NR_CLIPS_MAX = 6
+    
+    self.waffle_dg3_seco_crew = clone(self.waffle_dg3_prim_crew)
+    self.waffle_dg3_seco_crew.use_data.selection_index = SECONDARY
+
     self:_init_zm_new_weapons()
 end)
 

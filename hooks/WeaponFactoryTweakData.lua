@@ -3,8 +3,6 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "zm_init_weapon_data_factory", fu
     self:_init_wunderwaffe()
     self:_init_wunderwaffe_dg3()
 
-    self:_init_roach()
-
     self:_init_multiplix()
     self:_init_upgraded_multiplix()
 
@@ -113,6 +111,11 @@ function WeaponFactoryTweakData:_init_wunderwaffe()
  
     self.wpn_fps_spe_wunderwaffe_secondary = deep_clone(self.wpn_fps_spe_wunderwaffe_primary)
     self.wpn_fps_spe_wunderwaffe_secondary.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_secondary"
+
+    self.wpn_fps_spe_wunderwaffe_primary_npc = deep_clone(self.wpn_fps_spe_wunderwaffe_primary)
+    self.wpn_fps_spe_wunderwaffe_primary_npc.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_npc"
+    self.wpn_fps_spe_wunderwaffe_secondary_npc = deep_clone(self.wpn_fps_spe_wunderwaffe_secondary)
+	self.wpn_fps_spe_wunderwaffe_secondary_npc.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_secondary_npc"
 end
  
 function WeaponFactoryTweakData:_init_wunderwaffe_dg3()
@@ -166,112 +169,11 @@ function WeaponFactoryTweakData:_init_wunderwaffe_dg3()
     }
     self.wpn_fps_spe_wunderwaffe_dg3_secondary = deep_clone(self.wpn_fps_spe_wunderwaffe_dg3_primary)
     self.wpn_fps_spe_wunderwaffe_dg3_secondary.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_secondary"
-end
 
-function WeaponFactoryTweakData:_init_roach()
-    self.parts.wpn_fps_special_roach_barrel = deep_clone(self.parts.wpn_fps_shot_b682_b_long)
-    self.parts.wpn_fps_special_roach_barrel.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"
-    self.parts.wpn_fps_special_roach_barrel_pap = deep_clone(self.parts.wpn_fps_shot_b682_b_long)
-    self.parts.wpn_fps_special_roach_barrel_pap.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"
-    self.parts.wpn_fps_special_roach_frame = deep_clone(self.parts.wpn_fps_shot_b682_s_long)
-    self.parts.wpn_fps_special_roach_frame.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"
-    self.parts.wpn_fps_special_roach_frame_pap = deep_clone(self.parts.wpn_fps_shot_b682_s_long)
-    self.parts.wpn_fps_special_roach_frame_pap.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"
-    self.parts.wpn_fps_special_roach_discharge = deep_clone(self.parts.wpn_fps_shot_b682_s_long)
-    self.parts.wpn_fps_special_roach_discharge.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge"
-    self.parts.wpn_fps_special_roach_irons = deep_clone(self.parts.wpn_fps_smg_polymer_o_iron)
-    self.parts.wpn_fps_special_roach_irons.unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
-    self.parts.wpn_fps_special_roach_irons.stats.zoom = 12
-    self.parts.wpn_fps_special_roach_a_sabot = deep_clone(self.parts.wpn_fps_ammo_type)
-    self.parts.wpn_fps_special_roach_a_sabot.unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
-    self.parts.wpn_fps_special_roach_a_tungsten = deep_clone(self.parts.wpn_fps_ammo_type)
-    self.parts.wpn_fps_special_roach_a_tungsten.unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
-    self.parts.wpn_fps_special_roach_fl_built = deep_clone(self.parts.wpn_fps_upg_fl_ass_peq15)
-    self.parts.wpn_fps_special_roach_fl_built.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"
-    self.parts.wpn_fps_special_roach_o_inside = deep_clone(self.parts.wpn_fps_shot_b682_b_long)
-    self.parts.wpn_fps_special_roach_o_inside.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_inside"
-    self.parts.wpn_fps_special_roach_o_inside.type = "scope_inside"
-    self.parts.wpn_fps_special_roach_o_lens = deep_clone(self.parts.wpn_fps_shot_b682_b_long)
-    self.parts.wpn_fps_special_roach_o_lens.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_lens"
-    self.parts.wpn_fps_special_roach_o_lens.type = "scope_lens"
-    self.parts.wpn_fps_special_roach_o_reticle = deep_clone(self.parts.wpn_fps_shot_b682_b_long)
-    self.parts.wpn_fps_special_roach_o_reticle.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_reticle"
-    self.parts.wpn_fps_special_roach_o_reticle.type = "scope_reticle"
-    self.parts.wpn_fps_special_roach_o_display = deep_clone(self.parts.wpn_fps_upg_o_spot)
-    self.parts.wpn_fps_special_roach_o_display.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"
-    self.parts.wpn_fps_special_roach_o_display.type = "scope_display"
-    self.parts.wpn_fps_special_roach_o_display.a_obj = "a_b"
-    self.parts.wpn_fps_special_roach_o_display.reticle_obj = "nil"
-
-    self.parts.wpn_fps_special_roach_irons.stance_mod = {
-		wpn_fps_special_roach_primary = {
-			translation = Vector3(0, -12.5, -5.3)
-        },
-        wpn_fps_special_roach_secondary = {
-			translation = Vector3(0, -12.5, -5.3)
-        },
-        wpn_fps_special_roach_upg_primary = {
-			translation = Vector3(0, -12.5, -5.3)
-        },
-        wpn_fps_special_roach_upg_secondary = {
-			translation = Vector3(0, -12.5, -5.3)
-		}
-	}
-	self.parts.wpn_fps_special_roach_irons.perks = {"scope", "highlight"}
-	self.parts.wpn_fps_special_roach_barrel.adds = {"wpn_fps_special_roach_o_inside", "wpn_fps_special_roach_o_lens", "wpn_fps_special_roach_o_reticle"}
-	self.parts.wpn_fps_special_roach_frame.adds = {"wpn_fps_special_roach_discharge"}
-	self.parts.wpn_fps_special_roach_barrel_pap.adds = {"wpn_fps_special_roach_o_inside", "wpn_fps_special_roach_o_lens", "wpn_fps_special_roach_o_reticle"}
-	--self.parts.wpn_fps_special_roach_frame_pap.adds = {"wpn_fps_special_roach_discharge"}
-	self.parts.wpn_fps_special_roach_fl_built.stats = nil
-	self.parts.wpn_fps_special_roach_fl_built.adds = {"wpn_fps_upg_fl_ass_peq15_flashlight"}
-	self.parts.wpn_fps_special_roach_fl_built.perks = {"gadget"}
-
-	self.parts.wpn_fps_special_roach_a_sabot.custom_stats = {
-		rays = 1,
-		armor_piercing_add = 1,
-		can_shoot_through_enemy = true, 
-		can_shoot_through_shield = true, 
-		can_shoot_through_wall = true, 
-		damage_near_mul = 1.25,
-		damage_far_mul = 1.0,
-		bullet_class = "InstantExplosiveBulletBase"
-	}
-	
-	self.parts.wpn_fps_special_roach_a_tungsten.override = {
-		wpn_fps_special_roach_barrel = { unit="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel-50cal" },
-		wpn_fps_special_roach_discharge = { unit="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small" }
-	}
-	self.parts.wpn_fps_special_roach_a_tungsten.custom_stats = {
-		rays = 1,
-		armor_piercing_add = 1,
-		can_shoot_through_enemy = true, 
-		can_shoot_through_shield = true, 
-		can_shoot_through_wall = true
-    }
-
-    self.wpn_fps_special_roach_primary = deep_clone(self.wpn_fps_shot_b682)
-    self.wpn_fps_special_roach_primary.unit = "units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_primary"
-    self.wpn_fps_special_roach_primary.default_blueprint = {
-        "wpn_fps_special_roach_barrel",
-        "wpn_fps_special_roach_frame",
-        "wpn_fps_special_roach_irons",
-        "wpn_fps_special_roach_a_sabot",
-        "wpn_fps_special_roach_fl_built"
-    }
-    self.wpn_fps_special_roach_secondary = deep_clone(self.wpn_fps_special_roach_primary)
-    self.wpn_fps_special_roach_secondary.unit = "units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_secondary"
-
-    self.wpn_fps_special_roach_upg_primary = deep_clone(self.wpn_fps_special_roach_primary)
-    self.wpn_fps_special_roach_upg_primary.unit = "units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_upg_primary"
-    self.wpn_fps_special_roach_upg_primary.default_blueprint = {
-        "wpn_fps_special_roach_barrel_pap",
-        "wpn_fps_special_roach_frame_pap",
-        "wpn_fps_special_roach_irons",
-        "wpn_fps_special_roach_a_sabot",
-        "wpn_fps_special_roach_fl_built"
-    }
-    self.wpn_fps_special_roach_upg_secondary = deep_clone(self.wpn_fps_special_roach_upg_primary)
-    self.wpn_fps_special_roach_upg_secondary.unit = "units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_upg_secondary"
+    self.wpn_fps_spe_wunderwaffe_dg3_primary_npc = deep_clone(self.wpn_fps_spe_wunderwaffe_dg3_primary)
+    self.wpn_fps_spe_wunderwaffe_dg3_primary_npc.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_npc"
+    self.wpn_fps_spe_wunderwaffe_dg3_secondary_npc = deep_clone(self.wpn_fps_spe_wunderwaffe_dg3_secondary)
+	self.wpn_fps_spe_wunderwaffe_dg3_secondary_npc.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_secondary_npc"
 end
 
 function WeaponFactoryTweakData:_init_multiplix()
