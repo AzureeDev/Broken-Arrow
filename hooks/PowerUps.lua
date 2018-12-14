@@ -153,5 +153,7 @@ function PowerUps:sync_net_event(event, peer)
 end
 
 Hooks:PostHook(AmmoClip, "consume", "post_init_consume_zm", function(self)
-    managers.wdu:_destroy_source("power_up_loop" .. self._power_up_id)
+    if self._power_up_id then
+        managers.wdu:_destroy_source("power_up_loop" .. self._power_up_id)
+    end
 end)
