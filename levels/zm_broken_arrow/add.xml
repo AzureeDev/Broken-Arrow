@@ -213,7 +213,6 @@
 	<unit path="new_weapon_units/wpn_fps_ass_contraband_rifle_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_secondary"/>
-
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
@@ -2210,13 +2209,18 @@
 		<unit force="true" path="units/payday2/props/gen_prop_parachute/gen_prop_parachute" unload="true"/>
 	</add>
 	<add path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" type="unit">
-		<unit force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
-		<object force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
 		<material_config force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<object force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
 		<sequence_manager force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<unit force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" type="unit">
+		<unit force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" unload="true"/>
+		<object force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>
