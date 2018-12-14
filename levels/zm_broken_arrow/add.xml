@@ -213,7 +213,6 @@
 	<unit path="new_weapon_units/wpn_fps_ass_contraband_rifle_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_secondary"/>
-
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
@@ -2219,4 +2218,6 @@
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
+	<texture path="levels/mods/zm_broken_arrow/cubemaps/102208"/>
+	<texture path="levels/mods/zm_broken_arrow/cubemaps/102209"/>
 </table>

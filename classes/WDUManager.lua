@@ -817,12 +817,14 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         local kills_text = panel_endgame:child("total_kills")
         local downs_text = panel_endgame:child("total_downs")
         local revives_text = panel_endgame:child("total_revives")
+        local total_score = panel_endgame:child("total_score")
 
         local stats = LuaNetworking:StringToTable(data)
 
         kills_text:set_text(stats.kills)
         downs_text:set_text(stats.downs)
         revives_text:set_text(stats.revives)
+        total_score:set_text(stats.total_score)
     end
 end)
 
