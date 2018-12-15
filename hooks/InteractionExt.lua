@@ -530,3 +530,13 @@ function UseInteractionExt:sync_interacted(peer, player, status, skip_alive_chec
 
 	return player
 end
+
+Hooks:PostHook(ReviveInteractionExt, "interact", "zm_post_interact_revive", function(self, reviving_unit)
+	local helped_id = managers.criminals:character_peer_id_by_unit(self._unit)
+	local helper_id = managers.criminals:character_peer_id_by_unit(reviving_unit)
+
+	if helped_id then
+		local money_to_add = managers.wdu.players[helped_id].money * 0.15
+		managers.wdu:_add_money_to(helper_id, money_to_add)
+	end
+end)

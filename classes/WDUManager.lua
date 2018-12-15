@@ -246,6 +246,10 @@ function WDUManager:_add_money_to(peer_id, amount)
         local additional_amount = math.floor(amount)
         self.players[peer_id].money = self.players[peer_id].money + additional_amount
 
+        if self.players[peer_id].money < 0 then
+            self.players[peer_id].money = 0
+        end
+
         if not self:_is_solo() then
             LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
             LuaNetworking:SendToPeers( "ZMUpdatePointsGained", tostring(amount) )
