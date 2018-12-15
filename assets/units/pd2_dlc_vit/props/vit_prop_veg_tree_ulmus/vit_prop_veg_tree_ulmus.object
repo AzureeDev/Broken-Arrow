@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel orientation_object="rp_vit_prop_veg_tree_ulmus" materials="units/pd2_dlc_vit/props/vit_prop_veg_tree_ulmus/vit_prop_veg_tree_ulmus" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object name="rp_vit_prop_veg_tree_ulmus" />
+            <object collision_type="box" name="c_capsule_01" padding="-2.5"/>
+            <object collision_type="box" name="c_capsule_02" padding="-2.5"/>
+            <object collision_type="box" name="c_capsule_03" padding="-2.5"/>
+        </body>
+    </bodies>
+    <graphics>
+		<object name="g_lod0" enabled="true" shadow_caster="true" />
+		<object enabled="true" name="g_g_trunk" shadow_caster="true"/>
+    </graphics>
+</dynamic_object>

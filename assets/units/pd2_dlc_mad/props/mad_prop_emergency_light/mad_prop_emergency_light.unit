@@ -1,0 +1,8 @@
+<unit type="mad" slot="1">
+	<object file="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" />
+	<network sync="spawn"/>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+</unit>

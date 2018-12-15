@@ -1,0 +1,8 @@
+<materials version="3" group="mad_prop_emergency_light" >
+    <material name="mat_jry_prop_emergency_light_base" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/pd2_dlc_jerry/airplane/jry_prop_emergency_light_base_df"/>
+    </material>
+    <material name="mat_jry_prop_emergency_light_bulb" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/pd2_dlc_jerry/airplane/jry_prop_emergen_light_il_color_il"/>
+    </material>
+</materials>

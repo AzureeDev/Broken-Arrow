@@ -1,0 +1,19 @@
+<dynamic_object>
+    <diesel orientation_object="rp_ind_ext_warehouse_roof_windows" materials="units/payday2/architecture/ind/ind_ext_level/ind_windows_night" />
+    <bodies>
+        <body enabled="true" template="static" name="body0" >
+            <object name="rp_ind_ext_warehouse_roof_windows" />
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+			<object name="c_box_02" collision_type="box" padding="-2.5"/>
+        </body>
+    </bodies>
+	
+	<decal_surfaces default_material="metal" static="true">
+			<decal_mesh enabled="true" name="dm_glass_unbreakable" material="glass_unbreakable" />
+	</decal_surfaces>
+	
+    <graphics>
+		<object enabled="true" name="g_g" shadow_caster="false"/>
+		<object enabled="true" name="s_s" shadow_caster="true"/>
+    </graphics>
+</dynamic_object>

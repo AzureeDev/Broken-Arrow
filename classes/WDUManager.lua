@@ -642,6 +642,57 @@ function WDUManager:_was_last_cop_alive()
     return false
 end
 
+function WDUManager:_zm_auto_respawn()
+    return
+end
+--[[
+    if not Network:is_server() then
+        return
+    end
+
+    local threshold = 4
+    local time_before_respawn = 20
+    local current_total_spawned = self.level.zombies.currently_spawned
+    local total_killed = self.level.zombies.killed
+    local max_spawns = managers.wdu:_is_special_wave() and self.level.zombies.max_spawns or managers.wdu.level.zombies.max_special_wave_total_spawns
+
+    if (max_spawns - total_killed) <= threshold then
+        log("auto respawn initialized")
+        DelayedCalls:Add( "zm_auto_respawn_in", time_before_respawn, function()
+            if current_total_spawned > 0 then
+                local function nukeunit(pawn)
+                    local col_ray = { }
+                    col_ray.ray = Vector3(1, 0, 0)
+                    col_ray.position = pawn.unit:position()
+                
+                    local action_data = {}
+                    action_data.variant = "explosion"
+                    action_data.damage = 1000000
+                    action_data.attacker_unit = nil
+                    action_data.col_ray = col_ray
+                
+                    pawn.unit:character_damage():damage_explosion(action_data)
+                end
+        
+                for u_key,u_data in pairs(managers.enemy:all_enemies()) do
+                    nukeunit(u_data)
+                end
+            end
+
+            log("nuked")
+
+            managers.wdu:_zm_auto_respawn()
+        end)
+    end
+end--]]
+
+function WDUManager:_remove_auto_respawn()
+    return
+end
+--[[    log("auto respawn removed.")
+    DelayedCalls:Remove( "zm_auto_respawn_in" )
+end--]]
+
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "ZMUpdatePoints" then
         local points = tonumber(data)

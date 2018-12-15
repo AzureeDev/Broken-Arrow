@@ -1,0 +1,6 @@
+<unit type="ind" slot="1" >
+    <object file="units/payday2/architecture/ind/ind_ext_level/ind_ext_warehouse_window_night_no_destruction" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

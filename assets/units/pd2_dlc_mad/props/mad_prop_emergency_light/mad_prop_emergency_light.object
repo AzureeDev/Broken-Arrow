@@ -1,0 +1,13 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" orientation_object="rp_jry_prop_emergency_light" />
+	<sequence_manager file="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" />
+	<bodies>
+		<body name="body_static" enabled="true" template="raycoll_static">
+			<object name="rp_jry_prop_emergency_light" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<graphics>
+		<object name="g_g" enabled="true" />
+	</graphics>
+</dynamic_object>

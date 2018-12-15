@@ -2208,15 +2208,6 @@
 		<object force="true" path="units/payday2/props/gen_prop_parachute/gen_prop_parachute" unload="true"/>
 		<unit force="true" path="units/payday2/props/gen_prop_parachute/gen_prop_parachute" unload="true"/>
 	</add>
-	<add path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" type="unit">
-		<material_config force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<object force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
-		<sequence_manager force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
-		<unit force="true" path="units/payday2/vehicles/str_vehicle_car_police_washington/str_vehicle_car_police_washington" unload="true"/>
-	</add>
 	<add path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" type="unit">
 		<material_config force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall" unload="true"/>
 		<object force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_4x3m" unload="true"/>
@@ -2225,9 +2216,40 @@
 	<texture path="levels/mods/zm_broken_arrow/cubemaps/102208"/>
 	<texture path="levels/mods/zm_broken_arrow/cubemaps/102209"/>
 	<add path="units/payday2/architecture/com_int_basement/com_int_basement_wall_6x3m" type="unit">
-		<unit force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_6x3m" unload="true"/>
-		<object force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_6x3m" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall" unload="true"/>
+		<object force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_6x3m" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/com_int_basement/com_int_basement_wall_6x3m" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/ind/ind_ext_level/ind_ext_warehouse_roof_windows" type="unit">
+		<material_config force="true" path="units/payday2/architecture/ind/ind_ext_level/ind_windows_night" unload="true"/>
+		<object force="true" path="units/payday2/architecture/ind/ind_ext_level/ind_ext_warehouse_roof_windows" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/ind/ind_ext_level/ind_ext_warehouse_roof_windows" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/ind/ind_ext_level/ind_ext_warehouse_window_night_no_destruction" type="unit">
+		<material_config force="true" path="units/payday2/architecture/ind/ind_ext_level/ind_ext_warehouse_window_night_no_destruction" unload="true"/>
+		<object force="true" path="units/payday2/architecture/ind/ind_ext_level/ind_ext_warehouse_window_night_no_destruction" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/ind/ind_ext_level/ind_ext_warehouse_window_night_no_destruction" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/hcm/hcm_ext_balcony_2x16m_a" type="unit">
+		<material_config force="true" path="units/payday2/architecture/hcm/hcm" unload="true"/>
+		<object force="true" path="units/payday2/architecture/hcm/hcm_ext_balcony_2x16m_a" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/hcm/hcm_ext_balcony_2x16m_a" unload="true"/>
+	</add>
+	<add path="units/payday2/vehicles/ind_vehicle_truck_forklift/ind_vehicle_truck_forklift_raised" type="unit">
+		<material_config force="true" path="units/payday2/vehicles/ind_vehicle_truck_forklift/ind_vehicle_truck_forklift" unload="true"/>
+		<object force="true" path="units/payday2/vehicles/ind_vehicle_truck_forklift/ind_vehicle_truck_forklift_raised" unload="true"/>
+		<unit force="true" path="units/payday2/vehicles/ind_vehicle_truck_forklift/ind_vehicle_truck_forklift_raised" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc_vit/props/vit_prop_veg_tree_ulmus/vit_prop_veg_tree_ulmus" type="unit">
+		<material_config force="true" path="units/pd2_dlc_vit/props/vit_prop_veg_tree_ulmus/vit_prop_veg_tree_ulmus" unload="true"/>
+		<object force="true" path="units/pd2_dlc_vit/props/vit_prop_veg_tree_ulmus/vit_prop_veg_tree_ulmus" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_vit/props/vit_prop_veg_tree_ulmus/vit_prop_veg_tree_ulmus" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" type="unit">
+		<unit force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
+		<object force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>

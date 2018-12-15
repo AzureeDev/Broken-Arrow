@@ -17,6 +17,7 @@ function ElementWave:on_executed(instigator)
 
     if not self._values.ending_check then
         managers.wdu:_respawn()
+        managers.wdu:_remove_auto_respawn()
     end
 
     local current_wave = managers.wdu:_get_current_wave()
@@ -27,6 +28,9 @@ function ElementWave:on_executed(instigator)
 
     if self._values.ending_check then
         managers.wdu.level.zombies.killed = managers.wdu.level.zombies.killed + 1
+
+        managers.wdu:_remove_auto_respawn()
+	    managers.wdu:_zm_auto_respawn()
 
         if managers.wdu:_is_special_wave() then
             if managers.wdu.level.zombies.killed == (managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players()) then
