@@ -1041,3 +1041,7 @@ end)
 Hooks:PostHook(WeaponTweakData, "_set_sm_wish", "zm_td_smwish", function(self)
     self.swat_van_turret_module.DAMAGE = 15
 end)
+
+Hooks:PostHook(WeaponTweakData, "_init_data_smoke_npc", "zm_reduce_shadow_cockers_damage", function(self)
+    self.smoke_npc.DAMAGE = 1
+end)
