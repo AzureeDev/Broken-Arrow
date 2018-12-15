@@ -1041,3 +1041,23 @@ end)
 Hooks:PostHook(WeaponTweakData, "_set_sm_wish", "zm_td_smwish", function(self)
     self.swat_van_turret_module.DAMAGE = 15
 end)
+
+Hooks:PostHook(WeaponTweakData, "_init_data_smoke_npc", "zm_reduce_shadow_cockers_damage", function(self)
+    self.smoke_npc.DAMAGE = 1
+end)
+
+function WeaponTweakData:_init_data_smoke_npc()
+	self.smoke_npc.categories = clone(self.g36.categories)
+	self.smoke_npc.sounds.prefix = "g36_npc"
+	self.smoke_npc.use_data.selection_index = SELECTION.PRIMARY
+	self.smoke_npc.DAMAGE = 3
+	self.smoke_npc.muzzleflash = "effects/payday2/particles/weapons/heat/flash"
+	self.smoke_npc.shell_ejection = "effects/payday2/particles/weapons/shells/shell_556"
+	self.smoke_npc.CLIP_AMMO_MAX = 30
+	self.smoke_npc.NR_CLIPS_MAX = 5
+	self.smoke_npc.auto.fire_rate = 0.15
+	self.smoke_npc.hold = "rifle"
+	self.smoke_npc.alert_size = 5000
+	self.smoke_npc.suppression = 1
+	self.smoke_npc.FIRE_MODE = "auto"
+end
