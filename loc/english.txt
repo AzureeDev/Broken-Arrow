@@ -76,5 +76,6 @@
     "zm_buy_gunship" : "Hold $BTN_INTERACT to call a Chopper Gunner",
 	"zm_security" : "Its being locked by an external power source",
 	"zm_teleport_end" : "Hold $BTN_INTERACT to teleport to the whitehouse (The End)",
-    "wpn_contraband_upg_name" : "Illicitus"
+    "wpn_contraband_upg_name" : "Illicitus",
+    "wpn_tar_upg_name" : "Storm-115"
 }

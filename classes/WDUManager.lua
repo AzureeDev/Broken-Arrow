@@ -533,7 +533,8 @@ function WDUManager:_get_weapons_in_mystery_box()
         "wpn_fps_sho_deamon",
         "wpn_fps_bow_elastic",
         "wpn_fps_pis_1911",
-        "wpn_fps_ass_contraband_rifle"
+        "wpn_fps_ass_contraband_rifle",
+        "wpn_fps_ass_tar21"
     }
 end
 
@@ -612,7 +613,9 @@ function WDUManager:_convert_factory_to_upgrade()
         wpn_fps_bow_elastic_secondary = "wpn_fps_bow_elastic_upg_secondary",
         wpn_fps_pis_g22c = "wpn_fps_pis_stryk_upg_secondary",
         wpn_fps_ass_contraband_rifle_primary = "wpn_fps_ass_contraband_rifle_upg_primary",
-        wpn_fps_ass_contraband_rifle_secondary = "wpn_fps_ass_contraband_rifle_secondary"
+        wpn_fps_ass_contraband_rifle_secondary = "wpn_fps_ass_contraband_rifle_upg_secondary",
+        wpn_fps_ass_tar21_primary = "wpn_fps_ass_tar21_upg_primary",
+        wpn_fps_ass_tar21_secondary = "wpn_fps_ass_tar21_upg_secondary"
 	}
 end
 
@@ -696,6 +699,11 @@ end
 --[[    log("auto respawn removed.")
     DelayedCalls:Remove( "zm_auto_respawn_in" )
 end--]]
+
+function WDUManager:points_round(points)
+    local mult = 10^(-1)
+    return math.floor(points * mult + 0.5) / mult
+end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "ZMUpdatePoints" then

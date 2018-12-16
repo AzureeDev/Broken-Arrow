@@ -223,4 +223,9 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.contraband_rifle_secondary = deep_clone(self.stances.contraband)
 	self.stances.contraband_rifle_upg_primary = deep_clone(self.stances.contraband)
 	self.stances.contraband_rifle_upg_secondary = deep_clone(self.stances.contraband)
+
+	self.stances.tar21_primary = deep_clone(self.stances.komodo)
+	self.stances.tar21_secondary = deep_clone(self.stances.komodo)
+	self.stances.tar21_upg_primary = deep_clone(self.stances.komodo)
+	self.stances.tar21_upg_secondary = deep_clone(self.stances.komodo)
 end)

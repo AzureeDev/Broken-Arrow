@@ -497,7 +497,16 @@ function WeaponFactoryTweakData:_init_multiplix()
     self.wpn_fps_ass_contraband_rifle_secondary = deep_clone(self.wpn_fps_ass_contraband_rifle_primary)
     self.wpn_fps_ass_contraband_rifle_secondary.unit = "new_weapon_units/wpn_fps_ass_contraband_rifle_secondary"
     self.wpn_fps_ass_contraband_rifle_secondary_npc = deep_clone(self.wpn_fps_ass_contraband)
-	self.wpn_fps_ass_contraband_rifle_secondary_npc.unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband/wpn_fps_ass_contraband_npc"
+    self.wpn_fps_ass_contraband_rifle_secondary_npc.unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband/wpn_fps_ass_contraband_npc"
+    
+    self.wpn_fps_ass_tar21_primary = deep_clone(self.wpn_fps_ass_komodo)
+    self.wpn_fps_ass_tar21_primary.unit = "new_weapon_units/wpn_fps_ass_tar21_primary"
+    self.wpn_fps_ass_tar21_secondary = deep_clone(self.wpn_fps_ass_komodo)
+    self.wpn_fps_ass_tar21_secondary.unit = "new_weapon_units/wpn_fps_ass_tar21_secondary"
+    self.wpn_fps_ass_tar21_primary_npc = deep_clone(self.wpn_fps_ass_komodo)
+    self.wpn_fps_ass_tar21_primary_npc.unit = "units/pd2_dlc_tar/weapons/wpn_fps_ass_komodo/wpn_fps_ass_komodo_npc"
+    self.wpn_fps_ass_tar21_secondary_npc = deep_clone(self.wpn_fps_ass_komodo)
+	self.wpn_fps_ass_tar21_secondary_npc.unit = "units/pd2_dlc_tar/weapons/wpn_fps_ass_komodo/wpn_fps_ass_komodo_npc"
 end
 
 function WeaponFactoryTweakData:_init_upgraded_multiplix() 
@@ -999,10 +1008,9 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_ass_contraband_dh_standard",
         "wpn_fps_ass_contraband_fg_standard",
         "wpn_fps_ass_contraband_g_standard",
-        "wpn_fps_ass_contraband_gl_m203",
         "wpn_fps_ass_contraband_m_standard",
         "wpn_fps_ass_contraband_ns_standard",
-        "wpn_fps_ass_contraband_o_standard",
+        "wpn_fps_upg_o_reflex",
         "wpn_fps_ass_contraband_s_standard",
         "wpn_fps_ass_contraband_bolt_standard"
     }
@@ -1012,6 +1020,25 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     self.wpn_fps_ass_contraband_rifle_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_secondary"
     self.wpn_fps_ass_contraband_rifle_upg_secondary_npc = deep_clone(self.wpn_fps_ass_contraband)
     self.wpn_fps_ass_contraband_rifle_upg_secondary_npc.unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband/wpn_fps_ass_contraband_npc"
+
+    self.wpn_fps_ass_tar21_upg_primary = deep_clone(self.wpn_fps_ass_tar21_primary)
+    self.wpn_fps_ass_tar21_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_tar21_upg_primary"
+    self.wpn_fps_ass_tar21_upg_primary.default_blueprint = {
+        "wpn_fps_ass_komodo_b_standard",
+        "wpn_fps_ass_komodo_body",
+        "wpn_fps_ass_komodo_grip_standard",
+        "wpn_fps_upg_ns_ass_smg_tank",
+        "wpn_fps_upg_fl_ass_laser",
+        "wpn_fps_ass_komodo_dh",
+        "wpn_fps_upg_m4_m_quad",
+        "wpn_fps_upg_o_reflex"
+    }
+    self.wpn_fps_ass_tar21_upg_primary_npc = deep_clone(self.wpn_fps_ass_komodo)
+    self.wpn_fps_ass_tar21_upg_primary_npc.unit = "units/pd2_dlc_tar/weapons/wpn_fps_ass_komodo/wpn_fps_ass_komodo_npc"
+    self.wpn_fps_ass_tar21_upg_secondary = deep_clone(self.wpn_fps_ass_tar21_upg_primary)
+    self.wpn_fps_ass_tar21_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_tar21_upg_secondary"
+    self.wpn_fps_ass_tar21_upg_secondary_npc = deep_clone(self.wpn_fps_ass_komodo)
+    self.wpn_fps_ass_tar21_upg_secondary_npc.unit = "units/pd2_dlc_tar/weapons/wpn_fps_ass_komodo/wpn_fps_ass_komodo_npc"
 end
 
 function WeaponFactoryTweakData:_define_sights()
@@ -1020,5 +1047,20 @@ function WeaponFactoryTweakData:_define_sights()
     }
     self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_ass_m16_upg_secondary = {
         translation = Vector3(0, 0, -0.12)
+    }
+
+    self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_contraband_rifle_upg_primary = {
+        translation = Vector3(-0.01, 5, -1.7),
+		rotation = Rotation(0, 0, 0)
+    }
+
+    self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_contraband_rifle_upg_secondary = {
+        translation = Vector3(-0.01, 5, -1.7),
+		rotation = Rotation(0, 0, 0)
+    }
+
+    self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_contraband_rifle_upg_secondary = {
+        translation = Vector3(-0.01, 5, -1.7),
+		rotation = Rotation(0, 0, 0)
     }
 end
