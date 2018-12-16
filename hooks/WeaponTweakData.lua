@@ -497,10 +497,20 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.contraband_rifle_primary = deep_clone(self.contraband)
     self.contraband_rifle_primary.animations.reload_name_id = "contraband"
     self.contraband_rifle_primary.stats_modifiers = {damage = 2}
-    self.contraband_rifle_primary.NR_CLIPS_MAX = 5
+    self.contraband_rifle_primary.NR_CLIPS_MAX = 8
     self.contraband_rifle_primary.AMMO_MAX = self.contraband_rifle_primary.CLIP_AMMO_MAX * self.contraband_rifle_primary.NR_CLIPS_MAX
     self.contraband_rifle_secondary = deep_clone(self.contraband_rifle_primary)
     self.contraband_rifle_secondary.use_data = {selection_index = SECONDARY}
+
+    self.tar21_primary = deep_clone(self.komodo)
+    self.tar21_primary.animations.reload_name_id = "komodo"
+    self.tar21_primary.weapon_hold = "komodo"
+    self.tar21_primary.stats_modifiers = {damage = 4}
+    self.tar21_primary.NR_CLIPS_MAX = self.tar21_primary.NR_CLIPS_MAX * 2
+    self.tar21_primary.AMMO_MAX = self.tar21_primary.CLIP_AMMO_MAX * self.tar21_primary.NR_CLIPS_MAX
+    self.tar21_primary.use_data = {selection_index = PRIMARY}
+    self.tar21_secondary = deep_clone(self.tar21_primary)
+    self.tar21_secondary.use_data = {selection_index = SECONDARY}
 
     self:_init_upgraded_zm_weapons()
 end
@@ -508,8 +518,6 @@ end
 function WeaponTweakData:_init_upgraded_zm_weapons()
     self.new_m14_upg_primary = deep_clone(self.new_m14_primary)
     self.new_m14_upg_primary.name_id = "wpn_m308_upg_name"
-    self.new_m14_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.new_m14_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.new_m14_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.new_m14_upg_primary.CLIP_AMMO_MAX = 30
     self.new_m14_upg_primary.NR_CLIPS_MAX = 7
@@ -525,8 +533,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m95_upg_primary.CLIP_AMMO_MAX = 10
     self.m95_upg_primary.NR_CLIPS_MAX = 4
     self.m95_upg_primary.AMMO_MAX = self.m95_upg_primary.CLIP_AMMO_MAX * self.m95_upg_primary.NR_CLIPS_MAX
-    self.m95_upg_primary.sounds.fire = "zm_pew_snp_b"
-    self.m95_upg_primary.sounds.fire_single = "zm_pew_snp_b"
     self.m95_upg_primary.stats_modifiers = {damage = 100}
     self.m95_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.m95_upg_secondary = deep_clone(self.m95_upg_primary)
@@ -551,8 +557,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     }
     self.colt_1911_upg_primary.fire_mode_data = {fire_rate = 0.166}
     self.colt_1911_upg_primary.name_id = "wpn_m1911_upg_name"
-    self.colt_1911_upg_primary.sounds.fire = "zm_pew_m1911"
-    self.colt_1911_upg_primary.sounds.fire_single = "zm_pew_m1911"
     self.colt_1911_upg_primary.CLIP_AMMO_MAX = 12
     self.colt_1911_upg_primary.NR_CLIPS_MAX = 4
     self.colt_1911_upg_primary.AMMO_MAX = self.colt_1911_upg_primary.CLIP_AMMO_MAX * self.colt_1911_upg_primary.NR_CLIPS_MAX
@@ -565,8 +569,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.b682_upg_primary = deep_clone(self.b682_primary)
     self.b682_upg_primary.name_id = "wpn_jocy_upg_name"
     self.b682_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.b682_upg_primary.sounds.fire = "zm_pew_shts"
-    self.b682_upg_primary.sounds.fire_single = "zm_pew_shts"
     self.b682_upg_primary.stats_modifiers = {damage = 8}
     self.b682_upg_primary.CLIP_AMMO_MAX = 4
     self.b682_upg_primary.NR_CLIPS_MAX = 16
@@ -577,8 +579,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.mp9_upg_primary = deep_clone(self.mp9_primary)
     self.mp9_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.mp9_upg_primary.name_id = "wpn_mp9_upg_name"
-    self.mp9_upg_primary.sounds.fire = "zm_pew_smg"
-    self.mp9_upg_primary.sounds.fire_single = "zm_pew_smg"
     self.mp9_upg_primary.CLIP_AMMO_MAX = 64
     self.mp9_upg_primary.NR_CLIPS_MAX = 8
     self.mp9_upg_primary.AMMO_MAX = self.mp9_upg_primary.CLIP_AMMO_MAX * self.mp9_upg_primary.NR_CLIPS_MAX
@@ -590,8 +590,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.rpg7_upg_primary = deep_clone(self.rpg7_primary)
     self.rpg7_upg_primary.name_id = "wpn_rpg7_upg_name"
     self.rpg7_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.rpg7_upg_primary.sounds.fire = "zm_pew_m1911"
-    self.rpg7_upg_primary.sounds.fire_single = "zm_pew_m1911"
     self.rpg7_upg_primary.stats_modifiers = {damage = 10}
     self.rpg7_upg_primary.fire_mode_data = {fire_rate = 0.11}
     self.rpg7_upg_primary.CLIP_AMMO_MAX = 5
@@ -605,8 +603,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.amcar_upg_primary = deep_clone(self.amcar_primary)
     self.amcar_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.amcar_upg_primary.name_id = "wpn_amcar_upg_name"
-    self.amcar_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.amcar_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.amcar_upg_primary.stats_modifiers = {damage = 10}
     self.amcar_upg_primary.CLIP_AMMO_MAX = 40
     self.amcar_upg_primary.NR_CLIPS_MAX = 9
@@ -616,8 +612,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.aug_upg_primary = deep_clone(self.aug_primary)
     self.aug_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.aug_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.aug_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.aug_upg_primary.stats_modifiers = {damage = 9}
     self.aug_upg_primary.CLIP_AMMO_MAX = 35
     self.aug_upg_primary.NR_CLIPS_MAX = 10
@@ -627,8 +621,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.fal_upg_primary = deep_clone(self.fal_primary)
     self.fal_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.fal_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.fal_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.fal_upg_primary.stats_modifiers = {damage = 8}
     self.fal_upg_primary.CLIP_AMMO_MAX = 30
     self.fal_upg_primary.NR_CLIPS_MAX = 7
@@ -638,8 +630,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.flint_upg_primary = deep_clone(self.flint_primary)
     self.flint_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.flint_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.flint_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.flint_upg_primary.stats_modifiers = {damage = 8}
     self.flint_upg_primary.CLIP_AMMO_MAX = 35
     self.flint_upg_primary.NR_CLIPS_MAX = 10
@@ -649,8 +639,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.m16_upg_primary = deep_clone(self.m16_primary)
     self.m16_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.m16_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.m16_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.m16_upg_primary.stats_modifiers = {damage = 8}
     self.m16_upg_primary.CLIP_AMMO_MAX = 50
     self.m16_upg_primary.NR_CLIPS_MAX = 8
@@ -660,8 +648,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.scar_upg_primary = deep_clone(self.scar_primary)
     self.scar_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.scar_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.scar_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.scar_upg_primary.stats_modifiers = {damage = 10}
     self.scar_upg_primary.CLIP_AMMO_MAX = 35
     self.scar_upg_primary.NR_CLIPS_MAX = 9
@@ -671,8 +657,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.hk21_upg_primary = deep_clone(self.hk21_primary)
     self.hk21_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.hk21_upg_primary.sounds.fire = "zm_pew_lmg"
-    self.hk21_upg_primary.sounds.fire_single = "zm_pew_lmg"
     self.hk21_upg_primary.stats_modifiers = {damage = 8}
     self.hk21_upg_primary.CLIP_AMMO_MAX = 150
     self.hk21_upg_primary.NR_CLIPS_MAX = 6
@@ -682,8 +666,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.m249_upg_primary = deep_clone(self.m249_primary)
     self.m249_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.m249_upg_primary.sounds.fire = "zm_pew_lmg"
-    self.m249_upg_primary.sounds.fire_single = "zm_pew_lmg"
     self.m249_upg_primary.stats_modifiers = {damage = 10}
     self.m249_upg_primary.CLIP_AMMO_MAX = 125
     self.m249_upg_primary.NR_CLIPS_MAX = 5
@@ -693,8 +675,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
     self.breech_upg_primary = deep_clone(self.breech_primary)
     self.breech_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.breech_upg_primary.sounds.fire = "zm_pew_cobra"
-    self.breech_upg_primary.sounds.fire_single = "zm_pew_cobra"
     self.breech_upg_primary.stats_modifiers = {damage = 14}
     self.breech_upg_primary.use_data = {selection_index = PRIMARY}
     self.breech_upg_primary.CLIP_AMMO_MAX = 16
@@ -705,8 +685,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
     self.deagle_upg_primary = deep_clone(self.deagle_primary)
     self.deagle_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.deagle_upg_primary.sounds.fire = "zm_pew_cobra"
-    self.deagle_upg_primary.sounds.fire_single = "zm_pew_cobra"
     self.deagle_upg_primary.stats_modifiers = {damage = 15}
     self.deagle_upg_primary.CLIP_AMMO_MAX = 10
     self.deagle_upg_primary.NR_CLIPS_MAX = 8
@@ -718,8 +696,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.judge_upg_primary = deep_clone(self.judge_primary)
     self.judge_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.judge_upg_primary.name_id = "wpn_judge_upg_name"
-    self.judge_upg_primary.sounds.fire = "zm_pew_shts"
-    self.judge_upg_primary.sounds.fire_single = "zm_pew_shts"
     self.judge_upg_primary.stats_modifiers = {damage = 10}
     self.judge_upg_primary.CLIP_AMMO_MAX = 5
     self.judge_upg_primary.NR_CLIPS_MAX = 12
@@ -730,8 +706,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
     self.peacemaker_upg_primary = deep_clone(self.peacemaker_primary)
     self.peacemaker_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.peacemaker_upg_primary.sounds.fire = "zm_pew_cobra"
-    self.peacemaker_upg_primary.sounds.fire_single = "zm_pew_cobra"
     self.peacemaker_upg_primary.stats_modifiers = {damage = 14}
     self.peacemaker_upg_primary.CLIP_AMMO_MAX = 6
     self.peacemaker_upg_primary.NR_CLIPS_MAX = 14
@@ -745,8 +719,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.new_raging_bull_upg_primary = deep_clone(self.new_raging_bull_primary)
     self.new_raging_bull_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.new_raging_bull_upg_primary.sounds.fire = "zm_pew_cobra"
-    self.new_raging_bull_upg_primary.sounds.fire_single = "zm_pew_cobra"
     self.new_raging_bull_upg_primary.stats_modifiers = {damage = 16}
     self.new_raging_bull_upg_primary.CLIP_AMMO_MAX = 6
     self.new_raging_bull_upg_primary.NR_CLIPS_MAX = 10
@@ -760,8 +732,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
     self.striker_upg_primary = deep_clone(self.striker_primary)
     self.striker_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.striker_upg_primary.sounds.fire = "zm_pew_shta"
-    self.striker_upg_primary.sounds.fire_single = "zm_pew_shta"
     self.striker_upg_primary.stats_modifiers = {damage = 10}
     self.striker_upg_primary.CLIP_AMMO_MAX = 24
     self.striker_upg_primary.NR_CLIPS_MAX = 5
@@ -773,8 +743,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.p90_upg_primary = deep_clone(self.p90_primary)
     self.p90_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.p90_upg_primary.name_id = "wpn_p90_upg_name"
-    self.p90_upg_primary.sounds.fire = "zm_pew_smg"
-    self.p90_upg_primary.sounds.fire_single = "zm_pew_smg"
     self.p90_upg_primary.stats_modifiers = {damage = 10}
     self.p90_upg_primary.CLIP_AMMO_MAX = 50
     self.p90_upg_primary.NR_CLIPS_MAX = 9
@@ -785,8 +753,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
     self.m1928_upg_primary = deep_clone(self.m1928_primary)
     self.m1928_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.m1928_upg_primary.sounds.fire = "zm_pew_smg"
-    self.m1928_upg_primary.sounds.fire_single = "zm_pew_smg"
     self.m1928_upg_primary.stats_modifiers = {damage = 10}
     self.m1928_upg_primary.CLIP_AMMO_MAX = 100
     self.m1928_upg_primary.NR_CLIPS_MAX = 4
@@ -800,8 +766,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	self.ak74_upg_primary = deep_clone(self.ak74_primary)
     self.ak74_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.ak74_upg_primary.name_id = "wpn_ak_upg_name"
-    self.ak74_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.ak74_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.ak74_upg_primary.stats_modifiers = {damage = 10}
     self.ak74_upg_primary.CLIP_AMMO_MAX = 45
     self.ak74_upg_primary.NR_CLIPS_MAX = 8
@@ -813,8 +777,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	self.ching_upg_primary = deep_clone(self.ching_primary)
     self.ching_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.ching_upg_primary.name_id = "wpn_garand_upg_name"
-    self.ching_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.ching_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.ching_upg_primary.stats_modifiers = {damage = 8}
     self.ching_upg_primary.CLIP_AMMO_MAX = 20
     self.ching_upg_primary.NR_CLIPS_MAX = 7
@@ -827,8 +789,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	self.lemming_upg_primary = deep_clone(self.lemming_primary)
     self.lemming_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.lemming_upg_primary.name_id = "wpn_57_upg_name"
-    self.lemming_upg_primary.sounds.fire = "zm_pew_cobra"
-    self.lemming_upg_primary.sounds.fire_single = "zm_pew_cobra"
     self.lemming_upg_primary.stats_modifiers = {damage = 13}
     self.lemming_upg_primary.CLIP_AMMO_MAX = 20
     self.lemming_upg_primary.NR_CLIPS_MAX = 7
@@ -843,8 +803,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
 	self.m37_upg_primary = deep_clone(self.m37_primary)
     self.m37_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.m37_upg_primary.sounds.fire = "zm_pew_shts"
-    self.m37_upg_primary.sounds.fire_single = "zm_pew_shts"
     self.m37_upg_primary.stats_modifiers = {damage = 12}
     self.m37_upg_primary.CLIP_AMMO_MAX = 16
     self.m37_upg_primary.NR_CLIPS_MAX = 6
@@ -856,8 +814,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.r870_upg_primary = deep_clone(self.r870_primary)
     self.r870_upg_primary.name_id = "wpn_r870_upg_name"
     self.r870_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.r870_upg_primary.sounds.fire = "zm_pew_shts"
-    self.r870_upg_primary.sounds.fire_single = "zm_pew_shts"
     self.r870_upg_primary.stats_modifiers = {damage = 10}
     self.r870_upg_primary.CLIP_AMMO_MAX = 12
     self.r870_upg_primary.NR_CLIPS_MAX = 9
@@ -869,8 +825,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	self.erma_upg_primary = deep_clone(self.erma_primary)
     self.erma_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.erma_upg_primary.name_id = "wpn_mp40_upg_name"
-    self.erma_upg_primary.sounds.fire = "zm_pew_smg"
-    self.erma_upg_primary.sounds.fire_single = "zm_pew_smg"
     self.erma_upg_primary.stats_modifiers = {damage = 14}
     self.erma_upg_primary.CLIP_AMMO_MAX = 64
     self.erma_upg_primary.NR_CLIPS_MAX = 4
@@ -882,8 +836,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	self.schakal_upg_primary = deep_clone(self.schakal_primary)
     self.schakal_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.schakal_upg_primary.name_id = "wpn_ump45_upg_name"
-    self.schakal_upg_primary.sounds.fire = "zm_pew_smg"
-    self.schakal_upg_primary.sounds.fire_single = "zm_pew_smg"
     self.schakal_upg_primary.stats_modifiers = {damage = 10}
     self.schakal_upg_primary.CLIP_AMMO_MAX = 48
     self.schakal_upg_primary.NR_CLIPS_MAX = 6
@@ -894,8 +846,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
 	self.tec9_upg_primary = deep_clone(self.tec9_primary)
     self.tec9_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.tec9_upg_primary.sounds.fire = "zm_pew_smg"
-    self.tec9_upg_primary.sounds.fire_single = "zm_pew_smg"
     self.tec9_upg_primary.stats_modifiers = {damage = 15}
     self.tec9_upg_primary.CLIP_AMMO_MAX = 25
     self.tec9_upg_primary.NR_CLIPS_MAX = 10
@@ -909,8 +859,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.msr_upg_primary.CLIP_AMMO_MAX = 10
     self.msr_upg_primary.NR_CLIPS_MAX = 6
     self.msr_upg_primary.AMMO_MAX = self.msr_upg_primary.CLIP_AMMO_MAX * self.msr_upg_primary.NR_CLIPS_MAX
-    self.msr_upg_primary.sounds.fire = "zm_pew_snp_e"
-    self.msr_upg_primary.sounds.fire_single = "zm_pew_snp_e"
     self.msr_upg_primary.stats_modifiers = {damage = 85}
     self.msr_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.msr_upg_secondary = deep_clone(self.msr_upg_primary)
@@ -933,8 +881,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.vulcan_upg.name_id = "wpn_minigun_upg_name"
     self.vulcan_upg.animations.reload_name_id = "shuno"
     self.vulcan_upg.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.vulcan_upg.sounds.fire = "zm_pew_lmg"
-    self.vulcan_upg.sounds.fire_single = "zm_pew_lmg"
     self.vulcan_upg.CLIP_AMMO_MAX = 999
     self.vulcan_upg.NR_CLIPS_MAX = 1
     self.vulcan_upg.AMMO_MAX = self.vulcan_upg.CLIP_AMMO_MAX * self.vulcan_upg.NR_CLIPS_MAX
@@ -946,8 +892,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.deamon_upg_primary.CLIP_AMMO_MAX = 14
     self.deamon_upg_primary.NR_CLIPS_MAX = 6
     self.deamon_upg_primary.AMMO_MAX = self.deamon_upg_primary.CLIP_AMMO_MAX * self.deamon_upg_primary.NR_CLIPS_MAX
-    self.deamon_upg_primary.sounds.fire = "zm_pew_shts"
-    self.deamon_upg_primary.sounds.fire_single = "zm_pew_shts"
     self.deamon_upg_primary.stats_modifiers = {damage = 14}
     self.deamon_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.deamon_upg_secondary = deep_clone(self.deamon_upg_primary)
@@ -967,8 +911,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.stryk_upg_secondary.CLIP_AMMO_MAX = 47
     self.stryk_upg_secondary.NR_CLIPS_MAX = 7
     self.stryk_upg_secondary.AMMO_MAX = self.stryk_upg_secondary.CLIP_AMMO_MAX * self.stryk_upg_secondary.NR_CLIPS_MAX
-    self.stryk_upg_secondary.sounds.fire = "zm_pew_m1911"
-    self.stryk_upg_secondary.sounds.fire_single = "zm_pew_m1911"
     self.stryk_upg_secondary.stats_modifiers = {damage = 12}
     self.stryk_upg_secondary.stats.recoil = 99
     self.stryk_upg_secondary.stats.spread = 99
@@ -979,12 +921,24 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.contraband_rifle_upg_primary.CLIP_AMMO_MAX = 40
     self.contraband_rifle_upg_primary.NR_CLIPS_MAX = 8
     self.contraband_rifle_upg_primary.AMMO_MAX = self.contraband_rifle_upg_primary.CLIP_AMMO_MAX * self.contraband_rifle_upg_primary.NR_CLIPS_MAX
-    self.contraband_rifle_upg_primary.sounds.fire = "zm_pew_rifle"
-    self.contraband_rifle_upg_primary.sounds.fire_single = "zm_pew_rifle"
     self.contraband_rifle_upg_primary.stats_modifiers = {damage = 16}
     self.contraband_rifle_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.contraband_rifle_upg_secondary = deep_clone(self.contraband_rifle_upg_primary)
     self.contraband_rifle_upg_secondary.use_data = {selection_index = SECONDARY}
+
+    self.tar21_upg_primary = deep_clone(self.tar21_primary)
+    self.tar21_upg_primary.name_id = "wpn_tar_upg_name"
+    self.tar21_upg_primary.CLIP_AMMO_MAX = 50
+    self.tar21_upg_primary.NR_CLIPS_MAX = 10
+    self.tar21_upg_primary.AMMO_MAX = self.tar21_upg_primary.CLIP_AMMO_MAX * self.tar21_upg_primary.NR_CLIPS_MAX
+    self.tar21_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.tar21_upg_primary.stats_modifiers = {damage = 8}
+    self.tar21_upg_primary.stats.recoil = 17
+    self.tar21_upg_primary.stats.spread = 17
+    self.tar21_upg_primary.fire_mode_data = {fire_rate = 0.035}
+    self.tar21_upg_primary.auto = {fire_rate = 0.035}
+    self.tar21_upg_secondary = deep_clone(self.tar21_upg_primary)
+    self.tar21_upg_secondary.use_data = {selection_index = SECONDARY}
 end
 
 Hooks:PostHook(WeaponTweakData, "_init_data_swat_van_turret_module_npc", "zm_tweak_swat_turret", function(self)

@@ -52,9 +52,8 @@ Hooks:PreHook(PlayerDamage, "on_downed", "zm_remove_perks_on_down", function(sel
         managers.player:remove_special("perk_quickrevive")
 	end
 	
-	local points_to_remove = math.floor(0 - managers.wdu:_get_own_money() / 4)
-
-	managers.wdu:_add_money_to(managers.wdu:_peer_id(), points_to_remove)
+	local points_to_remove = managers.wdu:points_round(0 - managers.wdu:_get_own_money() / 4)
+	managers.wdu:_add_money_to(managers.wdu:_peer_id(), math.floor(points_to_remove))
 end)
 
 function PlayerDamage:damage_fall(data)

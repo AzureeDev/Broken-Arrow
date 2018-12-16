@@ -213,6 +213,10 @@
 	<unit path="new_weapon_units/wpn_fps_ass_contraband_rifle_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_tar21_primary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_tar21_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_tar21_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_tar21_upg_secondary"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
