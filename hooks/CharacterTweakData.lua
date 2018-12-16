@@ -71,13 +71,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi", "zm_disable_surrenders", functio
 	self.fbi.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.fbi.weapon = deep_clone(presets.weapon.good)
 	self.fbi.weapon.is_rifle.focus_delay = 1
-	self.fbi.weapon.is_rifle.optimal = 10000
-	self.fbi.weapon.is_rifle.far = 10000
-	self.fbi.weapon.is_rifle.close = 10000
 	self.fbi.weapon.is_smg.focus_delay = 1
-	self.fbi.weapon.is_smg.optimal = 10000
-	self.fbi.weapon.is_smg.far = 10000
-	self.fbi.weapon.is_smg.close = 10000
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", function(self, presets)
@@ -91,17 +85,8 @@ Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", func
 	self.swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.swat.weapon = deep_clone(presets.weapon.good)
 	self.swat.weapon.is_rifle.focus_delay = 1
-	self.swat.weapon.is_rifle.optimal = 10000
-	self.swat.weapon.is_rifle.far = 10000
-	self.swat.weapon.is_rifle.close = 10000
 	self.swat.weapon.is_smg.focus_delay = 1
-	self.swat.weapon.is_smg.optimal = 10000
-	self.swat.weapon.is_smg.far = 10000
-	self.swat.weapon.is_smg.close = 10000
 	self.swat.weapon.is_shotgun_pump.focus_delay = 1
-	self.swat.weapon.is_shotgun_pump.optimal = 10000
-	self.swat.weapon.is_shotgun_pump.far = 10000
-	self.swat.weapon.is_shotgun_pump.close = 10000
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3", function(self, presets)
@@ -115,17 +100,8 @@ Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3"
 	self.heavy_swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.heavy_swat.weapon = deep_clone(presets.weapon.good)
 	self.heavy_swat.weapon.is_rifle.focus_delay = 1
-	self.heavy_swat.weapon.is_rifle.optimal = 10000
-	self.heavy_swat.weapon.is_rifle.far = 10000
-	self.heavy_swat.weapon.is_rifle.close = 10000
 	self.heavy_swat.weapon.is_smg.focus_delay = 1
-	self.heavy_swat.weapon.is_smg.optimal = 10000
-	self.heavy_swat.weapon.is_smg.far = 10000
-	self.heavy_swat.weapon.is_smg.close = 10000
 	self.heavy_swat.weapon.is_shotgun_pump.focus_delay = 1
-	self.heavy_swat.weapon.is_shotgun_pump.optimal = 10000
-	self.heavy_swat.weapon.is_shotgun_pump.far = 10000
-	self.heavy_swat.weapon.is_shotgun_pump.close = 10000
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", function(self, presets)
@@ -139,17 +115,8 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", 
 	self.fbi_swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.fbi_swat.weapon = deep_clone(presets.weapon.good)
 	self.fbi_swat.weapon.is_rifle.focus_delay = 1
-	self.fbi_swat.weapon.is_rifle.optimal = 10000
-	self.fbi_swat.weapon.is_rifle.far = 10000
-	self.fbi_swat.weapon.is_rifle.close = 10000
 	self.fbi_swat.weapon.is_smg.focus_delay = 1
-	self.fbi_swat.weapon.is_smg.optimal = 10000
-	self.fbi_swat.weapon.is_smg.far = 10000
-	self.fbi_swat.weapon.is_smg.close = 10000
 	self.fbi_swat.weapon.is_shotgun_pump.focus_delay = 1
-	self.fbi_swat.weapon.is_shotgun_pump.optimal = 10000
-	self.fbi_swat.weapon.is_shotgun_pump.far = 10000
-	self.fbi_swat.weapon.is_shotgun_pump.close = 10000
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrenders_5", function(self, presets)
@@ -163,17 +130,8 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrender
 	self.fbi_heavy_swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.fbi_heavy_swat.weapon = deep_clone(presets.weapon.good)
 	self.fbi_heavy_swat.weapon.is_rifle.focus_delay = 1
-	self.fbi_heavy_swat.weapon.is_rifle.optimal = 10000
-	self.fbi_heavy_swat.weapon.is_rifle.far = 10000
-	self.fbi_heavy_swat.weapon.is_rifle.close = 10000
 	self.fbi_heavy_swat.weapon.is_smg.focus_delay = 1
-	self.fbi_heavy_swat.weapon.is_smg.optimal = 10000
-	self.fbi_heavy_swat.weapon.is_smg.far = 10000
-	self.fbi_heavy_swat.weapon.is_smg.close = 10000
 	self.fbi_heavy_swat.weapon.is_shotgun_pump.focus_delay = 1
-	self.fbi_heavy_swat.weapon.is_shotgun_pump.optimal = 10000
-	self.fbi_heavy_swat.weapon.is_shotgun_pump.far = 10000
-	self.fbi_heavy_swat.weapon.is_shotgun_pump.close = 10000
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6", function(self, presets)
@@ -187,17 +145,8 @@ Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6",
 	self.city_swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.city_swat.weapon = deep_clone(presets.weapon.good)
 	self.city_swat.weapon.is_rifle.focus_delay = 1
-	self.city_swat.weapon.is_rifle.optimal = 10000
-	self.city_swat.weapon.is_rifle.far = 10000
-	self.city_swat.weapon.is_rifle.close = 10000
 	self.city_swat.weapon.is_smg.focus_delay = 1
-	self.city_swat.weapon.is_smg.optimal = 10000
-	self.city_swat.weapon.is_smg.far = 10000
-	self.city_swat.weapon.is_smg.close = 10000
 	self.city_swat.weapon.is_shotgun_pump.focus_delay = 1
-	self.city_swat.weapon.is_shotgun_pump.optimal = 10000
-	self.city_swat.weapon.is_shotgun_pump.far = 10000
-	self.city_swat.weapon.is_shotgun_pump.close = 10000
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_med_tweak", function(self, presets)
@@ -210,13 +159,7 @@ Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_med_tweak", function(self,
 	self.medic.move_speed = presets.move_speed.very_fast
 	self.medic.weapon = deep_clone(presets.weapon.normal)
 	self.medic.weapon.is_rifle.focus_delay = 1
-	self.medic.weapon.is_rifle.optimal = 10000
-	self.medic.weapon.is_rifle.far = 10000
-	self.medic.weapon.is_rifle.close = 10000
 	self.medic.weapon.is_shotgun_pump.focus_delay = 1
-	self.medic.weapon.is_shotgun_pump.optimal = 10000
-	self.medic.weapon.is_shotgun_pump.far = 10000
-	self.medic.weapon.is_shotgun_pump.close = 10000
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_taser", "zm_taser_tweak", function(self, presets)
@@ -225,32 +168,16 @@ Hooks:PostHook(CharacterTweakData, "_init_taser", "zm_taser_tweak", function(sel
 	self.taser.no_arrest = true
 	self.taser.allowed_poses = {crouch = false, stand = true}
 	self.taser.move_speed = presets.move_speed.very_fast
-
-	self.taser.weapon.is_rifle.range.optimal = 10000
-	self.taser.weapon.is_rifle.range.far = 10000
-	self.taser.weapon.is_rifle.range.close = 10000
 	self.taser.weapon.is_rifle.focus_delay = 1
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_spooc", "zm_cloakie_tweak", function(self, presets)
 	self.spooc.allowed_poses = {crouch = false, stand = true}
 	self.spooc.weapon.is_smg.focus_delay = 1
-	self.spooc.weapon.is_smg.optimal = 10000
-	self.spooc.weapon.is_smg.far = 10000
-	self.spooc.weapon.is_smg.close = 10000
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_tank", "zm_tankie_tweak", function(self, presets)
-	self.tank.weapon.is_shotgun_mag.range.optimal = 10000
-	self.tank.weapon.is_shotgun_mag.range.far = 10000
-	self.tank.weapon.is_shotgun_mag.range.close = 10000
 	self.tank.weapon.is_shotgun_mag.focus_delay = 1
-	self.tank.weapon.is_rifle.range.optimal = 10000
-	self.tank.weapon.is_rifle.range.far = 10000
-	self.tank.weapon.is_rifle.range.close = 10000
 	self.tank.weapon.is_rifle.focus_delay = 1
-	self.tank.weapon.is_lmg.range.optimal = 10000
-	self.tank.weapon.is_lmg.range.far = 10000
-	self.tank.weapon.is_lmg.range.close = 10000
 	self.tank.weapon.is_lmg.focus_delay = 1
 end)

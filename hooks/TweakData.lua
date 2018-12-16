@@ -4,6 +4,28 @@
 	tweak_data.projectiles.launcher_rocket.player_damage = 10	--RPG player damage
 	tweak_data.projectiles.fir_com.damage = 15	--Incendiary Grenade
 
+	tweak_data.projectiles.launcher_incendiary_arbiter = {	-- Broken Arrow
+		damage = 50,
+		launch_speed = 7000,
+		curve_pow = 0.1,
+		player_damage = 15,
+		fire_dot_data = {
+			dot_trigger_chance = 100,
+			dot_damage = 100,
+			dot_length = 10,
+			dot_trigger_max_distance = 5000,
+			dot_tick_period = 0.25
+		},
+		range = 350,
+		init_timer = 2.5,
+		mass_look_up_modifier = 1,
+		sound_event = "white_explosion",
+		sound_event_impact_duration = 0.25,
+		name_id = "bm_launcher_incendiary",
+		burn_duration = 6,
+		burn_tick_period = 0.25
+	}
+
  	tweak_data.pickups.max_ammo = {
 		unit = Idstring("power_ups/max_ammo/max_ammo")
 	}

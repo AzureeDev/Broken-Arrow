@@ -25,6 +25,7 @@
     <effect load="true" path="effects/zm/zm_blood_smoke_distorted"/>
     <effect load="true" path="effects/zm/zm_blood_smoke_distorted_small"/>
     <effect load="true" path="effects/zm/zm_blood_smoke_trail_small"/>
+    <effect load="true" path="effects/zm/pinkhaze"/>
 
 
     <font load="true" path="fonts/murderer"/>
