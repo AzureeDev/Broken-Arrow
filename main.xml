@@ -8,7 +8,7 @@
 	</Hooks>
 	<Localization default="english.txt" directory="loc"/>
 	<contact assets_gui="guis/mission_briefing/preload_contact_bain" desc_id="quest_a_better_tomorrow_d" id="a_better_tomorrow" name_id="quest_a_better_tomorrow" package="packages/contact_bain"/>
-	<level ai_group_type="zombie" gamemode_type="3arc_zm" id="zm_broken_arrow" intro_event="broken_arrow_blackscreen_intro" max_bags="0" music="no_music" quest_zm_001="true" team_ai_off="true">
+	<level ai_group_type="zombie" gamemode_type="3arc_zm" id="zm_broken_arrow" intro_event="broken_arrow_blackscreen_intro" max_bags="0" music="no_music" quest_zm_001="true" quest_zm_001_icon="map_assets/ee_icon_done" team_ai_off="true">
 		<add file="levels/zm_broken_arrow/add.xml"/>
 		<hooks directory="hooks">
 			<hook file="Setup.lua" source_file="lib/setups/gamesetup"/>
@@ -130,7 +130,8 @@
 				<sound id="zm_pew_snp_e" path="snp_ebr_base.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_smg" path="smg_mp7_base.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_roach" path="railgun_papboom.ogg" prefix="regular" use_fix="true"/>
-				<sound id="zm_pew_global" path="new_pew_global.ogg" />
+				<sound id="zm_pew_global" path="new_pew_global.ogg" use_fix="true"/>
+				<sound id="zm_pew_global_npc" path="new_pew_global_npc.ogg" use_fix="true"/>
 			</sounds>
 			<sounds directory="teleporter">
 				<sound id="zm_teleporter_activated" path="activated.ogg"/>
