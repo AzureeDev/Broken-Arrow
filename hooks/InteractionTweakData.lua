@@ -543,4 +543,44 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		sound_done = "bar_c4_apply_cancel",
 		special_equipment_block = "perk_staminup"
 	}
+
+	self.zm_point_giveaway_spot_1 = {
+		zm_interaction = true,
+		point_giveaway_spot = true,
+		spot_nb = 1,
+		stay_active = true,
+		sound_done = "bar_plant_breaching_charges",
+		start_active = false,
+		axis = "y"
+	}
+
+	self.zm_point_giveaway_spot_2 = {
+		zm_interaction = true,
+		point_giveaway_spot = true,
+		spot_nb = 2,
+		stay_active = true,
+		sound_done = "bar_plant_breaching_charges",
+		start_active = false,
+		axis = "y"
+	}
+
+	self.zm_point_giveaway_spot_3 = {
+		zm_interaction = true,
+		point_giveaway_spot = true,
+		spot_nb = 3,
+		stay_active = true,
+		sound_done = "bar_plant_breaching_charges",
+		start_active = false,
+		axis = "y"
+	}
+
+	self.zm_point_giveaway_spot_4 = {
+		zm_interaction = true,
+		point_giveaway_spot = true,
+		spot_nb = 4,
+		stay_active = true,
+		sound_done = "bar_plant_breaching_charges",
+		start_active = false,
+		axis = "y"
+	}
 end)

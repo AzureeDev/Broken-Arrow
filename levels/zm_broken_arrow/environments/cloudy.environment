@@ -9,9 +9,9 @@
 			<param key="sky_texture" value="core/environments/skies/sky_2100_moon/sky_2100_moon"/>
 			<param key="global_world_overlay_mask_texture" value=""/>
 			<param key="underlay" value="core/environments/skies/sky_2100_moon/sky_2100_moon"/>
-			<param key="sun_ray_color_scale" value="0"/>
+			<param key="sun_ray_color_scale" value="0.1953798532486"/>
 			<param key="global_world_overlay_texture" value=""/>
-			<param key="sun_ray_color" value="1 1 1"/>
+			<param key="sun_ray_color" value="1 0 0"/>
 			<param key="global_texture" value="levels/mods/zm_broken_arrow/cube_lights/102209"/>
 		</others>
 		<post_effect>
@@ -27,11 +27,11 @@
 						<param key="sky_bottom_color_scale" value="0"/>
 						<param key="ambient_color_scale" value="1.1722816228867"/>
 						<param key="ambient_color" value="0.1843137294054 0.0078431377187371 0"/>
-						<param key="fog_max_range" value="4341.7607421875"/>
+						<param key="fog_max_range" value="9768.9921875"/>
 						<param key="bloom_threshold" value="0"/>
 						<param key="sky_top_color_scale" value="0"/>
 						<param key="sky_top_color" value="0 0 0.047058824449778"/>
-						<param key="fog_min_range" value="640.4130859375"/>
+						<param key="fog_min_range" value="1237.4085693359"/>
 						<param key="fog_max_density" value="0.31260851025581"/>
 					</apply_ambient>
 				</deferred_lighting>

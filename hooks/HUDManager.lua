@@ -9,5 +9,7 @@ Hooks:PostHook(HUDManager, "remove_teammate_panel", "post_rtp_hud_zm", function(
 	if self._hud_zm_points and prev_peer_id_disconnected then
 		self._hud_zm_points._zmp_avatars[prev_peer_id_disconnected]:set_visible(false)
 		self._hud_zm_points._zmp_points[prev_peer_id_disconnected]:set_visible(false)
+
+		managers.wdu:set_disconnected_state(id)
 	end
 end)

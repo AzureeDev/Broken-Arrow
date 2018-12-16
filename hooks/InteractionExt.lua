@@ -162,6 +162,27 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 				text = "You need " .. points_needed .. " more points to buy a random weapon"
 			end
 		end
+
+		if self._tweak_data.point_giveaway_spot then
+			local player_name_aimed_at = managers.wdu.players[self._tweak_data.spot_nb].player_name
+			cost = 1000
+
+			if player_name_aimed_at ~= "" then
+				text = "Press " .. managers.localization:btn_macro("interact") .. " to give 1000 points to " .. tostring(player_name_aimed_at)
+
+				if current_money < cost then
+					local points_needed = cost - current_money
+					text = "You need " .. points_needed .. " more points to give the minimum amount"
+				end
+			end
+
+			local my_p_id = managers.wdu:_peer_id()
+
+			if self._tweak_data.spot_nb == my_p_id or not managers.wdu:_player_connected(self._tweak_data.spot_nb) then
+				cost = 0
+				text = ""
+			end
+		end
 	else
 		local text_id = self._tweak_data.text_id or alive(self._unit) and self._unit:base().interaction_text_id and self._unit:base():interaction_text_id()
 		text = managers.localization:text(text_id, string_macros)
@@ -263,6 +284,22 @@ function BaseInteractionExt:can_interact(player)
 				if string.find(weapon_id, "_upg_") then
 					return false
 				end
+			end
+		end
+
+		if self._tweak_data.point_giveaway_spot then
+			local amount = 1000
+
+			if not managers.wdu:_player_connected(self._tweak_data.spot_nb) then
+				return false
+			end
+
+			if self._tweak_data.spot_nb == managers.wdu:_peer_id() then
+				return false
+			end
+			
+			if current_money < amount then
+				return false
 			end
 		end
 
@@ -381,6 +418,13 @@ function BaseInteractionExt:interact(player)
 
 		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
 			amount_to_deduct = 0 - 10
+		end
+
+		if self._tweak_data.point_giveaway_spot then
+			local amount = 1000
+
+			managers.wdu:_add_money_to(self._tweak_data.spot_nb, amount)
+			managers.wdu:_add_money_to(managers.wdu:_peer_id(), 0 - amount)
 		end
 
 		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then

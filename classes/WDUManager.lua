@@ -705,6 +705,20 @@ function WDUManager:points_round(points)
     return math.floor(points * mult + 0.5) / mult
 end
 
+function WDUManager:_player_connected(id)
+    if self.players[id] and self.players[id].steam_id == 0 then
+        return false
+    end
+
+    return true
+end
+
+function WDUManager:set_disconnected_state(id)
+    if id then
+        self.players[id].steam_id = 0
+    end
+end
+
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "ZMUpdatePoints" then
         local points = tonumber(data)
