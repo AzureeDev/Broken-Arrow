@@ -1,9 +1,4 @@
 Hooks:PostHook(RaycastWeaponBase, "fire", "zm_pap_sound_click", function(self)
-	if string.find(self._name_id, "_upg_") and string.find(self._name_id, "_npc") then
-		self._sound_fire:post_event("zm_pew_global_npc")
-		return
-	end
-
 	if string.find(self._name_id, "_upg_") then
 		self._sound_fire:post_event("zm_pew_global")
 	end
