@@ -548,6 +548,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		zm_interaction = true,
 		point_giveaway_spot = true,
 		spot_nb = 1,
+		points_cost = 0,
 		stay_active = true,
 		sound_done = "bar_plant_breaching_charges",
 		start_active = false,
@@ -559,6 +560,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		point_giveaway_spot = true,
 		spot_nb = 2,
 		stay_active = true,
+		points_cost = 0,
 		sound_done = "bar_plant_breaching_charges",
 		start_active = false,
 		axis = "y"
@@ -569,6 +571,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		point_giveaway_spot = true,
 		spot_nb = 3,
 		stay_active = true,
+		points_cost = 0,
 		sound_done = "bar_plant_breaching_charges",
 		start_active = false,
 		axis = "y"
@@ -579,6 +582,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		point_giveaway_spot = true,
 		spot_nb = 4,
 		stay_active = true,
+		points_cost = 0,
 		sound_done = "bar_plant_breaching_charges",
 		start_active = false,
 		axis = "y"

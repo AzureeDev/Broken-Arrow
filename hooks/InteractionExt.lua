@@ -297,7 +297,7 @@ function BaseInteractionExt:can_interact(player)
 			if self._tweak_data.spot_nb == managers.wdu:_peer_id() then
 				return false
 			end
-			
+
 			if current_money < amount then
 				return false
 			end
@@ -414,7 +414,7 @@ function BaseInteractionExt:interact(player)
 			return
 		end
 
-		local amount_to_deduct = 0 - self._tweak_data.points_cost
+		local amount_to_deduct = 0 - self._tweak_data.points_cost or 0
 
 		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
 			amount_to_deduct = 0 - 10
