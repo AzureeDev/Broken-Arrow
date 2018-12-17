@@ -1,3 +1,21 @@
+local mvec3_set = mvector3.set
+local mvec3_sub = mvector3.subtract
+local mvec3_add = mvector3.add
+local mvec3_mul = mvector3.multiply
+local mvec3_div = mvector3.divide
+local mvec3_norm = mvector3.normalize
+local mvec3_len = mvector3.length
+local mvec3_dot = mvector3.dot
+local mvec3_set_z = mvector3.set_z
+local mvec3_z = mvector3.z
+local mvec3_set_len = mvector3.set_length
+local tmp_vec1 = Vector3()
+local tmp_vec2 = Vector3()
+local tmp_vec3 = Vector3()
+local tmp_rot1 = Rotation()
+local tmp_rot2 = Rotation()
+local tmp_rot3 = Rotation()
+
 function HuskPlayerMovement:sync_start_auto_fire_sound()
 	if self._state == "mask_off" or self._state == "clean" or self._state == "civilian" then
 		return
