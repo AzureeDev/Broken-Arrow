@@ -77,5 +77,10 @@
 	"zm_security" : "Its being locked by an external power source",
 	"zm_teleport_end" : "Hold $BTN_INTERACT to teleport to the whitehouse (The End)",
     "wpn_contraband_upg_name" : "Illicitus",
-    "wpn_tar_upg_name" : "Storm-115"
+    "wpn_tar_upg_name" : "Storm-115",
+    "zm_hint_blood_sub_2" : "Step 2. Listen to the distant voices.",
+    "zm_hint_blood_sub_3" : "Step 3. A box of secrets is what you need. A letter and number is what you seek.",
+    "zm_hint_blood_sub_4" : "Step 4. Only one terminal can save you now.",
+    "zm_hint_blood_sub_5" : "Step 5. The more souls you get brings you closer to redemption.",
+    "zm_hint_blood_sub_6" : "Step 6. Unleash Hell."
 }

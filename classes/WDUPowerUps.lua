@@ -46,6 +46,15 @@ function WDUPowerUps:init()
         [5] = false,
         [6] = false,
     }
+
+    self._hint_subtitles_durations = {
+        [1] = { duration = 0 },
+        [2] = { duration = 4 },
+        [3] = { duration = 8 },
+        [4] = { duration = 4 },
+        [5] = { duration = 6 },
+        [6] = { duration = 4 },
+    }
 end
 
 function WDUPowerUps:execute_max_ammo()
@@ -323,6 +332,8 @@ function WDUPowerUps:execute_zombie_blood()
         if current_secret_step > 1 then
             if not self._hint_said_for_step[current_secret_step] then
                 local hint_name = "hint_blood_" .. tostring(current_secret_step)
+                local hint_subtitle_id = "zm_hint_blood_sub_" .. tostring(current_secret_step)
+                local duration = self._hint_subtitles_durations[current_secret_step].duration
 
                 managers.wdu:_element_play_sound({
                     name = "zombie_blood_hint",
@@ -335,6 +346,7 @@ function WDUPowerUps:execute_zombie_blood()
                     use_velocity = false
                 })
 
+                DramaExt:play_subtitle(hint_subtitle_id, duration)
                 self._hint_said_for_step[current_secret_step] = true
             end
         end
