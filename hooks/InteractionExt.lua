@@ -423,7 +423,7 @@ function BaseInteractionExt:interact(player)
 		if self._tweak_data.point_giveaway_spot then
 			local amount = 1000
 
-			managers.wdu:_add_money_to(self._tweak_data.spot_nb, amount)
+			LuaNetworking:SendToPeers( "ShareCashTo", tostring(self._tweak_data.spot_nb) )
 			managers.wdu:_add_money_to(managers.wdu:_peer_id(), 0 - amount)
 		end
 

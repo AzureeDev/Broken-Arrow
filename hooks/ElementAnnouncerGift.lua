@@ -131,8 +131,25 @@ function ElementAnnouncerGift:on_executed(instigator)
 
         managers.overlay_effect:play_effect(overlay_effect)
 
-        local double_point_effect = managers.wdu:_is_event_active("double_points") and 2 or 1
-        managers.wdu:_add_money_to(managers.wdu:_peer_id(), 400 * double_point_effect)
+        managers.wdu:wait(1, "kaboom_wait", function()
+            local function nukeunit(pawn)
+                local col_ray = { }
+                col_ray.ray = Vector3(1, 0, 0)
+                col_ray.position = pawn.unit:position()
+            
+                local action_data = {}
+                action_data.variant = "explosion"
+                action_data.damage = 1000000
+                action_data.attacker_unit = nil
+                action_data.col_ray = col_ray
+            
+                pawn.unit:character_damage():damage_explosion(action_data)
+            end
+    
+            for u_key,u_data in pairs(managers.enemy:all_enemies()) do
+                nukeunit(u_data)
+            end
+        end)
     end
 	
 	ElementAnnouncerGift.super.on_executed(self, instigator)

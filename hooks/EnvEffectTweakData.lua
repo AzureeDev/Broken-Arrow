@@ -1,4 +1,4 @@
-function EnvEffectTweakData:incendiary_fire_arbiter()
+--[[function EnvEffectTweakData:incendiary_fire_arbiter()
 	local params = {
 		sound_event = "gl_explode",
 		range = 100,
@@ -22,4 +22,4 @@ function EnvEffectTweakData:incendiary_fire_arbiter()
 	}
 
 	return params
-end
+end]]

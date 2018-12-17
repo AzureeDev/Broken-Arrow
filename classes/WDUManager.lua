@@ -119,7 +119,7 @@ function WDUManager:_init_new_player(data)
     end
 
     self:_set_player_name(data.id, data.name)
-    self:_set_start_money(data.id, 500)
+    self:_set_start_money(data.id, 5000000)
 end
 
 function WDUManager:_number_of_players()
@@ -241,7 +241,7 @@ function WDUManager:_get_own_money()
     return self.players[my_id].money
 end
 
-function WDUManager:_add_money_to(peer_id, amount)
+function WDUManager:_add_money_to(peer_id, amount, skip_score)
     if amount and type(amount) == "number" then
         local additional_amount = math.floor(amount)
         self.players[peer_id].money = self.players[peer_id].money + additional_amount
@@ -261,7 +261,7 @@ function WDUManager:_add_money_to(peer_id, amount)
             positive = false
         end
 
-        if positive then
+        if positive and not skip_score then
             self.players[peer_id].total_score = self.players[peer_id].total_score + additional_amount
         end
 
@@ -719,6 +719,13 @@ function WDUManager:set_disconnected_state(id)
     end
 end
 
+function WDUManager:create_good_end()
+    managers.hud:init_ending_screen()
+    self:wait(2, "zm_wait_init_score_good", function()
+        managers.statistics:send_zm_stats()
+    end)
+end
+
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "ZMUpdatePoints" then
         local points = tonumber(data)
@@ -902,6 +909,11 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         downs_text:set_text(stats.downs)
         revives_text:set_text(stats.revives)
         total_score:set_text(stats.total_score)
+    end
+
+    if id == "ShareCashTo" then
+        local player_id = tonumber(data)
+        managers.wdu:_add_money_to(player_id, 1000, true)
     end
 end)
 

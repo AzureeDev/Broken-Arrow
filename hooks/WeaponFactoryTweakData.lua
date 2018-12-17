@@ -176,29 +176,7 @@ function WeaponFactoryTweakData:_init_wunderwaffe_dg3()
 	self.wpn_fps_spe_wunderwaffe_dg3_secondary_npc.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_secondary_npc"
 end
 
-function WeaponFactoryTweakData:_init_multiplix()
-    self.parts.wpn_fps_bow_elastic_m_explosive = {
-		is_a_unlockable = true,
-		texture_bundle_folder = "ram",
-		a_obj = "a_m",
-		sub_type = "ammo_explosive",
-		type = "ammo",
-		parent = "lower_reciever",
-		name_id = "bm_wp_elastic_m_explosive",
-		unit = "units/pd2_dlc_ram/weapons/wpn_fps_bow_elastic_pts/wpn_fps_bow_elastic_m_standard",
-		pcs = {},
-		bullet_objects = {
-			amount = 1,
-			prefix = "g_bullet_"
-		},
-		stats = {
-			damage = 40
-		},
-		custom_stats = {
-			launcher_grenade = "launcher_incendiary_arbiter"
-		}
-    }
-    
+function WeaponFactoryTweakData:_init_multiplix()    
     self.wpn_fps_pis_1911_primary = deep_clone(self.wpn_fps_pis_1911)
     self.wpn_fps_pis_1911_primary.unit = "new_weapon_units/wpn_fps_pis_1911_primary"
     self.wpn_fps_pis_1911_primary_npc = deep_clone(self.wpn_fps_pis_1911)
@@ -999,15 +977,6 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 
     self.wpn_fps_bow_elastic_upg_primary = deep_clone(self.wpn_fps_bow_elastic)
     self.wpn_fps_bow_elastic_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_primary"
-    self.wpn_fps_bow_elastic_upg_primary.default_blueprint = {
-        "wpn_fps_bow_elastic_bow",
-        "wpn_fps_bow_elastic_body_regular",
-        "wpn_fps_bow_elastic_g_1",
-        "wpn_fps_bow_elastic_pin",
-        "wpn_fps_bow_elastic_whisker",
-        "wpn_fps_bow_elastic_m_explosive",
-        "wpn_fps_bow_elastic_sight"
-    }
     self.wpn_fps_bow_elastic_upg_secondary = deep_clone(self.wpn_fps_bow_elastic_upg_primary)
     self.wpn_fps_bow_elastic_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_secondary"
     self.wpn_fps_bow_elastic_upg_primary_npc = deep_clone(self.wpn_fps_bow_elastic)

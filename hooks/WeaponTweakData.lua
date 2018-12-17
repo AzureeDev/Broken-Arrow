@@ -898,7 +898,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.deamon_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
 
     self.elastic_upg_primary = deep_clone(self.elastic_primary)
-    self.elastic_upg_primary.projectile_type = "launcher_incendiary_arbiter"
     self.elastic_upg_primary.name_id = "wpn_elastic_upg_name"
     self.elastic_upg_primary.stats_modifiers = {damage = 14}
     self.elastic_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"

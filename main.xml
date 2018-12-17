@@ -58,6 +58,7 @@
 			<hook file="SentryGunMovement.lua" source_file="lib/units/equipment/sentry_gun/sentrygunmovement"/>
 			<hook file="FPCameraPlayerBase.lua" source_file="lib/units/cameras/fpcameraplayerbase"/>
 			<hook file="IngameWaitingForPlayersState.lua" source_file="lib/states/ingamewaitingforplayers"/>
+			<hook file="ArrowBase.lua" source_file="lib/units/weapons/projectiles/arrowbase"/>
 		</hooks>
 		<include directory="levels/zm_broken_arrow">
 			<file file="world.world" type="binary"/>
