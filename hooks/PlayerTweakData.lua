@@ -215,7 +215,11 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.elastic_primary = deep_clone(self.stances.elastic)
 	self.stances.elastic_secondary = deep_clone(self.stances.elastic)
 	self.stances.elastic_upg_primary = deep_clone(self.stances.elastic)
-	self.stances.elastic_upg_secondary = deep_clone(self.stances.elastic)
+	self.stances.elastic_upg_primary.standard.shoulders.translation = Vector3(-5.696, -20.377, 10.841)
+	self.stances.elastic_upg_primary.standard.shoulders.rotation = Rotation(0.00215024, -0.0345012, 0.00130212, -0.999402)
+	self.stances.elastic_upg_primary.steelsight.shoulders.translation = Vector3(-5.603, -5.377, 10.807)
+	self.stances.elastic_upg_primary.steelsight.shoulders.rotation = Rotation(0.000160639, 0.0440202, 0.00246083, -0.999028)
+	self.stances.elastic_upg_secondary = deep_clone(self.stances.elastic_upg_primary)
 
 	self.stances.stryk_upg_secondary = deep_clone(self.stances.glock_18c)
 
@@ -228,4 +232,5 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.tar21_secondary = deep_clone(self.stances.komodo)
 	self.stances.tar21_upg_primary = deep_clone(self.stances.komodo)
 	self.stances.tar21_upg_secondary = deep_clone(self.stances.komodo)
+
 end)

@@ -509,7 +509,44 @@ function WeaponFactoryTweakData:_init_multiplix()
 	self.wpn_fps_ass_tar21_secondary_npc.unit = "units/pd2_dlc_tar/weapons/wpn_fps_ass_komodo/wpn_fps_ass_komodo_npc"
 end
 
-function WeaponFactoryTweakData:_init_upgraded_multiplix() 
+function WeaponFactoryTweakData:_init_upgraded_multiplix()
+
+    self.parts.wpn_fps_spe_storm_bow_base = {
+		a_obj = "a_body",
+		type = "barrel",
+		name_id = "bm_wp_elastic_body_standard",
+		unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base",
+		stats = {
+			value = 1
+		},
+		animations = {
+			reload = "reload",
+			fire = "recoil",
+			fire_steelsight = "recoil",
+			charge = "charge"
+		}
+    }
+    
+    self.parts.wpn_fps_spe_storm_bow_bone_base = {
+		a_obj = "a_body",
+		type = "lower_reciever",
+		name_id = "bm_wp_elastic_body_standard",
+		unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base",
+		stats = {
+			value = 1
+		}
+    }
+    
+    self.parts.wpn_fps_spe_storm_bow_elec_base = {
+		a_obj = "a_body",
+		type = "lower_reciever",
+		name_id = "bm_wp_elastic_body_standard",
+		unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base",
+		stats = {
+			value = 1
+		}
+	}
+    
     self.wpn_fps_ass_m14_upg_primary = deep_clone(self.wpn_fps_ass_m14)
     self.wpn_fps_ass_m14_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_m14_upg_primary"
     self.wpn_fps_ass_m14_upg_primary.default_blueprint = {
@@ -976,9 +1013,15 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 	self.wpn_fps_sho_deamon_upg_secondary_npc.unit = "units/pd2_dlc_wild/weapons/wpn_fps_sho_boot/wpn_fps_sho_boot_npc"
 
     self.wpn_fps_bow_elastic_upg_primary = deep_clone(self.wpn_fps_bow_elastic)
-    self.wpn_fps_bow_elastic_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_primary"
+    self.wpn_fps_bow_elastic_upg_primary.unit = "units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow"
+    self.wpn_fps_bow_elastic_upg_primary.default_blueprint = {
+        "wpn_fps_spe_storm_bow_base",
+        "wpn_fps_spe_storm_bow_bone_base",
+        "wpn_fps_spe_storm_bow_elec_base",
+        "wpn_fps_bow_elastic_m_standard",
+    }
     self.wpn_fps_bow_elastic_upg_secondary = deep_clone(self.wpn_fps_bow_elastic_upg_primary)
-    self.wpn_fps_bow_elastic_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_bow_elastic_upg_secondary"
+    self.wpn_fps_bow_elastic_upg_secondary.unit = "units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow_secondary"
     self.wpn_fps_bow_elastic_upg_primary_npc = deep_clone(self.wpn_fps_bow_elastic)
 	self.wpn_fps_bow_elastic_upg_primary_npc.unit = "units/pd2_dlc_ram/weapons/wpn_fps_bow_elastic/wpn_fps_bow_elastic_npc"
     self.wpn_fps_bow_elastic_upg_primary_npc.skip_thq_parts = true

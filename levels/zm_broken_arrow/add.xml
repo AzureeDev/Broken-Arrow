@@ -217,6 +217,40 @@
 	<unit path="new_weapon_units/wpn_fps_ass_tar21_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_tar21_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_tar21_upg_secondary"/>
+
+	<unit path="units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow_secondary"/>
+	<object path="units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow"/>
+	<model path="units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow"/>
+	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/base_df"/>
+	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/base_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/bones_base_df"/>
+	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/bones_base_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/electric_base_df"/>
+	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/electric_base_nm"/>
+
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
+	<model path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
+	<object path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base_thq"/>
+
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
+	<model path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
+	<object path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base_thq"/>
+
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
+	<model path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
+	<object path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base_thq"/>
+
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
