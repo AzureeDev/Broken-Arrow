@@ -5,7 +5,7 @@ function ArrowBase:_on_collision(col_ray)
 	if not loose_shoot and alive(col_ray.unit) then
 		local client_damage = self._damage_class_string == "InstantExplosiveBulletBase" or alive(col_ray.unit) and col_ray.unit:id() ~= -1
 
-		if Network:is_server() or client_damage then
+		--if Network:is_server() or client_damage then
             self._damage_class:on_collision(col_ray, self._weapon_unit or self._unit, self._thrower_unit, self._damage * damage_mult, false, false)
 			
             local is_upg_bow = string.find(self:weapon_unit():base()._name_id, "_upg_")
@@ -42,7 +42,7 @@ function ArrowBase:_on_collision(col_ray)
 					end
 				end
             end
-		end
+		--end
 	end
 
 	if not loose_shoot and tweak_data.projectiles[self._tweak_projectile_entry].remove_on_impact then

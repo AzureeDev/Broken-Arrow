@@ -420,13 +420,6 @@ function BaseInteractionExt:interact(player)
 			amount_to_deduct = 0 - 10
 		end
 
-		if self._tweak_data.point_giveaway_spot then
-			local amount = 1000
-
-			LuaNetworking:SendToPeers( "ShareCashTo", tostring(self._tweak_data.spot_nb) )
-			managers.wdu:_add_money_to(managers.wdu:_peer_id(), 0 - amount)
-		end
-
 		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then
 			local current_state = managers.player:get_current_state()
 			if current_state then
@@ -447,6 +440,16 @@ function BaseInteractionExt:interact(player)
 			end
 		end
 
+		if self._tweak_data.point_giveaway_spot then
+			local amount = 1000
+
+			LuaNetworking:SendToPeers( "ShareCashTo", tostring(self._tweak_data.spot_nb) )
+			managers.wdu:_add_money_to(managers.wdu:_peer_id(), 0 - amount)
+			self:_post_event(player, "sound_done")
+			
+			return
+		end
+		
 		local peer_id = 1
 
 		if managers and managers.network then
