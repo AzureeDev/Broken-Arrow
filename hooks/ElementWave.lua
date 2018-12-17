@@ -17,6 +17,7 @@ function ElementWave:on_executed(instigator)
 
     if not self._values.ending_check then
         managers.wdu:_respawn()
+        managers.wdu.level.zombies.added_contour = false
         managers.wdu:_remove_auto_respawn()
     end
 
@@ -30,15 +31,23 @@ function ElementWave:on_executed(instigator)
         managers.wdu.level.zombies.killed = managers.wdu.level.zombies.killed + 1
 
         managers.wdu:_remove_auto_respawn()
-	    managers.wdu:_zm_auto_respawn()
+        managers.wdu:_zm_auto_respawn()
 
         if managers.wdu:_is_special_wave() then
-            if managers.wdu.level.zombies.killed == (managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players()) then
+            if (managers.wdu.level.zombies.killed) == math.floor((managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players()) - 3) then
+                managers.wdu:_create_last_enemies_outline()
+            end 
+
+            if managers.wdu.level.zombies.killed == math.floor((managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players())) then
                 managers.wdu:_start_new_wave(13, true)
                 ElementWave.super.on_executed(self, instigator)
                 return
             end
         else
+            if (managers.wdu.level.zombies.killed) == math.floor(managers.wdu.level.zombies.max_spawns - 3) then
+                managers.wdu:_create_last_enemies_outline()
+            end
+
             if managers.wdu.level.zombies.killed == math.floor(managers.wdu.level.zombies.max_spawns) then
                 managers.wdu:_start_new_wave(13)
                 ElementWave.super.on_executed(self, instigator)

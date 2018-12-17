@@ -59,7 +59,8 @@ function WDUManager:_init_variables()
             max_special_wave_total_spawns = 10,
             killed = 0,
             add_on_end_wave = 2,
-            max_special_wave_spawns = 2
+            max_special_wave_spawns = 2,
+            added_contour = false
         },
         wave = {
             current = 0,
@@ -111,6 +112,8 @@ function WDUManager:_init_variables()
 
     self._sound_buffers = {}
     self._sound_sources = {}
+
+    self._hud_hidden = false
 end
 
 function WDUManager:_init_new_player(data)
@@ -476,6 +479,16 @@ function WDUManager:_set_special_wave(state)
 end
 
 function WDUManager:_start_new_wave(t, was_special_wave)
+    if not self._hud_hidden then
+        if NepgearsyHUDReborn then
+            managers.hud:hide_panels("assault_panel_v2", "custody_panel", "hostages_panel", "heist_timer_panel")
+        else
+            managers.hud:hide_panels("assault_panel", "custody_panel", "hostages_panel", "heist_timer_panel")
+        end
+
+        self._hud_hidden = true
+    end
+
     if not t then
         t = self.level.wave.delay_timeout
     end
@@ -724,6 +737,18 @@ function WDUManager:create_good_end()
     self:wait(2, "zm_wait_init_score_good", function()
         managers.statistics:send_zm_stats()
     end)
+end
+
+function WDUManager:_create_last_enemies_outline()
+    if not Network:is_server() then
+        return
+    end
+
+    for u_k, u_d in pairs(managers.enemy:all_enemies()) do
+        u_d.unit:contour():add("highlight_character", true)
+    end
+
+    self.level.zombies.added_contour = true
 end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)

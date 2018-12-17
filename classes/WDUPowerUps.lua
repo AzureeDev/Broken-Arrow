@@ -257,13 +257,13 @@ function WDUPowerUps:execute_blood_money()
     self._source:post_event("zm_announcer_blood_money")
 
     local cash_table = {
+        50,
+        100,
+        150,
+        200,
         250,
         300,
-        400,
-        500,
-        750,
-        1000,
-        1500
+        500
     }
 
     local double_points = managers.wdu.level.active_events.double_points and 2 or 1

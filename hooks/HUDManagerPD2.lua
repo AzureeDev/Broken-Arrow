@@ -504,8 +504,8 @@ function HUDZMPoints:_create_zm_hud(parent)
 
     local peer_1_avatar = zm_points_panel:bitmap({
         texture = "guis/textures/pd2/none_icon",
-        h = 40,
-        w = 40,
+        h = 64,
+        w = 64,
         x = 0,
         y = 5,
         visible = false
@@ -519,7 +519,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         y = 5,
         text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         color = tweak_data.chat_colors[1],
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline",
         visible = false
     })
@@ -529,8 +529,8 @@ function HUDZMPoints:_create_zm_hud(parent)
 
     local peer_2_avatar = zm_points_panel:bitmap({
         texture = "guis/textures/pd2/none_icon",
-        h = 40,
-        w = 40,
+        h = 64,
+        w = 64,
         visible = false
     })
     peer_2_avatar:set_left(peer_1_avatar:left())
@@ -542,7 +542,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         valign = "center",
         text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         color = tweak_data.chat_colors[2],
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline",
         visible = false
     })
@@ -552,8 +552,8 @@ function HUDZMPoints:_create_zm_hud(parent)
 
     local peer_3_avatar = zm_points_panel:bitmap({
         texture = "guis/textures/pd2/none_icon",
-        h = 40,
-        w = 40,
+        h = 64,
+        w = 64,
         visible = false
     })
     peer_3_avatar:set_left(peer_2_avatar:left())
@@ -565,7 +565,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         valign = "center",
         text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         color = tweak_data.chat_colors[3],
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline",
         visible = false
     })
@@ -575,8 +575,8 @@ function HUDZMPoints:_create_zm_hud(parent)
 
     local peer_4_avatar = zm_points_panel:bitmap({
         texture = "guis/textures/pd2/none_icon",
-        h = 40,
-        w = 40,
+        h = 64,
+        w = 64,
         visible = false
     })
     peer_4_avatar:set_left(peer_3_avatar:left())
@@ -588,7 +588,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         valign = "center",
         text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         color = tweak_data.chat_colors[4],
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline",
         visible = false
     })
@@ -619,12 +619,12 @@ function HUDZMPoints:_create_zm_hud(parent)
         name = "peer_1_points_gained",
         vertical = "center",
         valign = "center",
-        x = -10,
+        x = -30,
         y = 5,
         text = "100000",
         visible = true,
         color = Color(1, 1, 0),
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline"
     })
     managers.hud:make_fine_text(peer_1_points_gained)
@@ -635,12 +635,12 @@ function HUDZMPoints:_create_zm_hud(parent)
         name = "peer_2_points_gained",
         vertical = "center",
         valign = "center",
-        x = -10,
+        x = -30,
         y = 5,
         text = "",
         visible = true,
         color = Color(1, 1, 0),
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline"
     })
     managers.hud:make_fine_text(peer_2_points_gained)
@@ -651,12 +651,12 @@ function HUDZMPoints:_create_zm_hud(parent)
         name = "peer_3_points_gained",
         vertical = "center",
         valign = "center",
-        x = -10,
+        x = -30,
         y = 5,
         text = "",
         visible = true,
         color = Color(1, 1, 0),
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline"
     })
     managers.hud:make_fine_text(peer_3_points_gained)
@@ -667,12 +667,12 @@ function HUDZMPoints:_create_zm_hud(parent)
         name = "peer_4_points_gained",
         vertical = "center",
         valign = "center",
-        x = -10,
+        x = -30,
         y = 5,
         text = "",
         visible = true,
         color = Color(1, 1, 0),
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline"
     })
     managers.hud:make_fine_text(peer_4_points_gained)
@@ -814,7 +814,7 @@ function HUDZMPoints:GenerateDuplicates(parent_panel, player_id, proper_id)
         text = "+99999",
         visible = true,
         color = Color(1, 1, 0),
-        font_size = tweak_data.menu.pd2_small_font_size,
+        font_size = tweak_data.menu.pd2_small_font_size + 6,
         font = "fonts/escom_outline"
     }
 

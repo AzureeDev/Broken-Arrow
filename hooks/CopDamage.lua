@@ -472,3 +472,9 @@ function CopDamage:chk_killshot(attacker_unit, variant, headshot, weapon_id)
 		managers.player:on_killshot(self._unit, variant, headshot, weapon_id)
 	end
 end
+
+Hooks:PostHook(CopDamage, "die", "post_init_die_cop", function(self)
+	if Network:is_server() then
+		self._unit:contour():remove("highlight_character", true)
+	end
+end)
