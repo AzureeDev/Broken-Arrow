@@ -327,7 +327,7 @@ function WDUPowerUps:execute_zombie_blood()
         unit:movement():set_team(team_data_enemy)
     end
 
-    managers.wdu:wait(6, "zombie_blood_duration", function()
+    managers.wdu:wait(10, "zombie_blood_secret_hint", function()
         local current_secret_step = WDUPowerUps._CURRENT_SECRET_STEP
         if current_secret_step > 1 then
             if not self._hint_said_for_step[current_secret_step] then
