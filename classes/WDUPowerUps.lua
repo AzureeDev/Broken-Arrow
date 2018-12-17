@@ -37,6 +37,15 @@ function WDUPowerUps:init()
         Idstring("LeftFoot"),
         Idstring("RightFoot")
     }
+
+    self._hint_said_for_step = {
+        [1] = false,
+        [2] = false,
+        [3] = false,
+        [4] = false,
+        [5] = false,
+        [6] = false,
+    }
 end
 
 function WDUPowerUps:execute_max_ammo()
@@ -308,6 +317,28 @@ function WDUPowerUps:execute_zombie_blood()
     if alive(unit) then
         unit:movement():set_team(team_data_enemy)
     end
+
+    managers.wdu:wait(6, "zombie_blood_duration", function()
+        local current_secret_step = WDUPowerUps._CURRENT_SECRET_STEP
+        if current_secret_step > 1 then
+            if not self._hint_said_for_step[current_secret_step] then
+                local hint_name = "hint_blood_" .. tostring(current_secret_step)
+
+                managers.wdu:_element_play_sound({
+                    name = "zombie_blood_hint",
+                    file_name = hint_name .. ".ogg",
+                    sound_type = "sfx",
+                    custom_dir = "sound/deamon/sora",
+                    is_relative = false,
+                    is_loop = false,
+                    is_3d = false,
+                    use_velocity = false
+                })
+
+                self._hint_said_for_step[current_secret_step] = true
+            end
+        end
+    end)
 
     managers.wdu:wait(31, "zombie_blood_duration", function()
         -- Revert changes
