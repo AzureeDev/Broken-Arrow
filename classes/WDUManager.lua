@@ -8,6 +8,7 @@ function WDUManager:init()
     self:_init_variables()
     self:_setup_xaudio()
     self:_setup_video_panel()
+    self._played_video = false
 
     self._power_ups = WDUPowerUps:new()
     
@@ -446,6 +447,10 @@ end
 
 function WDUManager:_play_teleporter_transition()
 
+    if self._played_video then
+        return
+    end
+
     local res = RenderSettings.resolution
 	local src_width = 1280
 	local src_height = 720
@@ -467,7 +472,13 @@ function WDUManager:_play_teleporter_transition()
 		x = x,
 		y = y,
 		layer = -10
-	})
+    })
+    
+    self._played_video = true
+
+    self:wait(8, "zm_wait_video_reenable", function()
+        managers.wdu._played_video = false
+    end)
 end
 
 function WDUManager:_set_teleporter_state(state)
@@ -506,7 +517,7 @@ end
 
 function WDUManager:_is_apocalypse()
     if not self:_is_special_wave() then
-        if self:_get_current_wave() > 9 then
+        if self:_get_current_wave() > 11 then
             if math.random(0, 100) > 91 then
                 return true
             end
@@ -772,11 +783,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
 
     if id == "ZMUpdatePointsGained" then
         local points = tonumber(data)
-        local positive = true
-
-        if points < 0 then
-            positive = false
-        end
+        local positive = points > 0 and true or false
 
         if managers.hud then
             managers.hud._hud_zm_points:_animate_points_gained_v2(sender, points, positive)
