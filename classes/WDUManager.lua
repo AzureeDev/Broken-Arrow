@@ -855,7 +855,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
     end
 
     if id == "SpecialWave_SpawnPosition" then
-        if managers.wdu:_is_special_wave() then
+        --if managers.wdu:_is_special_wave() then
             local pos = string_to_vector(data)
 
             if pos then
@@ -917,7 +917,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
                     feedback:play(unpack(params))
                 end
             end)
-        end
+        --end
     end
 
     if id == "ZMStatsEndGame" then
