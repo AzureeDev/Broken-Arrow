@@ -587,6 +587,24 @@
 			<sound path="phone/tone_end.ogg"/>
 			<sound path="phone/vo/Bain_voice_mail.ogg"/>
 			<sound path="phone/vo/bus_phone.ogg"/>
+			<sound path="music/Bank/bankpowerup_assault.ogg"/>
+			<sound path="music/Bank/bankpowerup_intro.ogg"/>
+			<sound path="music/Bank/bankpowerup_end.ogg"/>
+			<sound path="music/Nightclub/nightclubpowerup_assault.ogg"/>
+			<sound path="music/Nightclub/nightclubpowerup_end.ogg"/>
+			<sound path="music/Nightclub/nightclubpowerup_introintro.ogg"/>
+			<sound path="music/Nightclub/nightclubpowerup_intro.ogg"/>
+			<sound path="music/Nightclub/nightclubglitched.ogg"/>
+			<sound path="music/Store/storepowerup_intro.ogg"/>
+			<sound path="music/Store/storepowerup_end.ogg"/>
+			<sound path="music/Store/storepowerup_assault.ogg"/>
+			<sound path="music/Warehouse/whintro.ogg"/>
+			<sound path="music/Warehouse/whintrohackjammed.ogg"/>
+			<sound path="music/Warehouse/whloophackjammed.ogg"/>
+			<sound path="music/Warehouse/whloop1.ogg"/>
+			<sound path="music/Warehouse/whloop2.ogg"/>
+			<sound path="music/Warehouse/whloop3.ogg"/>
+			<sound path="music/Warehouse/whoutro.ogg"/>
 			<sound id="bar_thermal_lance_fix" path="box_interact.ogg"/>
 			<sound id="bar_thermal_lance_fix_cancel" path="box_interact_stop.ogg"/>
 			<sound id="bar_take_watertank" path="Door_buy1.ogg"/>
