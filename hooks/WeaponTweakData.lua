@@ -939,6 +939,29 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.tar21_upg_primary.auto = {fire_rate = 0.035}
     self.tar21_upg_secondary = deep_clone(self.tar21_upg_primary)
     self.tar21_upg_secondary.use_data = {selection_index = SECONDARY}
+
+    self.akrocket_upg_primary = deep_clone(self.akmsu)
+    self.akrocket_upg_primary.name_id = "wpn_ak_upg_name"
+    self.akrocket_upg_primary.weapon_hold = "ak47"
+    self.akrocket_upg_primary.CLIP_AMMO_MAX = 30
+    self.akrocket_upg_primary.NR_CLIPS_MAX = 15
+    self.akrocket_upg_primary.stats.recoil = 19
+    self.akrocket_upg_primary.stats.spread = 18
+    self.akrocket_upg_primary.stats_modifiers = {damage = 14}
+    self.akrocket_upg_primary.AMMO_MAX = self.akrocket_upg_primary.CLIP_AMMO_MAX * self.akrocket_upg_primary.NR_CLIPS_MAX
+    self.akrocket_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.akrocket_upg_primary.use_data = {selection_index = PRIMARY}
+    self.akrocket_upg_primary.fire_mode_data = {fire_rate = 0.1}
+    self.akrocket_upg_primary.animations.reload_name_id = "akmsu"
+    self.akrocket_upg_primary.animations.equip_id = "akmsu"
+    self.akrocket_upg_primary.sounds = {
+        fire = "akrocket_fire_single",
+        fire_single = "akrocket_fire_single",
+        stop_fire = "akrocket_stop",
+        use_fix = true
+    }
+    self.akrocket_upg_secondary = deep_clone(self.akrocket_upg_primary)
+    self.akrocket_upg_secondary.use_data = {selection_index = SECONDARY}
 end
 
 Hooks:PostHook(WeaponTweakData, "_init_data_swat_van_turret_module_npc", "zm_tweak_swat_turret", function(self)

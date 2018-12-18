@@ -1,4 +1,6 @@
 <table directory="assets">
+	<texture path="ui/bloodtrail"/>
+	<texture path="ui/bloodtrail_other"/>
 	<texture force="true" path="effects/textures/misc/lightning2"/>
 	<texture force="true" path="effects/textures/add_atlas_df"/>
 	<texture force="true" path="effects/textures/effects_atlas"/>
@@ -376,6 +378,141 @@
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum_thq"/>
+
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_barrel_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_barrel_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_foregrip_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_foregrip_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_grip_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_grip_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_lowerreceiver_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_lowerreceiver_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_mag_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_mag_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_stock_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_stock_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_upperreceiver_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_upperreceiver_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_ironsight_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_ironsight_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_rail_optic_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_rail_optic_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_rail_irons_df"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_rail_irons_nm"/>
+	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/red_fiber_il"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_secondary"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_npc"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary_npc"/>
+<!--Base Gun Asset-->
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight_thq"/>
+	
+	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
+	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
+	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium_thq"/>
+		
 	<cooked_physics path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>

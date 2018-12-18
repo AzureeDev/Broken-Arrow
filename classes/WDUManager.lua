@@ -278,6 +278,8 @@ function WDUManager:_update_hud_element()
         if managers and managers.network and managers.network:session() then
             for _, peer in pairs(managers.network:session():all_peers()) do
 
+                    local me = peer:id() == self:_peer_id()
+
                     self.players[peer:id()].steam_id = peer:user_id()
 
                     Steam:friend_avatar(2, peer:user_id(), function (texture)
@@ -296,6 +298,11 @@ function WDUManager:_update_hud_element()
 
                     managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
                     managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
+                    managers.hud._hud_zm_points._zmp_points_bg[peer:id()]:set_visible(true)
+
+                    if not me then
+                        managers.hud._hud_zm_points._zmp_points_bg[peer:id()]:set_image("ui/bloodtrail_other")
+                    end
             end
         end
     else
@@ -308,6 +315,7 @@ function WDUManager:_update_hud_element()
         end)
         managers.hud._hud_zm_points._zmp_points[1]:set_text(tostring(self.players[1].money))
         managers.hud._hud_zm_points._zmp_points[1]:set_visible(true)
+        managers.hud._hud_zm_points._zmp_points_bg[1]:set_visible(true)
     end
 end
 
@@ -587,8 +595,8 @@ function WDUManager:_convert_factory_to_upgrade()
 		wpn_fps_ass_flint_secondary = "wpn_fps_ass_flint_upg_secondary",
 		wpn_fps_pis_breech_primary = "wpn_fps_pis_breech_upg_primary",
 		wpn_fps_pis_breech_secondary = "wpn_fps_pis_breech_upg_secondary",
-		wpn_fps_ass_74_primary = "wpn_fps_ass_74_upg_primary",
-		wpn_fps_ass_74_secondary = "wpn_fps_ass_74_upg_secondary",
+		wpn_fps_ass_74_primary = "wpn_fps_ass_akrocket_upg_primary",
+		wpn_fps_ass_74_secondary = "wpn_fps_ass_akrocket_upg_secondary",
 		wpn_fps_ass_ching_primary = "wpn_fps_ass_ching_upg_primary",
 		wpn_fps_ass_ching_secondary = "wpn_fps_ass_ching_upg_secondary",
 		wpn_fps_pis_lemming_primary = "wpn_fps_pis_lemming_upg_primary",
@@ -734,9 +742,11 @@ function WDUManager:_create_last_enemies_outline()
         return
     end
 
-    for u_k, u_d in pairs(managers.enemy:all_enemies()) do
-        u_d.unit:contour():add("highlight_character", true)
-    end
+    self:wait(0.5, "zm_wait_create_outline", function()
+        for u_k, u_d in pairs(managers.enemy:all_enemies()) do
+            u_d.unit:contour():add("highlight_character", true)
+        end
+    end)
 
     self.level.zombies.added_contour = true
 end

@@ -2,6 +2,7 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "zm_init_weapon_data_factory", fu
     self:_init_no_weapon()
     self:_init_wunderwaffe()
     self:_init_wunderwaffe_dg3()
+    self:_init_alcat_akrocket()
 
     self:_init_multiplix()
     self:_init_upgraded_multiplix()
@@ -53,47 +54,47 @@ function WeaponFactoryTweakData:_init_wunderwaffe()
     self.parts.wpn_fps_spe_wunderwaffe_body = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_body.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body"
     self.parts.wpn_fps_spe_wunderwaffe_body.type = "barrel"
-    self.parts.wpn_fps_spe_wunderwaffe_body.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_body.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body"
 	
     self.parts.wpn_fps_spe_wunderwaffe_illum = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_illum.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"
     self.parts.wpn_fps_spe_wunderwaffe_illum.type = "extra"
-    self.parts.wpn_fps_spe_wunderwaffe_illum.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_illum.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"
 	
     self.parts.wpn_fps_spe_wunderwaffe_mag = deep_clone(self.parts.wpn_fps_ass_m14_m_standard)
     self.parts.wpn_fps_spe_wunderwaffe_mag.animations = nil
     self.parts.wpn_fps_spe_wunderwaffe_mag.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"
-    self.parts.wpn_fps_spe_wunderwaffe_mag.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_mag.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"
 	
     self.parts.wpn_fps_spe_wunderwaffe_bulb_outer = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_bulb_outer.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer"
     self.parts.wpn_fps_spe_wunderwaffe_bulb_outer.type = "extra"
-    self.parts.wpn_fps_spe_wunderwaffe_bulb_outer.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_bulb_outer.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer"
 	
     self.parts.wpn_fps_spe_wunderwaffe_center_glow = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_center_glow.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow"
     self.parts.wpn_fps_spe_wunderwaffe_center_glow.type = "extra"
-    self.parts.wpn_fps_spe_wunderwaffe_center_glow.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_center_glow.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow"
 	
     self.parts.wpn_fps_spe_wunderwaffe_center_tube = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_center_tube.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube"
     self.parts.wpn_fps_spe_wunderwaffe_center_tube.type = "extra"
-    self.parts.wpn_fps_spe_wunderwaffe_center_tube.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_center_tube.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube"
    
     self.parts.wpn_fps_spe_wunderwaffe_metal = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_metal.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal"
     self.parts.wpn_fps_spe_wunderwaffe_metal.type = "extra"
-    self.parts.wpn_fps_spe_wunderwaffe_metal.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_metal.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal"
 	
     self.parts.wpn_fps_spe_wunderwaffe_pipes = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_pipes.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes"
     self.parts.wpn_fps_spe_wunderwaffe_pipes.type = "extra"
-    self.parts.wpn_fps_spe_wunderwaffe_pipes.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_pipes.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes"
 	
     self.parts.wpn_fps_spe_wunderwaffe_wood = deep_clone(self.parts.wpn_fps_snp_mosin_body_standard)
     self.parts.wpn_fps_spe_wunderwaffe_wood.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood"
     self.parts.wpn_fps_spe_wunderwaffe_wood.type = "extra"
-    self.parts.wpn_fps_spe_wunderwaffe_wood.third_unit = "units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy"
+    self.parts.wpn_fps_spe_wunderwaffe_wood.third_unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood"
  
     self.wpn_fps_spe_wunderwaffe_primary = deep_clone(self.wpn_fps_snp_mosin)
     self.wpn_fps_spe_wunderwaffe_primary.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe"
@@ -174,6 +175,136 @@ function WeaponFactoryTweakData:_init_wunderwaffe_dg3()
     self.wpn_fps_spe_wunderwaffe_dg3_primary_npc.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_npc"
     self.wpn_fps_spe_wunderwaffe_dg3_secondary_npc = deep_clone(self.wpn_fps_spe_wunderwaffe_dg3_secondary)
 	self.wpn_fps_spe_wunderwaffe_dg3_secondary_npc.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_secondary_npc"
+end
+
+function WeaponFactoryTweakData:_init_alcat_akrocket()
+
+    self.parts.wpn_fps_ass_akrocket_barrel = deep_clone(self.parts.wpn_fps_ass_ak5_b_std)
+    self.parts.wpn_fps_ass_akrocket_barrel.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"
+    self.parts.wpn_fps_ass_akrocket_barrel.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"
+    self.parts.wpn_fps_ass_akrocket_barrel.adds = {
+        "wpn_fps_ass_akrocket_barrel_moving",
+        "wpn_fps_ass_akrocket_frontsight",
+        "wpn_fps_ass_akrocket_frontsight-tritium"
+    }
+
+    self.parts.wpn_fps_ass_akrocket_barrel_moving = deep_clone(self.parts.wpn_fps_ak_bolt)
+    self.parts.wpn_fps_ass_akrocket_barrel_moving.type = "barrel_actual"
+    self.parts.wpn_fps_ass_akrocket_barrel_moving.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"
+    self.parts.wpn_fps_ass_akrocket_barrel_moving.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"
+
+    self.parts.wpn_fps_ass_akrocket_frontsight = deep_clone(self.parts.wpn_fps_ak_bolt)
+    self.parts.wpn_fps_ass_akrocket_frontsight.type = "barrel_sight"
+    self.parts.wpn_fps_ass_akrocket_frontsight.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"
+    self.parts.wpn_fps_ass_akrocket_frontsight.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"
+
+    self.parts["wpn_fps_ass_akrocket_frontsight-tritium"] = deep_clone(self.parts.wpn_fps_ak_bolt)
+    self.parts["wpn_fps_ass_akrocket_frontsight-tritium"].type = "barrel_sight_tritium"
+    self.parts["wpn_fps_ass_akrocket_frontsight-tritium"].unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"
+    self.parts["wpn_fps_ass_akrocket_frontsight-tritium"].third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"
+
+    self.parts.wpn_fps_ass_akrocket_body = deep_clone(self.parts.wpn_fps_smg_akmsu_body_lowerreceiver)
+    self.parts.wpn_fps_ass_akrocket_body.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"
+    self.parts.wpn_fps_ass_akrocket_body.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"
+    self.parts.wpn_fps_ass_akrocket_body.adds = {
+        "wpn_fps_ass_akrocket_bolt"
+    }
+
+    self.parts.wpn_fps_ass_akrocket_body2 = deep_clone(self.parts.wpn_fps_ass_akm_body_upperreceiver)
+    self.parts.wpn_fps_ass_akrocket_body2.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"
+    self.parts.wpn_fps_ass_akrocket_body2.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"
+    self.parts.wpn_fps_ass_akrocket_bolt = deep_clone(self.parts.wpn_fps_ak_bolt)
+    self.parts.wpn_fps_ass_akrocket_bolt.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"
+    self.parts.wpn_fps_ass_akrocket_bolt.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"
+    self.parts.wpn_fps_ass_akrocket_bolt.a_obj = "a_bolt"
+    self.parts.wpn_fps_ass_akrocket_mag = deep_clone(self.parts.wpn_upg_ak_m_akm)
+    self.parts.wpn_fps_ass_akrocket_mag.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"
+    self.parts.wpn_fps_ass_akrocket_mag.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"
+    self.parts.wpn_fps_ass_akrocket_fg = deep_clone(self.parts.wpn_fps_smg_akmsu_fg_standard)
+    self.parts.wpn_fps_ass_akrocket_fg.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"
+    self.parts.wpn_fps_ass_akrocket_fg.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"
+    self.parts.wpn_fps_ass_akrocket_grip = deep_clone(self.parts.wpn_upg_ak_g_standard)
+    self.parts.wpn_fps_ass_akrocket_grip.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"
+    self.parts.wpn_fps_ass_akrocket_grip.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"
+    self.parts.wpn_fps_ass_akrocket_stock = deep_clone(self.parts.wpn_upg_ak_s_folding)
+    self.parts.wpn_fps_ass_akrocket_stock.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"
+    self.parts.wpn_fps_ass_akrocket_stock.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"
+    self.parts.wpn_fps_ass_akrocket_backsight = deep_clone(self.parts.wpn_fps_m4_uupg_o_flipup)
+    self.parts.wpn_fps_ass_akrocket_backsight.a_obj = "a_o_back"
+    self.parts.wpn_fps_ass_akrocket_backsight.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"
+    self.parts.wpn_fps_ass_akrocket_backsight.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"
+    self.parts.wpn_fps_ass_akrocket_backsight.adds = {
+        "wpn_fps_ass_akrocket_backsight-tritium"
+    }
+    self.parts["wpn_fps_ass_akrocket_backsight-tritium"] = deep_clone(self.parts.wpn_fps_m4_uupg_o_flipup)
+    self.parts["wpn_fps_ass_akrocket_backsight-tritium"].unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"
+    self.parts["wpn_fps_ass_akrocket_backsight-tritium"].third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"
+    self.parts["wpn_fps_ass_akrocket_backsight-tritium"].a_obj = "a_o_back"
+
+    self.parts.wpn_fps_ass_akrocket_o_rail = deep_clone(self.parts.wpn_fps_shot_r870_ris_special)
+    self.parts.wpn_fps_ass_akrocket_o_rail.a_obj = "a_g"
+    self.parts.wpn_fps_ass_akrocket_o_rail.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"
+    self.parts.wpn_fps_ass_akrocket_o_rail.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"
+
+    self.parts.wpn_fps_ass_akrocket_o_rail_irons = deep_clone(self.parts.wpn_fps_upg_o_ak_scopemount)
+    self.parts.wpn_fps_ass_akrocket_o_rail_irons.unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"
+    self.parts.wpn_fps_ass_akrocket_o_rail_irons.third_unit = "units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"
+    
+    --[[Ironsight Stance/Angle view]]
+	self.parts.wpn_fps_ass_akrocket_backsight.stance_mod = {
+		wpn_fps_ass_akrocket = {
+			translation = Vector3(0, -4, -1.6),
+			rotation = Rotation(0, 0, 0)
+		}
+	}
+	self.parts.wpn_fps_ass_akrocket_o_rail.stance_mod = {
+		wpn_fps_ass_akrocket = {
+			translation = Vector3(0, -11, 1),
+			rotation = Rotation(0, 0, 0)
+		}
+	}
+	
+	self.parts.wpn_fps_ass_akrocket_stock.adds = nil
+	self.parts.wpn_fps_ass_akrocket_stock.stats = nil
+	self.parts.wpn_fps_ass_akrocket_stock.pcs = nil
+	
+	
+	--[[Add Optic Sight Railing]]
+	self.parts.wpn_fps_ass_akrocket_fg.override = nil
+    
+    self.wpn_fps_ass_akrocket_upg_primary = deep_clone(self.wpn_fps_smg_akmsu)
+    self.wpn_fps_ass_akrocket_upg_primary.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"
+    self.wpn_fps_ass_akrocket_upg_primary.animations = {
+        fire = "recoil",
+        reload = "reload",
+        reload_not_empty = "reload_not_empty",
+        fire_steelsight = "recoil"
+    }
+    self.wpn_fps_ass_akrocket_upg_primary.default_blueprint = {
+        "wpn_fps_ass_akrocket_barrel",
+        "wpn_fps_ass_akrocket_body",
+        "wpn_fps_ass_akrocket_body2",
+        "wpn_fps_ass_akrocket_mag",
+        "wpn_fps_ass_akrocket_fg",
+        "wpn_fps_ass_akrocket_grip",
+        "wpn_fps_ass_akrocket_stock",
+        "wpn_fps_ass_akrocket_backsight",
+        "wpn_fps_upg_fl_ass_laser"
+    }
+
+    self.wpn_fps_ass_akrocket_upg_primary.adds = {
+		wpn_fps_ass_akrocket_backsight = {
+			"wpn_fps_ass_akrocket_o_rail_irons"
+		}
+	}
+
+    self.wpn_fps_ass_akrocket_upg_secondary = deep_clone(self.wpn_fps_ass_akrocket_upg_primary)
+    self.wpn_fps_ass_akrocket_upg_secondary.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_secondary"
+
+    self.wpn_fps_ass_akrocket_upg_primary_npc = deep_clone(self.wpn_fps_smg_akmsu)
+    self.wpn_fps_ass_akrocket_upg_primary_npc.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary_npc"
+    self.wpn_fps_ass_akrocket_upg_secondary_npc = deep_clone(self.wpn_fps_smg_akmsu)
+    self.wpn_fps_ass_akrocket_upg_secondary_npc.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_npc"
 end
 
 function WeaponFactoryTweakData:_init_multiplix()    
@@ -515,7 +646,8 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 		a_obj = "a_body",
 		type = "barrel",
 		name_id = "bm_wp_elastic_body_standard",
-		unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base",
+        unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base",
+        third_unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base",
 		stats = {
 			value = 1
 		},
@@ -531,7 +663,8 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 		a_obj = "a_body",
 		type = "lower_reciever",
 		name_id = "bm_wp_elastic_body_standard",
-		unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base",
+        unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base",
+        third_unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base",
 		stats = {
 			value = 1
 		}
@@ -541,7 +674,8 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 		a_obj = "a_body",
 		type = "lower_reciever",
 		name_id = "bm_wp_elastic_body_standard",
-		unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base",
+        unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base",
+        third_unit = "units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base",
 		stats = {
 			value = 1
 		}

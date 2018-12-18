@@ -31,10 +31,10 @@ function HUDZMWaves:_create_zm_waves_hud(parent)
 end
 
 function HUDZMWaves:_create_gift_hud(parent)
-    local is_firesale = managers.wdu:_is_event_active("firesale")
-    local is_instakill = managers.wdu:_is_event_active("instakill")
-    local is_double_points = managers.wdu:_is_event_active("double_points")
-    local is_zombie_blood = managers.wdu:_is_event_active("zombie_blood")
+    local is_firesale = false
+    local is_instakill = false
+    local is_double_points = false
+    local is_zombie_blood = false
 
     local gift_panel = parent:panel({
         name = "gift_panel",
@@ -527,6 +527,18 @@ function HUDZMPoints:_create_zm_hud(parent)
     peer_1_points:set_left(peer_1_avatar:right() + 15)
     peer_1_points:set_world_center_y(peer_1_avatar:world_center_y())
 
+    local peer_1_bg_points = zm_points_panel:bitmap({
+        name = "peer_1_bg_points",
+        visible = false,
+        layer = -1,
+        texture = "ui/bloodtrail",
+        h = 32,
+        w = 128
+    })
+
+    peer_1_bg_points:set_left(peer_1_avatar:right() + 5)
+    peer_1_bg_points:set_world_center_y(peer_1_avatar:world_center_y())
+
     local peer_2_avatar = zm_points_panel:bitmap({
         texture = "guis/textures/pd2/none_icon",
         h = 64,
@@ -549,6 +561,18 @@ function HUDZMPoints:_create_zm_hud(parent)
     managers.hud:make_fine_text(peer_2_points)
     peer_2_points:set_left(peer_1_points:left())
     peer_2_points:set_world_center_y(peer_2_avatar:world_center_y())
+
+    local peer_2_bg_points = zm_points_panel:bitmap({
+        name = "peer_2_bg_points",
+        visible = false,
+        layer = -1,
+        texture = "ui/bloodtrail",
+        h = 32,
+        w = 128
+    })
+
+    peer_2_bg_points:set_left(peer_2_avatar:right() + 5)
+    peer_2_bg_points:set_world_center_y(peer_2_avatar:world_center_y())
 
     local peer_3_avatar = zm_points_panel:bitmap({
         texture = "guis/textures/pd2/none_icon",
@@ -573,6 +597,18 @@ function HUDZMPoints:_create_zm_hud(parent)
     peer_3_points:set_left(peer_1_points:left())
     peer_3_points:set_world_center_y(peer_3_avatar:world_center_y())
 
+    local peer_3_bg_points = zm_points_panel:bitmap({
+        name = "peer_3_bg_points",
+        visible = false,
+        layer = -1,
+        texture = "ui/bloodtrail",
+        h = 32,
+        w = 128
+    })
+
+    peer_3_bg_points:set_left(peer_3_avatar:right() + 5)
+    peer_3_bg_points:set_world_center_y(peer_3_avatar:world_center_y())
+
     local peer_4_avatar = zm_points_panel:bitmap({
         texture = "guis/textures/pd2/none_icon",
         h = 64,
@@ -596,6 +632,18 @@ function HUDZMPoints:_create_zm_hud(parent)
     peer_4_points:set_left(peer_1_points:left())
     peer_4_points:set_world_center_y(peer_4_avatar:world_center_y())
 
+    local peer_4_bg_points = zm_points_panel:bitmap({
+        name = "peer_4_bg_points",
+        visible = false,
+        layer = -1,
+        texture = "ui/bloodtrail",
+        h = 32,
+        w = 128
+    })
+
+    peer_4_bg_points:set_left(peer_4_avatar:right() + 5)
+    peer_4_bg_points:set_world_center_y(peer_4_avatar:world_center_y())
+
     self._zmp_avatars = {
         [1] = peer_1_avatar,
         [2] = peer_2_avatar,
@@ -608,6 +656,13 @@ function HUDZMPoints:_create_zm_hud(parent)
         [2] = peer_2_points,
         [3] = peer_3_points,
         [4] = peer_4_points
+    }
+
+    self._zmp_points_bg = {
+        [1] = peer_1_bg_points,
+        [2] = peer_2_bg_points,
+        [3] = peer_3_bg_points,
+        [4] = peer_4_bg_points
     }
 
     self._zmp_points[1]:set_text("---")

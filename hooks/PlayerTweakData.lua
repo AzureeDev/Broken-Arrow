@@ -233,4 +233,6 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.tar21_upg_primary = deep_clone(self.stances.komodo)
 	self.stances.tar21_upg_secondary = deep_clone(self.stances.komodo)
 
+	self.stances.akrocket_upg_primary = deep_clone(self.stances.akmsu)
+	self.stances.akrocket_upg_secondary = deep_clone(self.stances.akmsu)
 end)
