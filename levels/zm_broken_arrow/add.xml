@@ -745,20 +745,7 @@
 		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 	</unit_load>
 	<movie path="movies/ascension"/>
-	<movie path="sound/music/bank/bankpowerup_assault"/>
-	<movie path="sound/music/bank/bankpowerup_intro"/>
-	<movie path="sound/music/bank/bankpowerup_end"/>
-	<movie path="sound/music/Nightclub/nightclubpowerup_intro"/>
-	<movie path="sound/music/Nightclub/nightclubpowerup_introintro"/>
-	<movie path="sound/music/Nightclub/nightclubpowerup_assault"/>
-	<movie path="sound/music/Nightclub/nightclubpowerup_end"/>
-	<movie path="sound/music/Bus/buspowerup_intro"/>
-	<movie path="sound/music/Bus/buspowerup_assault"/>
-	<movie path="sound/music/Bus/buspowerup_end"/>
 	<movie path="sound/buzzer_fail"/>
-	<movie path="sound/music/Store/storepowerup_intro"/>
-	<movie path="sound/music/Store/storepowerup_assault"/>
-	<movie path="sound/music/Store/storepowerup_end"/>
 	<movie path="sound/music/ee/Beginning"/>
 	<movie path="sound/music/ee/1"/>
 	<movie path="sound/music/ee/2"/>
@@ -770,13 +757,6 @@
 	<movie path="sound/music/ee/fin"/>
 	<movie path="sound/music/ee/stop"/>
 	<movie path="sound/music/ee/buzz"/>
-	<movie path="sound/music/Warehouse/whintro"/>
-	<movie path="sound/music/Warehouse/whoutro"/>
-	<movie path="sound/music/Warehouse/whloop1"/>
-	<movie path="sound/music/Warehouse/whloop2"/>
-	<movie path="sound/music/Warehouse/whloop3"/>
-	<movie path="sound/music/Warehouse/whintrohackjammed"/>
-	<movie path="sound/music/Warehouse/whloophackjammed"/>
 	<add path="units/pd2_dlc_des/props/des_prop_inter_hack_computer/des_inter_hack_computer" type="unit">
 		<bnk force="true" path="soundbanks/regular_sfx" unload="true"/>
 		<gui force="true" path="guis/timer_gui" unload="true"/>
