@@ -41,9 +41,7 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.new_m14_primary = deep_clone(self.stances.new_m14)
 	self.stances.new_m14_secondary = deep_clone(self.stances.new_m14)
 	self.stances.new_m14_upg_primary = deep_clone(self.stances.new_m14)
-	self.stances.new_m14_upg_primary.steelsight.shoulders.translation = Vector3(-10.9, -20, -1)
 	self.stances.new_m14_upg_secondary = deep_clone(self.stances.new_m14)
-	self.stances.new_m14_upg_secondary.steelsight.shoulders.translation = Vector3(-10.9, -20, -1)
 	self.stances.b682_primary = deep_clone(self.stances.b682)
 	self.stances.b682_secondary = deep_clone(self.stances.b682)
 	self.stances.mp9_primary = deep_clone(self.stances.mp9)
@@ -235,4 +233,14 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 
 	self.stances.akrocket_upg_primary = deep_clone(self.stances.akmsu)
 	self.stances.akrocket_upg_secondary = deep_clone(self.stances.akmsu)
+
+	self.stances.par_primary = deep_clone(self.stances.par)
+	self.stances.par_secondary = deep_clone(self.stances.par)
+	self.stances.par_upg_primary = deep_clone(self.stances.par)
+	self.stances.par_upg_secondary = deep_clone(self.stances.par)
+
+	self.stances.packrat_primary = deep_clone(self.stances.packrat)
+	self.stances.packrat_secondary = deep_clone(self.stances.packrat)
+	self.stances.packrat_upg_primary = deep_clone(self.stances.x_packrat)
+	self.stances.packrat_upg_secondary = deep_clone(self.stances.x_packrat)
 end)

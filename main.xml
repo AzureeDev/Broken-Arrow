@@ -100,6 +100,8 @@
 			<value_node value="levels/narratives/classics/glace/level_art/level_art"/>
 			<value_node value="levels/narratives/e_framing_frame/stage_1/world"/>
 			<value_node value="levels/narratives/vlad/jewelry_store/world/world"/>
+			<value_node value="levels/narratives/locke/des/editor_only/editor_only"/>
+			<value_node value="levels/narratives/locke/vit/editor_only/editor_only"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">

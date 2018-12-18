@@ -512,6 +512,22 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.tar21_secondary = deep_clone(self.tar21_primary)
     self.tar21_secondary.use_data = {selection_index = SECONDARY}
 
+    self.par_primary = deep_clone(self.par)
+    self.par_primary.animations.reload_name_id = "par"
+    self.par_primary.weapon_hold = "par"
+    self.par_primary.stats_modifiers = {damage = 2}
+    self.par_primary.use_data = {selection_index = PRIMARY}
+    self.par_secondary = deep_clone(self.par_primary)
+    self.par_secondary.use_data = {selection_index = SECONDARY}
+
+    self.packrat_primary = deep_clone(self.packrat)
+    self.packrat_primary.animations.reload_name_id = "packrat"
+    self.packrat_primary.weapon_hold = "packrat"
+    self.packrat_primary.stats_modifiers = {damage = 2}
+    self.packrat_primary.use_data = {selection_index = PRIMARY}
+    self.packrat_secondary = deep_clone(self.packrat_primary)
+    self.packrat_secondary.use_data = {selection_index = SECONDARY}
+
     self:_init_upgraded_zm_weapons()
 end
 
@@ -962,6 +978,40 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     }
     self.akrocket_upg_secondary = deep_clone(self.akrocket_upg_primary)
     self.akrocket_upg_secondary.use_data = {selection_index = SECONDARY}
+
+    self.par_upg_primary = deep_clone(self.par_primary)
+    self.par_upg_primary.name_id = "wpn_par_upg_name"
+    self.par_upg_primary.CLIP_AMMO_MAX = 200
+    self.par_upg_primary.NR_CLIPS_MAX = 4
+    self.par_upg_primary.AMMO_MAX = self.par_upg_primary.CLIP_AMMO_MAX * self.par_upg_primary.NR_CLIPS_MAX
+    self.par_upg_primary.stats.recoil = 19
+    self.par_upg_primary.stats.spread = 18
+    self.par_upg_primary.stats_modifiers = {damage = 14}
+    self.par_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.par_upg_primary.use_data = {selection_index = PRIMARY}
+    self.par_upg_secondary = deep_clone(self.par_upg_primary)
+    self.par_upg_secondary.use_data = {selection_index = SECONDARY}
+
+    self.packrat_upg_primary = deep_clone(self.x_packrat)
+    self.packrat_upg_primary.name_id = "wpn_packrat_upg_name"
+    self.packrat_upg_primary.animations = {
+		second_gun_versions = {
+			reload_not_empty = "reload_not_empty_left",
+			reload = "reload_left"
+		},
+		has_steelsight_stance = true,
+		recoil_steelsight = true,
+        magazine_empty = "last_recoil",
+        reload_name_id = "x_packrat"
+    }
+    self.packrat_upg_primary.CLIP_AMMO_MAX = 30
+    self.packrat_upg_primary.NR_CLIPS_MAX = 8
+    self.packrat_upg_primary.AMMO_MAX = self.packrat_upg_primary.CLIP_AMMO_MAX * self.packrat_upg_primary.NR_CLIPS_MAX
+    self.packrat_upg_primary.stats_modifiers = {damage = 14}
+    self.packrat_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.packrat_upg_primary.use_data = {selection_index = PRIMARY}
+    self.packrat_upg_secondary = deep_clone(self.packrat_upg_primary)
+    self.packrat_upg_secondary.use_data = {selection_index = SECONDARY}
 end
 
 Hooks:PostHook(WeaponTweakData, "_init_data_swat_van_turret_module_npc", "zm_tweak_swat_turret", function(self)

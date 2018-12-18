@@ -82,5 +82,7 @@
     "zm_hint_blood_sub_3" : "Step 3. A box of secrets is what you need. A letter and number is what you seek.",
     "zm_hint_blood_sub_4" : "Step 4. Only one terminal can save you now.",
     "zm_hint_blood_sub_5" : "Step 5. The more souls you get brings you closer to redemption.",
-    "zm_hint_blood_sub_6" : "Step 6. Unleash Hell."
+    "zm_hint_blood_sub_6" : "Step 6. Unleash Hell.",
+    "wpn_par_upg_name" : "Sulfateuz",
+    "wpn_packrat_upg_name" : "Deep Clone"
 }
