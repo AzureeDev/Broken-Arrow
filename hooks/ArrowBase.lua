@@ -23,7 +23,7 @@ function ArrowBase:_on_collision(col_ray)
 						}
 						action_data.variant = "fire"
 						action_data.damage = self._damage * damage_mult
-						action_data.attacker_unit = nil
+						action_data.attacker_unit = self._thrower_unit
 						action_data.col_ray = col_ray
 						action_data.fire_dot_data = fire_dot_data
 						col_ray.unit:character_damage():damage_fire(action_data)
@@ -33,7 +33,7 @@ function ArrowBase:_on_collision(col_ray)
 						action_data.damage_effect = 2
 						action_data.name_id = "zeus"
 						action_data.damage = 200
-						action_data.attacker_unit = managers.player:player_unit()
+						action_data.attacker_unit = self._thrower_unit
 						action_data.col_ray = col_ray
 						action_data.variant = "taser_tased"
 						col_ray.unit:character_damage():damage_melee(action_data)

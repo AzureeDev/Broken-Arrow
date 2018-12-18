@@ -899,7 +899,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.elastic_upg_primary = deep_clone(self.elastic_primary)
     self.elastic_upg_primary.name_id = "wpn_elastic_upg_name"
-    self.elastic_upg_primary.stats_modifiers = {damage = 14}
+    self.elastic_upg_primary.stats_modifiers = {damage = 16}
     self.elastic_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.elastic_upg_secondary = deep_clone(self.elastic_upg_primary)
     self.elastic_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}

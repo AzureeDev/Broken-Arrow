@@ -19,6 +19,16 @@ function ElementWave:on_executed(instigator)
         managers.wdu:_respawn()
         managers.wdu.level.zombies.added_contour = false
         managers.wdu:_remove_auto_respawn()
+
+        if not managers.wdu._hud_hidden then
+            if NepgearsyHUDReborn then
+                managers.hud:hide_panels("assault_panel_v2", "custody_panel", "hostages_panel", "heist_timer_panel")
+            else
+                managers.hud:hide_panels("assault_panel", "custody_panel", "hostages_panel", "heist_timer_panel")
+            end
+    
+            managers.wdu._hud_hidden = true
+        end
     end
 
     local current_wave = managers.wdu:_get_current_wave()

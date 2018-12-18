@@ -479,16 +479,6 @@ function WDUManager:_set_special_wave(state)
 end
 
 function WDUManager:_start_new_wave(t, was_special_wave)
-    if not self._hud_hidden then
-        if NepgearsyHUDReborn then
-            managers.hud:hide_panels("assault_panel_v2", "custody_panel", "hostages_panel", "heist_timer_panel")
-        else
-            managers.hud:hide_panels("assault_panel", "custody_panel", "hostages_panel", "heist_timer_panel")
-        end
-
-        self._hud_hidden = true
-    end
-
     if not t then
         t = self.level.wave.delay_timeout
     end
