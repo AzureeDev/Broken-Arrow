@@ -2403,5 +2403,10 @@
 		<sequence_manager force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile_debris" unload="true"/>
 		<physic_effect force="true" path="physic_effects/push_sphere_unit" unload="true"/>
 	</add>
+	<add path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" type="unit">
+		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/lux/lux" unload="true"/>
+	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>

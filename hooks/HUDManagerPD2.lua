@@ -21,7 +21,7 @@ function HUDZMWaves:_create_zm_waves_hud(parent)
         layer = 1,
         text = "",
         color = Color(1, 0.6, 0, 0),
-        font_size = tweak_data.menu.pd2_large_font_size + 10,
+        font_size = tweak_data.menu.pd2_large_font_size + 16,
         font = "fonts/murderer",
         visible = true
     })
@@ -52,7 +52,8 @@ function HUDZMWaves:_create_gift_hud(parent)
         text = "",
         align = "right",
         vertical = "bottom",
-        valign = "bottom"
+        valign = "bottom",
+        y = -16
     })
     weapon_name_bottom_right:set_center_x(parent:center_x())
     weapon_name_bottom_right:set_text(managers.localization:text("wpn_m1911_name"))
@@ -490,7 +491,7 @@ function HUDZMPoints:_create_zm_hud(parent)
         h = 250
     })
     self._panel = zm_points_panel
-    self._panel:set_top(managers.hud._hud_zm_waves._panel:bottom() + 40)
+    self._panel:set_top(managers.hud._hud_zm_waves._panel:bottom() + 5)
 
     local zm_points_panel_rect = zm_points_panel:rect({
         name = "background",
@@ -1003,6 +1004,11 @@ function HUDManager:init_ending_screen()
 end
 
 function HUDManager:_init_result_table(panel)
+
+    if self._zm_result_panel then
+        return
+    end
+
     local all_panels = {}
 
     for id = 1, 4, 1 do
