@@ -2404,9 +2404,16 @@
 		<physic_effect force="true" path="physic_effects/push_sphere_unit" unload="true"/>
 	</add>
 	<add path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" type="unit">
-		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" unload="true"/>
-		<object force="true" path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/lux/lux" unload="true"/>
+		<object force="true" path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" type="unit">
+		<unit force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
+		<object force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
+		<font force="true" path="fonts/font_digital" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>
