@@ -3,6 +3,7 @@ Hooks:PreHook(PlayerManager, "init", "zm_init_perk", function(self)
     self._wunderwaffe_unlocked = false
 	self.totalCopAlive = 0
 	self._show_point_list = false
+	self._god = false
 end)
 
 Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
@@ -12,6 +13,16 @@ Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
 		end)
 		
 		self._show_point_list = true
+	end
+
+	if not self._god then
+		if self:has_special_equipment("perk_god") then
+			tweak_data.blackmarket.melee_weapons.shovel.stats.min_damage = 90
+			tweak_data.blackmarket.melee_weapons.shovel.stats.max_damage = 120
+			tweak_data.blackmarket.melee_weapons.shovel.stats.charge_time = 1
+			tweak_data.blackmarket.melee_weapons.shovel.stats.range = 300
+			self._god = true
+		end
 	end
 
     local player = self:player_unit()

@@ -7,8 +7,6 @@ function GroupAIStateBesiege:_perform_group_spawning(spawn_task, force, use_last
 	local group_ai_tweak = tweak_data.group_ai
 	local spawn_points = spawn_task.spawn_group.spawn_pts
 
-	force = true
-	
 	local function _try_spawn_unit(u_type_name, spawn_entry)
 		if GroupAIStateBesiege._MAX_SIMULTANEOUS_SPAWNS <= nr_units_spawned and not force then
 			return
@@ -26,14 +24,15 @@ function GroupAIStateBesiege:_perform_group_spawning(spawn_task, force, use_last
 				if sp_data.delay_t < self._t then
 					local units = category.unit_types[current_unit_type]
 					produce_data.name = units[math.random(#units)]
+					produce_data.name = managers.modifiers:modify_value("GroupAIStateBesiege:SpawningUnit", produce_data.name)
 					local spawned_unit = sp_data.mission_element:produce(produce_data)
-                    
-                    if not spawned_unit then
-                        return
-                    end
 
-                    local u_key = spawned_unit:key()
-                    local objective = nil
+					if not spawned_unit then
+						return
+					end
+
+					local u_key = spawned_unit:key()
+					local objective = nil
 
 					if spawn_task.objective then
 						objective = self.clone_objective(spawn_task.objective)
@@ -85,7 +84,7 @@ function GroupAIStateBesiege:_perform_group_spawning(spawn_task, force, use_last
 						spawned_unit:brain()._logic_data.spawned_in_phase = spawn_task.ai_task.phase
 					end
 
-					sp_data.delay_t = 1
+					sp_data.delay_t = self._t + sp_data.interval
 
 					if sp_data.amount then
 						sp_data.amount = sp_data.amount - 1

@@ -23,6 +23,7 @@
 	<texture path="perks/revive"/>
 	<texture path="perks/speedcola"/>
 	<texture path="perks/staminup"/>
+	<texture path="perks/god_strength"/>
 	<texture path="perks/gift_firesale"/>
 	<texture path="perks/gift_double_points"/>
 	<texture path="perks/gift_instakill"/>

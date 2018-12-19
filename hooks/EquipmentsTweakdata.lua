@@ -42,4 +42,11 @@ Hooks:PostHook(EquipmentsTweakData, "init", "init_zm_perks", function(self)
 		icon = "perk_staminup",
 		text_id = "hud_perk_staminup"
     }
+
+    self.specials.perk_god = {
+        sync_possession = true,
+		transfer_quantity = 0,
+		icon = "perk_god",
+		text_id = "hud_perk_god"
+    }
 end)

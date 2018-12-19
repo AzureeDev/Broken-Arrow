@@ -9,6 +9,7 @@ dofile(Path .. "hooks/ElementPlayVideo.lua")
 dofile(Path .. "hooks/ElementSpawnSafeEnemyDummy.lua")
 dofile(Path .. "hooks/ElementSoraCinematicCamera.lua")
 dofile(Path .. "hooks/ElementReviveInstigator.lua")
+dofile(Path .. "hooks/ElementCheckSecret.lua")
 
 function MissionManager:get_mission_element(element_id)
 	for _, data in pairs(self._scripts) do
