@@ -180,4 +180,5 @@ Hooks:PostHook(CharacterTweakData, "_init_tank", "zm_tankie_tweak", function(sel
 	self.tank.weapon.is_shotgun_mag.focus_delay = 1
 	self.tank.weapon.is_rifle.focus_delay = 1
 	self.tank.weapon.is_lmg.focus_delay = 1
+	self.tank_hw.HEALTH_INIT = 500
 end)
