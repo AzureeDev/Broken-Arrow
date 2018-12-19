@@ -227,7 +227,6 @@
 	<unit path="new_weapon_units/wpn_fps_pis_packrat_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_pis_packrat_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_pis_packrat_upg_secondary"/>
-
 	<unit path="units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow_secondary"/>
 	<object path="units/mods/weapons/wpn_fps_spe_storm_bow/wpn_fps_spe_storm_bow"/>
@@ -239,28 +238,24 @@
 	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/bones_base_nm"/>
 	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/electric_base_df"/>
 	<texture path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/textures/electric_base_nm"/>
-
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
 	<model path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
 	<object path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
 	<unit load="true" path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_base_thq"/>
-
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
 	<model path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
 	<object path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
 	<unit load="true" path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_bone_base_thq"/>
-
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
 	<model path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
 	<object path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
 	<unit load="true" path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_storm_bow_pts/wpn_fps_spe_storm_bow_elec_base_thq"/>
-
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
@@ -386,7 +381,6 @@
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum_thq"/>
-
 	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_barrel_df"/>
 	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_barrel_nm"/>
 	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_foregrip_df"/>
@@ -408,7 +402,6 @@
 	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_rail_irons_df"/>
 	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/bo3_rail_irons_nm"/>
 	<texture path="units/mods/weapons/wpn_fps_ass_akrocket_pts/red_fiber_il"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
@@ -417,110 +410,94 @@
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_npc"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary_npc"/>
-<!--Base Gun Asset-->
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel_moving_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_frontsight-tritium_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_body2_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_bolt_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_mag_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_fg_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_grip_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_stock_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_o_rail-irons_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight_thq"/>
-	
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium"/>
 	<material_config path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_backsight-tritium_thq"/>
-		
 	<cooked_physics path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
@@ -765,26 +742,6 @@
 	<movie path="sound/music/ee/fin"/>
 	<movie path="sound/music/ee/stop"/>
 	<movie path="sound/music/ee/buzz"/>
-	<movie path="sound/music/Warehouse/whintro"/>
-	<movie path="sound/music/Warehouse/whoutro"/>
-	<movie path="sound/music/Warehouse/whloop1"/>
-	<movie path="sound/music/Warehouse/whloop2"/>
-	<movie path="sound/music/Warehouse/whloop3"/>
-	<movie path="sound/music/Warehouse/whintrohackjammed"/>
-	<movie path="sound/music/Warehouse/whloophackjammed"/>
-	<movie path="sound/music/Store/storepowerup_intro"/>
-	<movie path="sound/music/Store/storepowerup_assault"/>
-	<movie path="sound/music/Store/storepowerup_end"/>
-	<movie path="sound/music/bank/bankpowerup_assault"/>
-	<movie path="sound/music/bank/bankpowerup_intro"/>
-	<movie path="sound/music/bank/bankpowerup_end"/>
-	<movie path="sound/music/Nightclub/nightclubpowerup_intro"/>
-	<movie path="sound/music/Nightclub/nightclubpowerup_introintro"/>
-	<movie path="sound/music/Nightclub/nightclubpowerup_assault"/>
-	<movie path="sound/music/Nightclub/nightclubpowerup_end"/>
-	<movie path="sound/music/Bus/buspowerup_intro"/>
-	<movie path="sound/music/Bus/buspowerup_assault"/>
-	<movie path="sound/music/Bus/buspowerup_end"/>
 	<add path="units/pd2_dlc_des/props/des_prop_inter_hack_computer/des_inter_hack_computer" type="unit">
 		<bnk force="true" path="soundbanks/regular_sfx" unload="true"/>
 		<gui force="true" path="guis/timer_gui" unload="true"/>
@@ -2429,10 +2386,21 @@
 		<unit force="true" path="units/pd2_dlc_vit/props/vit_prop_veg_tree_ulmus/vit_prop_veg_tree_ulmus" unload="true"/>
 	</add>
 	<add path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" type="unit">
-		<unit force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
-		<object force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
+		<object force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_mad/props/mad_prop_emergency_light/mad_prop_emergency_light" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile_explosion_4x4m" type="unit">
+		<unit force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile_explosion_4x4m" unload="true"/>
+		<object force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile_explosion_4x4m" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile_explosion_4x4m" unload="true"/>
+		<unit force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile_debris" unload="true"/>
+		<object force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile_debris" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc2/architecture/gov_d_int/gov_d_int_ceiling_tile_debris" unload="true"/>
+		<physic_effect force="true" path="physic_effects/push_sphere_unit" unload="true"/>
 	</add>
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>
