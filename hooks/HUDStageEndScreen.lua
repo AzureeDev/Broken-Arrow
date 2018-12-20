@@ -45,7 +45,7 @@ Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", f
     DelayedCalls:Add( "Delayed_Call_For_Sync_ZMScore", 1, function()
         local player_1 = self._package_forepanel:text({
             name = "highscore_1",
-            text = get_player_data(1, "player_name") .. " survived a maximum of " .. get_player_data(1, "max_waves_survived") .. " rounds",
+            text = get_player_data(1, "player_name") .. "'s record is " .. get_player_data(1, "max_waves_survived") .. " rounds",
             font = tweak_data.menu.pd2_large_font,
             font_size = tweak_data.menu.pd2_large_font_size - 16,
             color = Color.white,
@@ -58,7 +58,7 @@ Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", f
 
         local player_2 = self._package_forepanel:text({
             name = "highscore_2",
-            text = get_player_data(2, "player_name") .. " survived a maximum of " .. get_player_data(2, "max_waves_survived") .. " rounds",
+            text = get_player_data(2, "player_name") .. "'s record is " .. get_player_data(2, "max_waves_survived") .. " rounds",
             font = tweak_data.menu.pd2_large_font,
             font_size = tweak_data.menu.pd2_large_font_size - 16,
             color = Color.white,
@@ -71,7 +71,7 @@ Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", f
 
         local player_3 = self._package_forepanel:text({
             name = "highscore_3",
-            text = get_player_data(3, "player_name") .. " survived a maximum of " .. get_player_data(3, "max_waves_survived") .. " rounds",
+            text = get_player_data(3, "player_name") .. "'s record is " .. get_player_data(3, "max_waves_survived") .. " rounds",
             font = tweak_data.menu.pd2_large_font,
             font_size = tweak_data.menu.pd2_large_font_size - 16,
             color = Color.white,
@@ -84,7 +84,7 @@ Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", f
 
         local player_4 = self._package_forepanel:text({
             name = "highscore_4",
-            text = get_player_data(4, "player_name") .. " survived a maximum of " .. get_player_data(4, "max_waves_survived") .. " rounds",
+            text = get_player_data(4, "player_name") .. "'s record is " .. get_player_data(4, "max_waves_survived") .. " rounds",
             font = tweak_data.menu.pd2_large_font,
             font_size = tweak_data.menu.pd2_large_font_size - 16,
             color = Color.white,
