@@ -16,8 +16,6 @@ function ElementSpawnEnemyDummy:produce(params)
 	
 	local units_special_wave = {}
 
-	
-
 	if managers.wdu:_is_special_wave() then
 		if (managers.wdu.level.zombies.killed) == math.floor((managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players()) - 3) then
 			managers.wdu:_create_last_enemies_outline()

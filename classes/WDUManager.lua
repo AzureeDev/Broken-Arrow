@@ -768,6 +768,35 @@ function WDUManager:_create_last_enemies_outline()
     self.level.zombies.added_contour = true
 end
 
+function WDUManager:check_ee_state()
+    local keys = {
+        "finsternis_easteregg_completed",
+        "broken_arrow2_easteregg_completed"
+    }
+
+    local secret_completed = 0
+
+    for _, key in pairs(keys) do
+        local secret_key = managers.mission:get_saved_job_value(key)
+
+        if not secret_key then
+            return false
+        end
+
+        if secret_key ~= 1 then
+            return false
+        end
+
+        secret_completed = secret_completed + 1
+    end
+
+    if secret_completed < #keys then
+        return false
+    end
+
+    return true
+end
+
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "ZMUpdatePoints" then
         local points = tonumber(data)
@@ -952,6 +981,22 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
     if id == "ShareCashTo" then
         local player_id = tonumber(data)
         managers.wdu:_add_money_to(player_id, 1000, true)
+    end
+
+    if id == "SecretsCompleted" then
+        if Network:is_server() then
+            local unit_by_peer = managers.criminals:character_unit_by_peer_id(sender)
+            if alive(unit_by_peer) then
+                local rpc_params = {
+                    "give_equipment",
+                    "perk_god",
+                    1,
+                    false
+                }
+    
+                unit_by_peer:network():send_to_unit(rpc_params)
+            end
+        end
     end
 end)
 
