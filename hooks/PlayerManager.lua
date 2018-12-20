@@ -15,25 +15,6 @@ Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
 		self._show_point_list = true
 	end
 
-	if not self._god then
-		managers.wdu:wait(3, "waiting_for_host_sync", function()
-			if Network:is_server() then
-				if managers.wdu:check_ee_state() then
-					managers.player:add_special({
-						name = "perk_god",
-						amount = 1
-					})
-				end
-			else
-				if managers.wdu:check_ee_state() then
-					LuaNetworking:SendToPeers("SecretsCompleted", "1")
-				end
-			end
-		end)
-
-		self._god = true
-	end
-
 	if self:has_special_equipment("perk_god") then
 		tweak_data.blackmarket.melee_weapons.zdann.stats.min_damage = 90
 		tweak_data.blackmarket.melee_weapons.zdann.stats.max_damage = 120
