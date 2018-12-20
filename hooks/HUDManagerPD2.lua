@@ -488,7 +488,7 @@ function HUDZMPoints:_create_zm_hud(parent)
     local zm_points_panel = parent:panel({
         name = "zm_point_panel",
         w = 300,
-        h = 250
+        h = 350
     })
     self._panel = zm_points_panel
     self._panel:set_top(managers.hud._hud_zm_waves._panel:bottom() + 5)
