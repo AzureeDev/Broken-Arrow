@@ -20,7 +20,7 @@ function MissionManager:get_mission_element(element_id)
 		end
 	end
 end
-
+--[[
 function MissionManager:set_fading_debug_enabled(enabled)
 	self._fading_debug_output:show()
 end
@@ -40,4 +40,4 @@ function MissionManager:add_fading_debug_output(debug, color, as_subtitle)
 
 		self._fading_debug_output:script().log(stuff[self._fade_index] .. " " .. debug, color, nil)
 	end
-end
+end--]]
