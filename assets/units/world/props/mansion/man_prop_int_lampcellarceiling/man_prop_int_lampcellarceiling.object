@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/mansion/man_prop_int_lampcellarceiling/man_prop_int_lampcellarceiling" orientation_object="rp_man_prop_int_lampcellarceiling" />
+  <sequence_manager file="units/world/props/mansion/man_prop_int_lampcellarceiling/man_prop_int_lampcellarceiling" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_man_prop_int_lampcellarceiling" />
+      <object name="c_box" collision_type="box" padding="-2"/>
+    </body>
+  </bodies>
+  <decal_surfaces default_material="metal_chassis" static="true">
+    <decal_mesh name="dm_plastic" enabled="true" material="metal_chassis" />
+  </decal_surfaces>
+<lights>
+  <light name="ls_lamp" enabled="false" editable="true" type="omni|specular" multiplier="1.8" far_range="350" falloff="6" />
+</lights>
+  <graphics>
+    <object name="g_light_on" enabled="true" shadow_caster="false" instance_struct="world_tm" />
+    <object name="g_light_off" enabled="false" shadow_caster="false" instance_struct="world_tm" />
+  </graphics>
+</dynamic_object>

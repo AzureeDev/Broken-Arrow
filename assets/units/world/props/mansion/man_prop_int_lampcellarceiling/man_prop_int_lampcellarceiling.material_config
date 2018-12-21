@@ -1,0 +1,10 @@
+<materials version="3" group="secret_stash_lamp_ceiling">
+    <material render_template="generic:DIFFUSE_TEXTURE:INSTANCED:SELF_ILLUMINATION" decal_material="glass_unbreakable" version="2" name="lampcellarceiling">
+        <diffuse_texture file="units/world/props/mansion/man_prop_int_lampcellarceiling/man_int_prop_lampcellarceiling_df"/>
+        <self_illumination_texture file="units/world/props/mansion/man_prop_int_lampcellarceiling/man_int_prop_lampcellarceiling_il"/>
+        <variable value="streetlight" type="scalar" name="il_multiplier"/>
+    </material>
+    <material render_template="generic:DIFFUSE_TEXTURE:INSTANCED:SELF_ILLUMINATION" decal_material="glass_unbreakable" version="2" name="lampcellarceiling_light_off">
+        <diffuse_texture file="units/world/props/mansion/man_prop_int_lampcellarceiling/man_int_prop_lampcellarceiling_df"/>
+    </material>
+</materials>

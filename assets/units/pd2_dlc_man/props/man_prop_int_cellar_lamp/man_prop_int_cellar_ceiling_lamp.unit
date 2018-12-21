@@ -1,0 +1,20 @@
+<unit type="man" slot="1">
+	<object file="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" />
+	
+	<dependencies>
+		<depends_on effect="effects/payday2/particles/window/storefront_window_small" />
+    	<depends_on effect="effects/particles/dest/sparks_lamp_dest" />
+		<depends_on effect="effects/payday2/particles/flares/indoor_lamp_small" />
+		<depends_on bnk="soundbanks/regular_sfx" />
+    </dependencies>
+
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+
+	<sounds>
+		<default_soundsource source="e_effect"/>
+		<soundsource name="snd" source="e_effect" />
+	</sounds>
+</unit>

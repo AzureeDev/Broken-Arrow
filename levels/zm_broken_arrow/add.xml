@@ -2409,14 +2409,43 @@
 		<unit force="true" path="units/payday2/architecture/lux/lux_int_wall1_050m_cap_a" unload="true"/>
 	</add>
 	<add path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" type="unit">
-		<unit force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
-		<object force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
-		<material_config force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
-		<sequence_manager force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
 		<font force="true" path="fonts/font_digital" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
+		<object force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_chill/props/chl_prop_timer_large/chl_prop_timer_large" unload="true"/>
 	</add>
-	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/106918"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/107040"/>
 	<texture path="levels/mods/zm_broken_arrow/cubemaps/100932"/>
+	<add path="units/world/props/mansion/man_prop_int_lampcellarceiling/man_prop_int_lampcellarceiling" type="unit">
+		<material_config force="true" path="units/world/props/mansion/man_prop_int_lampcellarceiling/man_prop_int_lampcellarceiling" unload="true"/>
+		<object force="true" path="units/world/props/mansion/man_prop_int_lampcellarceiling/man_prop_int_lampcellarceiling" unload="true"/>
+		<sequence_manager force="true" path="units/world/props/mansion/man_prop_int_lampcellarceiling/man_prop_int_lampcellarceiling" unload="true"/>
+		<unit force="true" path="units/world/props/mansion/man_prop_int_lampcellarceiling/man_prop_int_lampcellarceiling" unload="true"/>
+	</add>
+	<add path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" type="unit">
+		<unit force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
+		<cooked_physics force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
+		<object force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/flares/indoor_lamp_small" unload="true"/>
+		<bnk force="true" path="soundbanks/regular_sfx" unload="true"/>
+	</add>
+	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/106912"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/107194"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/107193"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/107198"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/107154"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/103474"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/103466"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/107111"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/107110"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/107112"/>
+	<texture path="levels/mods/zm_broken_arrow/cube_lights/107113"/>
 </table>
