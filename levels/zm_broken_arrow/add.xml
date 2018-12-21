@@ -2418,4 +2418,5 @@
 	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/106918"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/107040"/>
+	<texture path="levels/mods/zm_broken_arrow/cubemaps/100932"/>
 </table>
