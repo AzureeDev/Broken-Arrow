@@ -255,8 +255,11 @@ function WDUManager:_add_money_to(peer_id, amount, skip_score)
         end
 
         if not self:_is_solo() then
-            LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
-            LuaNetworking:SendToPeers( "ZMUpdatePointsGained", tostring(amount) )
+            local tbl = { 
+                cm = tostring(self:_get_own_money()),
+                pg = tostring(amount)
+            }
+            LuaNetworking:SendToPeers( "UpdPts", LuaNetworking:TableToString(tbl) )
         end
 
         local positive = true
@@ -798,18 +801,19 @@ function WDUManager:check_ee_state()
 end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
-    if id == "ZMUpdatePoints" then
-        local points = tonumber(data)
-
-        managers.wdu.players[sender].money = points
+    if id == "UpdPts" then
+        local tbl_data = LuaNetworking:StringToTable(data)
+        managers.wdu.players[sender].money = tbl_data.cm
+        local positive = tbl_data.pg > 0 and true or false
 
         if managers.hud then
             managers.wdu:_update_hud_element()
+            managers.hud._hud_zm_points:_animate_points_gained_v2(sender, tbl_data.pg, positive)
         end
 
-        managers.wdu:_update_total_score(sender, points)
+        managers.wdu:_update_total_score(sender, tbl_data.pg)
     end
-
+--[[
     if id == "ZMUpdatePointsGained" then
         local points = tonumber(data)
         local positive = points > 0 and true or false
@@ -818,7 +822,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
             managers.hud._hud_zm_points:_animate_points_gained_v2(sender, points, positive)
         end
     end
-
+--]]
     if id == "ZMWavesHighScore" then
         local max_waves = tonumber(data)
         managers.wdu.players[sender].max_waves_survived = max_waves
