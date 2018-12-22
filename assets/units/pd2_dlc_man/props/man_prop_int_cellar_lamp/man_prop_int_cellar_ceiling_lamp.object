@@ -1,0 +1,51 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" orientation_object="rp_man_prop_int_cellar_ceiling_lamp" />
+	<sequence_manager file="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" />
+	<bodies>
+		<body name="body_static" enabled="false" template="static">
+			<object name="rp_man_prop_int_cellar_ceiling_lamp" />
+			<object name="c_box_02" collision_type="box" padding="-2.5" />
+		</body>
+
+		<body name="body_lamp" enabled="true" template="static">
+			<object name="rp_man_prop_int_cellar_ceiling_lamp" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+
+	</bodies>
+	<decal_surfaces default_material="plastic">
+		<decal_mesh name="dm_plastic" enabled="true" material="plastic" />
+	</decal_surfaces>
+	<graphics>
+		
+		<object name="g_il" enabled="false" />
+		
+		<lod_object name="lod_g_lamp_holder">
+				<object name="g_lamp_holder_lod0" enabled="true" max_distance="40000" />
+				<object name="g_lamp_holder_lod1" enabled="true" />
+		</lod_object>
+
+		<graphic_group name="lamp_grp" enabled="true" culling_object="CullingObjectName">
+			<lod_object name="lod_g_g">
+			<object name="g_g_lod0" enabled="true" max_distance="40000" />
+			<object name="g_g_lod1" enabled="true" />
+		</lod_object>
+		</graphic_group>
+
+		
+		<graphic_group name="lamp_dmg_grp" enabled="false" culling_object="CullingObjectName">
+			<lod_object name="lod_g_dmg">
+				<object name="g_dmg_lod0" enabled="true" max_distance="40000" />
+				<object name="g_dmg_lod1" enabled="true" />
+			</lod_object>
+		</graphic_group>
+		
+	</graphics>
+
+
+	<lights>
+		<light name="li_light" enabled="true" editable="true" type="omni|specular" multiplier="1" far_range="350" falloff="4" />
+	</lights>
+
+
+</dynamic_object>
