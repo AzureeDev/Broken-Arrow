@@ -1,3 +1,15 @@
+function RaycastWeaponBase:start_shooting_allowed()
+	if self:gadget_overrides_weapon_functions() then
+		return self:gadget_function_override("start_shooting_allowed")
+	end
+
+	if not self._unit then
+		return false
+	end
+
+	return self._next_fire_allowed <= self._unit:timer():time()
+end
+
 Hooks:PostHook(RaycastWeaponBase, "fire", "zm_pap_sound_click", function(self)
 	if string.find(self._name_id, "_upg_") then
 		self._sound_fire:post_event("zm_pew_global")

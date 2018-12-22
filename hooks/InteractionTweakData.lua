@@ -1,4 +1,5 @@
 Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", function(self, tweak_data)
+	self.pick_lock_hard_no_skill.timer = 7
     self.zm_wall_buy_m14 = {
 		zm_interaction = true,
 		weapon = "M308 Rifle",
