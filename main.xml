@@ -1,6 +1,6 @@
 <table global_key="ZM_BANK" name="Broken Arrow">
 	<AddFiles file="dynamic_manager.xml"/>
-	<AssetUpdates id="24132" provider="modworkshop" use_local_dir="true" version="1.1"/>
+	<AssetUpdates id="24132" provider="modworkshop" use_local_dir="true" version="1.2"/>
 	<Hooks directory="hooks">
 		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
 		<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
@@ -138,7 +138,6 @@
 				<sound id="zm_pew_snp_b" path="snp_barret_base.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_snp_e" path="snp_ebr_base.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_smg" path="smg_mp7_base.ogg" prefix="regular" use_fix="true"/>
-				<sound id="zm_pew_roach" path="railgun_papboom.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_global" path="new_pew_global.ogg" use_fix="true"/>
 				<sound id="zm_pew_global_npc" path="new_pew_global_npc.ogg" use_fix="true"/>
 			</sounds>
@@ -567,7 +566,6 @@
 			<sound id="wunderwaffe_hit" path="gottem.ogg"/>
 			<sound id="wunderwaffe_spree" path="spree.ogg"/>
 			<sound id="wunderwaffe_spree2" path="spree2.ogg"/>
-			<sound id="roach_fire" path="railgun_boom.ogg" prefix="regular"/>
 			<sound id="zm_firesale" path="firesale.ogg"/>
 			<sound id="zm_dead" path="ded.ogg"/>
 			<sound id="zm_instakill_loop" path="instakill_loop.ogg"/>
