@@ -803,15 +803,15 @@ end
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "UpdPts" then
         local tbl_data = LuaNetworking:StringToTable(data)
-        managers.wdu.players[sender].money = tbl_data.cm
-        local positive = tbl_data.pg > 0 and true or false
+        managers.wdu.players[sender].money = tonumber(tbl_data.cm)
+        local positive = tonumber(tbl_data.pg) > 0 and true or false
 
         if managers.hud then
             managers.wdu:_update_hud_element()
-            managers.hud._hud_zm_points:_animate_points_gained_v2(sender, tbl_data.pg, positive)
+            managers.hud._hud_zm_points:_animate_points_gained_v2(sender, tonumber(tbl_data.pg), positive)
         end
 
-        managers.wdu:_update_total_score(sender, tbl_data.pg)
+        managers.wdu:_update_total_score(sender, tonumber(tbl_data.pg))
     end
 --[[
     if id == "ZMUpdatePointsGained" then
