@@ -30,6 +30,17 @@
 	<texture path="perks/gift_zombie_blood"/>
 	<texture path="perks/power"/>
 	<texture path="skies/top_clouds_dark_df"/>
+	<unit_load name="units/ecl_paper_hint/paper_seq/ecl_paper">
+		<material_config force="true" path="units/ecl_paper_hint/paper_seq/ecl_paper_hint_1" unload="true"/>
+		<material_config force="true" path="units/ecl_paper_hint/paper_seq/ecl_paper_hint_2" unload="true"/>
+		<texture force="true" path="units/ecl_paper_hint/paper_seq/textures/ecl_paper_hint_1" unload="true"/>
+		<texture force="true" path="units/ecl_paper_hint/paper_seq/textures/ecl_paper_hint_2" unload="true"/>
+		<cooked_physics force="true" path="units/ecl_paper_hint/paper_seq/ecl_paper" unload="true"/>
+		<model force="true" path="units/ecl_paper_hint/paper_seq/ecl_paper" unload="true"/>
+		<object force="true" path="units/ecl_paper_hint/paper_seq/ecl_paper" unload="true"/>
+		<sequence_manager force="true" path="units/ecl_paper_hint/paper_seq/ecl_paper2" unload="true"/>
+		<unit force="true" path="units/ecl_paper_hint/paper_seq/ecl_paper" unload="true"/>
+	</unit_load>
 	<sequence_manager force="true" path="units/payday2/equipment/gen_interactable_door_reinforced/gen_interactable_door_reinforced" unload="true"/>
 	<sequence_manager force="true" path="units/payday2/equipment/gen_interactable_door_wooden_a/gen_interactable_door_wooden_a" unload="true"/>
 	<sequence_manager force="true" path="units/payday2/props/gen_prop_bank_atm_standing/gen_prop_bank_atm_standing" unload="true"/>
