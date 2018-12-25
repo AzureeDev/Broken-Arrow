@@ -607,6 +607,16 @@
 		<sequence_manager path="units/sora/erf_emblem_decal/erf_emblem_decal"/>
 		<unit path="units/sora/erf_emblem_decal/erf_emblem_decal"/>
 	</unit_load>
+	<unit_load name="units/sora/ba_plate/ba_plate">
+		<material_config path="units/sora/ba_plate/ba_plate"/>
+		<texture path="units/sora/ba_plate/ba_plate_df"/>
+		<texture path="units/sora/ba_plate/ba_plate_nm"/>
+		<texture path="units/sora/ba_plate/ba_plate_gsma"/>
+		<cooked_physics path="units/sora/ba_plate/ba_plate"/>
+		<model path="units/sora/ba_plate/ba_plate"/>
+		<object path="units/sora/ba_plate/ba_plate"/>
+		<unit path="units/sora/ba_plate/ba_plate"/>
+	</unit_load>
 	<unit_load name="units/babuforce/random_box/random_box">
 		<texture path="units/babuforce/random_box/textures/generic_objective_df"/>
 		<texture path="units/babuforce/random_box/textures/zm_magic_box_df"/>
