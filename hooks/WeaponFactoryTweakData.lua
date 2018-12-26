@@ -3,6 +3,7 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "zm_init_weapon_data_factory", fu
     self:_init_wunderwaffe()
     self:_init_wunderwaffe_dg3()
     self:_init_alcat_akrocket()
+    self:_init_shovigun()
 
     self:_init_multiplix()
     self:_init_upgraded_multiplix()
@@ -309,6 +310,51 @@ function WeaponFactoryTweakData:_init_alcat_akrocket()
     self.wpn_fps_ass_akrocket_upg_primary_npc.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary_npc"
     self.wpn_fps_ass_akrocket_upg_secondary_npc = deep_clone(self.wpn_fps_smg_akmsu)
     self.wpn_fps_ass_akrocket_upg_secondary_npc.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_npc"
+end
+
+function WeaponFactoryTweakData:_init_shovigun()
+    self.parts.wpn_fps_spe_raygun_body = deep_clone(self.parts.wpn_fps_pis_breech_body)
+    self.parts.wpn_fps_spe_raygun_body.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_body"
+    self.parts.wpn_fps_spe_raygun_metal = deep_clone(self.parts.wpn_fps_pis_breech_body)
+    self.parts.wpn_fps_spe_raygun_metal.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_metal"
+    self.parts.wpn_fps_spe_raygun_reticle = deep_clone(self.parts.wpn_fps_pis_breech_body)
+    self.parts.wpn_fps_spe_raygun_reticle.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_reticle"
+    self.parts.wpn_fps_spe_raygun_glass = deep_clone(self.parts.wpn_fps_pis_breech_body)
+    self.parts.wpn_fps_spe_raygun_glass.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_glass"
+    self.parts.wpn_fps_spe_raygun_power = deep_clone(self.parts.wpn_fps_pis_breech_body)
+    self.parts.wpn_fps_spe_raygun_power.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_power"
+    self.parts.wpn_fps_spe_raygun_meter = deep_clone(self.parts.wpn_fps_pis_breech_body)
+    self.parts.wpn_fps_spe_raygun_meter.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter"
+    self.parts.wpn_fps_spe_raygun_b_dummy = deep_clone(self.parts.wpn_fps_pis_breech_b_standard)
+    self.parts.wpn_fps_spe_raygun_b_dummy.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_b_dummy"
+    self.parts.wpn_fps_spe_raygun_meter_vis = deep_clone(self.parts.wpn_fps_fla_mk2_body)
+    self.parts.wpn_fps_spe_raygun_meter_vis.a_obj = "a_meter"
+    self.parts.wpn_fps_spe_raygun_meter_vis.animations = {
+        fire_steelsight = "recoil",
+        fire = "recoil",
+        reload = "",
+        reload_not_empty = ""
+    }
+    self.parts.wpn_fps_spe_raygun_meter_vis.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"
+
+    self.wpn_fps_spe_raygun_primary = deep_clone(self.wpn_fps_pis_breech)
+    self.wpn_fps_spe_raygun_primary.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun"
+    self.wpn_fps_spe_raygun_primary.default_blueprint = {
+        "wpn_fps_spe_raygun_body",
+        "wpn_fps_spe_raygun_b_dummy",
+        "wpn_fps_spe_raygun_metal",
+        "wpn_fps_spe_raygun_glass",
+        "wpn_fps_spe_raygun_power",
+        "wpn_fps_spe_raygun_meter",
+        "wpn_fps_spe_raygun_reticle",
+        "wpn_fps_spe_raygun_meter_vis"
+    }
+    self.wpn_fps_spe_raygun_primary_npc = deep_clone(self.wpn_fps_spe_raygun_primary)
+    self.wpn_fps_spe_raygun_primary_npc.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_npc"
+    self.wpn_fps_spe_raygun_secondary = deep_clone(self.wpn_fps_spe_raygun_primary)
+    self.wpn_fps_spe_raygun_secondary.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_secondary"
+    self.wpn_fps_spe_raygun_secondary_npc = deep_clone(self.wpn_fps_spe_raygun_primary)
+    self.wpn_fps_spe_raygun_secondary_npc.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_npc"
 end
 
 function WeaponFactoryTweakData:_init_multiplix()    

@@ -588,6 +588,13 @@
 			<sound id="broken_arrow_blackscreen_intro" path="intro.ogg"/>
 			<sound id="power_up_loop" path="power_up_loop.ogg"/>
 			<sound id="akrocket_fire_single" path="bo2_an94_shot.ogg" prefix="regular" use_fix="true"/>
+			<sound id="raygun_fire" path="raygun_fire.ogg" prefix="regular"/>
+			<sound id="raygun_out" path="off_open.ogg" prefix="first"/>
+			<sound id="raygun_out" path="off_open.ogg" prefix="third"/>
+			<sound id="raygun_eject" path="eject_battery.ogg" prefix="first"/>
+			<sound id="raygun_eject" path="eject_battery.ogg" prefix="third"/>
+			<sound id="raygun_in" path="on_close.ogg" prefix="first"/>
+			<sound id="raygun_in" path="on_close.ogg" prefix="third"/>
 		</sounds>
 	</level>
 	<narrative contact="a_better_tomorrow" icon="map_assets/ba_map_icon" id="broken_arrow2" quest_zm_001="true" quest_zm_001_icon="map_assets/ee_icon_done">

@@ -243,4 +243,11 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.packrat_secondary = deep_clone(self.stances.packrat)
 	self.stances.packrat_upg_primary = deep_clone(self.stances.x_packrat)
 	self.stances.packrat_upg_secondary = deep_clone(self.stances.x_packrat)
+
+	self.stances.raygun_primary = deep_clone(self.stances.breech)
+	self.stances.raygun_primary.standard.shoulders.translation = Vector3(1.784, -0.432, -4.207)
+	self.stances.raygun_primary.steelsight.shoulders.translation = Vector3(-8.000, 0.668, -6.207)
+	self.stances.raygun_primary.steelsight.shoulders.rotation = Rotation(-0.018108, -0.000864689, 0.00141215, -0.999835)
+	self.stances.raygun_primary.crouched.shoulders.translation = Vector3(0.783923, -1.43154, -5.207)
+	self.stances.raygun_secondary = deep_clone(self.stances.raygun_primary)
 end)

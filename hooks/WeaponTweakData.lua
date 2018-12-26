@@ -528,6 +528,45 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.packrat_secondary = deep_clone(self.packrat_primary)
     self.packrat_secondary.use_data = {selection_index = SECONDARY}
 
+    self.raygun_primary = deep_clone(self.breech)
+    self.raygun_primary.sounds = {
+        fire = "raygun_fire",
+        fire_single = "raygun_fire",
+        fire_auto = "raygun_fire",
+        magazine_empty = "",
+        use_fix = true,
+        reload = {
+            wp_breech_clip_slide_out = "raygun_out",
+            wp_breech_clip_slide_in = "raygun_in",
+            wp_breech_clip_take_new = "raygun_eject"
+        }
+    }
+    self.raygun_primary.animations.reload_name_id = "breech"
+    self.raygun_primary.ignore_damage_upgrades = true
+    self.raygun_primary.shell_ejection = "effects/payday2/particles/weapons/shells/shell_empty"
+    self.raygun_primary.muzzleflash = "effects/raygun_fire"
+    self.raygun_primary.animations.ignore_fullreload = true
+    self.raygun_primary.timers.reload_empty = 1.33
+    self.raygun_primary.weapon_hold = "breech"
+    self.raygun_primary.projectile_type = "raygun_blast"
+    self.raygun_primary.CLIP_AMMO_MAX = 20
+    self.raygun_primary.NR_CLIPS_MAX = 9
+    self.raygun_primary.AMMO_MAX = self.raygun_primary.CLIP_AMMO_MAX * self.raygun_primary.NR_CLIPS_MAX
+    self.raygun_primary.stats.spread = 24
+    self.raygun_primary.upgrade_blocks = {
+        weapon = {
+            "clip_ammo_increase"
+        }
+    }
+    self.raygun_primary.stats_modifiers = {damage = 10}
+    self.raygun_primary.fire_mode_data = {
+		fire_rate = 0.2
+    }
+    self.raygun_primary.use_data = {selection_index = PRIMARY}
+
+    self.raygun_secondary = deep_clone(self.raygun_primary)
+    self.raygun_secondary.use_data = {selection_index = SECONDARY}
+
     self:_init_upgraded_zm_weapons()
 end
 

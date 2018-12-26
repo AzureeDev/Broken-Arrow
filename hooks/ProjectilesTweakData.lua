@@ -23,4 +23,10 @@ Hooks:PostHook(BlackMarketTweakData, "_init_projectiles", "zm_new_nade_amount", 
 
     self.projectiles.rocket_frag.time_cheat = 0
     self.projectiles.launcher_frag_arbiter.time_cheat = 0
+    
+    self.projectiles.raygun_blast = deep_clone(self.projectiles.ecp_arrow_exp)
+    self.projectiles.raygun_blast.weapon_id = "raygun_primary"
+    self.projectiles.raygun_blast.physic_effect = Idstring("physic_effects/anti_gravitate")
+	self.projectiles.raygun_blast.adjust_z = 0
+
 end)
