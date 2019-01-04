@@ -85,5 +85,6 @@
     "zm_hint_blood_sub_6" : "Step 6. Unleash Hell.",
     "wpn_par_upg_name" : "Sulfateuz",
     "wpn_packrat_upg_name" : "Deep Clone",
-    "hud_perk_god" : "God Strength"
+    "hud_perk_god" : "God Strength",
+    "wpn_raygun" : "Shovel's Ray Gun"
 }

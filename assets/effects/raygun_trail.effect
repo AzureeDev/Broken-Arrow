@@ -9,7 +9,7 @@
         </initializerstack>
         <simulatorstack>
             <worldtransform transform_rotations="true"/>
-            <trail size="20" mode="distance" distance="1500"/>
+            <trail size="20" mode="distance" distance="800"/>
             <variableopacity name="opacity_1" opacity="1"/>
         </simulatorstack>
         <visualizerstack>

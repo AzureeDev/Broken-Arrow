@@ -529,6 +529,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.packrat_secondary.use_data = {selection_index = SECONDARY}
 
     self.raygun_primary = deep_clone(self.breech)
+    self.raygun_primary.name_id = "wpn_raygun"
     self.raygun_primary.sounds = {
         fire = "raygun_fire",
         fire_single = "raygun_fire",

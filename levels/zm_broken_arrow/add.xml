@@ -574,10 +574,9 @@
 	<unit path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis_thq"/>
-	
 	<texture path="effects/textures/raygun_trail_df"/>
 	<texture path="effects/textures/raygun_circle_df"/>
-	<object path="units/pd2_dlc_ecp/weapons/wpn_prj_ecp_arrow_exp/wpn_prj_ecp_arrow_exp" force="true"/>
+	<object force="true" path="units/pd2_dlc_ecp/weapons/wpn_prj_ecp_arrow_exp/wpn_prj_ecp_arrow_exp"/>
 	<cooked_physics path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
@@ -676,11 +675,11 @@
 		<unit path="units/sora/erf_emblem_decal/erf_emblem_decal"/>
 	</unit_load>
 	<unit_load name="units/sora/ba_plate/ba_plate">
-		<material_config path="units/sora/ba_plate/ba_plate"/>
 		<texture path="units/sora/ba_plate/ba_plate_df"/>
 		<texture path="units/sora/ba_plate/ba_plate_nm"/>
 		<texture path="units/sora/ba_plate/ba_plate_gsma"/>
 		<cooked_physics path="units/sora/ba_plate/ba_plate"/>
+		<material_config path="units/sora/ba_plate/ba_plate"/>
 		<model path="units/sora/ba_plate/ba_plate"/>
 		<object path="units/sora/ba_plate/ba_plate"/>
 		<unit path="units/sora/ba_plate/ba_plate"/>
@@ -2514,18 +2513,17 @@
 		<unit force="true" path="units/world/props/mansion/man_prop_int_lampcellarceiling/man_prop_int_lampcellarceiling" unload="true"/>
 	</add>
 	<add path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" type="unit">
-		<unit force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
-		<cooked_physics force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
-		<object force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
-		<sequence_manager force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
 		<material_config force="true" path="units/payday2/props/dest_glass/glass_shatter" unload="true"/>
-		<effect force="true" load="true" path="effects/payday2/particles/flares/indoor_lamp_small" unload="true"/>
 		<bnk force="true" path="soundbanks/regular_sfx" unload="true"/>
+		<cooked_physics force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
+		<effect force="true" load="true" path="effects/payday2/particles/flares/indoor_lamp_small" unload="true"/>
+		<object force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_man/props/man_prop_int_cellar_lamp/man_prop_int_cellar_ceiling_lamp" unload="true"/>
 	</add>
-	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/106912"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/107194"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/107193"/>
@@ -2537,4 +2535,11 @@
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/107110"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/107112"/>
 	<texture path="levels/mods/zm_broken_arrow/cube_lights/107113"/>
+	<add path="units/payday2/pickups/gen_pku_crowbar/gen_pku_crowbar" type="unit">
+		<unit force="true" path="units/payday2/pickups/gen_pku_crowbar/gen_pku_crowbar" unload="true"/>
+		<object force="true" path="units/payday2/pickups/gen_pku_crowbar/gen_pku_crowbar" unload="true"/>
+		<material_config force="true" path="units/payday2/pickups/gen_pku_crowbar/gen_pku_crowbar" unload="true"/>
+		<sequence_manager force="true" path="units/payday2/pickups/gen_pku_crowbar/gen_pku_crowbar" unload="true"/>
+	</add>
+	<effect force="true" path="effects/payday2/environment/mallcrasher_fire" unload="true"/>
 </table>
