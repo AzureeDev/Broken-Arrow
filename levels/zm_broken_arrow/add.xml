@@ -566,12 +566,6 @@
 	<unit path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_b_dummy"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_b_dummy"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_b_dummy_thq"/>
-	<cooked_physics path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"/>
-	<model path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"/>
-	<object path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"/>
-	<unit path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"/>
-	<material_config path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"/>
-	<material_config path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis_thq"/>
 	<texture path="effects/textures/raygun_trail_df"/>
 	<texture path="effects/textures/raygun_circle_df"/>
 	<object force="true" path="units/pd2_dlc_ecp/weapons/wpn_prj_ecp_arrow_exp/wpn_prj_ecp_arrow_exp"/>
