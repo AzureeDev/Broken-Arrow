@@ -327,15 +327,6 @@ function WeaponFactoryTweakData:_init_shovigun()
     self.parts.wpn_fps_spe_raygun_meter.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter"
     self.parts.wpn_fps_spe_raygun_b_dummy = deep_clone(self.parts.wpn_fps_pis_breech_b_standard)
     self.parts.wpn_fps_spe_raygun_b_dummy.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_b_dummy"
-    self.parts.wpn_fps_spe_raygun_meter_vis = deep_clone(self.parts.wpn_fps_fla_mk2_body)
-    self.parts.wpn_fps_spe_raygun_meter_vis.a_obj = "a_meter"
-    self.parts.wpn_fps_spe_raygun_meter_vis.animations = {
-        fire_steelsight = "recoil",
-        fire = "recoil",
-        reload = "",
-        reload_not_empty = ""
-    }
-    self.parts.wpn_fps_spe_raygun_meter_vis.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"
 
     self.wpn_fps_spe_raygun_primary = deep_clone(self.wpn_fps_pis_breech)
     self.wpn_fps_spe_raygun_primary.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_primary"
@@ -346,8 +337,7 @@ function WeaponFactoryTweakData:_init_shovigun()
         "wpn_fps_spe_raygun_glass",
         "wpn_fps_spe_raygun_power",
         "wpn_fps_spe_raygun_meter",
-        "wpn_fps_spe_raygun_reticle",
-        "wpn_fps_spe_raygun_meter_vis"
+        "wpn_fps_spe_raygun_reticle"
     }
     self.wpn_fps_spe_raygun_primary_npc = deep_clone(self.wpn_fps_spe_raygun_primary)
     self.wpn_fps_spe_raygun_primary_npc.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_npc"
