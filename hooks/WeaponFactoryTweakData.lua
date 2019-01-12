@@ -277,7 +277,7 @@ function WeaponFactoryTweakData:_init_alcat_akrocket()
 	self.parts.wpn_fps_ass_akrocket_fg.override = nil
     
     self.wpn_fps_ass_akrocket_upg_primary = deep_clone(self.wpn_fps_smg_akmsu)
-    self.wpn_fps_ass_akrocket_upg_primary.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"
+    self.wpn_fps_ass_akrocket_upg_primary.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary"
     self.wpn_fps_ass_akrocket_upg_primary.animations = {
         fire = "recoil",
         reload = "reload",
@@ -307,7 +307,7 @@ function WeaponFactoryTweakData:_init_alcat_akrocket()
     self.wpn_fps_ass_akrocket_upg_secondary.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_secondary"
 
     self.wpn_fps_ass_akrocket_upg_primary_npc = deep_clone(self.wpn_fps_smg_akmsu)
-    self.wpn_fps_ass_akrocket_upg_primary_npc.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary_npc"
+    self.wpn_fps_ass_akrocket_upg_primary_npc.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_npc"
     self.wpn_fps_ass_akrocket_upg_secondary_npc = deep_clone(self.wpn_fps_smg_akmsu)
     self.wpn_fps_ass_akrocket_upg_secondary_npc.unit = "units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_npc"
 end
@@ -338,7 +338,7 @@ function WeaponFactoryTweakData:_init_shovigun()
     self.parts.wpn_fps_spe_raygun_meter_vis.unit = "units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_meter_vis"
 
     self.wpn_fps_spe_raygun_primary = deep_clone(self.wpn_fps_pis_breech)
-    self.wpn_fps_spe_raygun_primary.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun"
+    self.wpn_fps_spe_raygun_primary.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_primary"
     self.wpn_fps_spe_raygun_primary.default_blueprint = {
         "wpn_fps_spe_raygun_body",
         "wpn_fps_spe_raygun_b_dummy",

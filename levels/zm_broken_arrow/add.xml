@@ -417,11 +417,9 @@
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
-	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket"/>
-	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_secondary"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_npc"/>
+	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_secondary"/>
 	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary"/>
-	<unit path="units/mods/weapons/wpn_fps_ass_akrocket/wpn_fps_ass_akrocket_primary_npc"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
 	<model path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
 	<object path="units/mods/weapons/wpn_fps_ass_akrocket_pts/wpn_fps_ass_akrocket_barrel"/>
@@ -523,7 +521,7 @@
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun"/>
 	<model path="units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun"/>
 	<object path="units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun"/>
-	<unit path="units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_primary"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_secondary"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_npc"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_body"/>
