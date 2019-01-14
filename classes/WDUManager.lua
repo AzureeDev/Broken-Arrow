@@ -646,7 +646,9 @@ function WDUManager:_convert_factory_to_upgrade()
         wpn_fps_lmg_par_primary = "wpn_fps_lmg_par_upg_primary",
         wpn_fps_lmg_par_secondary = "wpn_fps_lmg_par_upg_secondary",
         wpn_fps_pis_packrat_primary = "wpn_fps_pis_packrat_upg_primary",
-        wpn_fps_pis_packrat_secondary = "wpn_fps_pis_packrat_upg_secondary"
+        wpn_fps_pis_packrat_secondary = "wpn_fps_pis_packrat_upg_secondary",
+        wpn_fps_spe_raygun_primary = "wpn_fps_spe_raygun_upg_primary",
+        wpn_fps_spe_raygun_secondary = "wpn_fps_spe_raygun_upg_secondary"
 	}
 end
 

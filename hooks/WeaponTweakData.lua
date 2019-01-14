@@ -901,6 +901,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.schakal_upg_secondary.use_data = {selection_index = SECONDARY}
 	
 	self.tec9_upg_primary = deep_clone(self.tec9_primary)
+    self.tec9_upg_primary.name_id = "wpn_tec9_upg_name"
     self.tec9_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.tec9_upg_primary.stats_modifiers = {damage = 15}
     self.tec9_upg_primary.CLIP_AMMO_MAX = 25
@@ -1052,6 +1053,15 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.packrat_upg_primary.use_data = {selection_index = PRIMARY}
     self.packrat_upg_secondary = deep_clone(self.packrat_upg_primary)
     self.packrat_upg_secondary.use_data = {selection_index = SECONDARY}
+	
+    self.raygun_upg_primary = deep_clone(self.raygun_primary)
+    self.raygun_upg_primary.name_id = "wpn_raygun_upg_name"
+    self.raygun_upg_primary.muzzleflash = "effects/raygun_fire"
+    self.raygun_upg_primary.CLIP_AMMO_MAX = 40
+    self.raygun_upg_primary.NR_CLIPS_MAX = 4.5
+    self.raygun_upg_primary.AMMO_MAX = self.raygun_upg_primary.CLIP_AMMO_MAX * self.raygun_upg_primary.NR_CLIPS_MAX
+    self.raygun_upg_secondary = deep_clone(self.raygun_upg_primary)
+    self.raygun_upg_secondary.use_data = {selection_index = SECONDARY}
 end
 
 Hooks:PostHook(WeaponTweakData, "_init_data_swat_van_turret_module_npc", "zm_tweak_swat_turret", function(self)

@@ -86,5 +86,7 @@
     "wpn_par_upg_name" : "Sulfateuz",
     "wpn_packrat_upg_name" : "Deep Clone",
     "hud_perk_god" : "God Strength",
-    "wpn_raygun" : "Shovel's Ray Gun"
+    "wpn_raygun" : "Ray Gun",
+    "wpn_raygun_upg_name" : "Shovel's X2 Ray Gun",
+    "wpn_tec9_upg_name" : "BEP-99"
 }
