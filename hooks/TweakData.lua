@@ -58,7 +58,3 @@
 	tweak_data.projectiles.raygun_blast.damage = 300
 	tweak_data.projectiles.raygun_blast.adjust_z = 0
 	tweak_data.projectiles.raygun_blast.push_at_body_index = 0
-
-	tweak_data.projectiles.ecp_arrow_exp.damage = 300
-	tweak_data.projectiles.ecp_arrow_exp.adjust_z = 0
-	tweak_data.projectiles.ecp_arrow_exp.push_at_body_index = 0
