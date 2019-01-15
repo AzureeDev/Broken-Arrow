@@ -587,13 +587,18 @@
 	<material_config path="units/mods/weapons/wpn_fps_spe_raygun_pts/wpn_fps_spe_raygun_b_dummy_cc_thq"/>
 	<texture path="effects/textures/raygun_trail_df"/>
 	<texture path="effects/textures/raygun_circle_df"/>
-	<object force="true" path="units/pd2_dlc_ecp/weapons/wpn_prj_ecp_arrow_exp/wpn_prj_ecp_arrow_exp"/>
 	<cooked_physics path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast"/>
 	<model path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast"/>
 	<object path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast"/>
 	<material_config path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast"/>
 	<unit path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast"/>
 	<unit path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast_local"/>
+	<cooked_physics path="units/mods/weapons/wpn_prj_raygun_blast_pap/wpn_prj_raygun_blast_pap"/>
+	<model path="units/mods/weapons/wpn_prj_raygun_blast_pap/wpn_prj_raygun_blast_pap"/>
+	<object path="units/mods/weapons/wpn_prj_raygun_blast_pap/wpn_prj_raygun_blast_pap"/>
+	<material_config path="units/mods/weapons/wpn_prj_raygun_blast_pap/wpn_prj_raygun_blast_pap"/>
+	<unit path="units/mods/weapons/wpn_prj_raygun_blast_pap/wpn_prj_raygun_blast_pap"/>
+	<unit path="units/mods/weapons/wpn_prj_raygun_blast_pap/wpn_prj_raygun_blast_pap_local"/>
 	<cooked_physics path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes_red"/>
 	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes_red"/>
 	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes_red"/>

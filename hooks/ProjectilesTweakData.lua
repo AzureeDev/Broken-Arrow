@@ -34,5 +34,12 @@ Hooks:PostHook(BlackMarketTweakData, "_init_projectiles", "zm_new_nade_amount", 
     self.projectiles.raygun_blast.weapon_id = "raygun_primary"
     self.projectiles.raygun_blast.physic_effect = Idstring("physic_effects/anti_gravitate")
 	self.projectiles.raygun_blast.adjust_z = 0
+	
+    self.projectiles.raygun_blast_pap = deep_clone(self.projectiles.ecp_arrow_exp)
+	self.projectiles.raygun_blast_pap.unit = "units/mods/weapons/wpn_prj_raygun_blast_pap/wpn_prj_raygun_blast_pap"
+	self.projectiles.raygun_blast_pap.local_unit = "units/mods/weapons/wpn_prj_raygun_blast_pap/wpn_prj_raygun_blast_pap_local"
+    self.projectiles.raygun_blast_pap.weapon_id = "raygun_upg_primary"
+    self.projectiles.raygun_blast_pap.physic_effect = Idstring("physic_effects/anti_gravitate")
+	self.projectiles.raygun_blast_pap.adjust_z = 0
 
 end)

@@ -30,6 +30,9 @@
     <effect load="true" path="effects/raygun_glow"/>
     <effect load="true" path="effects/raygun_trail"/>
 	<effect load="true" path="effects/raygun_fire"/>
+    <effect load="true" path="effects/raygun_glow_pap"/>
+    <effect load="true" path="effects/raygun_trail_pap"/>
+	<effect load="true" path="effects/raygun_fire_pap"/>
 
     <font load="true" path="fonts/murderer"/>
     <texture path="fonts/murderer"/>

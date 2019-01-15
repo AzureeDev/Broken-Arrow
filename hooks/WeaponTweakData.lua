@@ -561,7 +561,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     }
     self.raygun_primary.stats_modifiers = {damage = 10}
     self.raygun_primary.fire_mode_data = {
-		fire_rate = 0.2
+		fire_rate = 0.331
     }
     self.raygun_primary.use_data = {selection_index = PRIMARY}
 
@@ -1056,10 +1056,12 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
     self.raygun_upg_primary = deep_clone(self.raygun_primary)
     self.raygun_upg_primary.name_id = "wpn_raygun_upg_name"
-    self.raygun_upg_primary.muzzleflash = "effects/raygun_fire"
+    self.raygun_upg_primary.muzzleflash = "effects/raygun_fire_pap"
+    self.raygun_upg_primary.projectile_type = "raygun_blast_pap"
     self.raygun_upg_primary.CLIP_AMMO_MAX = 40
     self.raygun_upg_primary.NR_CLIPS_MAX = 4.5
     self.raygun_upg_primary.AMMO_MAX = self.raygun_upg_primary.CLIP_AMMO_MAX * self.raygun_upg_primary.NR_CLIPS_MAX
+    self.raygun_upg_primary.use_data = {selection_index = PRIMARY}
     self.raygun_upg_secondary = deep_clone(self.raygun_upg_primary)
     self.raygun_upg_secondary.use_data = {selection_index = SECONDARY}
 end
