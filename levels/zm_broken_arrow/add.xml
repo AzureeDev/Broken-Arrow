@@ -594,11 +594,11 @@
 	<material_config path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast"/>
 	<unit path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast"/>
 	<unit path="units/mods/weapons/wpn_prj_raygun_blast/wpn_prj_raygun_blast_local"/>
-	<cooked_physics path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
-	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
-	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
-	<object path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
-	<unit path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
+	<cooked_physics path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes_red"/>
+	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes_red"/>
+	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes_red"/>
+	<object path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes_red"/>
+	<unit path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes_red"/>
 	<texture path="units/zdann/ene_acc_zombie_eyes/zombie_eyes_il"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_fbi_heavy_hvh_1/ene_fbi_heavy_hvh_1"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_fbi_swat_hvh_1/ene_fbi_swat_hvh_1"/>
