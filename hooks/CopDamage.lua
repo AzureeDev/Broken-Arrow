@@ -33,6 +33,14 @@ function CopDamage:drop_pickup(extra)
 end
 
 function CopDamage:_dismember_condition(attack_data)
+	if alive(attack_data.col_ray.unit) and attack_data.col_ray.unit:base() then
+		target_is_shadow_spooc = attack_data.col_ray.unit:base()._tweak_table == "shadow_spooc"
+	end
+	
+	if target_is_shadow_spooc then
+		return false
+	end
+	
 	return true
 end
 
