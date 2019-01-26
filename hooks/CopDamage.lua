@@ -477,4 +477,8 @@ Hooks:PostHook(CopDamage, "die", "post_init_die_cop", function(self)
 	if Network:is_server() then
 		self._unit:contour():remove("highlight_character", true)
 	end
+	
+	if alive(self._unit:base()._headwear_unit) then
+		self._unit:base()._headwear_unit:set_slot(0)
+	end
 end)

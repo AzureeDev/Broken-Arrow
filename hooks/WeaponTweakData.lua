@@ -941,6 +941,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.vulcan_upg.CLIP_AMMO_MAX = 999
     self.vulcan_upg.NR_CLIPS_MAX = 1
     self.vulcan_upg.AMMO_MAX = self.vulcan_upg.CLIP_AMMO_MAX * self.vulcan_upg.NR_CLIPS_MAX
+	self.vulcan_upg.sounds.fire_single = "shuno_fire"
     self.vulcan_upg.stats_modifiers = {damage = 10}
     self.vulcan_upg.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
 
