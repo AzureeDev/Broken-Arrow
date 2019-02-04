@@ -145,15 +145,15 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	
 	self.zm_wall_buy_msr = {
 		zm_interaction = true,
-		weapon = "Rattlesnake",
-		weapon_id = "msr",
-		points_cost = 1400,
+		weapon = "Galant Rifle",
+		weapon_id = "ching",
+		points_cost = 1350,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		sound_done = "bar_plant_breaching_charges",
 		axis = "y",
-		timer = 0.5
+		timer = 0.5,
 	}
 
 	self.zm_wall_buy_mp40 = {
@@ -171,15 +171,15 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 
 	self.zm_wall_buy_garand = {
 		zm_interaction = true,
-		weapon = "Galant Rifle",
-		weapon_id = "ching",
+		weapon = "Nagant",
+		weapon_id = "mosin",
 		points_cost = 500,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		sound_done = "bar_plant_breaching_charges",
 		axis = "y",
-		timer = 0.5,
+		timer = 0.5
 	}
 
 	self.zm_wall_buy_nades = {

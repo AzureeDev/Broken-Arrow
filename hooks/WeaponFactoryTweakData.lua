@@ -356,7 +356,16 @@ function WeaponFactoryTweakData:_init_multiplix()
     self.wpn_fps_pis_1911_secondary.unit = "new_weapon_units/wpn_fps_pis_1911_secondary"
     self.wpn_fps_pis_1911_secondary_npc = deep_clone(self.wpn_fps_pis_1911_secondary)
 	self.wpn_fps_pis_1911_secondary_npc.unit = "units/payday2/weapons/wpn_fps_pis_1911/wpn_fps_pis_1911_npc"
-
+	
+	self.wpn_fps_pis_g22c_primary = deep_clone(self.wpn_fps_pis_g22c)
+    self.wpn_fps_pis_g22c_primary.unit = "new_weapon_units/wpn_fps_pis_g22c_primary"
+    self.wpn_fps_pis_g22c_primary_npc = deep_clone(self.wpn_fps_pis_g22c_primary)
+	self.wpn_fps_pis_g22c_primary_npc.unit = "units/payday2/weapons/wpn_fps_pis_g22c/wpn_fps_pis_g22c_npc"
+    self.wpn_fps_pis_g22c_secondary = deep_clone(self.wpn_fps_pis_g22c)
+    self.wpn_fps_pis_g22c_secondary.unit = "new_weapon_units/wpn_fps_pis_g22c_secondary"
+    self.wpn_fps_pis_g22c_secondary_npc = deep_clone(self.wpn_fps_pis_g22c_secondary)
+	self.wpn_fps_pis_g22c_secondary_npc.unit = "units/payday2/weapons/wpn_fps_pis_g22c/wpn_fps_pis_g22c_npc"
+	
     self.wpn_fps_ass_m14_primary = deep_clone(self.wpn_fps_ass_m14)
     self.wpn_fps_ass_m14_primary.unit = "new_weapon_units/wpn_fps_ass_m14_primary"
     self.wpn_fps_ass_m14_primary_npc = deep_clone(self.wpn_fps_ass_m14_primary)
@@ -620,14 +629,20 @@ function WeaponFactoryTweakData:_init_multiplix()
     self.wpn_fps_smg_tec9_secondary_npc = deep_clone(self.wpn_fps_smg_tec9_secondary)
 	self.wpn_fps_smg_tec9_secondary_npc.unit = "units/pd2_dlc_miami/weapons/wpn_fps_smg_tec9/wpn_fps_smg_tec9_npc"
 
-    self.wpn_fps_snp_msr_primary = deep_clone(self.wpn_fps_snp_msr)
-    self.wpn_fps_snp_msr_primary.unit = "new_weapon_units/wpn_fps_snp_msr_primary"
-    self.wpn_fps_snp_msr_secondary = deep_clone(self.wpn_fps_snp_msr)
-    self.wpn_fps_snp_msr_secondary.unit = "new_weapon_units/wpn_fps_snp_msr_secondary"
-    self.wpn_fps_snp_msr_primary_npc = deep_clone(self.wpn_fps_snp_msr_primary)
-    self.wpn_fps_snp_msr_primary_npc.unit = "units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_msr/wpn_fps_snp_msr_npc"
-    self.wpn_fps_snp_msr_secondary_npc = deep_clone(self.wpn_fps_snp_msr_secondary)
-	self.wpn_fps_snp_msr_secondary_npc.unit = "units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_msr/wpn_fps_snp_msr_npc"
+    self.wpn_fps_snp_mosin_primary = deep_clone(self.wpn_fps_snp_mosin)
+    self.wpn_fps_snp_mosin_primary.unit = "new_weapon_units/wpn_fps_snp_mosin_primary"
+	self.wpn_fps_snp_mosin_primary.default_blueprint = {
+        "wpn_fps_snp_mosin_iron_sight",
+		"wpn_fps_snp_mosin_body_standard",
+		"wpn_fps_snp_mosin_b_standard",
+		"wpn_fps_snp_mosin_m_standard"
+    }
+    self.wpn_fps_snp_mosin_secondary = deep_clone(self.wpn_fps_snp_mosin_primary)
+    self.wpn_fps_snp_mosin_secondary.unit = "new_weapon_units/wpn_fps_snp_mosin_secondary"
+    self.wpn_fps_snp_mosin_primary_npc = deep_clone(self.wpn_fps_snp_mosin_primary)
+    self.wpn_fps_snp_mosin_primary_npc.unit = "units/pd2_dlc_gage_historical/weapons/wpn_fps_snp_mosin/wpn_fps_snp_mosin_npc"
+    self.wpn_fps_snp_mosin_secondary_npc = deep_clone(self.wpn_fps_snp_mosin_secondary)
+	self.wpn_fps_snp_mosin_secondary_npc.unit = "units/pd2_dlc_gage_historical/weapons/wpn_fps_snp_mosin/wpn_fps_snp_mosin_npc"
 
     self.wpn_fps_sho_deamon_primary = deep_clone(self.wpn_fps_sho_boot)
     self.wpn_fps_sho_deamon_primary.unit = "new_weapon_units/wpn_fps_sho_deamon_primary"
@@ -649,26 +664,24 @@ function WeaponFactoryTweakData:_init_multiplix()
 	self.wpn_fps_bow_elastic_secondary_npc.unit = "units/pd2_dlc_ram/weapons/wpn_fps_bow_elastic/wpn_fps_bow_elastic_npc"
     self.wpn_fps_bow_elastic_secondary_npc.skip_thq_parts = true
     
-    self.wpn_fps_ass_contraband_rifle_primary = deep_clone(self.wpn_fps_ass_contraband)
-    self.wpn_fps_ass_contraband_rifle_primary.unit = "new_weapon_units/wpn_fps_ass_contraband_rifle_primary"
-    self.wpn_fps_ass_contraband_rifle_primary.default_blueprint = {
-        "wpn_fps_ass_contraband_b_standard",
-        "wpn_fps_ass_contraband_body_standard",
-        "wpn_fps_ass_contraband_dh_standard",
-        "wpn_fps_ass_contraband_fg_standard",
-        "wpn_fps_ass_contraband_g_standard",
-        "wpn_fps_ass_contraband_m_standard",
-        "wpn_fps_ass_contraband_ns_standard",
-        "wpn_fps_ass_contraband_o_standard",
-        "wpn_fps_ass_contraband_s_standard",
-        "wpn_fps_ass_contraband_bolt_standard"
+    self.wpn_fps_ass_g3_primary = deep_clone(self.wpn_fps_ass_g3)
+    self.wpn_fps_ass_g3_primary.unit = "new_weapon_units/wpn_fps_ass_g3_primary"
+    self.wpn_fps_ass_g3_primary.default_blueprint = {
+			"wpn_fps_ass_g3_b_sniper",
+			"wpn_fps_ass_g3_body_lower",
+			"wpn_fps_ass_g3_body_upper",
+			"wpn_fps_ass_g3_fg_bipod",
+			"wpn_fps_lmg_hk21_g_standard",
+			"wpn_fps_ass_g3_m_mag",
+			"wpn_fps_lmg_hk21_s_standard",
+			"wpn_fps_upg_i_singlefire"
     }
-    self.wpn_fps_ass_contraband_rifle_primary_npc = deep_clone(self.wpn_fps_ass_contraband_rifle_primary)
-    self.wpn_fps_ass_contraband_rifle_primary_npc.unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband/wpn_fps_ass_contraband_npc"
-    self.wpn_fps_ass_contraband_rifle_secondary = deep_clone(self.wpn_fps_ass_contraband_rifle_primary)
-    self.wpn_fps_ass_contraband_rifle_secondary.unit = "new_weapon_units/wpn_fps_ass_contraband_rifle_secondary"
-    self.wpn_fps_ass_contraband_rifle_secondary_npc = deep_clone(self.wpn_fps_ass_contraband_rifle_secondary)
-    self.wpn_fps_ass_contraband_rifle_secondary_npc.unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband/wpn_fps_ass_contraband_npc"
+    self.wpn_fps_ass_g3_primary_npc = deep_clone(self.wpn_fps_ass_g3_primary)
+    self.wpn_fps_ass_g3_primary_npc.unit = "units/pd2_dlc_gage_assault/weapons/wpn_fps_ass_g3/wpn_fps_ass_g3_npc"
+    self.wpn_fps_ass_g3_secondary = deep_clone(self.wpn_fps_ass_g3_primary)
+    self.wpn_fps_ass_g3_secondary.unit = "new_weapon_units/wpn_fps_ass_g3_secondary"
+    self.wpn_fps_ass_g3_secondary_npc = deep_clone(self.wpn_fps_ass_g3_secondary)
+    self.wpn_fps_ass_g3_secondary_npc.unit = "units/pd2_dlc_gage_assault/weapons/wpn_fps_ass_g3/wpn_fps_ass_g3_npc"
     
     self.wpn_fps_ass_tar21_primary = deep_clone(self.wpn_fps_ass_komodo)
     self.wpn_fps_ass_tar21_primary.unit = "new_weapon_units/wpn_fps_ass_tar21_primary"
@@ -746,7 +759,9 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_ass_m14_body_lower_legendary",
         "wpn_fps_ass_m14_body_upper_legendary",
         "wpn_fps_ass_m14_m_standard",
-        "wpn_fps_ass_m14_body_legendary"
+        "wpn_fps_ass_m14_body_legendary",
+		"wpn_fps_upg_o_acog",
+		"wpn_fps_upg_o_m14_scopemount"
     }
     self.wpn_fps_ass_m14_upg_secondary = deep_clone(self.wpn_fps_ass_m14_upg_primary)
     self.wpn_fps_ass_m14_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_m14_upg_secondary"
@@ -763,7 +778,7 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_snp_m95_lower_reciever",
         "wpn_fps_snp_m95_upper_reciever",
         "wpn_fps_snp_m95_magazine",
-        "wpn_fps_upg_o_leupold",
+        "wpn_fps_upg_o_acog",
         "wpn_fps_upg_m4_g_standard_vanilla"
     }
     self.wpn_fps_snp_m95_upg_secondary = deep_clone(self.wpn_fps_snp_m95_upg_primary)
@@ -814,7 +829,8 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_smg_mp9_b_dummy",
         "wpn_fps_upg_ass_ns_battle",
         "wpn_fps_upg_vg_ass_smg_verticalgrip",
-        "wpn_fps_upg_fl_ass_laser"
+        "wpn_fps_upg_fl_ass_laser",
+		"wpn_fps_upg_o_reflex"
     }
     self.wpn_fps_smg_mp9_upg_secondary = deep_clone(self.wpn_fps_smg_mp9_upg_primary)
     self.wpn_fps_smg_mp9_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_secondary"
@@ -833,7 +849,8 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_ass_fal_g_01",
         "wpn_fps_ass_fal_m_01",
         "wpn_fps_ass_fal_s_wood",
-        "wpn_fps_upg_fl_ass_laser"
+        "wpn_fps_upg_fl_ass_laser",
+		"wpn_fps_upg_o_acog"
     }
     self.wpn_fps_ass_fal_upg_secondary = deep_clone(self.wpn_fps_ass_fal_upg_primary)
     self.wpn_fps_ass_fal_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_fal_upg_secondary"
@@ -848,7 +865,10 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_pis_deagle_body_standard",
         "wpn_fps_pis_deagle_m_standard",
         "wpn_fps_pis_deagle_b_legend",
-        "wpn_fps_pis_deagle_g_ergo"
+        "wpn_fps_pis_deagle_g_ergo",
+		"wpn_fps_pis_deagle_extra",
+		"wpn_fps_upg_o_reflex",
+		"wpn_fps_upg_fl_pis_laser"
     }
     self.wpn_fps_pis_deagle_upg_secondary = deep_clone(self.wpn_fps_pis_deagle_upg_primary)
     self.wpn_fps_pis_deagle_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_pis_deagle_upg_secondary"
@@ -860,12 +880,12 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     self.wpn_fps_ass_aug_upg_primary = deep_clone(self.wpn_fps_ass_aug)
     self.wpn_fps_ass_aug_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_aug_upg_primary"
     self.wpn_fps_ass_aug_upg_primary.default_blueprint = {
-        "wpn_fps_aug_body_aug",
+        "wpn_fps_aug_body_f90",
         "wpn_fps_aug_b_long",
         "wpn_fps_aug_fg_a3",
         "wpn_fps_upg_vg_ass_smg_verticalgrip",
         "wpn_fps_aug_m_pmag",
-        "wpn_upg_o_marksmansight_rear_vanilla",
+        "wpn_fps_upg_o_reflex",
         "wpn_fps_upg_fl_ass_laser"
     }
     self.wpn_fps_ass_aug_upg_secondary = deep_clone(self.wpn_fps_ass_aug_upg_primary)
@@ -879,9 +899,9 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     self.wpn_fps_smg_p90_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_smg_p90_upg_primary"
     self.wpn_fps_smg_p90_upg_primary.default_blueprint = {
         "wpn_fps_smg_p90_body_boxy",
-        "wpn_fps_smg_p90_b_long",
+        "wpn_fps_smg_p90_b_legend",
         "wpn_fps_smg_p90_m_strap",
-        "wpn_upg_o_marksmansight_rear_vanilla",
+        "wpn_fps_upg_o_reflex",
         "wpn_fps_upg_fl_ass_laser"
     }
     self.wpn_fps_smg_p90_upg_secondary = deep_clone(self.wpn_fps_smg_p90_upg_primary)
@@ -896,8 +916,9 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     self.wpn_fps_sho_striker_upg_primary.default_blueprint = {
         "wpn_fps_sho_striker_b_long",
         "wpn_fps_sho_striker_body_standard",
-        "wpn_upg_o_marksmansight_rear_vanilla",
         "wpn_fps_upg_shot_ns_king",
+		"wpn_fps_upg_a_dragons_breath",
+		"wpn_fps_upg_o_reflex",
         "wpn_fps_upg_fl_ass_laser"
     }
     self.wpn_fps_sho_striker_upg_secondary = deep_clone(self.wpn_fps_sho_striker_upg_primary)
@@ -911,15 +932,18 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     self.wpn_fps_ass_amcar_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_amcar_upg_primary"
     self.wpn_fps_ass_amcar_upg_primary.default_blueprint = {
         "wpn_fps_m4_uupg_b_medium_vanilla",
-        "wpn_fps_m4_lower_reciever",
-        "wpn_fps_amcar_uupg_body_upperreciever",
-        "wpn_fps_amcar_uupg_fg_amcar",
-        "wpn_fps_upg_ns_ass_smg_tank",
-        "wpn_fps_upg_m4_m_quad",
-        "wpn_fps_upg_m4_s_ubr",
-        "wpn_fps_upg_fl_ass_laser",
-        "wpn_fps_upg_m4_g_standard_vanilla",
-        "wpn_fps_amcar_bolt_standard"
+		"wpn_fps_m4_lower_reciever",
+		"wpn_fps_amcar_uupg_body_upperreciever",
+		"wpn_fps_amcar_uupg_fg_amcar",
+		"wpn_fps_upg_m4_m_quad",
+		"wpn_fps_upg_m4_s_standard_vanilla",
+		"wpn_fps_upg_m4_g_standard_vanilla",
+		"wpn_fps_amcar_bolt_standard",
+		"wpn_fps_upg_o_reflex",
+		"wpn_fps_amcar_bolt_standard",
+		"wpn_fps_m4_upper_reciever_round",
+		"wpn_fps_m4_uupg_fg_rail",
+		"wpn_fps_upg_fl_ass_laser"
     }
     self.wpn_fps_ass_amcar_upg_secondary = deep_clone(self.wpn_fps_ass_amcar_upg_primary)
     self.wpn_fps_ass_amcar_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_amcar_upg_secondary"
@@ -956,7 +980,7 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_ass_scar_b_long",
         "wpn_fps_ass_scar_body_standard",
         "wpn_fps_ass_scar_s_sniper",
-        "wpn_fps_ass_scar_o_flipups_up",
+        "wpn_fps_upg_o_reflex",
         "wpn_fps_upg_m4_g_sniper",
         "wpn_fps_upg_vg_ass_smg_afg",
         "wpn_fps_upg_ns_ass_smg_tank",
@@ -975,7 +999,8 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_pis_judge_body_standard",
         "wpn_fps_pis_judge_b_legend",
         "wpn_fps_pis_judge_g_legend",
-        "wpn_fps_upg_a_custom"
+        "wpn_fps_upg_a_custom",
+		"wpn_fps_upg_o_reflex"
     }
     self.wpn_fps_pis_judge_upg_secondary = deep_clone(self.wpn_fps_pis_judge_upg_primary)
     self.wpn_fps_pis_judge_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_pis_judge_upg_secondary"
@@ -986,6 +1011,17 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 	
     self.wpn_fps_smg_thompson_upg_primary = deep_clone(self.wpn_fps_smg_thompson)
     self.wpn_fps_smg_thompson_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_smg_thompson_upg_primary"
+	self.wpn_fps_smg_thompson_upg_primary.default_blueprint = {
+        "wpn_fps_smg_thompson_body",
+        "wpn_fps_smg_thompson_barrel_long",
+        "wpn_fps_smg_thompson_grip",
+        "wpn_fps_smg_thompson_foregrip",
+		"wpn_fps_smg_thompson_stock",
+		"wpn_fps_smg_thompson_drummag",
+		"wpn_fps_smg_thompson_ns_standard",
+		"wpn_fps_upg_fl_ass_laser",
+		"wpn_fps_upg_o_reflex"
+    }
     self.wpn_fps_smg_thompson_upg_secondary = deep_clone(self.wpn_fps_smg_thompson_upg_primary)
     self.wpn_fps_smg_thompson_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_smg_thompson_upg_secondary"
     self.wpn_fps_smg_thompson_upg_primary_npc = deep_clone(self.wpn_fps_smg_thompson_upg_primary)
@@ -1047,6 +1083,13 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 	
     self.wpn_fps_pis_peacemaker_upg_primary = deep_clone(self.wpn_fps_pis_peacemaker)
     self.wpn_fps_pis_peacemaker_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_pis_peacemaker_upg_primary"
+	self.wpn_fps_pis_peacemaker_upg_primary.default_blueprint = {
+        "wpn_fps_pis_peacemaker_body_standard",
+		"wpn_fps_pis_peacemaker_b_long",
+		"wpn_fps_pis_peacemaker_m_standard",
+		"wpn_fps_pis_peacemaker_g_standard",
+		"wpn_fps_pis_peacemaker_s_skeletal"
+    }
     self.wpn_fps_pis_peacemaker_upg_secondary = deep_clone(self.wpn_fps_pis_peacemaker_upg_primary)
     self.wpn_fps_pis_peacemaker_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_pis_peacemaker_upg_secondary"
     self.wpn_fps_pis_peacemaker_upg_primary_npc = deep_clone(self.wpn_fps_pis_peacemaker_upg_primary)
@@ -1063,7 +1106,7 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_ass_flint_fg_standard",
         "wpn_fps_ass_flint_dh_standard",
         "wpn_fps_upg_ns_ass_smg_tank",
-        "wpn_fps_ass_flint_o_standard",
+        "wpn_fps_upg_o_reflex",
         "wpn_fps_snp_tti_s_vltor",
         "wpn_fps_upg_ak_g_pgrip",
         "wpn_fps_ass_flint_m_release_standard"
@@ -1077,6 +1120,13 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 	
     self.wpn_fps_pis_breech_upg_primary = deep_clone(self.wpn_fps_pis_breech)
     self.wpn_fps_pis_breech_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_pis_breech_upg_primary"
+	self.wpn_fps_pis_breech_upg_primary.default_blueprint = {
+        "wpn_fps_pis_breech_b_reinforced",
+			"wpn_fps_pis_breech_body",
+			"wpn_fps_pis_breech_dh",
+			"wpn_fps_pis_breech_g_standard",
+			"wpn_fps_pis_breech_mag"
+    }
     self.wpn_fps_pis_breech_upg_secondary = deep_clone(self.wpn_fps_pis_breech_upg_primary)
     self.wpn_fps_pis_breech_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_pis_breech_upg_secondary"
     self.wpn_fps_pis_breech_upg_primary_npc = deep_clone(self.wpn_fps_pis_breech_upg_primary)
@@ -1087,6 +1137,19 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 	--shovel upgrade mkII
     self.wpn_fps_ass_74_upg_primary = deep_clone(self.wpn_fps_ass_74)
     self.wpn_fps_ass_74_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_74_upg_primary"
+	self.wpn_fps_ass_74_upg_primary.default_blueprint = {
+			"wpn_fps_ass_74_b_legend",
+			"wpn_fps_ass_74_body_upperreceiver",
+			"wpn_fps_ass_ak_body_lowerreceiver",
+			"wpn_fps_ass_74_m_standard",
+			"wpn_upg_ak_fl_legend",
+			"wpn_upg_ak_fg_legend",
+			"wpn_upg_ak_g_legend",
+			"wpn_upg_ak_s_legend",
+			"wpn_fps_upg_o_ak_scopemount",
+			"wpn_fps_upg_fl_ass_laser",
+			"wpn_fps_upg_o_reflex"
+	}
     self.wpn_fps_ass_74_upg_secondary = deep_clone(self.wpn_fps_ass_74_upg_primary)
     self.wpn_fps_ass_74_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_74_upg_secondary"
     self.wpn_fps_ass_74_upg_primary_npc = deep_clone(self.wpn_fps_ass_74_upg_primary)
@@ -1096,6 +1159,19 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 	
     self.wpn_fps_ass_ching_upg_primary = deep_clone(self.wpn_fps_ass_ching)
     self.wpn_fps_ass_ching_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_ching_upg_primary"
+	self.wpn_fps_ass_ching_upg_primary.default_blueprint = {
+			"wpn_fps_ass_ching_b_standard",
+			"wpn_fps_ass_ching_body_standard",
+			"wpn_fps_ass_ching_bolt_standard",
+			"wpn_fps_ass_ching_dh_standard",
+			"wpn_fps_ass_ching_extra_swiwel",
+			"wpn_fps_ass_ching_extra1_swiwel",
+			"wpn_fps_ass_ching_fg_railed",
+			"wpn_fps_ass_ching_m_standard",
+			"wpn_fps_ass_ching_s_standard",
+			"wpn_fps_upg_fl_ass_laser",
+			"wpn_fps_upg_o_acog"
+	}
     self.wpn_fps_ass_ching_upg_secondary = deep_clone(self.wpn_fps_ass_ching_upg_primary)
     self.wpn_fps_ass_ching_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_ching_upg_secondary"
     self.wpn_fps_ass_ching_upg_primary_npc = deep_clone(self.wpn_fps_ass_ching_upg_primary)
@@ -1105,6 +1181,15 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     
     self.wpn_fps_pis_lemming_upg_primary = deep_clone(self.wpn_fps_pis_lemming)
     self.wpn_fps_pis_lemming_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_pis_lemming_upg_primary"
+	self.wpn_fps_pis_lemming_upg_primary.default_blueprint = {
+			"wpn_fps_pis_lemming_b_standard",
+			"wpn_fps_pis_lemming_body",
+			"wpn_fps_pis_lemming_m_ext",
+			"wpn_fps_pis_lemming_mag_release",
+			"wpn_fps_pis_lemming_sl_standard",
+			"wpn_fps_upg_fl_pis_laser",
+			"wpn_fps_upg_fl_pis_laser"
+	}
     self.wpn_fps_pis_lemming_upg_secondary = deep_clone(self.wpn_fps_pis_lemming_upg_primary)
     self.wpn_fps_pis_lemming_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_pis_lemming_upg_secondary"
     self.wpn_fps_pis_lemming_upg_primary_npc = deep_clone(self.wpn_fps_pis_lemming_upg_primary)
@@ -1114,6 +1199,14 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     
     self.wpn_fps_shot_m37_upg_primary = deep_clone(self.wpn_fps_shot_m37)
     self.wpn_fps_shot_m37_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_shot_m37_upg_primary"
+	self.wpn_fps_shot_m37_upg_primary.default_blueprint = {
+			"wpn_fps_shot_m37_b_standard",
+			"wpn_fps_shot_m37_s_standard",
+			"wpn_fps_shot_m37_m_standard",
+			"wpn_fps_shot_m37_body_standard",
+			"wpn_fps_shot_m37_fg_standard",
+			"wpn_fps_upg_fl_ass_laser"
+	}
     self.wpn_fps_shot_m37_upg_secondary = deep_clone(self.wpn_fps_shot_m37_upg_primary)
     self.wpn_fps_shot_m37_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_shot_m37_upg_secondary"
     self.wpn_fps_shot_m37_upg_primary_npc = deep_clone(self.wpn_fps_shot_m37_upg_primary)
@@ -1127,7 +1220,9 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_shot_r870_body_standard",
         "wpn_fps_shot_r870_b_legendary",
         "wpn_fps_shot_r870_fg_legendary",
-        "wpn_fps_shot_r870_s_legendary"
+        "wpn_fps_shot_r870_s_legendary",
+		"wpn_fps_upg_o_reflex",
+		"wpn_fps_upg_fl_ass_laser"
     }
     self.wpn_fps_shot_r870_upg_secondary = deep_clone(self.wpn_fps_shot_r870_upg_primary)
     self.wpn_fps_shot_r870_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_shot_r870_upg_secondary"
@@ -1138,6 +1233,16 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     
     self.wpn_fps_smg_erma_upg_primary = deep_clone(self.wpn_fps_smg_erma)
     self.wpn_fps_smg_erma_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_smg_erma_upg_primary"
+	self.wpn_fps_smg_erma_upg_primary.default_blueprint = {
+			"wpn_fps_smg_erma_b_standard",
+			"wpn_fps_smg_erma_body_standard",
+			"wpn_fps_smg_erma_bolt_standard",
+			"wpn_fps_smg_erma_mag_standard",
+			"wpn_fps_smg_erma_ns_standard",
+			"wpn_fps_upg_o_reflex",
+			"wpn_fps_smg_erma_s_unfolded",
+			"wpn_fps_upg_fl_ass_laser"
+	}
     self.wpn_fps_smg_erma_upg_secondary = deep_clone(self.wpn_fps_smg_erma_upg_primary)
     self.wpn_fps_smg_erma_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_smg_erma_upg_secondary"
     self.wpn_fps_smg_erma_upg_primary_npc = deep_clone(self.wpn_fps_smg_erma_upg_primary)
@@ -1147,6 +1252,19 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     
     self.wpn_fps_smg_schakal_upg_primary = deep_clone(self.wpn_fps_smg_schakal)
     self.wpn_fps_smg_schakal_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_smg_schakal_upg_primary"
+	self.wpn_fps_smg_schakal_upg_primary.default_blueprint = {
+			"wpn_fps_smg_schakal_b_standard",
+			"wpn_fps_smg_schakal_body_lower",
+			"wpn_fps_smg_schakal_body_upper",
+			"wpn_fps_smg_schakal_m_standard",
+			"wpn_fps_smg_schakal_s_civil",
+			"wpn_fps_smg_schakal_dh_standard",
+			"wpn_fps_smg_schakal_bolt_standard",
+			"wpn_fps_smg_schakal_vg_surefire",
+			"wpn_fps_smg_schakal_extra_magrelease",
+			"wpn_fps_upg_fl_ass_laser",
+			"wpn_fps_upg_o_reflex"
+	}
     self.wpn_fps_smg_schakal_upg_secondary = deep_clone(self.wpn_fps_smg_schakal_upg_primary)
     self.wpn_fps_smg_schakal_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_smg_schakal_upg_secondary"
     self.wpn_fps_smg_schakal_upg_primary_npc = deep_clone(self.wpn_fps_smg_schakal_upg_primary)
@@ -1156,6 +1274,14 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     
     self.wpn_fps_smg_tec9_upg_primary = deep_clone(self.wpn_fps_smg_tec9)
     self.wpn_fps_smg_tec9_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_smg_tec9_upg_primary"
+	self.wpn_fps_smg_tec9_upg_primary.default_blueprint = {
+			"wpn_fps_smg_tec9_m_standard",
+			"wpn_fps_smg_tec9_ns_ext",
+			"wpn_fps_smg_tec9_s_unfolded",
+			"wpn_fps_smg_tec9_body_standard",
+			"wpn_fps_upg_fl_ass_laser",
+			"wpn_fps_upg_o_reflex"
+	}
     self.wpn_fps_smg_tec9_upg_secondary = deep_clone(self.wpn_fps_smg_tec9_upg_primary)
     self.wpn_fps_smg_tec9_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_smg_tec9_upg_secondary"
     self.wpn_fps_smg_tec9_upg_primary_npc = deep_clone(self.wpn_fps_smg_tec9_upg_primary)
@@ -1165,6 +1291,12 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 
     self.wpn_fps_spe_rpg7_upg_primary = deep_clone(self.wpn_fps_rpg7)
     self.wpn_fps_spe_rpg7_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_spe_rpg7_upg_primary"
+	self.wpn_fps_spe_rpg7_upg_primary.default_blueprint = {
+			"wpn_fps_rpg7_body",
+			"wpn_fps_rpg7_m_grinclown",
+			"wpn_fps_rpg7_barrel",
+			"wpn_fps_rpg7_sight"
+	}
     self.wpn_fps_spe_rpg7_upg_secondary = deep_clone(self.wpn_fps_spe_rpg7_upg_primary)
     self.wpn_fps_spe_rpg7_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_spe_rpg7_upg_secondary"
     self.wpn_fps_spe_rpg7_upg_primary_npc = deep_clone(self.wpn_fps_spe_rpg7_upg_primary)
@@ -1172,24 +1304,34 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     self.wpn_fps_spe_rpg7_upg_secondary_npc = deep_clone(self.wpn_fps_spe_rpg7_upg_secondary)
 	self.wpn_fps_spe_rpg7_upg_secondary_npc.unit = "units/pd2_dlc_overkill_pack/weapons/wpn_fps_rpg7/wpn_fps_rpg7_npc"
 
-    self.wpn_fps_snp_msr_upg_primary = deep_clone(self.wpn_fps_snp_msr)
-    self.wpn_fps_snp_msr_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_snp_msr_upg_primary"
-    self.wpn_fps_snp_msr_upg_primary.default_blueprint = {
-        "wpn_fps_snp_msr_b_long",
-        "wpn_fps_snp_msr_body_msr",
-        "wpn_fps_snp_msr_m_standard",
-        "wpn_fps_upg_o_leupold",
-        "wpn_fps_upg_fl_ass_laser"
+    self.wpn_fps_snp_mosin_upg_primary = deep_clone(self.wpn_fps_snp_mosin)
+    self.wpn_fps_snp_mosin_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_snp_mosin_upg_primary"
+    self.wpn_fps_snp_mosin_upg_primary.default_blueprint = {
+        "wpn_fps_upg_o_acog",
+		"wpn_fps_snp_mosin_body_standard",
+		"wpn_fps_snp_mosin_b_standard",
+		"wpn_fps_snp_mosin_m_standard",
+		"wpn_fps_snp_mosin_rail",
+		"wpn_fps_upg_fl_ass_laser"
+		
     }
-    self.wpn_fps_snp_msr_upg_secondary = deep_clone(self.wpn_fps_snp_msr_upg_primary)
-    self.wpn_fps_snp_msr_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_snp_msr_upg_secondary"
-    self.wpn_fps_snp_msr_upg_primary_npc = deep_clone(self.wpn_fps_snp_msr_upg_primary)
-    self.wpn_fps_snp_msr_upg_primary_npc.unit = "units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_msr/wpn_fps_snp_msr_npc"
-    self.wpn_fps_snp_msr_upg_secondary_npc = deep_clone(self.wpn_fps_snp_msr_upg_secondary)
-	self.wpn_fps_snp_msr_upg_secondary_npc.unit = "units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_msr/wpn_fps_snp_msr_npc"
+    self.wpn_fps_snp_mosin_upg_secondary = deep_clone(self.wpn_fps_snp_mosin_upg_primary)
+    self.wpn_fps_snp_mosin_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_snp_mosin_upg_secondary"
+    self.wpn_fps_snp_mosin_upg_primary_npc = deep_clone(self.wpn_fps_snp_mosin_upg_primary)
+    self.wpn_fps_snp_mosin_upg_primary_npc.unit = "units/pd2_dlc_gage_historical/weapons/wpn_fps_snp_mosin/wpn_fps_snp_mosin_npc"
+    self.wpn_fps_snp_mosin_upg_secondary_npc = deep_clone(self.wpn_fps_snp_mosin_upg_secondary)
+	self.wpn_fps_snp_mosin_upg_secondary_npc.unit = "units/pd2_dlc_gage_historical/weapons/wpn_fps_snp_mosin/wpn_fps_snp_mosin_npc"
 
     self.wpn_fps_spe_vulcan_upg_primary = deep_clone(self.wpn_fps_lmg_shuno)
     self.wpn_fps_spe_vulcan_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_spe_vulcan_upg_primary"
+	self.wpn_fps_spe_vulcan_upg_primary.default_blueprint = {
+        "wpn_fps_lmg_shuno_body_standard",
+			"wpn_fps_lmg_shuno_b_heat_long",
+			"wpn_fps_lmg_shuno_m_standard",
+			"wpn_fps_lmg_shuno_s_standard",
+			"wpn_fps_lmg_shuno_b_dummy_long",
+			"wpn_fps_upg_fl_ass_laser"
+    }
     self.wpn_fps_spe_vulcan_upg_primary_npc = deep_clone(self.wpn_fps_spe_vulcan_upg_primary)
 	self.wpn_fps_spe_vulcan_upg_primary_npc.unit = "units/pd2_dlc_dmg/weapons/wpn_fps_lmg_shuno/wpn_fps_lmg_shuno_npc"
 
@@ -1202,6 +1344,7 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
         "wpn_fps_sho_boot_s_legendary",
         "wpn_fps_sho_boot_body_standard",
         "wpn_fps_sho_boot_em_extra",
+		"wpn_fps_upg_fl_ass_laser",
         "wpn_fps_sho_boot_m_standard",
         "wpn_fps_upg_a_custom_free"
     }
@@ -1230,31 +1373,44 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 	self.wpn_fps_bow_elastic_upg_secondary_npc.unit = "units/pd2_dlc_ram/weapons/wpn_fps_bow_elastic/wpn_fps_bow_elastic_npc"
 	self.wpn_fps_bow_elastic_upg_secondary_npc.skip_thq_parts = true
 
-    self.wpn_fps_pis_stryk_upg_secondary = deep_clone(self.wpn_fps_pis_g18c)
+
+	self.wpn_fps_pis_stryk_upg_primary = deep_clone(self.wpn_fps_pis_g18c)
+    self.wpn_fps_pis_stryk_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_pis_stryk_upg_primary"
+	self.wpn_fps_pis_stryk_upg_primary.default_blueprint = {
+		"wpn_fps_pis_g18c_body_frame",
+		"wpn_fps_pis_g18c_b_standard",
+		"wpn_fps_pis_g18c_m_mag_17rnd",
+		"wpn_fps_pis_g18c_s_stock",
+		"wpn_fps_upg_fl_pis_laser"
+    }
+	self.wpn_fps_pis_stryk_upg_secondary = deep_clone(self.wpn_fps_pis_stryk_upg_primary)
     self.wpn_fps_pis_stryk_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_pis_stryk_upg_secondary"
-    self.wpn_fps_pis_stryk_upg_secondary_npc = deep_clone(self.wpn_fps_pis_g18c)
+	self.wpn_fps_pis_stryk_upg_primary_npc = deep_clone(self.wpn_fps_pis_stryk_upg_primary)
+	self.wpn_fps_pis_stryk_upg_primary_npc.unit = "units/payday2/weapons/wpn_fps_pis_g18c/wpn_fps_pis_g18c_npc"
+    self.wpn_fps_pis_stryk_upg_secondary_npc = deep_clone(self.wpn_fps_pis_stryk_upg_secondary)
 	self.wpn_fps_pis_stryk_upg_secondary_npc.unit = "units/payday2/weapons/wpn_fps_pis_g18c/wpn_fps_pis_g18c_npc"
 
-    self.wpn_fps_ass_contraband_rifle_upg_primary = deep_clone(self.wpn_fps_ass_contraband_rifle_primary)
-    self.wpn_fps_ass_contraband_rifle_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_primary"
-    self.wpn_fps_ass_contraband_rifle_upg_primary.default_blueprint = {
-        "wpn_fps_ass_contraband_b_standard",
-        "wpn_fps_ass_contraband_body_standard",
-        "wpn_fps_ass_contraband_dh_standard",
-        "wpn_fps_ass_contraband_fg_standard",
-        "wpn_fps_ass_contraband_g_standard",
-        "wpn_fps_ass_contraband_m_standard",
-        "wpn_fps_ass_contraband_ns_standard",
-        "wpn_fps_upg_o_reflex",
-        "wpn_fps_ass_contraband_s_standard",
-        "wpn_fps_ass_contraband_bolt_standard"
+
+    self.wpn_fps_ass_g3_upg_primary = deep_clone(self.wpn_fps_ass_g3_primary)
+    self.wpn_fps_ass_g3_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_g3_upg_primary"
+    self.wpn_fps_ass_g3_upg_primary.default_blueprint = {
+			"wpn_fps_ass_g3_b_sniper",
+			"wpn_fps_ass_g3_body_lower",
+			"wpn_fps_ass_g3_body_upper",
+			"wpn_fps_ass_g3_fg_retro_plastic",
+			"wpn_fps_ass_g3_g_sniper",
+			"wpn_fps_ass_g3_m_mag",
+			"wpn_fps_ass_g3_s_sniper",
+			"wpn_fps_upg_fl_ass_laser",
+			"wpn_fps_upg_i_singlefire",
+			"wpn_fps_upg_o_acog"
     }
-    self.wpn_fps_ass_contraband_rifle_upg_primary_npc = deep_clone(self.wpn_fps_ass_contraband_rifle_upg_primary)
-    self.wpn_fps_ass_contraband_rifle_upg_primary_npc.unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband/wpn_fps_ass_contraband_npc"
-    self.wpn_fps_ass_contraband_rifle_upg_secondary = deep_clone(self.wpn_fps_ass_contraband_rifle_upg_primary)
-    self.wpn_fps_ass_contraband_rifle_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_contraband_rifle_upg_secondary"
-    self.wpn_fps_ass_contraband_rifle_upg_secondary_npc = deep_clone(self.wpn_fps_ass_contraband_rifle_upg_secondary)
-    self.wpn_fps_ass_contraband_rifle_upg_secondary_npc.unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband/wpn_fps_ass_contraband_npc"
+    self.wpn_fps_ass_g3_upg_primary_npc = deep_clone(self.wpn_fps_ass_g3_upg_primary)
+    self.wpn_fps_ass_g3_upg_primary_npc.unit = "units/pd2_dlc_gage_assault/weapons/wpn_fps_ass_g3/wpn_fps_ass_g3_npc"
+    self.wpn_fps_ass_g3_upg_secondary = deep_clone(self.wpn_fps_ass_g3_upg_primary)
+    self.wpn_fps_ass_g3_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_ass_g3_upg_secondary"
+    self.wpn_fps_ass_g3_upg_secondary_npc = deep_clone(self.wpn_fps_ass_g3_upg_secondary)
+    self.wpn_fps_ass_g3_upg_secondary_npc.unit = "units/pd2_dlc_gage_assault/weapons/wpn_fps_ass_g3/wpn_fps_ass_g3_npc"
 
     self.wpn_fps_ass_tar21_upg_primary = deep_clone(self.wpn_fps_ass_tar21_primary)
     self.wpn_fps_ass_tar21_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_ass_tar21_upg_primary"
@@ -1295,6 +1451,16 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 
     self.wpn_fps_pis_packrat_upg_primary = deep_clone(self.wpn_fps_pis_packrat_primary)
     self.wpn_fps_pis_packrat_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_pis_packrat_upg_primary"
+	self.wpn_fps_pis_packrat_upg_primary.default_blueprint = {
+        "wpn_fps_pis_packrat_b_standard",
+		"wpn_fps_pis_packrat_body_standard",
+		"wpn_fps_pis_packrat_bolt_standard",
+		"wpn_fps_pis_packrat_m_standard",
+		"wpn_fps_pis_packrat_o_standard",
+		"wpn_fps_pis_packrat_sl_standard",
+		"wpn_fps_pis_packrat_o_expert",
+		"wpn_fps_upg_fl_pis_laser"
+    }
     self.wpn_fps_pis_packrat_upg_secondary = deep_clone(self.wpn_fps_pis_packrat_primary)
     self.wpn_fps_pis_packrat_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_pis_packrat_upg_secondary"
     self.wpn_fps_pis_packrat_upg_primary_npc = deep_clone(self.wpn_fps_pis_packrat_upg_primary)
@@ -1302,7 +1468,7 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     self.wpn_fps_pis_packrat_upg_secondary_npc = deep_clone(self.wpn_fps_pis_packrat_upg_secondary)
 	self.wpn_fps_pis_packrat_upg_secondary_npc.unit = "units/pd2_dlc_pim/weapons/wpn_fps_x_packrat/wpn_fps_x_packrat_npc"
 	
-    self.wpn_fps_spe_raygun_upg_primary = deep_clone(self.wpn_fps_spe_raygun_primary)
+	self.wpn_fps_spe_raygun_upg_primary = deep_clone(self.wpn_fps_spe_raygun_primary)
     self.wpn_fps_spe_raygun_upg_primary.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_upg_primary"
     self.wpn_fps_spe_raygun_upg_secondary = deep_clone(self.wpn_fps_spe_raygun_primary)
     self.wpn_fps_spe_raygun_upg_secondary.unit = "units/mods/weapons/wpn_fps_spe_raygun/wpn_fps_spe_raygun_upg_secondary"
@@ -1319,6 +1485,13 @@ function WeaponFactoryTweakData:_define_sights()
     self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_ass_m16_upg_secondary = {
         translation = Vector3(0, 0, -0.12)
     }
+	
+	self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_snp_mosin_upg_primary = {
+        translation = Vector3(0, -28, -4.3)
+    }
+    self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_snp_mosin_upg_secondary = {
+        translation = Vector3(0, -28, -4.3)
+    }
     
     self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_ass_m14_upg_primary = {
         translation = Vector3(-0.02, -15, -3.85)
@@ -1328,18 +1501,132 @@ function WeaponFactoryTweakData:_define_sights()
         translation = Vector3(-0.02, -15, -3.85)
     }
 
-    self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_contraband_rifle_upg_primary = {
-        translation = Vector3(-0.01, 5, -1.7),
-		rotation = Rotation(0, 0, 0)
+    self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_ass_g3_upg_primary = {
+        translation = Vector3(0, 0, -3),
     }
 
-    self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_contraband_rifle_upg_secondary = {
-        translation = Vector3(-0.01, 5, -1.7),
-		rotation = Rotation(0, 0, 0)
+    self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_ass_g3_upg_secondary = {
+        translation = Vector3(0, 0, -3),
     }
 
-    self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_contraband_rifle_upg_secondary = {
-        translation = Vector3(-0.01, 5, -1.7),
-		rotation = Rotation(0, 0, 0)
+	self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_snp_m95_upg_primary = {
+        translation = Vector3(0, -1, -3.8),
     }
+	
+    self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_snp_m95_upg_secondary = {
+        translation = Vector3(0, -1, -3.85),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_mp9_upg_primary = {
+        translation = Vector3(0, 0, -3.47),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_mp9_upg_secondary = {
+        translation = Vector3(0, 0, -3.47),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_aug_upg_primary = {
+        translation = Vector3(0, 0, -2.8),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_aug_upg_secondary = {
+        translation = Vector3(0, 0, -2.8),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_p90_upg_primary = {
+        translation = Vector3(0, 0, -2.97),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_p90_upg_secondary = {
+        translation = Vector3(0, 0, -2.97),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_scar_upg_primary = {
+        translation = Vector3(0, 0, -0.25),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_scar_upg_secondary = {
+        translation = Vector3(0, 0, -0.25),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_thompson_upg_primary = {
+        translation = Vector3(0, -24, -4.2),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_thompson_upg_secondary = {
+        translation = Vector3(0, -24, -4.2),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_flint_upg_primary = {
+        translation = Vector3(0, 5, -2.65),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_flint_upg_secondary = {
+        translation = Vector3(0, 5, -2.65),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_74_upg_primary = {
+        translation = Vector3(0, 0, -3.1),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_74_upg_secondary = {
+        translation = Vector3(0, 0, -3.1),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_ching_upg_primary = {
+        translation = Vector3(0, 5, -2.77),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_ching_upg_secondary = {
+        translation = Vector3(0, 5, -2.77),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_shot_r870_upg_primary = {
+        translation = Vector3(0.01, 0, -3.3),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_shot_r870_upg_secondary = {
+        translation = Vector3(0.01, 0, -3.3),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_erma_upg_primary = {
+        translation = Vector3(0, 5, -3.85),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_erma_upg_secondary = {
+        translation = Vector3(0, 5, -3.85),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_fal_upg_primary = {
+        translation = Vector3(0, 7, -3.5),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_ass_fal_upg_secondary = {
+        translation = Vector3(0, 7, -3.5),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_schakal_upg_primary = {
+        translation = Vector3(0, 0, -2.8),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_schakal_upg_secondary = {
+        translation = Vector3(0, 0, -2.8),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_tec9_upg_primary = {
+        translation = Vector3(0, 0, -4.9),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_smg_tec9_upg_secondary = {
+        translation = Vector3(0, 0, -4.9),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_pis_judge_upg_primary = {
+        translation = Vector3(-0.02, -10, -5.406),
+    }
+	
+	self.parts.wpn_fps_upg_o_reflex.stance_mod.wpn_fps_pis_judge_upg_secondary = {
+        translation = Vector3(-0.02, -10, -5.406),
+    }
+	
 end
