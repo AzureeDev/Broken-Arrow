@@ -849,6 +849,7 @@
 		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 	</unit_load>
 	<movie path="movies/ascension"/>
+	<movie path="movies/theend"/>
 	<movie path="sound/buzzer_fail"/>
 	<movie path="sound/music/ee/Beginning"/>
 	<movie path="sound/music/ee/1"/>
