@@ -569,6 +569,7 @@ end
 function WDUManager:_get_weapons_in_mystery_box()
     return {
         "wpn_fps_spe_wunderwaffe",
+		"wpn_fps_spe_raygun",
 		"wpn_fps_ass_m14",
 		"wpn_fps_shot_b682",
 		"wpn_fps_smg_mp9",

@@ -118,7 +118,7 @@
 				<sound id="zm_blood_ambiance" path="zmblood_ambiance.ogg"/>
 				<sound id="zm_sam_laugh" path="demon_sam_laugh.ogg"/>
 				<sound id="zm_announcer_wunder" path="LIGHTNING_IS_POWER.ogg"/>
-				<sound id="zm_announcer_roach" path="demon_sam_present.ogg"/>
+				<sound id="zm_announcer_raygun" path="demon_sam_present.ogg"/>
 				<sounds directory="sora">
 					<sound id="zm_announcer_max_ammo" path="max_ammo.ogg"/>
 					<sound id="zm_announcer_firesale" path="firesale.ogg"/>

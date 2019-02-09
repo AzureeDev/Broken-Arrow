@@ -142,9 +142,9 @@ function ElementWeaponSwitch:_get_random_weapon()
 		table.remove(table_available_weapons_mystery_box, 1)
 	end
 	
-	if managers.player._roach_unlocked and not managers.player._wunderwaffe_unlocked then
+	if managers.player._raygun_unlocked and not managers.player._wunderwaffe_unlocked then
 		table.remove(table_available_weapons_mystery_box, 2)
-	elseif managers.player._roach_unlocked and managers.player._wunderwaffe_unlocked then
+	elseif managers.player._raygun_unlocked and managers.player._wunderwaffe_unlocked then
 		table.remove(table_available_weapons_mystery_box, 1)
     end
     
