@@ -685,6 +685,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.aug_upg_primary = deep_clone(self.aug_primary)
     self.aug_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.aug_upg_primary.stats_modifiers = {damage = 9}
+	self.aug_upg_primary.name_id = "wpn_aug_upg_name"
     self.aug_upg_primary.CLIP_AMMO_MAX = 35
     self.aug_upg_primary.NR_CLIPS_MAX = 10
     self.aug_upg_primary.AMMO_MAX = self.aug_upg_primary.CLIP_AMMO_MAX * self.aug_upg_primary.NR_CLIPS_MAX
@@ -694,6 +695,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.fal_upg_primary = deep_clone(self.fal_primary)
     self.fal_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.fal_upg_primary.stats_modifiers = {damage = 8}
+	self.fal_upg_primary.name_id = "wpn_fal_upg_name"
     self.fal_upg_primary.CLIP_AMMO_MAX = 30
     self.fal_upg_primary.NR_CLIPS_MAX = 7
     self.fal_upg_primary.AMMO_MAX = self.fal_upg_primary.CLIP_AMMO_MAX * self.fal_upg_primary.NR_CLIPS_MAX
@@ -703,6 +705,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.flint_upg_primary = deep_clone(self.flint_primary)
     self.flint_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.flint_upg_primary.stats_modifiers = {damage = 8}
+	self.flint_upg_primary.name_id = "wpn_ak17_upg_name"
     self.flint_upg_primary.CLIP_AMMO_MAX = 35
     self.flint_upg_primary.NR_CLIPS_MAX = 10
     self.flint_upg_primary.AMMO_MAX = self.flint_upg_primary.CLIP_AMMO_MAX * self.flint_upg_primary.NR_CLIPS_MAX
@@ -712,6 +715,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m16_upg_primary = deep_clone(self.m16_primary)
     self.m16_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.m16_upg_primary.stats_modifiers = {damage = 8}
+	self.m16_upg_primary.name_id = "wpn_m16_upg_name"
     self.m16_upg_primary.CLIP_AMMO_MAX = 50
     self.m16_upg_primary.NR_CLIPS_MAX = 8
     self.m16_upg_primary.AMMO_MAX = self.m16_upg_primary.CLIP_AMMO_MAX * self.m16_upg_primary.NR_CLIPS_MAX
@@ -721,6 +725,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.scar_upg_primary = deep_clone(self.scar_primary)
     self.scar_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.scar_upg_primary.stats_modifiers = {damage = 10}
+	self.scar_upg_primary.name_id = "wpn_scar_upg_name"
     self.scar_upg_primary.CLIP_AMMO_MAX = 35
     self.scar_upg_primary.NR_CLIPS_MAX = 9
     self.scar_upg_primary.AMMO_MAX = self.scar_upg_primary.CLIP_AMMO_MAX * self.scar_upg_primary.NR_CLIPS_MAX
@@ -730,6 +735,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.hk21_upg_primary = deep_clone(self.hk21_primary)
     self.hk21_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.hk21_upg_primary.stats_modifiers = {damage = 8}
+	self.hk21_upg_primary.name_id = "wpn_brenner_upg_name"
     self.hk21_upg_primary.CLIP_AMMO_MAX = 150
     self.hk21_upg_primary.NR_CLIPS_MAX = 6
     self.hk21_upg_primary.AMMO_MAX = self.hk21_upg_primary.CLIP_AMMO_MAX * self.hk21_upg_primary.NR_CLIPS_MAX
@@ -739,6 +745,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m249_upg_primary = deep_clone(self.m249_primary)
     self.m249_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.m249_upg_primary.stats_modifiers = {damage = 10}
+	self.m249_upg_primary.name_id = "wpn_m249_upg_name"
     self.m249_upg_primary.CLIP_AMMO_MAX = 125
     self.m249_upg_primary.NR_CLIPS_MAX = 5
     self.m249_upg_primary.AMMO_MAX = self.m249_upg_primary.CLIP_AMMO_MAX * self.m249_upg_primary.NR_CLIPS_MAX
@@ -748,6 +755,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.breech_upg_primary = deep_clone(self.breech_primary)
     self.breech_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.breech_upg_primary.stats_modifiers = {damage = 14}
+	self.breech_upg_primary.name_id = "wpn_parabellum_upg_name"
     self.breech_upg_primary.use_data = {selection_index = PRIMARY}
     self.breech_upg_primary.CLIP_AMMO_MAX = 16
     self.breech_upg_primary.NR_CLIPS_MAX = 6
@@ -758,6 +766,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.deagle_upg_primary = deep_clone(self.deagle_primary)
     self.deagle_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.deagle_upg_primary.stats_modifiers = {damage = 15}
+	self.deagle_upg_primary.name_id = "wpn_deagle_upg_name"
     self.deagle_upg_primary.CLIP_AMMO_MAX = 10
     self.deagle_upg_primary.NR_CLIPS_MAX = 8
     self.deagle_upg_primary.use_data = {selection_index = PRIMARY}
@@ -775,22 +784,10 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.judge_upg_primary.AMMO_MAX = self.judge_upg_primary.CLIP_AMMO_MAX * self.judge_upg_primary.NR_CLIPS_MAX
     self.judge_upg_secondary = deep_clone(self.judge_upg_primary)
     self.judge_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
-	
-    self.peacemaker_upg_primary = deep_clone(self.peacemaker_primary)
-    self.peacemaker_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
-    self.peacemaker_upg_primary.stats_modifiers = {damage = 14}
-    self.peacemaker_upg_primary.CLIP_AMMO_MAX = 6
-    self.peacemaker_upg_primary.NR_CLIPS_MAX = 14
-    self.peacemaker_upg_primary.armor_piercing_chance = 1
-    self.peacemaker_upg_primary.can_shoot_through_enemy = true
-    self.peacemaker_upg_primary.can_shoot_through_shield = true
-    self.peacemaker_upg_primary.AMMO_MAX = self.peacemaker_upg_primary.CLIP_AMMO_MAX * self.peacemaker_upg_primary.NR_CLIPS_MAX
-    self.peacemaker_upg_primary.use_data = {selection_index = PRIMARY}
-    self.peacemaker_upg_secondary = deep_clone(self.peacemaker_upg_primary)
-    self.peacemaker_upg_secondary.use_data = {selection_index = SECONDARY}
 
     self.new_raging_bull_upg_primary = deep_clone(self.new_raging_bull_primary)
     self.new_raging_bull_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+	self.new_raging_bull_upg_primary.name_id = "wpn_bronco_upg_name"
     self.new_raging_bull_upg_primary.stats_modifiers = {damage = 16}
     self.new_raging_bull_upg_primary.CLIP_AMMO_MAX = 6
     self.new_raging_bull_upg_primary.NR_CLIPS_MAX = 10
@@ -804,6 +801,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
     self.striker_upg_primary = deep_clone(self.striker_primary)
     self.striker_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+	self.striker_upg_primary.name_id = "wpn_striker_upg_name"
     self.striker_upg_primary.stats_modifiers = {damage = 10}
     self.striker_upg_primary.CLIP_AMMO_MAX = 24
     self.striker_upg_primary.NR_CLIPS_MAX = 5
@@ -826,6 +824,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m1928_upg_primary = deep_clone(self.m1928_primary)
     self.m1928_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.m1928_upg_primary.stats_modifiers = {damage = 10}
+	self.m1928_upg_primary.name_id = "wpn_chicago_upg_name"
     self.m1928_upg_primary.CLIP_AMMO_MAX = 100
     self.m1928_upg_primary.NR_CLIPS_MAX = 4
     self.m1928_upg_primary.AMMO_MAX = self.m1928_upg_primary.CLIP_AMMO_MAX * self.m1928_upg_primary.NR_CLIPS_MAX
@@ -876,6 +875,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	self.m37_upg_primary = deep_clone(self.m37_primary)
     self.m37_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.m37_upg_primary.stats_modifiers = {damage = 12}
+	self.m37_upg_primary.name_id = "wpn_m37_upg_name"
     self.m37_upg_primary.CLIP_AMMO_MAX = 16
     self.m37_upg_primary.NR_CLIPS_MAX = 6
     self.m37_upg_primary.AMMO_MAX = self.m37_upg_primary.CLIP_AMMO_MAX * self.m37_upg_primary.NR_CLIPS_MAX
@@ -935,7 +935,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.mosin_upg_primary.can_shoot_through_wall = true 
     self.mosin_upg_primary.can_shoot_through_shield = true 
     self.mosin_upg_primary.AMMO_MAX = self.mosin_upg_primary.CLIP_AMMO_MAX * self.mosin_upg_primary.NR_CLIPS_MAX
-    self.mosin_upg_primary.stats_modifiers = {damage = 85}
+    self.mosin_upg_primary.stats_modifiers = {damage = 15}
     self.mosin_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.mosin_upg_secondary = deep_clone(self.mosin_upg_primary)
     self.mosin_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}

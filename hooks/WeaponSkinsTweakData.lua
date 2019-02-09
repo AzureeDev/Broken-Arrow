@@ -53,6 +53,16 @@ Hooks:PostHook(BlackMarketTweakData, "_init_weapon_skins", "zm_init_new_weapon_c
                 pattern = "units/skins/pap_1/pattern/pat_pack-a-punch",
                 pattern_gradient = "units/skins/pap_1/pattern_gradient/patgra_pack-a-punch"
             }
+			
+			gadget = {
+                pattern = "units/skins/pap_1/pattern/pat_pack-a-punch",
+                pattern_gradient = "units/skins/pap_1/pattern_gradient/patgra_pack-a-punch"
+            }
+			
+			stock_adapter = {
+                pattern = "units/skins/pap_1/pattern/pat_pack-a-punch",
+                pattern_gradient = "units/skins/pap_1/pattern_gradient/patgra_pack-a-punch"
+            }
         }
     }
 end)
