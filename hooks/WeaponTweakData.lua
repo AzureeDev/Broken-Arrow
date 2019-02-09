@@ -462,7 +462,7 @@ function WeaponTweakData:_init_zm_new_weapons()
 	self.mosin_primary.can_shoot_through_enemy = false 
     self.mosin_primary.can_shoot_through_wall = false 
     self.mosin_primary.can_shoot_through_shield = false 
-    self.mosin_primary.stats_modifiers = {damage = 2.5}
+    self.mosin_primary.stats_modifiers = {damage = 1.5}
     self.mosin_primary.NR_CLIPS_MAX = self.mosin_primary.NR_CLIPS_MAX * 2
     self.mosin_primary.AMMO_MAX = self.mosin_primary.CLIP_AMMO_MAX * self.mosin_primary.NR_CLIPS_MAX
     self.mosin_primary.use_data = {selection_index = PRIMARY, align_place = "left_hand"}
@@ -935,7 +935,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.mosin_upg_primary.can_shoot_through_wall = true 
     self.mosin_upg_primary.can_shoot_through_shield = true 
     self.mosin_upg_primary.AMMO_MAX = self.mosin_upg_primary.CLIP_AMMO_MAX * self.mosin_upg_primary.NR_CLIPS_MAX
-    self.mosin_upg_primary.stats_modifiers = {damage = 80}
+    self.mosin_upg_primary.stats_modifiers = {damage = 40}
     self.mosin_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.mosin_upg_secondary = deep_clone(self.mosin_upg_primary)
     self.mosin_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
