@@ -1,9 +1,8 @@
 <table global_key="ZM_BANK" name="Broken Arrow">
 	<AddFiles file="dynamic_manager.xml"/>
-	<AssetUpdates id="24132" provider="modworkshop" use_local_dir="true" version="1.6"/>
+	<AssetUpdates id="24132" provider="modworkshop" use_local_dir="true" version="1.61"/>
 	<Hooks directory="hooks">
 		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
-		<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
 		<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
 		<hook file="ContractBrokerHeistItem.lua" source_file="lib/managers/menu/items/contractbrokerheistitem"/>
 	</Hooks>
@@ -13,6 +12,7 @@
 		<add file="levels/zm_broken_arrow/add.xml"/>
 		<hooks directory="hooks">
 			<hook file="Setup.lua" source_file="lib/setups/gamesetup"/>
+			<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
 			<hook file="AssetsTweakData.lua" source_file="lib/tweak_data/assetstweakdata"/>
 			<hook file="BlackMarketManager.lua" source_file="lib/managers/blackmarketmanager"/>
 			<hook file="CharacterTweakData.lua" source_file="lib/tweak_data/charactertweakdata"/>
